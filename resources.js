@@ -89,8 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     3: {
       assignments: [
-        { title: "DBMS assignment(by SETHU)", link:"DBMS_assignment_by_SETHU.pdf"},
-        { title: "Assignment 2", link: "#" }
+        { title: "DBMS Assignment(by SETHU)", link:"DBMS_assignment_by_SETHU.pdf"},
+        { title: "JAVA Assignment(by SETHU)", link: "JAVA_assignment_by_SETHU.pdf"},
+        { title: "MATHS Assignment(by SETHU)", link:"maths_assignment_by_SETHU.pdf"},
+        { title: "ORGANISATION BEHAVIOUR Assignment(by SETHU)", link:"Organisation_Behaviour_assignment_by_SETHU.pdf"},
+        { title: "SOFTWARE ENGINEERING Assignment(by SETHU)", link:"Software Engineer assignment (by SETHU).pdf"},
       ],
       notes: Array.from({ length: 7 }, (_, i) => ({
         subject: `Subject ${i + 1}`,
