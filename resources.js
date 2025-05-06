@@ -352,3 +352,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+function toggleNav() {
+  const sideNav = document.getElementById("mySidenav");
+  if (sideNav.style.width === "250px") {
+    sideNav.style.width = "0";
+  } else {
+    sideNav.style.width = "250px";
+  }
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function toggleDropdown(element) {
+  const parent = element.parentElement;
+  parent.classList.toggle("open");
+}
