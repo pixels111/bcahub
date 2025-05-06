@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     3: {
       assignments: [
-        { title: "DBMS assignment(by SETHU)", link:"fast-double-click-on-mouse.mp3"},
+        { title: "DBMS assignment(by SETHU)", link:"DBMS assignment (by SETHU).pdf"},
         { title: "Assignment 2", link: "#" }
       ],
       notes: Array.from({ length: 7 }, (_, i) => ({
