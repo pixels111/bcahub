@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     3: {
       assignments: [
-        { title: "DBMS assignment(by SETHU)", link:".\ BCA HONOURS\ 3rd SEM\ ASSIGNMENTS\ DBMS assignment (by SETHU).pdf"},
+        { title: "DBMS assignment(by SETHU)", link:"DBMS_assignment_by_SETHU.pdf"},
         { title: "Assignment 2", link: "#" }
       ],
       notes: Array.from({ length: 7 }, (_, i) => ({
