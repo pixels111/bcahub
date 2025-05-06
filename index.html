@@ -35,6 +35,59 @@
   <main>
     <h1>Welcome to BCAHub</h1>
     <p>Welcome to BCAHub, your ultimate destination for sharing and accessing quality study materials designed specifically for BCA (Bachelor of Computer Applications) students. BCAHub is meant to make learning easy by providing study material, notes, past papers, project suggestions, and coding guidance—all together. Whatever be the aspect whether it's getting ready for exams, learning about programming topics, or doing academic work, BCAHub gives you authentic and current content contributed by students and instructors both. Become a part of the community and make your academic life better with BCAHub!</p>
+
+<!-- Drip campaign signup form -->
+<div class="drip-signup">
+  <h3>Get notified about new content</h3>
+  <form id="dripSignupForm">
+    <input type="email" id="dripEmail" placeholder="Your email" required>
+    
+    <div class="preferences">
+      <label>Notify me about:</label>
+      <div>
+        <input type="checkbox" id="pref-updates" name="preferences" value="updates" checked>
+        <label for="pref-updates">Website Updates</label>
+      </div>
+      <div>
+        <input type="checkbox" id="pref-tutorials" name="preferences" value="tutorials">
+        <label for="pref-tutorials">New Tutorials</label>
+      </div>
+      <div>
+        <input type="checkbox" id="pref-news" name="preferences" value="news">
+        <label for="pref-news">Company News</label>
+      </div>
+    </div>
+    
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+<script>
+document.getElementById('dripSignupForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const email = document.getElementById('dripEmail').value;
+  const checkboxes = document.querySelectorAll('input[name="preferences"]:checked');
+  const preferences = Array.from(checkboxes).map(cb => cb.value);
+  
+  try {
+    const response = await fetch('/api/subscribe-drip', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, preferences })
+    });
+    
+    if (response.ok) {
+      alert('You\'re subscribed! You\'ll receive notifications about new content.');
+    } else {
+      alert('Subscription failed. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again later.');
+  }
+});
+</script>
   </main>
 
   <footer>
