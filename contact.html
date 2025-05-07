@@ -34,18 +34,24 @@
   <main>
     <h1>Contact Us</h1>
     <p>If you have any questions, suggestions or feedback, feel free to reach out!</p>
-    <form id="contactForm">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br />
-      
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br />
-      
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="5" required></textarea><br />
-      
-      <button type="submit" class="btn">Send</button>
-    </form>
+
+   <form id="contactForm" method="POST" action="https://formspree.io/f/meoggyga">
+  <!-- Prevent spam -->
+  <input type="hidden" name="_captcha" value="false">
+  <!-- Redirect after successful submission (optional) -->
+  <input type="hidden" name="_next" value="https://sethu369.github.io/contact.html">
+
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" required /><br />
+
+  <label for="email">Email:</label><br />
+  <input type="email" id="email" name="email" required /><br />
+
+  <label for="message">Message:</label><br />
+  <textarea id="message" name="message" rows="5" required></textarea><br />
+
+  <button type="submit" class="btn">Send</button>
+</form>
     <p id="form-response" aria-live="polite"></p>
   </main>
 
