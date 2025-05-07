@@ -26,66 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const semesterResources = {
     1: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
-      pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
-      ],
       
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
-      syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
     },
     2: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
       pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
+        { title: "C-LANGUAGE", link: "C-LANGUAGE.docx" },
+        { title: "Excel--Labels-Values-and-Formulas", link: "Excel--Labels-Values-and-Formulas.doc" },
+        { title: "Marketing Skill notes", link: "Marketing Skill notes.pdf" },
+        { title: "NOTES -MSWORD-1", link: "NOTES -MSWORD-1.pdf" },
+        { title: "office automation tools record programs", link: "office automation tools record programs.pdf" },
+        { title: "office automation tools(1,2)", link: "office automation tools(1,2).pdf" },
+        { title: "Edx", link: "Edx.pdf" },
       ],
       
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
-      syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
     },
     3: {
       assignments: [
@@ -95,26 +48,70 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "ORGANISATION BEHAVIOUR Assignment(by SETHU)", link:"Organisation_Behaviour_assignment_by_SETHU.pdf"},
         { title: "SOFTWARE ENGINEERING Assignment(by SETHU)", link:"Software Engineer assignment (by SETHU).pdf"},
       ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "DBMS assignment(by SETHU).pdf" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
+      notes: [
+        {
+          subject: "DATABASE MANAGEMENT SYSTEM",
+          units: [
+            { title: "Unit 1: Overview Of Database System", link: "Maths_Unit1.pdf" },
+            { title: "Unit 2: Relational Model & Normalization", link: "Maths_Unit2.pdf" },
+            { title: "Unit 3: Entity Relationship Model & Basic SQL", link: "Maths_Unit3.pdf" },
+            { title: "Unit 4: SQL", link: "Maths_Unit4.pdf" },
+            { title: "Unit 5: PS/SQL", link: "Maths_Unit5.pdf" },
+          ]
+        },
+        {
+          subject: "MATHEMATICAL AND STATISTICAL FOUNDATIONS",
+          units: [
+            { title: "Unit 1: Matrix Algebra-1", link: "Maths_Unit1.pdf" },
+            { title: "Unit 2: Matrix Algebra-2", link: "Maths_Unit2.pdf" },
+            { title: "Unit 3: Set Theory", link: "Maths_Unit3.pdf" },
+            { title: "Unit 4: Basics Of Statistics", link: "Maths_Unit4.pdf" },
+            { title: "Unit 5: Statistical Measures", link: "Maths_Unit5.pdf" }
+          ]
+        },
+        {
+          subject: "JAVA AND DATA STRUCTURES",
+          units: [
+            { title: "Unit 1: Introduction To OOPS", link: "Maths_Unit1.pdf" },
+            { title: "Unit 2: Class and Objects & Inheritance & Interface", link: "Maths_Unit2.pdf" },
+            { title: "Unit 3: Packages & Exception Handling & Applets", link: "Maths_Unit3.pdf" },
+            { title: "Unit 4: Data Structure & Linear Data Structure", link: "Maths_Unit4.pdf" },
+            { title: "Unit 5: Trees and Graphs", link: "Maths_Unit5.pdf" }
+          ]
+        },
+      ],
       pdfs: [
         { title: "PDF 1", link: "#" },
         { title: "PDF 2", link: "#" }
       ],
-      
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
+      records: [
+        {
+          subject: "Mathematics",
+          pdf: { title: "Maths Record", link: "Maths_Record.pdf" }
+        },
+        {
+          subject: "Physics",
+          pdf: { title: "Physics Record", link: "Physics_Record.pdf" }
+        }
+      ],
       syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
+        major: [
+          { title: "Mathematics", link: "Mathematics_Syllabus.pdf" },
+          { title: "Physics", link: "Physics_Syllabus.pdf" },
+          { title: "Chemistry", link: "Chemistry_Syllabus.pdf" },
+          { title: "Biology", link: "Biology_Syllabus.pdf" },
+          { title: "Computer Science", link: "Computer_Science_Syllabus.pdf" }
+        ],
+        minor: [
+          { title: "Environmental Science", link: "Environmental_Science_Syllabus.pdf" },
+          { title: "Statistics", link: "Statistics_Syllabus.pdf" },
+          { title: "Economics", link: "Economics_Syllabus.pdf" }
+        ],
+        skillCourse: [
+          { title: "Python Programming", link: "Python_Programming_Syllabus.pdf" },
+          { title: "Web Development", link: "Web_Development_Syllabus.pdf" },
+          { title: "Data Science", link: "Data_Science_Syllabus.pdf" }
+        ]
       },
       questionPapers: [
         { title: "Question Paper 1", link: "#" },
@@ -126,26 +123,54 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "Assignment 1", link: "#" },
         { title: "Assignment 2", link: "#" }
       ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
+      notes: [
+        {
+          subject: "Mathematics",
+          units: [
+            { title: "Unit 1: Algebra", link: "Maths_Unit1.pdf" },
+            { title: "Unit 2: Calculus", link: "Maths_Unit2.pdf" }
+          ]
+        },
+        {
+          subject: "Physics",
+          units: [
+            { title: "Unit 1: Mechanics", link: "Physics_Unit1.pdf" },
+            { title: "Unit 2: Thermodynamics", link: "Physics_Unit2.pdf" }
+          ]
+        }
+      ],
       pdfs: [
         { title: "PDF 1", link: "#" },
         { title: "PDF 2", link: "#" }
       ],
-      
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
+      records: [
+        {
+          subject: "Mathematics",
+          pdf: { title: "Maths Record", link: "Maths_Record.pdf" }
+        },
+        {
+          subject: "Physics",
+          pdf: { title: "Physics Record", link: "Physics_Record.pdf" }
+        }
+      ],
       syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
+        major: [
+          { title: "Mathematics", link: "Mathematics_Syllabus.pdf" },
+          { title: "Physics", link: "Physics_Syllabus.pdf" },
+          { title: "Chemistry", link: "Chemistry_Syllabus.pdf" },
+          { title: "Biology", link: "Biology_Syllabus.pdf" },
+          { title: "Computer Science", link: "Computer_Science_Syllabus.pdf" }
+        ],
+        minor: [
+          { title: "Environmental Science", link: "Environmental_Science_Syllabus.pdf" },
+          { title: "Statistics", link: "Statistics_Syllabus.pdf" },
+          { title: "Economics", link: "Economics_Syllabus.pdf" }
+        ],
+        skillCourse: [
+          { title: "Python Programming", link: "Python_Programming_Syllabus.pdf" },
+          { title: "Web Development", link: "Web_Development_Syllabus.pdf" },
+          { title: "Data Science", link: "Data_Science_Syllabus.pdf" }
+        ]
       },
       questionPapers: [
         { title: "Question Paper 1", link: "#" },
@@ -153,128 +178,16 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     5: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
-      pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
-      ],
       
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
-      syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
     },
     6: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
-      pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
-      ],
       
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
-      syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
+    },
+    6: {
+      
     },
     7: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
-      pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
-      ],
-      
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
-      syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
-    },
-    8: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        units: [
-          { title: `Unit 1`, link: "#" },
-          { title: `Unit 2`, link: "#" }
-        ]
-      })),
-      pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
-      ],
-      
-      records: Array.from({ length: 7 }, (_, i) => ({
-        subject: `Subject ${i + 1}`,
-        pdf: { title: `PDF`, link: "#" }
-      })),
-      syllabus: {
-        major: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        minor: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`),
-        skillCourse: Array.from({ length: 7 }, (_, i) => `Subject ${i + 1}`)
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
+
     },
     // Add similar structure for other semesters
   };
@@ -298,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${subject.subject}
                     <ul>
                       ${subject.units
-                        .map(unit => `<li><a href="${unit.link}" target="_blank">${unit.title}</a></li>`)
+                        .map(unit => `  &nbsp; <li><a href="${unit.link}" target="_blank">${unit.title}</a></li>`)
                         .join('')}
                     </ul>
                   </li>
@@ -322,21 +235,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>Major
                   <ul>
                     ${resourceData.major
-                      .map(subject => `<li>${subject}</li>`)
+                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li>`)
                       .join('')}
                   </ul>
                 </li>
                 <li>Minor
                   <ul>
                     ${resourceData.minor
-                      .map(subject => `<li>${subject}</li>`)
+                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li>`)
                       .join('')}
                   </ul>
                 </li>
                 <li>Skill Course
                   <ul>
                     ${resourceData.skillCourse
-                      .map(subject => `<li>${subject}</li>`)
+                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li>`)
                       .join('')}
                   </ul>
                 </li>
