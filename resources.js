@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const clickSound = document.getElementById('click-sound');
+  const menuLinks = document.querySelectorAll('nav ul a'); // Select all menu links
   const semesterButtons = document.querySelectorAll('.semester-btn');
   const resourceSections = {
     assignments: document.getElementById('assignments-list'),
@@ -9,21 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     syllabus: document.getElementById('syllabus-list'),
     questionPapers: document.getElementById('question-papers-list'),
   };
-
-  // Play click sound on all anchor and button clicks
-  document.querySelectorAll('a, button').forEach(elem => {
-    elem.addEventListener('click', () => {
-      if (clickSound) {
-        clickSound.currentTime = 0;
-        clickSound.play();
-      }
-    });
+  menuLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active'); // Add 'active' class to the matching link
+    } else {
+      link.classList.remove('active'); // Remove 'active' class from non-matching links
+    }
   });
-
-  // Ensure the side navigation is hidden on page load
-  const sideNav = document.getElementById("mySidenav");
-  sideNav.style.width = "0"; // Always hidden initially
-
   const semesterResources = {
     1: {
       
@@ -207,49 +199,49 @@ document.addEventListener('DOMContentLoaded', () => {
               // Render notes with sublist
               sectionElement.innerHTML = resourceData
                 .map(subject => `
-                  <li>
-                    ${subject.subject}
+                  <li><strong>
+                    ${subject.subject}</strong>
                     <ul>
                       ${subject.units
                         .map(unit => `  &nbsp; <li><a href="${unit.link}" target="_blank">${unit.title}</a></li>`)
                         .join('')}
                     </ul>
-                  </li>
+                  </li><br>
                 `)
                 .join('');
             } else if (section === "records") {
               // Render records with PDFs
               sectionElement.innerHTML = resourceData
                 .map(record => `
-                  <li>
-                    ${record.subject}
-                    <ul>
+                  <li><strong>
+                    ${record.subject}</strong>
+                    <ul><br>
                       <li><a href="${record.pdf.link}" target="_blank">${record.pdf.title}</a></li>
                     </ul>
-                  </li>
+                  </li><br>
                 `)
                 .join('');
             } else if (section === "syllabus") {
               // Render syllabus with major, minor, and skill courses
               sectionElement.innerHTML = `
-                <li>Major
-                  <ul>
+                <li><strong>Major</strong>
+                  <ul><br>
                     ${resourceData.major
-                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li>`)
+                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
-                <li>Minor
-                  <ul>
+                <li><strong>Minor</strong>
+                  <ul><br>
                     ${resourceData.minor
-                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li>`)
+                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
-                </li>
-                <li>Skill Course
-                  <ul>
+                </li><br>
+                <li><strong>Skill Course</strong>
+                  <ul><br>
                     ${resourceData.skillCourse
-                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li>`)
+                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
@@ -257,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
               // Render other sections
               sectionElement.innerHTML = resourceData
-                .map(item => `<li><a href="${item.link}" download target="_blank">${item.title}</a></li>`)
+                .map(item => `<li><a href="${item.link}" download target="_blank">${item.title}</a></li><br>`)
                 .join('');
             }
           } else {
@@ -269,20 +261,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function toggleNav() {
-  const sideNav = document.getElementById("mySidenav");
-  if (sideNav.style.width === "250px") {
-    sideNav.style.width = "0";
-  } else {
-    sideNav.style.width = "250px";
-  }
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'flex'
 }
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-function toggleDropdown(element) {
-  const parent = element.parentElement;
-  parent.classList.toggle("open");
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display = 'none'
 }
