@@ -1,0 +1,34 @@
+name: Auto Update Last Updated Date
+
+on:
+  push:
+    branches:
+      - main  # Change to 'master' if that’s your default branch
+
+jobs:
+  update-last-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Get Current Date (Indian Format)
+        id: date
+        run: echo "date=$(date '+%B %d, %Y')" >> $GITHUB_OUTPUT
+
+      - name: Update HTML Files with Last Updated Date
+        run: |
+          for file in index.html about.html contact.html privacy.html terms.html; do
+            if [ -f "$file" ]; then
+              sed -i "s|<span id=\"last-updated-date\">.*</span>|<span id=\"last-updated-date\">${{ steps.date.outputs.date }}</span>|" "$file"
+            fi
+          done
+
+      - name: Commit and Push Updated Files
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Auto update last updated date to ${{ steps.date.outputs.date }}" || echo "No changes to commit"
+          git push

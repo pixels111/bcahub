@@ -22,31 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     2: {
       pdfs: [
-        { title: "C-LANGUAGE", link: "C-LANGUAGE.docx" },
-        { title: "Excel--Labels-Values-and-Formulas", link: "Excel--Labels-Values-and-Formulas.doc" },
-        { title: "Marketing Skill notes", link: "Marketing Skill notes.pdf" },
-        { title: "NOTES -MSWORD-1", link: "NOTES -MSWORD-1.pdf" },
-        { title: "office automation tools record programs", link: "office automation tools record programs.pdf" },
-        { title: "office automation tools(1,2)", link: "office automation tools(1,2).pdf" },
-        { title: "Edx", link: "Edx.pdf" },
+        { title: "C-LANGUAGE", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/C_LANGUAGE.docx" },
+        { title: "Excel--Labels-Values-and-Formulas", link: "sem_resources/Excel_Labels_Values_and_Formulas.doc" },
+        { title: "Marketing Skill notes", link: "sem_resources/Marketing_Skill_notes.pdf" },
+        { title: "NOTES -MSWORD-1", link: "sem_resources/NOTES_MSWORD-1.pdf" },
+        { title: "office automation tools record programs", link: "sem_resources/officeautomationtoolsrecordprograms.pdf" },
+        { title: "office automation tools(1,2)", link: "sem_resources/officeautomationtools(1,2).pdf" },
+        { title: "Edx", link: "sem_resources/Edx.pdf" },
       ],
       
     },
     3: {
       assignments: [
-        { title: "DBMS Assignment(by SETHU)", link:"DBMS_assignment_by_SETHU.pdf"},
-        { title: "JAVA Assignment(by SETHU)", link: "JAVA_assignment_by_SETHU.pdf"},
-        { title: "MATHS Assignment(by SETHU)", link:"maths_assignment_by_SETHU.pdf"},
-        { title: "ORGANISATION BEHAVIOUR Assignment(by SETHU)", link:"Organisation_Behaviour_assignment_by_SETHU.pdf"},
-        { title: "SOFTWARE ENGINEERING Assignment(by SETHU)", link:"Software Engineer assignment (by SETHU).pdf"},
+        { title: "DBMS Assignment(by SETHU)", link:"sem_resources/DBMS_assignment_by_SETHU.pdf"},
+        { title: "JAVA Assignment(by SETHU)", link: "sem_resources/JAVA_assignment_by_SETHU.pdf"},
+        { title: "MATHS Assignment(by SETHU)", link:"sem_resources/maths_assignment_by_SETHU.pdf"},
+        { title: "ORGANISATION BEHAVIOUR Assignment(by SETHU)", link:"sem_resources/Organisation_Behaviour_assignment_by_SETHU.pdf"},
+        { title: "SOFTWARE ENGINEERING Assignment(by SETHU)", link:"sem_resources/Software Engineer assignment (by SETHU).pdf"},
       ],
       notes: [
         {
           subject: "DATABASE MANAGEMENT SYSTEM",
           units: [
-            { title: "Unit 1: Overview Of Database System", link: "Maths_Unit1.pdf" },
-            { title: "Unit 2: Relational Model & Normalization", link: "Maths_Unit2.pdf" },
-            { title: "Unit 3: Entity Relationship Model & Basic SQL", link: "Maths_Unit3.pdf" },
+            { title: "Unit 1: Overview Of Database System", link: "sem_resources/Maths_Unit1.pdf" },
+            { title: "Unit 2: Relational Model & Normalization", link: "sem_resources/Maths_Unit2.pdf" },
+            { title: "Unit 3: Entity Relationship Model & Basic SQL", link: "sem_resources/Maths_Unit3.pdf" },
             { title: "Unit 4: SQL", link: "Maths_Unit4.pdf" },
             { title: "Unit 5: PS/SQL", link: "Maths_Unit5.pdf" },
           ]
@@ -54,20 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           subject: "MATHEMATICAL AND STATISTICAL FOUNDATIONS",
           units: [
-            { title: "Unit 1: Matrix Algebra-1", link: "Maths_Unit1.pdf" },
-            { title: "Unit 2: Matrix Algebra-2", link: "Maths_Unit2.pdf" },
-            { title: "Unit 3: Set Theory", link: "Maths_Unit3.pdf" },
-            { title: "Unit 4: Basics Of Statistics", link: "Maths_Unit4.pdf" },
-            { title: "Unit 5: Statistical Measures", link: "Maths_Unit5.pdf" }
+            { title: "Unit 1: Matrix Algebra-1", link: "sem_resources/Maths_Unit1.pdf" },
+            { title: "Unit 2: Matrix Algebra-2", link: "sem_resources/Maths_Unit2.pdf" },
+            { title: "Unit 3: Set Theory", link: "sem_resources/Maths_Unit3.pdf" },
+            { title: "Unit 4: Basics Of Statistics", link: "sem_resources/Maths_Unit4.pdf" },
+            { title: "Unit 5: Statistical Measures", link: "sem_resources/Maths_Unit5.pdf" }
           ]
         },
         {
           subject: "JAVA AND DATA STRUCTURES",
           units: [
-            { title: "Unit 1: Introduction To OOPS", link: "Maths_Unit1.pdf" },
-            { title: "Unit 2: Class and Objects & Inheritance & Interface", link: "Maths_Unit2.pdf" },
-            { title: "Unit 3: Packages & Exception Handling & Applets", link: "Maths_Unit3.pdf" },
-            { title: "Unit 4: Data Structure & Linear Data Structure", link: "Maths_Unit4.pdf" },
+            { title: "Unit 1: Introduction To OOPS", link: "sem_resources/Maths_Unit1.pdf" },
+            { title: "Unit 2: Class and Objects & Inheritance & Interface", link: "sem_resources/Maths_Unit2.pdf" },
+            { title: "Unit 3: Packages & Exception Handling & Applets", link: "sem_resources/Maths_Unit3.pdf" },
+            { title: "Unit 4: Data Structure & Linear Data Structure", link: "sem_resources/Maths_Unit4.pdf" },
             { title: "Unit 5: Trees and Graphs", link: "Maths_Unit5.pdf" }
           ]
         },
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${subject.subject}</strong>
                     <ul>
                       ${subject.units
-                        .map(unit => `  &nbsp; <li><a href="${unit.link}" target="_blank">${unit.title}</a></li>`)
+                        .map(unit => `  &nbsp; <li> <a href="#" onclick="downloadAndRedirect('${unit.link}');" target="_blank">${unit.title}</a></li>`)
                         .join('')}
                     </ul>
                   </li><br>
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
               // Render other sections
               sectionElement.innerHTML = resourceData
-                .map(item => `<li><a href="${item.link}" download target="_blank">${item.title}</a></li><br>`)
+                .map(item => `<li><a href="#" onclick="downloadAndRedirect('${item.link}');">${item.title}</a></li><br>`)
                 .join('');
             }
           } else {
@@ -262,10 +262,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'flex'
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'flex';
+  document.querySelector('.socials-container').style.display = 'none';
 }
 function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'none'
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+  document.querySelector('.socials-container').style.display = 'flex';
+}
+function downloadAndRedirect(link) {
+  const a = document.createElement('a');
+  a.href = link;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  document.body.appendChild(a); // must append to DOM
+  a.click(); // trigger download
+  a.remove(); // clean up
+
+  // Redirect after delay (3 seconds)
+  setTimeout(() => {
+    window.location.href = 'https://sethu369.github.io/bcahub/resources.html'; // update this to your real redirect page
+  }, 6000);
 }
