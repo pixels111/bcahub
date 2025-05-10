@@ -31,40 +31,53 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-  
+
   const repoOwner = 'sethu369';
   const repoName = 'bcahub';
 
-  // Get accurate commit count
+  // Step 1: Get the default branch
   fetch(`https://api.github.com/repos/${repoOwner}/${repoName}`)
     .then(res => res.json())
-    .then(repoData => {
-      const branch = repoData.default_branch;
-      const commitsUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?per_page=1&sha=${branch}`;
+    .then(repo => {
+      const branch = repo.default_branch;
 
-      fetch(commitsUrl, { method: 'GET' })
+      // Step 2: Fetch 1 commit and extract total count from the Link header
+      return fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits?per_page=1&sha=${branch}`)
         .then(response => {
-          const count = response.headers.get('Link')?.match(/&page=(\d+)>; rel="last"/);
-          if (count) {
-            document.getElementById('commit-count').textContent = `${count[1]} commits`;
+          const linkHeader = response.headers.get('Link');
+          let totalCommits = 'Unknown';
+
+          if (linkHeader && linkHeader.includes('rel="last"')) {
+            const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
+            if (match) {
+              totalCommits = match[1];
+            }
           } else {
-            document.getElementById('commit-count').textContent = `1 commit`;
+            // No pagination, probably < 30 commits
+            totalCommits = '30 or fewer';
           }
 
+          document.getElementById('commit-count').textContent = `${totalCommits} commits`;
+
+          // Step 3: Still get the latest commit date
           return response.json();
-        })
-        .then(data => {
-          const lastDate = new Date(data[0].commit.committer.date);
-          document.getElementById('last-updated-date').textContent =
-            lastDate.toLocaleDateString('en-IN', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            });
-        })
-        .catch(err => {
-          console.error('Error getting commits:', err);
-          document.getElementById('commit-count').textContent = 'Unavailable';
-          document.getElementById('last-updated-date').textContent = 'Unavailable';
         });
+    })
+    .then(data => {
+      if (Array.isArray(data) && data.length > 0) {
+        const lastDate = new Date(data[0].commit.committer.date);
+        document.getElementById('last-updated-date').textContent =
+          lastDate.toLocaleDateString('en-IN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('commit-count').textContent = 'Unavailable';
+      document.getElementById('last-updated-date').textContent = 'Unavailable';
     });
+</script>
+  
