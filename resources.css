@@ -154,10 +154,10 @@ button, .btn {
 }
 
 button:active, .btn:active {
-  background: linear-gradient(to bottom, #808080 0%, #404040 100%);
-  color: #00ffff;
+  background: linear-gradient(to bottom, #000000 0%, #000000 100%);
+  color: #ffffff;
   box-shadow:
-    inset 1px 1px 4px #00ffff;
+    inset 1px 1px 4px #ffffff;
   outline: none;
 }
 

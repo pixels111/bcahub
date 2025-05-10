@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     2: {
       pdfs: [
-        { title: "C-LANGUAGE", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/C_LANGUAGE.docx" },
-        { title: "Excel--Labels-Values-and-Formulas", link: "sem_resources/Excel_Labels_Values_and_Formulas.doc" },
-        { title: "Marketing Skill notes", link: "sem_resources/Marketing_Skill_notes.pdf" },
-        { title: "NOTES -MSWORD-1", link: "sem_resources/NOTES_MSWORD-1.pdf" },
-        { title: "office automation tools record programs", link: "sem_resources/officeautomationtoolsrecordprograms.pdf" },
-        { title: "office automation tools(1,2)", link: "sem_resources/officeautomationtools(1,2).pdf" },
-        { title: "Edx", link: "sem_resources/Edx.pdf" },
+        { title: "C-LANGUAGE", link:""},
+        { title: "Excel--Labels-Values-and-Formulas", link: "" },
+        { title: "Marketing Skill notes", link: "https://drive.google.com/open?id=1DP3yonLL5tkt6E-Sguj8LJg2xP-NWDhy&usp=drive_fs" },
+        { title: "NOTES-MSWORD-1", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/NOTES._MSWORD_1.pdf" },
+        { title: "office automation tools record programs", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/officeautomationtoolsrecordprograms.pdf" },
+        { title: "office automation tools(1,2)", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/office.automation.tools.1.2.pdf" },
+        { title: "Edx", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/Edx.pdf" },
       ],
       
     },
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${subject.subject}</strong>
                     <ul>
                       ${subject.units
-                        .map(unit => `  &nbsp; <li> <a href="#" onclick="downloadAndRedirect('${unit.link}');" target="_blank">${unit.title}</a></li>`)
+                        .map(unit => `  &nbsp; <li> <a href="${unit.link}" download>${unit.title}</a></li>`)
                         .join('')}
                     </ul>
                   </li><br>
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <li><strong>
                     ${record.subject}</strong>
                     <ul><br>
-                      <li><a href="${record.pdf.link}" target="_blank">${record.pdf.title}</a></li>
+                      <li><a href="${record.pdf.link}" >${record.pdf.title}</a></li>
                     </ul>
                   </li><br>
                 `)
@@ -227,21 +227,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><strong>Major</strong>
                   <ul><br>
                     ${resourceData.major
-                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
                 <li><strong>Minor</strong>
                   <ul><br>
                     ${resourceData.minor
-                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li><br>
                 <li><strong>Skill Course</strong>
                   <ul><br>
                     ${resourceData.skillCourse
-                      .map(subject => `<li><a href="${subject.link}" target="_blank">${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
               // Render other sections
               sectionElement.innerHTML = resourceData
-                .map(item => `<li><a href="#" onclick="downloadAndRedirect('${item.link}');">${item.title}</a></li><br>`)
+                .map(item => `<li><a href="${item.link}">${item.title}</a></li><br>`)
                 .join('');
             }
           } else {
@@ -268,18 +268,4 @@ function showSidebar(){
 function hideSidebar(){
   document.querySelector('.sidebar').classList.remove('active');
   document.querySelector('.socials-container').style.display = 'flex';
-}
-function downloadAndRedirect(link) {
-  const a = document.createElement('a');
-  a.href = link;
-  a.target = '_blank';
-  a.rel = 'noopener';
-  document.body.appendChild(a); // must append to DOM
-  a.click(); // trigger download
-  a.remove(); // clean up
-
-  // Redirect after delay (3 seconds)
-  setTimeout(() => {
-    window.location.href = 'https://sethu369.github.io/bcahub/resources.html'; // update this to your real redirect page
-  }, 6000);
 }
