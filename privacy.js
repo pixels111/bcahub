@@ -9,54 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'flex'
-}
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'none'
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const now = new Date();
-  const formattedDate = now.toLocaleDateString('en-IN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
-  document.querySelectorAll('.last-updated').forEach(el => {
-    el.textContent = formattedDate;
-  });
-
-  // Optional: show current date & time somewhere
-  const currentTimeElem = document.getElementById('current-time');
-  if (currentTimeElem) {
-    setInterval(() => {
-      const timeNow = new Date();
-      currentTimeElem.textContent = timeNow.toLocaleString('en-IN');
-    }, 1000);
+  function showSidebar(){
+    document.querySelector('.sidebar').classList.add('active');
+    document.querySelector('.socials-container').style.display = 'none';
   }
-});
-document.addEventListener('DOMContentLoaded', () => {
-  const now = new Date();
-  const formattedDate = now.toLocaleDateString('en-IN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
-  document.querySelectorAll('.last-updated').forEach(el => {
-    el.textContent = formattedDate;
-  });
-
-  // Optional: show current date & time somewhere
-  const currentTimeElem = document.getElementById('current-time');
-  if (currentTimeElem) {
-    setInterval(() => {
-      const timeNow = new Date();
-      currentTimeElem.textContent = timeNow.toLocaleString('en-IN');
-    }, 1000);
+  function hideSidebar(){
+    document.querySelector('.sidebar').classList.remove('active');
+    document.querySelector('.socials-container').style.display = 'flex';
   }
-});

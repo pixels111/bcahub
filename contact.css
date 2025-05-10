@@ -84,10 +84,17 @@ nav li:first-child{
   backdrop-filter: blur(12px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding: 1em;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.active {
+  transform: translateX(0);
 }
 .sidebar li{
   width: 100%;
@@ -163,7 +170,9 @@ footer {
   text-align: center;
   padding: 1px 2px 2px;
 }
-
+.hidden{
+  display: none !important;
+}
 .socials-container {
   display: flex;
   gap: 14px;

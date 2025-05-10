@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'flex';
-  document.querySelector('.socials-container').style.display = 'none';
-}
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.style.display = 'none';
-  document.querySelector('.socials-container').style.display = 'flex';
-}
-
+  function showSidebar(){
+    document.querySelector('.sidebar').classList.add('active');
+    document.querySelector('.socials-container').style.display = 'none';
+  }
+  function hideSidebar(){
+    document.querySelector('.sidebar').classList.remove('active');
+    document.querySelector('.socials-container').style.display = 'flex';
+  }
+  

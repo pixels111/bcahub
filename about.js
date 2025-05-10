@@ -9,15 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'flex'
-}
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display = 'none'
-}
+  function showSidebar(){
+    document.querySelector('.sidebar').classList.add('active');
+    document.querySelector('.socials-container').style.display = 'none';
+  }
+  function hideSidebar(){
+    document.querySelector('.sidebar').classList.remove('active');
+    document.querySelector('.socials-container').style.display = 'flex';
+  }
 
+  
 // Live Clock
 function updateClock() {
   const now = new Date();
@@ -57,7 +58,7 @@ updateClock();
             totalCommits = '30 or fewer';
           }
 
-          document.getElementById('commit-count').textContent = `${totalCommits} commits`;
+          document.getElementById('commit-count').textContent = `${totalCommits} updates`;
 
           // Step 3: Still get the latest commit date
           return response.json();
@@ -79,5 +80,3 @@ updateClock();
       document.getElementById('commit-count').textContent = 'Unavailable';
       document.getElementById('last-updated-date').textContent = 'Unavailable';
     });
-</script>
-  

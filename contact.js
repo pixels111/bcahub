@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-  function showSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
-  }
-  function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-  }
-  
+function showSidebar() {
+  document.querySelector('.sidebar').classList.add('active');
+  document.querySelectorAll('.socials-container').forEach(el => el.classList.add('hidden'));
+}
+
+function hideSidebar() {
+  document.querySelector('.sidebar').classList.remove('active');
+  document.querySelectorAll('.socials-container').forEach(el => el.classList.remove('hidden'));
+}
