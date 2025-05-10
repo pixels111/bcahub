@@ -31,13 +31,27 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// Fetch commit count from GitHub API
-fetch('https://api.github.com/repos/sethu369/bcahub/commits')
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('commit-count').textContent = data.length + ' updates';
-  })
-  .catch(err => {
-    document.getElementById('commit-count').textContent = 'Unavailable';
-    console.error(err);
-  });
+  const repoOwner = 'sethu369';
+  const repoName = 'bcahub';
+
+  // Fetch latest commit date
+  fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
+    .then(res => res.json())
+    .then(data => {
+      // Get the most recent commit date
+      const lastCommitDate = new Date(data[0].commit.committer.date);
+      document.getElementById('last-updated-date').textContent =
+        lastCommitDate.toLocaleDateString('en-IN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+      // Total number of commits = length of this fetch page (max 30 unless paginated)
+      document.getElementById('commit-count').textContent = data.length + ' commits';
+    })
+    .catch(error => {
+      document.getElementById('last-updated-date').textContent = 'Unavailable';
+      document.getElementById('commit-count').textContent = 'Unavailable';
+      console.error('GitHub API error:', error);
+    });
