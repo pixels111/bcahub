@@ -31,27 +31,40 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+  
   const repoOwner = 'sethu369';
   const repoName = 'bcahub';
 
-  // Fetch latest commit date
-  fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`)
+  // Get accurate commit count
+  fetch(`https://api.github.com/repos/${repoOwner}/${repoName}`)
     .then(res => res.json())
-    .then(data => {
-      // Get the most recent commit date
-      const lastCommitDate = new Date(data[0].commit.committer.date);
-      document.getElementById('last-updated-date').textContent =
-        lastCommitDate.toLocaleDateString('en-IN', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
+    .then(repoData => {
+      const branch = repoData.default_branch;
+      const commitsUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/commits?per_page=1&sha=${branch}`;
 
-      // Total number of commits = length of this fetch page (max 30 unless paginated)
-      document.getElementById('commit-count').textContent = data.length + ' commits';
-    })
-    .catch(error => {
-      document.getElementById('last-updated-date').textContent = 'Unavailable';
-      document.getElementById('commit-count').textContent = 'Unavailable';
-      console.error('GitHub API error:', error);
+      fetch(commitsUrl, { method: 'GET' })
+        .then(response => {
+          const count = response.headers.get('Link')?.match(/&page=(\d+)>; rel="last"/);
+          if (count) {
+            document.getElementById('commit-count').textContent = `${count[1]} commits`;
+          } else {
+            document.getElementById('commit-count').textContent = `1 commit`;
+          }
+
+          return response.json();
+        })
+        .then(data => {
+          const lastDate = new Date(data[0].commit.committer.date);
+          document.getElementById('last-updated-date').textContent =
+            lastDate.toLocaleDateString('en-IN', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            });
+        })
+        .catch(err => {
+          console.error('Error getting commits:', err);
+          document.getElementById('commit-count').textContent = 'Unavailable';
+          document.getElementById('last-updated-date').textContent = 'Unavailable';
+        });
     });
