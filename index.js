@@ -17,4 +17,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.sidebar').classList.remove('active');
     document.querySelector('.socials-container').style.display = 'flex';
   }
-  
