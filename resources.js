@@ -71,43 +71,86 @@ document.addEventListener('DOMContentLoaded', () => {
             { title: "Unit 5: Trees and Graphs", link: "Maths_Unit5.pdf" }
           ]
         },
+        {
+          subject: "SOFTWARE ENGINEERING",
+          units: [
+            { title: "Unit 1: Introduction To Software Engineering", link: "sem_resources/Maths_Unit1.pdf" },
+            { title: "Unit 2: Software Cost Estimation", link: "sem_resources/Maths_Unit2.pdf" },
+            { title: "Unit 3: Software Design", link: "sem_resources/Maths_Unit3.pdf" },
+            { title: "Unit 4: User Interface Design & Real Time System", link: "sem_resources/Maths_Unit4.pdf" },
+            { title: "Unit 5: Software Quality & Testing", link: "Maths_Unit5.pdf" }
+          ]
+        },
+        {
+          subject: "ORGANISATIONAL BEHAVIOUR",
+          units: [
+            { title: "Unit 1: Organizational Behaviour", link: "sem_resources/Maths_Unit1.pdf" },
+            { title: "Unit 2: Group Dynamics", link: "sem_resources/Maths_Unit2.pdf" },
+            { title: "Unit 3: Leadership", link: "sem_resources/Maths_Unit3.pdf" },
+            { title: "Unit 4: Management of Change", link: "sem_resources/Maths_Unit4.pdf" },
+            { title: "Unit 5: Organizational culture", link: "Maths_Unit5.pdf" }
+          ]
+        },
+        {
+          subject: "HEALTH AND HYGIENE",
+          units: [
+            { title: "Unit 1: Basic Of Nutrition", link: "sem_resources/Maths_Unit1.pdf" },
+            { title: "Unit 2: Health", link: "sem_resources/Maths_Unit2.pdf" },
+            { title: "Unit 3: Hygiene", link: "sem_resources/Maths_Unit3.pdf" },
+          ]
+        },
+        {
+          subject: "PROJECT MANAGEMENT",
+          units: [
+            { title: "Project Management(All Units)", link: "sem_resources/Maths_Unit1.pdf" },
+          ]
+        },
       ],
       pdfs: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
+        { title: "Applet", link: "#" },
+        { title: "DBMS(1-3)", link: "#" },
+        { title: "Graph", link: "#" },
+        { title: "Java 1st Unit", link: "#" },
       ],
       records: [
         {
-          subject: "Mathematics",
-          pdf: { title: "Maths Record", link: "Maths_Record.pdf" }
+          subject: "DATABASE MANAGEMENT SYSTEM",
+          pdf: { title: "DBMS Record (by SETHU)", link: "Maths_Record.pdf" },
+          pdf: { title: "DBMS Record (source file)", link: "Maths_Record.pdf" }
+
         },
         {
-          subject: "Physics",
-          pdf: { title: "Physics Record", link: "Physics_Record.pdf" }
+          subject: "JAVA AND DATA STRUCTURES",
+          pdf: { title: "JAVA Record (by SETHU)", link: "Physics_Record.pdf" }
+        },
+        {
+          subject: "MATHEMATICAL AND STATISTICAL FOUNDATIONS",
+          pdf: { title: "Maths Record (by SETHU)", link: "Physics_Record.pdf" },
+          pdf: { title: "Maths Record (source file)", link: "Maths_Record.pdf" }
+        },
+        {
+          subject: "SOFTWARE ENGINEERING",
+          pdf: { title: "SOFTWARE ENGINEERING Record (by SETHU)", link: "Physics_Record.pdf" }
         }
       ],
       syllabus: {
         major: [
-          { title: "Mathematics", link: "Mathematics_Syllabus.pdf" },
-          { title: "Physics", link: "Physics_Syllabus.pdf" },
-          { title: "Chemistry", link: "Chemistry_Syllabus.pdf" },
-          { title: "Biology", link: "Biology_Syllabus.pdf" },
-          { title: "Computer Science", link: "Computer_Science_Syllabus.pdf" }
+          { title: "DATABASE MANAGEMENT SYSTEM", link: "Mathematics_Syllabus.pdf" },
+          { title: "JAVA AND DATA STRUCTURES", link: "Physics_Syllabus.pdf" },
+          { title: "MATHEMATICAL AND STATISTICAL FOUNDATIONS", link: "Chemistry_Syllabus.pdf" },
+          { title: "SOFTWARE ENGINEERING", link: "Biology_Syllabus.pdf" },
         ],
         minor: [
-          { title: "Environmental Science", link: "Environmental_Science_Syllabus.pdf" },
-          { title: "Statistics", link: "Statistics_Syllabus.pdf" },
-          { title: "Economics", link: "Economics_Syllabus.pdf" }
+          { title: "ORGANISATIONAL BEHAVIOUR", link: "Environmental_Science_Syllabus.pdf" },
         ],
         skillCourse: [
-          { title: "Python Programming", link: "Python_Programming_Syllabus.pdf" },
-          { title: "Web Development", link: "Web_Development_Syllabus.pdf" },
-          { title: "Data Science", link: "Data_Science_Syllabus.pdf" }
+          { title: "HEALTH AND HYGIENE", link: "Python_Programming_Syllabus.pdf" },
+          { title: "PROJECT MANAGEMENT", link: "Web_Development_Syllabus.pdf" },
         ]
       },
       questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
+        { title: "Semester Exam Question Papers", link: "#" },
+        { title: "Internal Exam Question Papers", link: "#" }
       ]
     },
     4: {
@@ -238,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       .join('')}
                   </ul>
                 </li><br>
-                <li><strong>Skill Course</strong>
+                <li><strong>Skill / Multidisciplinary Course</strong>
                   <ul><br>
                     ${resourceData.skillCourse
                       .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
