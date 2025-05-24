@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     2: {
       pdfs: [
-        { title: "C-LANGUAGE", link:"https://dl.dropboxusercontent.com/scl/fi/z2m7j9sa8xbjq4swl4dyo/C-LANGUAGE.pdf?rlkey=xi8zcjnv2my6rjiae1foccl8y"},
+        { title: "C-LANGUAGE", link:"https://drive.google.com/uc?id=1DqnrX2_fDLlUqzUHK21vu_ms_As3bUuu"},
         { title: "Excel--Labels-Values-and-Formulas", link: "https://dl.dropboxusercontent.com/scl/fi/wnq4paupt63o0whurdfyr/Excel-Labels-Values-and-Formulas.pdf?rlkey=p8oji5451azal04snrxu0828e" },
         { title: "Marketing Skill notes", link: "https://dl.dropboxusercontent.com/scl/fi/us3n5ifd32onyhk957zwv/Marketing-Skill-notes.pdf?rlkey=cx0wz53y709qurdpzzw7lmol9" },
         { title: "NOTES-MSWORD-1", link: "https://dl.dropboxusercontent.com/scl/fi/rcwogg4jnts2un9amshf8/NOTES-MSWORD-1.pdf?rlkey=9y6z6kcc7sitdlsxdhb0nfext" },
@@ -115,22 +115,30 @@ document.addEventListener('DOMContentLoaded', () => {
       records: [
         {
           subject: "DATABASE MANAGEMENT SYSTEM",
-          pdf: { title: "DBMS Record (by SETHU)", link: "Maths_Record.pdf" },
-          pdf: { title: "DBMS Record (source file)", link: "Maths_Record.pdf" }
+          pdf: [
+            { title: "DBMS Record (by SETHU)", link: "Maths_Record.pdf" },
+            { title: "DBMS Record (source file)", link: "Maths_Record.pdf" }
+          ]
 
         },
         {
           subject: "JAVA AND DATA STRUCTURES",
-          pdf: { title: "JAVA Record (by SETHU)", link: "Physics_Record.pdf" }
+          pdf: [
+          { title: "JAVA Record (by SETHU)", link: "Physics_Record.pdf" }
+          ]
         },
         {
           subject: "MATHEMATICAL AND STATISTICAL FOUNDATIONS",
-          pdf: { title: "Maths Record (by SETHU)", link: "Physics_Record.pdf" },
-          pdf: { title: "Maths Record (source file)", link: "Maths_Record.pdf" }
+          pdf:[
+           { title: "Maths Record (by SETHU)", link: "Physics_Record.pdf" },
+           { title: "Maths Record (source file)", link: "Maths_Record.pdf" }
+        ]
         },
         {
           subject: "SOFTWARE ENGINEERING",
-          pdf: { title: "SOFTWARE ENGINEERING Record (by SETHU)", link: "Physics_Record.pdf" }
+          pdf: [
+          { title: "SOFTWARE ENGINEERING Record (by SETHU)", link: "Physics_Record.pdf" }
+          ]
         }
       ],
       syllabus: {
@@ -174,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ]
         }
       ],
-      pdfs: [
+      pdf: [
         { title: "PDF 1", link: "#" },
         { title: "PDF 2", link: "#" }
       ],
@@ -259,7 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   <li><strong>
                     ${record.subject}</strong>
                     <ul><br>
-                      <li><a href="${record.pdf.link}" >${record.pdf.title}</a></li>
+                       ${record.pdf
+                        .map(pdf => `<li><a href="${pdf.link}" download>${pdf.title}</a></li><br>`)
+                        .join('')}
                     </ul>
                   </li><br>
                 `)
@@ -270,21 +280,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><strong>Major</strong>
                   <ul><br>
                     ${resourceData.major
-                      .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}" download>${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
                 <li><strong>Minor</strong>
                   <ul><br>
                     ${resourceData.minor
-                      .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}" download>${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li><br>
                 <li><strong>Skill / Multidisciplinary Course</strong>
                   <ul><br>
                     ${resourceData.skillCourse
-                      .map(subject => `<li><a href="${subject.link}" >${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}" download>${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
@@ -292,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
               // Render other sections
               sectionElement.innerHTML = resourceData
-                .map(item => `<li><a href="${item.link}">${item.title}</a></li><br>`)
+                .map(item => `<li><a href="${item.link}" download>${item.title}</a></li><br>`)
                 .join('');
             }
           } else {
