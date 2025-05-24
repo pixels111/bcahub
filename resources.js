@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     2: {
       pdfs: [
-        { title: "C-LANGUAGE", link:"https://drive.google.com/uc?export=download&id=1DR4JJdSG3cT_y1RX6g8ywJhcFByjN0V3"},
+        { title: "C-LANGUAGE", link:"https://www.dropbox.com/scl/fi/z5xoai4iirvdgqz933ak1/Python-Complete-notes.pdf?rlkey=k0cmof9jyu9aci9rg6y0p7i9x&st=io0uvo9u&dl=1"},
         { title: "Excel--Labels-Values-and-Formulas", link: "" },
         { title: "Marketing Skill notes", link: "https://drive.google.com/open?id=1DP3yonLL5tkt6E-Sguj8LJg2xP-NWDhy&usp=drive_fs" },
         { title: "NOTES-MSWORD-1", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/NOTES._MSWORD_1.pdf" },
