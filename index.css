@@ -29,6 +29,8 @@ header {
   position: fixed;
   width: 100%;
   border-bottom: 2px solid black;
+    z-index: 9999;
+
 }
 main {
   flex-grow: 1;
@@ -66,13 +68,19 @@ nav a{
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: black;
 }
 nav a:hover{
   background-color: #2929297c;
 }
 nav li:first-child{
   margin-right: auto;
+}
+nav a.sideactive:not(.logo) {
+  color: white !important;
+  background-color: #2929297c;
+  outline: 2px solid black;
+  transition: background-color 0.3s, color 0.3s;
 }
 .sidebar{
   position: fixed;
@@ -88,7 +96,6 @@ nav li:first-child{
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 1em;
   z-index: 9999;
   transform: translateX(100%);
   transition: transform 0.3s ease;
@@ -108,6 +115,7 @@ nav li:first-child{
 }
 .sidebar a.active {
   background-color: #2929297c;
+  color: white;
 }
 .menu-button{
   display: none;
@@ -230,7 +238,8 @@ footer span {
 }
 @media(max-width: 400px){
   .sidebar{
-    width: 100%;
+    width: 250px;
+    max-width: 95vw;
   }
 }
 @media (max-width: 768px) {

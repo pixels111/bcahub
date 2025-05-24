@@ -280,21 +280,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><strong>Major</strong>
                   <ul><br>
                     ${resourceData.major
-                      .map(subject => `<li><a href="${subject.link}" download>${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}">${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
                 <li><strong>Minor</strong>
                   <ul><br>
                     ${resourceData.minor
-                      .map(subject => `<li><a href="${subject.link}" download>${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}">${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li><br>
                 <li><strong>Skill / Multidisciplinary Course</strong>
                   <ul><br>
                     ${resourceData.skillCourse
-                      .map(subject => `<li><a href="${subject.link}" download>${subject.title}</a></li><br>`)
+                      .map(subject => `<li><a href="${subject.link}">${subject.title}</a></li><br>`)
                       .join('')}
                   </ul>
                 </li>
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
               // Render other sections
               sectionElement.innerHTML = resourceData
-                .map(item => `<li><a href="${item.link}" download>${item.title}</a></li><br>`)
+                .map(item => `<li><a href="${item.link}">${item.title}</a></li><br>`)
                 .join('');
             }
           } else {
