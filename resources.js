@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     2: {
       pdfs: [
-        { title: "C-LANGUAGE", link:"https://www.dropbox.com/scl/fi/z5xoai4iirvdgqz933ak1/Python-Complete-notes.pdf?rlkey=k0cmof9jyu9aci9rg6y0p7i9x&st=io0uvo9u&dl=1"},
-        { title: "Excel--Labels-Values-and-Formulas", link: "" },
-        { title: "Marketing Skill notes", link: "https://drive.google.com/open?id=1DP3yonLL5tkt6E-Sguj8LJg2xP-NWDhy&usp=drive_fs" },
-        { title: "NOTES-MSWORD-1", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/NOTES._MSWORD_1.pdf" },
-        { title: "office automation tools record programs", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/officeautomationtoolsrecordprograms.pdf" },
-        { title: "office automation tools(1,2)", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/office.automation.tools.1.2.pdf" },
-        { title: "Edx", link: "https://github.com/sethu369/bcahub/releases/download/bcahub/Edx.pdf" },
+        { title: "C-LANGUAGE", link:"https://dl.dropboxusercontent.com/scl/fi/z2m7j9sa8xbjq4swl4dyo/C-LANGUAGE.pdf?rlkey=xi8zcjnv2my6rjiae1foccl8y"},
+        { title: "Excel--Labels-Values-and-Formulas", link: "https://dl.dropboxusercontent.com/scl/fi/wnq4paupt63o0whurdfyr/Excel-Labels-Values-and-Formulas.pdf?rlkey=p8oji5451azal04snrxu0828e" },
+        { title: "Marketing Skill notes", link: "https://dl.dropboxusercontent.com/scl/fi/us3n5ifd32onyhk957zwv/Marketing-Skill-notes.pdf?rlkey=cx0wz53y709qurdpzzw7lmol9" },
+        { title: "NOTES-MSWORD-1", link: "https://dl.dropboxusercontent.com/scl/fi/rcwogg4jnts2un9amshf8/NOTES-MSWORD-1.pdf?rlkey=9y6z6kcc7sitdlsxdhb0nfext" },
+        { title: "office automation tools record programs", link: "https://dl.dropboxusercontent.com/scl/fi/fucn32cn6e2wn6yakcpiq/office-automation-tools-record-programs.pdf?rlkey=gk9c0yfuicij26yddr6mc8oty" },
+        { title: "office automation tools(1,2)", link: "https://dl.dropboxusercontent.com/scl/fi/8088usd1q4gtc5pjr5qu8/office-automation-tools-1-2.pdf?rlkey=d90f9ty30vmt3f7qb1i582nz9" },
+        { title: "Edx", link: "https://dl.dropboxusercontent.com/scl/fi/31pcuehlbvi1j4f7rnsf7/Edx.pdf?rlkey=q3y0248eiovehl6p8e9wn10d3" },
       ],
       
     },
