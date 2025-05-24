@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Expression Evaluation</title>
+    <script type="text/javascript">
+        function Evaluate() {
+            var enteredExpr = document.getElementById("expr").value;
+            try {
+                // Evaluate the expression safely
+                var result = eval(enteredExpr);
+                document.getElementById("result").value = result;
+            } catch (e) {
+                document.getElementById("result").value = "Invalid Expression";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+        Enter any valid expression: 
+        <input type="text" id="expr" /><br /><br />
+
+        <input type="button" value="Evaluate" onClick="Evaluate()" /><br /><br />
+
+        Result of expression: 
+        <input type="text" id="result" readonly /><br /><br />
+    </form>
+</body>
+</html>
