@@ -1,6 +1,4 @@
-/* Retro Windows 95 style basic reset and style */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,7 +27,7 @@ header {
   position: fixed;
   width: 100%;
   border-bottom: 2px solid black;
-  z-index: 9999;
+    z-index: 9999;
 
 }
 main {
@@ -120,67 +118,13 @@ nav a.sideactive:not(.logo) {
 .menu-button{
   display: none;
 }
-
-form {
-  max-width: 450px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  font-family: 'VT323', monospace;
-  font-size: 18px;
-  padding: 6px 8px;
-  margin-bottom: 12px;
-  background: white;
-  border: 2px solid #808080;
-  box-shadow: inset 1px 1px 1px #fff, inset -1px -1px 1px #404040;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button, .btn {
-  font-family: 'VT323', monospace;
-  font-weight: bold;
-  background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
-  border: 2px solid #808080;
-  padding: 8px 16px;
-  color: black;
-  cursor: pointer;
-  box-shadow:
-    1px 1px 0 #fff,
-    inset 1px 1px 0 #fff,
-    inset -1px -1px 0 #808080;
-  transition: background 0.15s ease, box-shadow 0.1s ease;
-  user-select: none;
-}
-
-button:active, .btn:active {
-  background: linear-gradient(to bottom, #808080 0%, #404040 100%);
-  color: #00ffff;
-  box-shadow:
-    inset 1px 1px 4px #00ffff;
-  outline: none;
-}
-
-#form-response {
-  margin-top: 12px;
-  font-weight: bold;
-  color: green;
-}
-
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
   color: white;
   text-align: center;
   padding: 1px 2px 2px;
 }
-.hidden{
-  display: none !important;
-}
+
 .socials-container {
   display: flex;
   gap: 14px;
@@ -268,9 +212,11 @@ footer {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 .footer-nav a:hover {
   color: #aaa;
 }
+
 footer p {
   font-size: 14px;
   margin-top: 20px;
@@ -331,4 +277,3 @@ footer span {
     transform: translateY(-28px) rotate(0);
   }
 }
-
