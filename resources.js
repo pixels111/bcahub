@@ -162,63 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     4: {
-      assignments: [
-        { title: "Assignment 1", link: "#" },
-        { title: "Assignment 2", link: "#" }
-      ],
-      notes: [
-        {
-          subject: "Mathematics",
-          units: [
-            { title: "Unit 1: Algebra", link: "Maths_Unit1.pdf" },
-            { title: "Unit 2: Calculus", link: "Maths_Unit2.pdf" }
-          ]
-        },
-        {
-          subject: "Physics",
-          units: [
-            { title: "Unit 1: Mechanics", link: "Physics_Unit1.pdf" },
-            { title: "Unit 2: Thermodynamics", link: "Physics_Unit2.pdf" }
-          ]
-        }
-      ],
-      pdf: [
-        { title: "PDF 1", link: "#" },
-        { title: "PDF 2", link: "#" }
-      ],
-      records: [
-        {
-          subject: "Mathematics",
-          pdf: { title: "Maths Record", link: "Maths_Record.pdf" }
-        },
-        {
-          subject: "Physics",
-          pdf: { title: "Physics Record", link: "Physics_Record.pdf" }
-        }
-      ],
-      syllabus: {
-        major: [
-          { title: "Mathematics", link: "Mathematics_Syllabus.pdf" },
-          { title: "Physics", link: "Physics_Syllabus.pdf" },
-          { title: "Chemistry", link: "Chemistry_Syllabus.pdf" },
-          { title: "Biology", link: "Biology_Syllabus.pdf" },
-          { title: "Computer Science", link: "Computer_Science_Syllabus.pdf" }
-        ],
-        minor: [
-          { title: "Environmental Science", link: "Environmental_Science_Syllabus.pdf" },
-          { title: "Statistics", link: "Statistics_Syllabus.pdf" },
-          { title: "Economics", link: "Economics_Syllabus.pdf" }
-        ],
-        skillCourse: [
-          { title: "Python Programming", link: "Python_Programming_Syllabus.pdf" },
-          { title: "Web Development", link: "Web_Development_Syllabus.pdf" },
-          { title: "Data Science", link: "Data_Science_Syllabus.pdf" }
-        ]
-      },
-      questionPapers: [
-        { title: "Question Paper 1", link: "#" },
-        { title: "Question Paper 2", link: "#" }
-      ]
+    
     },
     5: {
       

@@ -144,7 +144,19 @@ nav a.sideactive:not(.logo) {
   border-radius: 4px;
   min-height: auto;
 }
-
+/* Style all links inside resource-list sections */
+.resource-list a:link {
+  color: blue;
+  text-decoration: none;
+}
+.resource-list a:visited {
+  color: blue;
+  text-decoration: none;
+}
+.resource-list a:hover {
+  color: purple;
+  text-decoration: underline;
+}
 /* Buttons style */
 button, .btn {
   font-family: 'VT323', monospace;

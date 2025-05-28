@@ -9,6 +9,15 @@
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
 }
+.splink:link{color: blue;
+  text-decoration: none;
+}
+.splink:visited{color: blue;
+  text-decoration: none;
+}
+.splink:hover{color: purple;
+  text-decoration: underline;
+} 
 
 /* Ensure the body takes up the full height of the viewport */
 body {
@@ -130,14 +139,16 @@ nav a.sideactive:not(.logo) {
 
 .latest-updates-box {
   margin: 32px auto;
+  
   padding: 24px 32px;
-  max-width: 600px;
+  max-width: 100%;
   background: #fffbe6 ;
   position: relative;
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
   font-family: inherit;
   border: none;
   color: navy;
+
 
   /* Animated border using 4 gradients */
   background:
@@ -199,6 +210,138 @@ nav a.sideactive:not(.logo) {
   margin-bottom: 8px;
   font-size: 1.1em;
 }
+.explore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+}
+
+.explore-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.explore-section-title h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.explore-section-title h1::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background: black;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.explore-section-title p {
+    font-size: 18px;
+    color: #777;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.explore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.explore-card {
+    flex: 0 0 calc(33.33% - 20px);
+  background-color: rgba(255, 255, 255, 0.699);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: navy;
+}
+
+.explore-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.explore-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+        border: 2px solid navy;
+
+}
+
+.explore-card:hover .explore-image img {
+    transform: scale(1.05);
+}
+
+.explore-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.explore-card p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more {
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
+    border: 2px solid #808080;
+    padding: 8px 16px;
+    box-shadow:
+    1px 1px 0 #fff,
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #808080;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.read-more .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.read-more:hover {
+    padding-right: 25px;
+}
+
+.read-more:hover .arrow {
+    transform: translateX(5px);
+}
+
 
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
@@ -358,4 +501,37 @@ footer span {
   .socials-container a:hover::after {
     transform: translateY(-28px) rotate(0);
   }
+}
+/* Responsive styles */
+@media (max-width: 992px) {
+    .explore-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-card {
+        flex: 0 0 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .section-title h1 {
+        font-size: 30px;
+    }
+    
+    .section-title p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .explore-image {
+        height: 180px;
+    }
 }
