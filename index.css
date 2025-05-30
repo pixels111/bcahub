@@ -308,19 +308,16 @@ nav a.sideactive:not(.logo) {
 }
 
 .read-more {
-  font-family: 'VT323', monospace;
-  font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 20px;
     background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
     border: 2px solid #808080;
-    padding: 8px 16px;
     box-shadow:
     1px 1px 0 #fff,
     inset 1px 1px 0 #fff,
     inset -1px -1px 0 #808080;
     color: black;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;

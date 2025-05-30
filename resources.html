@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  <title>BCAHub - Resources</title>
-  <link rel="stylesheet" href="resources.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCAHub - Resources</title>
+    <link rel="stylesheet" href="resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
+      <header>
     <nav>
       <ul class="sidebar">
         <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
@@ -30,50 +31,84 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Resources by Semester</h1>
-    <p>Access all semester-wise resources for your BCA course in one place.</p>
-    <div class="semesters">
-      <button class="btn semester-btn" data-sem="1">Semester 1</button>
-      <button class="btn semester-btn" data-sem="2">Semester 2</button>
-      <button class="btn semester-btn" data-sem="3">Semester 3</button>
-      <button class="btn semester-btn" data-sem="4">Semester 4</button>
-      <button class="btn semester-btn" data-sem="5">Semester 5</button>
-      <button class="btn semester-btn" data-sem="6">Semester 6</button>
-      <button class="btn semester-btn" data-sem="7">Semester 7</button>
-      <button class="btn semester-btn" data-sem="8">Semester 8</button>
+<main>
+    <h1 class="sph1">Resources by Semester</h1>
+    <p class="sph1">Access all semester-wise resources for your BCA course in one place.</p>
+
+    <div class="container">
+        <div class="selection-container">
+            <div class="select-box">
+                <label for="semester">Select Semester</label>
+                <div class="custom-select">
+                    <div class="select-header" id="semester-header">
+                        <span>Select Semester</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="select-options" id="semester-options">
+                        <div class="option" data-value="all">All Semesters</div>
+                        <div class="option" data-value="1">1st Semester</div>
+                        <div class="option" data-value="2">2nd Semester</div>
+                        <div class="option" data-value="3">3rd Semester</div>
+                        <div class="option" data-value="4">4th Semester</div>
+                        <div class="option" data-value="5">5th Semester</div>
+                        <div class="option" data-value="6">6th Semester</div>
+                        <div class="option" data-value="7">7th Semester</div>
+                        <div class="option" data-value="8">8th Semester</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="select-box">
+                <label for="resource">Select Resources</label>
+                <div class="custom-select">
+                    <div class="select-header" id="resource-header">
+                        <span>Select Resource</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="select-options" id="resource-options">
+                        <div class="option" data-value="all">All Resources</div>
+                        <div class="option" data-value="assignments">Assignments</div>
+                        <div class="option" data-value="notes">Notes & Materials</div>
+                        <div class="option" data-value="pdfs">PDF's</div>
+                        <div class="option" data-value="records">Records</div>
+                        <div class="option" data-value="syllabus">Syllabus</div>
+                        <div class="option" data-value="papers">Question Papers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="selected-info">
+            <h2>YOU SELECTED: <span id="selected-sem">NO SEMESTER SELECTED</span></h2>
+            <h3 id="selected-resource">NO RESOURCE SELECTED</h3>
+            <p id="selection-message">Select semester & resource type to view resources</p>
+        </div>
+        
+        <div class="resources-container" id="resources-container">
+            <!-- Initial content when nothing is selected -->
+            <div class="initial-content">
+                <p>Welcome to the Academic Resources portal. Please select a semester and resource type to view available materials.</p>
+                <div class="info-box">
+                    <h4>Available Resources:</h4>
+                    <ul>
+                        <li>Assignments</li>
+                        <li>Notes & Materials</li>
+                        <li>PDF's</li>
+                        <li>Records</li>
+                        <li>Syllabus</li>
+                        <li>Question Papers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <h4>Disclaimer</h4>
+            <p>The resources provided here are for educational purposes only. While we strive for accuracy, we cannot guarantee that all materials are error-free or up-to-date. Users are advised to verify information with official sources. The maintainers of this resource repository are not responsible for any mistakes or inaccuracies in the provided materials.</p>
+        </div>
     </div>
-    <h3>ASSIGNMENTS</h3>
-    <section id="assignments-list" class="resource-list" >
-      <p  >Select a semester to view resources.</p>
-    </section>
-
-    <h3>NOTES & MATERIALS</h3>
-    <section id="notes-list" class="resource-list" >
-      <p>Select a semester to view resources.</p>
-    </section>
-
-    <h3>PDF's</h3>
-    <section id="pdfs-list" class="resource-list" >
-      <p>Select a semester to view resources.</p>
-    </section>
-
-    <h3>RECORDS</h3>
-    <section id="records-list" class="resource-list" >
-      <p>Select a semester to view resources.</p>
-    </section>
-
-    <h3>SYLLABUS</h3>
-    <section id="syllabus-list" class="resource-list" >
-      <p>Select a semester to view resources.</p>
-    </section>
-
-    <h3>QUESTION PAPERS</h3>
-    <section id="question-papers-list" class="resource-list" >
-      <p >Select a semester to view resources.</p>
-    </section>
-  </main>
-  <footer>
+    </main>
+      <footer>
     <ul class="footer-nav">
       <li><a href="contact.html">Contact us</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
@@ -95,7 +130,8 @@
       © 2025 BCAHub — Built by <span>SETHU</span> | All Rights Reserved.
     </p>
   </footer>
-  <script src="resources.js"></script>
+
+    
+    <script src="resources.js"></script>
 </body>
 </html>
-

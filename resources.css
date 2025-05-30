@@ -6,8 +6,7 @@
   padding: 0;
   font-family: 'VT323', monospace;
   -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale;}
 
 body {
   display: flex;
@@ -30,12 +29,22 @@ header {
 main {
   flex-grow: 1;
   margin-top: 50px; /* Match the height of the fixed header */
-  padding: 10px;
   background: #e0e0e0;
   border: 2px solid #808080;
   box-shadow: inset 1px 1px 1px #fff, inset -1px -1px 1px #404040;
 }
 
+.sph1{
+padding-right: 15px;
+padding-left: 15px;
+padding-top: 15px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
 .logo {
   font-weight: bold;
   font-size: 28px;
@@ -43,7 +52,6 @@ main {
   text-shadow: 1px 1px 0 white;
   letter-spacing: 1px;
 }
-
 
 .menu-icon {
   font-size: 24px;
@@ -125,24 +133,130 @@ nav a.sideactive:not(.logo) {
 .menu-button{
   display: none;
 }
-.semesters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 20px 0 40px 0;
+
+
+/* Selection Container */
+.selection-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
 }
-.semester-btn {
-  min-width: 120px;
-  border-radius: 0;
-  text-align: center;
+
+.select-box {
+    flex: 1;
+    min-width: 250px;
 }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.select-header {
+    padding: 12px 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.select-header:hover {
+    border-color: navy;
+}
+
+.select-header i {
+    transition: transform 0.3s ease;
+}
+
+.select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 10;
+}
+
+.select-options.active {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.option {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Selected Info */
+.selected-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.selected-info h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.selected-info h3 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.selected-info p {
+    color: #7f8c8d;
+}
+
+/* Resources Container */
+.resources-container {
+    margin-bottom: 30px;
+}
+
+.resource-section {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.resource-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
 .resource-list {
-  background: white;
-  border: 2px solid #808080;
-  box-shadow: inset 1px 1px 1px #fff, inset -1px -1px 1px #404040;
-  padding: 15px;
-  border-radius: 4px;
-  min-height: auto;
+    list-style-type: none;
 }
 /* Style all links inside resource-list sections */
 .resource-list a:link {
@@ -157,36 +271,124 @@ nav a.sideactive:not(.logo) {
   color: purple;
   text-decoration: underline;
 }
-/* Buttons style */
-button, .btn {
-  font-family: 'VT323', monospace;
-  font-weight: bold;
-  background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
-  border: 2px solid #808080;
-  padding: 8px 16px;
-  color: black;
-  cursor: pointer;
-  box-shadow:
-    1px 1px 0 #fff,
-    inset 1px 1px 0 #fff,
-    inset -1px -1px 0 #808080;
-  transition: background 0.15s ease, box-shadow 0.1s ease;
+
+.resource-list li {
+    padding: 8px 0;
+    margin-left: 20px;
 }
 
-button:active, .btn:active {
-  background: linear-gradient(to bottom, #000000 0%, #000000 100%);
-  color: #ffffff;
-  box-shadow:
-    inset 1px 1px 4px #ffffff;
-  outline: none;
-}
-#notes-list ul,
-#records-list ul,
-#syllabus-list ul {
-  margin-left: 24px;
-  padding-left: 16px;
+.resource-list li:before {
+    content: "•";
+    color: navy;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
+.subject-group {
+    margin-left: 20px;
+}
+
+.subject-group li:before {
+    content: "-";
+}
+
+.subject-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 10px 0 5px -20px;
+}
+.subject-title:before {
+    content: "❖";
+    margin-right: 5px;
+
+}
+
+/* Disclaimer */
+.disclaimer {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #f5c6cb;
+    margin-top: 30px;
+}
+
+.disclaimer h4 {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .selection-container {
+        flex-direction: column;
+    }
+    
+    .select-box {
+        width: 100%;
+    }
+}
+/* Previous styles remain the same, add these new styles */
+
+.initial-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.initial-content p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.info-box h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.info-box ul {
+    list-style-type: none;
+}
+
+.info-box li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 36px;
+
+}
+
+.info-box li:before {
+    content: "--->";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+.semester-heading {
+    background-color: #e9f7fe;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-left: 4px solid #3498db;
+    font-weight: 600;
+    color: black;
+}
+
+.no-resources {
+    padding: 20px;
+    text-align: center;
+    color: #7f8c8d;
+}
 /* Footer */
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
@@ -296,7 +498,6 @@ footer span {
   font-weight: bold;
   color: #bbb;
 }
-
 /* Responsive */
 @media(max-width: 800px){
   .hideOnMobile{
