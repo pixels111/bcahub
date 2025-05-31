@@ -15,18 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
                
           
             3: [
-                { name: "DBMS Assignment", link:"sem_resources/DBMS_assignment_by_SETHU.pdf"},
-                { name: "JAVA Assignment", link: "sem_resources/JAVA_assignment_by_SETHU.pdf"},
-                { name: "MATHS Assignment", link:"sem_resources/maths_assignment_by_SETHU.pdf"},
-                { name: "ORGANISATION BEHAVIOUR Assignment", link:"sem_resources/Organisation_Behaviour_assignment_by_SETHU.pdf"},
-                { name: "SOFTWARE ENGINEERING Assignment", link:"sem_resources/Software Engineer assignment .pdf"},
+                { name: "DBMS Assignment", link:"https://drive.google.com/uc?export=download&id=1l7m_ZeXaI_dkc2G8swltFs_lvRNS-P_Q"},
+                { name: "JAVA Assignment", link: "https://drive.google.com/uc?export=download&id=1s5kDhgKzGE77BV4VCKiApE3SocGxRepx"},
+                { name: "MATHS Assignment", link:"https://drive.google.com/uc?export=download&id=1l7rBPFvE6lslqYs7wzuSJ0CKFeNtcqNc"},
+                { name: "ORGANISATION BEHAVIOUR Assignment", link:"https://drive.google.com/uc?export=download&id=1l9ehHf9m52O9Q8bLx-EYlhwkq7W_XI42"},
+                { name: "SOFTWARE ENGINEERING Assignment", link:"https://drive.google.com/uc?export=download&id=1lEu32gBZXEGyeVnJVXEqB2F7ynVGjygI"},
             ],
             4: [
-                { name: "4 sem", link:"sem_resources/DBMS_assignment_by_SETHU.pdf"},
-                { name: "4 sem", link: "sem_resources/JAVA_assignment_by_SETHU.pdf"},
-                { name: "4 sem", link:"sem_resources/maths_assignment_by_SETHU.pdf"},
-                { name: "4 sem", link:"sem_resources/Organisation_Behaviour_assignment_by_SETHU.pdf"},
-                { name: "4 sem", link:"sem_resources/Software Engineer assignment .pdf"},
+                { name: "python programming assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1xXluvLwuePrg7bspnNungzRblLhxsXzr"},
+                { name: "web  programming assignment (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1xYm4aOMmbmf7AXfb4GvLPIPJkOU6bdVU"},
+                { name: "OS Assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=147PdKRdOWDv_TAn4ZmTM-y4SwcLMMKam"},
+                { name: "HRM Assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1tDdjU1_H7fSfQkZpxUQiRV4knnEJUD8a"},
+                { name: "FM Assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1tEtqzVFJDNcYtmTJuyq-6Iv-nqi3wVnv"},
             ],
            
         },
@@ -34,48 +34,98 @@ document.addEventListener('DOMContentLoaded', function() {
             
             3: {
                 "DATABASE MANAGEMENT SYSTEM": [
-            { name: "Unit 1: Overview Of Database System", link: "sem_resources/Maths_Unit1.pdf" },
-            { name: "Unit 2: Relational Model & Normalization", link: "sem_resources/Maths_Unit2.pdf" },
-            { name: "Unit 3: Entity Relationship Model & Basic SQL", link: "sem_resources/Maths_Unit3.pdf" },
-            { name: "Unit 4: SQL", link: "Maths_Unit4.pdf" },
-            { name: "Unit 5: PS/SQL", link: "Maths_Unit5.pdf" },
+            { name: "Unit 1: Overview Of Database System", link: "https://drive.google.com/uc?export=download&id=1-t7Rk5xPEUdjhtI4a7mHcXndk7hRyXk2" },
+            { name: "Unit 2: Relational Model & Normalization", link: "https://drive.google.com/uc?export=download&id=1-vNJn0adGvaGZaJRj_uiE8c2cYW_EfZf" },
+            { name: "Unit 3: Entity Relationship Model & Basic SQL", link: "https://drive.google.com/uc?export=download&id=1Z_3qovhb_FaILs4FdWIcR0iRDY52wkF-" },
+            { name: "Unit 4: SQL", link: "https://drive.google.com/uc?export=download&id=1ZaU22YnDq2TkvaO_uYSp1ZxPDvkaAFKE" },
+            { name: "Unit 5: PS/SQL", link: "https://drive.google.com/uc?export=download&id=1s3YAhaIiirCm3uax98nlR9rYH47-CJfr" },
                 ],
                 
                 "MATHEMATICAL AND STATISTICAL FOUNDATIONS": [
-            { name: "Unit 1: Matrix Algebra-1", link: "sem_resources/Maths_Unit1.pdf" },
-            { name: "Unit 2: Matrix Algebra-2", link: "sem_resources/Maths_Unit2.pdf" },
-            { name: "Unit 3: Set Theory", link: "sem_resources/Maths_Unit3.pdf" },
-            { name: "Unit 4: Basics Of Statistics", link: "sem_resources/Maths_Unit4.pdf" },
-            { name: "Unit 5: Statistical Measures", link: "sem_resources/Maths_Unit5.pdf" }
+            { name: "Unit 1: Matrix Algebra-1", link: "https://drive.google.com/uc?export=download&id=1-AszkJxX4bz9v_prNsCY7TIVlVOkhUKN" },
+            { name: "Unit 2: Matrix Algebra-2", link: "https://drive.google.com/uc?export=download&id=1-5BZs6nRagZ0Iu9_f3UId_m_5c6WDBrD" },
+            { name: "Unit 3: Set Theory", link: "https://drive.google.com/uc?export=download&id=1ZkSM7CpLyPAqZKIzSIoK7RIcZ6yAyPbe" },
+            { name: "Unit 4: Basics Of Statistics", link: "https://drive.google.com/uc?export=download&id=1ro2xVkaa9AsjUa3nvHN9isHPH5zvOAXI" },
+            { name: "Unit 5: Statistical Measures", link: "https://drive.google.com/uc?export=download&id=1pvxVSoX3v0xQRYqFd6eeZyWPUyDRO4Ln" }
                 ],
                  "JAVA AND DATA STRUCTURES": [
-            { name: "Unit 1: Introduction To OOPS", link: "sem_resources/Maths_Unit1.pdf" },
-            { name: "Unit 2: Class and Objects & Inheritance & Interface", link: "sem_resources/Maths_Unit2.pdf" },
-            { name: "Unit 3: Packages & Exception Handling & Applets", link: "sem_resources/Maths_Unit3.pdf" },
-            { name: "Unit 4: Data Structure & Linear Data Structure", link: "sem_resources/Maths_Unit4.pdf" },
-            { name: "Unit 5: Trees and Graphs", link: "Maths_Unit5.pdf" }
+            { name: "Unit 1: Introduction To OOPS", link: "https://drive.google.com/uc?export=download&id=1-RXFy2I4IpbkcdQtZvc2yC0pzj9N10xc" },
+            { name: "Unit 2: Class and Objects & Inheritance & Interface", link: "https://drive.google.com/uc?export=download&id=1-qp3kH9goaDJg6anwRmjRHSgBY6LZQfW" },
+            { name: "Unit 3: Packages & Exception Handling & Applets", link: "https://drive.google.com/uc?export=download&id=1ZhZs6nxkH8ohKAaB3SE4HnADRcZv6vqZ" },
+            { name: "Unit 4: Data Structure & Linear Data Structure", link: "https://drive.google.com/uc?export=download&id=1ZjOWfM4IF0RFO66Vk5RKxgoMyns_fW2W" },
+            { name: "Unit 5: Trees and Graphs", link: "https://drive.google.com/uc?export=download&id=1pvnVDo_ELu2PI2NXAIxLEbn821zJFQZU" }
                  ],
                   "SOFTWARE ENGINEERING": [
-            { name: "Unit 1: Introduction To Software Engineering", link: "sem_resources/Maths_Unit1.pdf" },
-            { name: "Unit 2: Software Cost Estimation", link: "sem_resources/Maths_Unit2.pdf" },
-            { name: "Unit 3: Software Design", link: "sem_resources/Maths_Unit3.pdf" },
-            { name: "Unit 4: User Interface Design & Real Time System", link: "sem_resources/Maths_Unit4.pdf" },
-            { name: "Unit 5: Software Quality & Testing", link: "Maths_Unit5.pdf" }
+            { name: "Unit 1: Introduction To Software Engineering", link: "https://drive.google.com/uc?export=download&id=1-NLP03qikCzuBhnD4JiI7HJTfDtJKyMX" },
+            { name: "Unit 2: Software Cost Estimation", link: "https://drive.google.com/uc?export=download&id=1-GnTOCX03e9vyWdxnWX0CjB0z0uNvemr" },
+            { name: "Unit 3: Software Design", link: "https://drive.google.com/uc?export=download&id=1q8nLrKv9dPC9OJpIMThmkJ0AoEV-isv-" },
+            { name: "Unit 4: User Interface Design & Real Time System", link: "https://drive.google.com/uc?export=download&id=1rqY67x4gJwaXMZ-kMZrn0pKyC4Zt8fj0" },
+            { name: "Unit 5: Software Quality & Testing", link: "https://drive.google.com/uc?export=download&id=1rtKxD2F5h5Ks9zIs97NUuFIbFlTg8s_w" }
           ],
                   "ORGANISATIONAL BEHAVIOUR" : [
-            { name: "Unit 1: Organizational Behaviour", link: "sem_resources/Maths_Unit1.pdf" },
-            { name: "Unit 2: Group Dynamics", link: "sem_resources/Maths_Unit2.pdf" },
-            { name: "Unit 3: Leadership", link: "sem_resources/Maths_Unit3.pdf" },
-            { name: "Unit 4: Management of Change", link: "sem_resources/Maths_Unit4.pdf" },
-            { name: "Unit 5: Organizational culture", link: "Maths_Unit5.pdf" }
+            { name: "Unit 1: Organizational Behaviour", link: "https://drive.google.com/uc?export=download&id=1-QSzLGI-3U29B6zmgPJ8cyKh0se5EeKE" },
+            { name: "Unit 2: Group Dynamics", link: "https://drive.google.com/uc?export=download&id=1-OanzAOdb7ATxuR5r8SjYB1Zk4th4_4A" },
+            { name: "Unit 3: Leadership", link: "https://drive.google.com/uc?export=download&id=1q6-PdrF_pvinsmIGJsa1fDrltni87jdq" },
+            { name: "Unit 4: Management of Change", link: "https://drive.google.com/uc?export=download&id=1q8AfUVtXLOEoij9uONyCU-p5MV8fQ6D6" },
+            { name: "Unit 5: Organizational culture", link: "https://drive.google.com/uc?export=download&id=1ryycsu7vZKle5HrEWKrxggahwYbfhaXr" }
           ],
                  "HEALTH AND HYGIENE" : [
-            { name: "Unit 1: Basic Of Nutrition", link: "sem_resources/Maths_Unit1.pdf" },
-            { name: "Unit 2: Health", link: "sem_resources/Maths_Unit2.pdf" },
-            { name: "Unit 3: Hygiene", link: "sem_resources/Maths_Unit3.pdf" },
+            { name: "Unit 1: Basic Of Nutrition", link: "https://drive.google.com/uc?export=download&id=1zL3-CcdgUj70vM91XPOn8O3K5k_iwpem" },
+            { name: "Unit 2: Health", link: "https://drive.google.com/uc?export=download&id=1zMBtEXxO2kEPF3y-3vccWEW5NkJ0S8UW" },
+            { name: "Unit 3: Hygiene", link: "https://drive.google.com/uc?export=download&id=1zOrkrhOxLr7NgQdKPmBqOHIKemzRd2i2" },
           ],
                  "PROJECT MANAGEMENT" : [
-            { name: "Project Management (All Units)", link: "sem_resources/Maths_Unit1.pdf" },
+            { name: "Project Management (All Units)", link: "sem_resources/Maths_Unit1" },
+          ],
+
+            },
+        4: {
+                "PYTHON PROGRAMMING": [
+            { name: "Unit 1: Getting Started With Python & Strings", link: "https://drive.google.com/uc?export=download&id=1V-VdXlVx8_lO4Mi_x4eKw3ZFeHYEzE0D" },
+            { name: "Unit 2: Functions & Python and OOP & Exception Handling", link: "https://drive.google.com/uc?export=download&id=17b22nDJGxXAnomxr7FZcVvwhouNKos1E" },
+            { name: "Unit 3: List & Tuple and Dictionaries", link: "https://drive.google.com/uc?export=download&id=1isjpamk398V8TFsm5Q1cke1FN6OV4VCk" },
+            { name: "Unit 4: Introduction to Numpy & Data Handling", link: "https://drive.google.com/uc?export=download&id=1qY55uuSqnI9SgnQVxPLdSEk5KxFSi_Rz" },
+            { name: "Unit 5: Plotting Data Using Matplotlib & Database Connectivity", link: "https://drive.google.com/uc?export=download&id=1teb5mjO1PcASJDTojn54hY9f5u9lAj92" },
+                ],
+                
+                "WEB PROGRAMMING": [
+            { name: "Unit 1: Introduction to Web Programming", link: "https://drive.google.com/uc?export=download&id=1ixvQa0vAtoDfo_nhnu27ISrjsgyse1uw" },
+            { name: "Unit 2: Coding Standards, Block Elements", link: "https://drive.google.com/uc?export=download&id=1q42ohUft6Kr7EA8ZGa_oWBzRpD8W_9p7" },
+            { name: "Unit 3: Cascading Style Sheet(CSS)", link: "https://drive.google.com/uc?export=download&id=1q2eaXXcg5pOGdP-BBrRfo01MRmhdyn16" },
+            { name: "Unit 4: Organizing a pages, content with lists, figures and various organizational elements", link: "https://drive.google.com/uc?export=download&id=1tbFyWi4JP_XBQ1K1bvIV8hpAP4Ed7p30" },
+            { name: "Unit 5: Image Manipulations, Audio and Video", link: "https://drive.google.com/uc?export=download&id=1td8xxcMVr2LA-6ZVo-jCUbxKNIIIQ6ta" }
+                ],
+                 "OPERATING SYSTEM": [
+            { name: "Unit 1: Introduction & System Structures", link: "https://drive.google.com/uc?export=download&id=1jfIWRAffVjACIUMDlCZzb6EYJFGcLC13" },
+            { name: "Unit 2: Process Management & Process Scheduling", link: "https://drive.google.com/uc?export=download&id=1isuEy76qKrMjhc3jmkj-kginl0yW1WnW" },
+            { name: "Unit 3: Synchronization & Deadlocks", link: "https://drive.google.com/uc?export=download&id=1jeYp7EsuNd9ePEqZO7sl04USGw_qF-72" },
+            { name: "Unit 4: Memory Management", link: "https://drive.google.com/uc?export=download&id=1qJM5pKq9jSek2MSJOokZR2kNlznRWiyW" },
+            { name: "Unit 5: Files and Directories", link: "https://drive.google.com/uc?export=download&id=1wPS-ZoPJM98e5t9Wjbk8dczbcrYX_4V0" }
+                 ],
+                  "HUMAN RESOURCE MANAGEMENT": [
+            { name: "Unit 1: INTRODUCTION", link: "https://drive.google.com/uc?export=download&id=1UyJG3k0WxS88i9SzD5RrHcWsTh6oy60Z" },
+            { name: "Unit 2: PROCUREMENT AND DEVELOPMENT FUNCTIONS [1-7]", link: "https://drive.google.com/uc?export=download&id=1a26uAwlu6t3_wEV0prLWwCGSdQxVxYHE" },
+            { name: "Unit 2: PROCUREMENT AND DEVELOPMENT FUNCTIONS [8-12]", link: "https://drive.google.com/uc?export=download&id=1xhNRSK8Mhz5-XV6iiIO7OfdaY4_jdk27" },
+            { name: "Unit 3: TRAINING AND DEVELOPMENT", link: "https://drive.google.com/uc?export=download&id=1qLskTEhPPIusEL_vyBwOG5R8sihBsGJ3" },
+            { name: "Unit 4: PERFORMANCE APPRAISAL", link: "https://drive.google.com/uc?export=download&id=1yVruLQCsMoU1gTVWPjbzNiIMpLAmqvVQ" },
+            { name: "Unit 5: INDUSTRIAL RELATIONS", link: "https://drive.google.com/uc?export=download&id=1r2K3e98LlylZNmjrxM6Lwh9yoya_2xmE" },
+            { name: "Human Resource Management All Units", link: "https://drive.google.com/uc?export=download&id=1F4ZRI-Lcjpfmv7QY0TF2jet4CUxBJwzR" }
+         
+        ],
+                  "FINANCIAL MANAGEMENT" : [
+            { name: "Unit 1: INTRODUCTION", link: "https://drive.google.com/uc?export=download&id=1TeMaqY1PYP77eO2VHESz47YTx-Tq9WLF" },
+            { name: "Unit 2: INVESTMENT DECISIONS", link: "https://drive.google.com/uc?export=download&id=1a2NYTb1rTWksa87n_yb1DskYuWDGSYDp" },
+            { name: "Unit 3: FINANCING DECISIONS", link: "https://drive.google.com/uc?export=download&id=1jvglBZHA0d5-Jy23ONmO_zyRGfDZeHHH" },
+            { name: "Unit 4: DIVIDEND DECISIONS", link: "https://drive.google.com/uc?export=download&id=1wHUewDHt48qzqqvuJRvPPArAAqd5V8Sf" },
+            { name: "Unit 5: WORKING CAPITAL MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=1vv-7c3VbFmcwA1dQOO_hONqd0hAUgZQn" },
+            { name: "Financial Management All Units", link: "https://drive.google.com/uc?export=download&id=1F4ZRI-Lcjpfmv7QY0TF2jet4CUxBJwzR" }
+
+        ],
+                 "TOURISM GUIDANCE" : [
+            { name: "Tourism Guidance (All Units)", link: "https://drive.google.com/uc?export=download&id=1pvJYEhd4IyjNuQNxz__T3D5AQov2Bn4X" },
+          ],
+                 "GEOGRAPHY" : [
+            { name: "Geography (All Units)", link: "https://drive.google.com/uc?export=download&id=1pyc8HLRBQfxWCY0jVVlWZ1JX0gudvq_2" },
           ],
 
             },
@@ -84,83 +134,121 @@ document.addEventListener('DOMContentLoaded', function() {
         pdfs: {
            
             2: [
-                { name: "C-LANGUAGE", link:"https://drive.google.com/uc?id=1DqnrX2_fDLlUqzUHK21vu_ms_As3bUuu"},
-                { name: "Excel--Labels-Values-and-Formulas", link: "https://dl.dropboxusercontent.com/scl/fi/wnq4paupt63o0whurdfyr/Excel-Labels-Values-and-Formulas.pdf?rlkey=p8oji5451azal04snrxu0828e" },
-                { name: "Marketing Skill notes", link: "https://dl.dropboxusercontent.com/scl/fi/us3n5ifd32onyhk957zwv/Marketing-Skill-notes.pdf?rlkey=cx0wz53y709qurdpzzw7lmol9" },
-                { name: "NOTES-MSWORD-1", link: "https://dl.dropboxusercontent.com/scl/fi/rcwogg4jnts2un9amshf8/NOTES-MSWORD-1.pdf?rlkey=9y6z6kcc7sitdlsxdhb0nfext" },
-                { name: "office automation tools record programs", link: "https://dl.dropboxusercontent.com/scl/fi/fucn32cn6e2wn6yakcpiq/office-automation-tools-record-programs.pdf?rlkey=gk9c0yfuicij26yddr6mc8oty" },
-                { name: "office automation tools(1,2)", link: "https://dl.dropboxusercontent.com/scl/fi/8088usd1q4gtc5pjr5qu8/office-automation-tools-1-2.pdf?rlkey=d90f9ty30vmt3f7qb1i582nz9" },
-                { name: "Edx", link: "https://dl.dropboxusercontent.com/scl/fi/31pcuehlbvi1j4f7rnsf7/Edx.pdf?rlkey=q3y0248eiovehl6p8e9wn10d3" },
+                { name: "C-LANGUAGE", link:"https://drive.google.com/uc?export=download&id=1DR4JJdSG3cT_y1RX6g8ywJhcFByjN0V3"},
+                { name: "Excel--Labels-Values-and-Formulas", link: "https://drive.google.com/uc?export=download&id=1DfC0rk2p_iwpmHDeSbSJdAYo0hZLaiea" },
+                { name: "Marketing Skill notes", link: "https://drive.google.com/uc?export=download&id=1DP3yonLL5tkt6E-Sguj8LJg2xP-NWDhy" },
+                { name: "NOTES-MSWORD-1", link: "https://drive.google.com/uc?export=download&id=1DSL-qCTGjuwZ5_zWk4zBnH404TJcygyA" },
+                { name: "office automation tools record programs", link: "https://drive.google.com/uc?export=download&id=1DPYtuWCdDCCHfkE3A0b_nPJCb-Y3MdIw" },
+                { name: "office automation tools(1,2)", link: "https://drive.google.com/uc?export=download&id=1DaWOzNcZUZeud9WhcoyIrp9D1XnJpf7d" },
+                { name: "Edx", link: "https://drive.google.com/uc?export=download&id=1Di2c4atUJckQya9iejX2Ui_ttQgiTyo7" },
 
             ],
             3: [
-                { name: "Applet", link: "#" },
-                { name: "DBMS(1-3)", link: "#" },
-                { name: "Graph", link: "#" },
-                { name: "Java 1st Unit", link: "#" },
+                { name: "Applet", link: "https://drive.google.com/uc?export=download&id=1jU4egr8qj2Cuw5hZ06XuoH2T6SCOeQc3" },
+                { name: "DBMS(1-3)", link: "https://drive.google.com/uc?export=download&id=1WEVQx0rKDv39bs3HQw6IRe7HtREgo-3s" },
+                { name: "Graph", link: "https://drive.google.com/uc?export=download&id=1ZYfrvK5IZqdMmGfsAiYav3RcE8bA3JmW" },
+                { name: "Java 1st Unit", link: "https://drive.google.com/uc?export=download&id=1Crn1wigBm3_KWLw-TuarX-xCzu7D-tdG" },
             ],
-            
+            4: [
+                { name: "fcfs program", link: "https://drive.google.com/uc?export=download&id=1jLlJqEoYFxbpYfyW7vOxFu4Fm9on1Yw_" },
+                { name: "II-IV SEM PYTHON", link: "https://drive.google.com/uc?export=download&id=1K2uCvPlOZRT8gmNHHgtJo3EG2VTlUBQo" },
+                { name: "Introduction", link: "https://drive.google.com/uc?export=download&id=1U2A7EFEt_sNu3jaMynGL8MRJpkX0VZEB" },
+                { name: "OS program source code", link: "https://drive.google.com/uc?export=download&id=1jQ6_psFHoMsQS6wSrM7bYB9YfYjKGG7n" },
+                { name: "Python_material_updated", link: "https://drive.google.com/uc?export=download&id=1K05kTJ1WnO1rRYeAqjP4giQSbL7T9v8h" },
+                { name: "Unit 4", link: "https://drive.google.com/uc?export=download&id=1K1MhC0CkeTmoTxuApnqUqdJYkpYN3RiM" },
+                { name: "UNIT-5 python notes", link: "https://drive.google.com/uc?export=download&id=1K9ZhIcy3WPEON4G2LP13Lm5kqVF_6wOu" },
+            ],
         },
         records: {
            
             3: {
                  "DATABASE MANAGEMENT SYSTEM": [
-                    { name: "DBMS Record (by SETHU)", link: "Maths_Record.pdf" },
-                    { name: "DBMS Record (source file)", link: "Maths_Record.pdf" },
+                    { name: "DBMS Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1-EEf5vXhy5LVIYDEYHoGrNfXjLIgzW9R" },
+                    { name: "DBMS Record (source file)", link: "https://drive.google.com/uc?export=download&id=1jPm_m_73QfqpO0L_4xfmay4Wz8zW7aSC" },
                ],
 
                 "JAVA AND DATA STRUCTURES": [
-                    { name: "JAVA Record (by SETHU)", link: "Physics_Record.pdf" },
+                    { name: "JAVA Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=10wE0-CRtmH0lT1JUCoH9nIY1KlJlrSv8" },
                 ],
 
                 "MATHEMATICAL AND STATISTICAL FOUNDATIONS":[
-                    { name: "Maths Record (by SETHU)", link: "Physics_Record.pdf" },
-                    { name: "Maths Record (source file)", link: "Maths_Record.pdf" },
+                    { name: "Maths Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1zFbQfDDf5PJpAJed3qt_Y4kKHG-w0t_4" },
+                    { name: "Maths Record (source file)", link: "https://drive.google.com/uc?export=download&id=1lOmvdzVrYouMCOv-cQQ6Ku4pAw4EzsUw" },
                 ],       
 
                 "SOFTWARE ENGINEERING": [
-                    { name: "SOFTWARE ENGINEERING Record (by SETHU)", link: "Physics_Record.pdf" },
+                    { name: "SOFTWARE ENGINEERING Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1UQ6uBRBdmLIbuxWBJbSl6LsUgxTPmgm8" },
                 ],
             },
-           
+            4: {
+                 "PYTHON PROGRAMMING": [
+                    { name: "python Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=14aoyGGaarUfnGInMAxlGqZq4jGMTi1My" },
+               ],
+
+                "WEB PROGRAMMING": [
+                    { name: "Web Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X5xNmGDF9ag7h7IUYVNuskWaeW6-wVqz" },
+                    { name: "web record outputs(by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X6mSriCEfBi0OnT_eR-Oyu5A9IgkkGmD" },
+                    { name: "web record but no outputs(by RAKESH)", link: "https://drive.google.com/uc?export=download&id=1ONDQCE0gpJyg02Y_Gu8fGe7TKKgJM9aL" },
+                    { name: "WP-lab-manual-list", link: "https://drive.google.com/uc?export=download&id=1rCzdepN3QQNfkbf_2HCjg0o_0rAM6lF_" }, 
+                    { name: "8,9,10", link: "https://drive.google.com/uc?export=download&id=1rF99JdMTGOCDtePcSi8TCNRXaOpFTHXU" },
+
+                ],
+
+                "OPERATING SYSTEM":[
+                    { name: "Operating System Record", link: "https://drive.google.com/uc?export=download&id=148GK7ltpIRLRDAOsdX6UOXsq966Qn65z" },
+                ],       
+            },
         },
         syllabus: {
             all: {
                 "All Semesters Syllabus": [
-                    { name: "All Semesters Syllabus (1-8) ", link: "#" },
+                    { name: "All Semesters Syllabus (1-8) ", link: "https://drive.google.com/uc?export=download&id=1DqnrX2_fDLlUqzUHK21vu_ms_As3bUuu" },
                 ],
             },
            
-            2:{},
+            
             3:{
                 "major": [
-                { name: "DATABASE MANAGEMENT SYSTEM", link: "Mathematics_Syllabus.pdf" },
-                { name: "JAVA AND DATA STRUCTURES", link: "Physics_Syllabus.pdf" },
-                { name: "MATHEMATICAL AND STATISTICAL FOUNDATIONS", link: "Chemistry_Syllabus.pdf" },
-                { name: "SOFTWARE ENGINEERING", link: "Biology_Syllabus.pdf" },
+                { name: "3rd sem all major subject syllabus", link: "https://drive.google.com/uc?export=download&id=1WMJF7R0cbZLdABY4K6awqKsCR0lwMbqv" },
                 ],
 
                 "minor": [
-                { name: "ORGANISATIONAL BEHAVIOUR", link: "Environmental_Science_Syllabus.pdf" },
+                { name: "ORGANISATIONAL BEHAVIOUR", link: "#" },
                 ],
 
                 "Skill / Multidisciplinary Course": [
-                { name: "HEALTH AND HYGIENE", link: "Python_Programming_Syllabus.pdf" },
-                { name: "PROJECT MANAGEMENT", link: "Web_Development_Syllabus.pdf" },
+                { name: "HEALTH AND HYGIENE", link: "https://drive.google.com/uc?export=download&id=1iWJx35AHtEEK9RyzWyq4o_zFswCg1iJj" },
+                { name: "PROJECT MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=1iS_z3WLQhPoPdDglSC65ta6TIkR0J0Uj" },
                 ]
             },
-            4:{},
-            5:{},
-            6:{},
-            7:{},
-            8:{}
+            4:{
+                "major": [
+                { name: "4th sem all major subject syllabus", link: "https://drive.google.com/uc?export=download&id=1DRbykhYbDI1aeKBzPFJw74_4vDZ7cUUd" },
+                { name: "4th sem all major subject syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1DOllFd6ALBpRZ7nRP7pcAt_m0yFn43VP" },
+                { name: "4th sem Web Programming Syllabus", link: "https://drive.google.com/uc?export=download&id=1jXmXyWfrp80GaKjgD1UoraP7LSVOqXPC" },
+
+            ],
+
+                "minor": [
+                { name: "4th sem all minor subject syllabus", link: "https://drive.google.com/uc?export=download&id=1Iu3E3vqwz4LE1FjRo9xOh4uxTX1xaa05" },
+                { name: "4th sem all minor subject syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1JPEIOCNP_fu-CTwt2EfD_6xrytTSN8TB" },
+            
+            ],
+
+                "Skill / Multidisciplinary Course": [
+                { name: "TOURISM-GUIDANCE", link: "https://drive.google.com/uc?export=download&id=1pvJYEhd4IyjNuQNxz__T3D5AQov2Bn4X" },
+                { name: "INTRODUCTION-TO-GEOGRAPHY", link: "https://drive.google.com/uc?export=download&id=1pyc8HLRBQfxWCY0jVVlWZ1JX0gudvq_2" },
+                ]
+            },
+          
         },
         papers: {
         
           
-            3: [
+            4: [
                        { name: "Semester Exam Question Papers", link: "#" },
-                       { name: "Internal Exam Question Papers", link: "#" }
+                       { name: "Internal Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1AmxiY2cTNwtxN04V27NRoRGwNfv_Y2zv" },
+                       { name: "Health & Hygeine imp Q & A ", link: "https://drive.google.com/uc?export=download&id=1zZBO_7vlhgSbiUmkATKj7uqiWcVvIxYa" }
 
             ],
            
@@ -375,7 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const link = document.createElement('a');
                     link.href = item.link;
                     link.textContent = item.name;
-                    link.target = "_blank";
+                   
                     li.appendChild(link);
                 } else {
                     li.textContent = typeof item === 'object' ? item.name : item;
@@ -399,7 +487,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             const link = document.createElement('a');
                             link.href = item.link;
                             link.textContent = item.name;
-                            link.target = "_blank";
+                           
                             li.appendChild(link);
                         } else {
                             li.textContent = typeof item === 'object' ? item.name : item;

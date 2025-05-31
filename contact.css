@@ -9,6 +9,27 @@
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
 }
+.splink:link{color: blue;
+  text-decoration: none;
+}
+.splink:visited{color: blue;
+  text-decoration: none;
+}
+.splink:hover{color: purple;
+  text-decoration: underline;
+} 
+.section-highlight {
+  animation: highlight-fade 1.5s ease-out;
+}
+
+@keyframes highlight-fade {
+  0% {
+    background-color: lightskyblue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
 
 /* Ensure the body takes up the full height of the viewport */
 body {
@@ -120,7 +141,36 @@ nav a.sideactive:not(.logo) {
 .menu-button{
   display: none;
 }
+.social-simple {
+  display: flex;
+  gap: 18px;
+  margin: 24px 0;
+}
 
+.social-simple span {
+  font-weight: 600;
+  margin-right: 8px;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.social-simple a {
+  color: #888;
+  font-size: 1.7em;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: flex;
+}
+
+.social-simple a:hover {
+  color: #e4405f; /* Instagram pink */
+}
+.social-simple a:nth-child(3):hover {
+  color: #ff0000; /* YouTube red */
+}
+.social-simple a:nth-child(4):hover {
+  color: #229ed9; /* Telegram blue */
+}
 form {
   max-width: 450px;
 }

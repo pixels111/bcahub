@@ -18,6 +18,19 @@
 .splink:hover{color: purple;
   text-decoration: underline;
 } 
+/* Add this to your CSS */
+.section-highlight {
+  animation: highlight-fade 1.5s ease-out;
+}
+
+@keyframes highlight-fade {
+  0% {
+    background-color: lightskyblue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
 
 /* Ensure the body takes up the full height of the viewport */
 body {
