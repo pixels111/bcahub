@@ -577,3 +577,10 @@ function hideSidebar(){
   document.querySelector('.sidebar').classList.remove('active');
   document.querySelector('.socials-container').style.display = 'flex';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.select-box').forEach(box => {
+    box.classList.add('highlight');
+    setTimeout(() => box.classList.remove('highlight'), 1500);
+  });
+});

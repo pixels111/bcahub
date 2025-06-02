@@ -134,6 +134,27 @@ nav a.sideactive:not(.logo) {
   display: none;
 }
 
+.select-box {
+  border: 2.5px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  /* other styles as needed */
+}
+
+.select-box.highlight {
+  animation: border-highlight-fade 1.9s ease-out;
+}
+
+@keyframes border-highlight-fade {
+  0% {
+    border-color: lightskyblue;
+    box-shadow: 0 0 0 4px #b3e5fc;
+  }
+  100% {
+    border-color: #ddd;
+    box-shadow: none;
+  }
+}
 
 /* Selection Container */
 .selection-container {
