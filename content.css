@@ -18,7 +18,18 @@
 .splink:hover{color: purple;
   text-decoration: underline;
 } 
+.section-highlight {
+  animation: highlight-fade 1.5s ease-out;
+}
 
+@keyframes highlight-fade {
+  0% {
+    background-color: lightskyblue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
 /* Ensure the body takes up the full height of the viewport */
 body {
   display: flex;
@@ -55,6 +66,7 @@ main {
   color: navy;
   text-shadow: 1px 1px 0 white;
   letter-spacing: 1px;
+  
 }
 nav{
   background: linear-gradient(to top, #c0c0c0 0%, #808080 100%);

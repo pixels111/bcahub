@@ -1,4 +1,6 @@
+/* Retro Windows 95 style basic reset and style */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +19,6 @@
   text-decoration: underline;
 } 
 
-/* Ensure the body takes up the full height of the viewport */
 body {
   display: flex;
   flex-direction: column;
@@ -30,13 +31,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
 header {
   position: fixed;
   width: 100%;
   border-bottom: 2px solid black;
-    z-index: 9999;
+  z-index: 9999;
 
 }
 main {
@@ -53,6 +52,7 @@ main {
   color: navy;
   text-shadow: 1px 1px 0 white;
   letter-spacing: 1px;
+  
 }
 nav{
   background: linear-gradient(to top, #c0c0c0 0%, #808080 100%);
@@ -122,11 +122,151 @@ nav a.sideactive:not(.logo) {
 }
 .sidebar a.active {
   background-color: #2929297c;
-  color: white;
+   color: white;
 }
 .menu-button{
   display: none;
 }
+.section-highlight {
+  animation: highlight-fade 1.5s ease-out;
+}
+
+@keyframes highlight-fade {
+  0% {
+    background-color: lightskyblue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+section h1{
+  font-size: 2em;
+}
+section h2 {
+  font-size: 1.5em;
+}
+section h3 {
+  font-size: 1.2em;
+ 
+}
+section p {
+  padding-left: 10px;
+  margin-bottom: 10px ;
+}
+
+section ul {
+  padding-left: 20px;
+}
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.faq-item {
+  margin-bottom: 12px;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.08em;
+  color: black;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.2s;
+}
+.faq-question[aria-expanded="true"] {
+  color: black;
+  font-weight: bold;
+}
+.faq-answer {
+  padding: 8px 0 8px 16px;
+  color: blue;
+  background: none;
+  border-left: 2px solid navy;
+  margin-top: 0;
+  font-size: 1em;
+  transition: max-height 0.3s;
+}
+.video-card {
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+   max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+   transition: padding 0.3s, max-width 0.3s, margin 0.3s;
+}
+
+.video-card-question h3 {
+  color: #0077ff;
+  font-size: 1.18em;
+  text-align: left;
+  margin: 0 0 0 0;
+}
+
+.video-card-video,
+.video-card-image {
+  width: 100%;
+  padding: 12px 0;
+  background: none;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  aspect-ratio: 16/9;
+}
+
+.video-card-video iframe,
+.video-card-image img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.video-card-caption {
+  text-align: left;
+  color: #444;
+  font-size: 1em;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+/* Responsive: Increase padding and card size on larger screens */
+@media (min-width: 700px) {
+  .video-card {
+    max-width: 480px;
+    padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .video-card {
+    max-width: 480px;
+    padding: 0;
+  }
+}
+/* On very large screens, align left and use normal flow */
+@media (min-width: 800px) {
+  .video-card {
+    margin-left: 0;
+    margin-right: auto;
+    align-items: flex-start;
+  }
+  .video-card-question h3,
+  .video-card-caption {
+    text-align: left;
+  }
+}
+
+
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
   color: white;

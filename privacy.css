@@ -55,6 +55,7 @@ main {
   color: navy;
   text-shadow: 1px 1px 0 white;
   letter-spacing: 1px;
+  
 }
 nav{
   background: linear-gradient(to top, #c0c0c0 0%, #808080 100%);
@@ -129,41 +130,36 @@ nav a.sideactive:not(.logo) {
 .menu-button{
   display: none;
 }
-.privacycss {
- padding: 24px 18px;
-  font-size: 1.08em;
+.section-highlight {
+  animation: highlight-fade 1.5s ease-out;
 }
 
-.privacycss h1, .privacycss h2 {
-  margin-bottom: 0.5em;
-  color: black;
+@keyframes highlight-fade {
+  0% {
+    background-color: lightskyblue;
+  }
+  100% {
+    background-color: transparent;
+  }
 }
-
+.privacycss div {
+  padding-left: 10px;
+  margin-bottom: 10px ;
+}
+.privacycss div p {
+  padding-left: 15px;
+  margin-bottom: 10px ;
+}
+.privacycss div h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.privacycss div ul {
+  padding-left: 20px;
+}
 .privacycss h1 {
-  font-size: 2em;
-  text-align: center;
-}
-
-.privacycss h2 {
-  font-size: 1.2em;
-  margin-top: 1.8em;
-}
-
-.privacycss ul {
-  margin: 0 0 1.2em 1.5em;
-  padding-left: 1.2em;
-  list-style-type: disc;
-}
-
-.privacycss ul li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-  padding-left: 0.2em;
-}
-
-.privacycss p {
-  margin: 0.7em 0 1.1em 0;
-  line-height: 1.7;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);

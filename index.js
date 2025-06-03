@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.sidebar').classList.remove('active');
     document.querySelector('.socials-container').style.display = 'flex';
   }
+  
 // Perfect smooth scroll solution with refresh protection
 function setupPerfectSmoothScroll() {
   let isProgrammaticNavigation = false;
@@ -29,10 +30,11 @@ function setupPerfectSmoothScroll() {
   // Scroll to element with perfect positioning
   function perfectScrollTo(targetEl) {
     if (!targetEl) return;
-    
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
     const elementPosition = targetEl.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
-    
+    const offsetPosition = elementPosition + window.pageYOffset - headerHeight - scrollOffset;
+
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'

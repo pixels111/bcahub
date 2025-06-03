@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Encrypted Secure Note</title>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #eee;
+      padding: 20px;
+    }
+    #editor {
+      display: none;
+      margin-top: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      background-color: #222;
+      color: #eee;
+      border: none;
+      padding: 10px;
+      resize: none;
+      font-size: 16px;
+      font-family: monospace;
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 10px;
+      color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔐 Encrypted Secure Note</h2>
+
+  <div id="login">
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button onclick="unlock()">Unlock</button>
+    <p id="message"></p>
+  </div>
+
+  <div id="editor">
+    <textarea id="noteArea" placeholder="Type your confidential data here..."></textarea><br />
+    <button onclick="save()">💾 Save</button>
+    <p id="saveMessage" style="color: #4caf50;"></p>
+  </div>
+
+  <script>
+    const encoder = new TextEncoder();
+    const decoder = new TextDecoder();
+    let cryptoKey;
+
+    // Derive a crypto key from password
+    async function deriveKey(password) {
+      const passKey = await crypto.subtle.importKey(
+        'raw',
+        encoder.encode(password),
+        'PBKDF2',
+        false,
+        ['deriveKey']
+      );
+
+      return crypto.subtle.deriveKey(
+        {
+          name: 'PBKDF2',
+          salt: encoder.encode('some-fixed-salt'), // fixed salt, can be changed
+          iterations: 100000,
+          hash: 'SHA-256',
+        },
+        passKey,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['encrypt', 'decrypt']
+      );
+    }
+
+    async function encryptData(plainText) {
+      const iv = crypto.getRandomValues(new Uint8Array(12));
+      const encoded = encoder.encode(plainText);
+      const encrypted = await crypto.subtle.encrypt(
+        { name: 'AES-GCM', iv },
+        cryptoKey,
+        encoded
+      );
+      return {
+        iv: arrayBufferToBase64(iv),
+        data: arrayBufferToBase64(encrypted),
+      };
+    }
+
+    async function decryptData(ivBase64, dataBase64) {
+      try {
+        const iv = base64ToArrayBuffer(ivBase64);
+        const data = base64ToArrayBuffer(dataBase64);
+        const decrypted = await crypto.subtle.decrypt(
+          { name: 'AES-GCM', iv },
+          cryptoKey,
+          data
+        );
+        return decoder.decode(decrypted);
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function arrayBufferToBase64(buffer) {
+      let binary = '';
+      const bytes = new Uint8Array(buffer);
+      bytes.forEach((b) => (binary += String.fromCharCode(b)));
+      return window.btoa(binary);
+    }
+
+    function base64ToArrayBuffer(base64) {
+      const binary = window.atob(base64);
+      const len = binary.length;
+      const bytes = new Uint8Array(len);
+      for (let i = 0; i < len; i++) {
+        bytes[i] = binary.charCodeAt(i);
+      }
+      return bytes.buffer;
+    }
+
+    async function unlock() {
+      const password = document.getElementById('passwordInput').value;
+      if (!password) {
+        document.getElementById('message').textContent = 'Please enter a password.';
+        return;
+      }
+      cryptoKey = await deriveKey(password);
+
+      const storedData = localStorage.getItem('secure-note-data');
+      const storedIv = localStorage.getItem('secure-note-iv');
+
+      if (storedData && storedIv) {
+        const decrypted = await decryptData(storedIv, storedData);
+        if (decrypted === null) {
+          document.getElementById('message').textContent = '❌ Wrong password or corrupted data!';
+          return;
+        }
+        document.getElementById('noteArea').value = decrypted;
+      } else {
+        document.getElementById('noteArea').value = '';
+      }
+
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('message').textContent = '';
+      document.getElementById('editor').style.display = 'block';
+    }
+
+    async function save() {
+      const text = document.getElementById('noteArea').value;
+      const encrypted = await encryptData(text);
+      localStorage.setItem('secure-note-data', encrypted.data);
+      localStorage.setItem('secure-note-iv', encrypted.iv);
+      document.getElementById('saveMessage').textContent = '✅ Data saved securely!';
+    }
+  </script>
+</body>
+</html>

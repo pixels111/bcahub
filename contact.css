@@ -67,6 +67,7 @@ main {
   color: navy;
   text-shadow: 1px 1px 0 white;
   letter-spacing: 1px;
+  
 }
 nav{
   background: linear-gradient(to top, #c0c0c0 0%, #808080 100%);
