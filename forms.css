@@ -18,20 +18,7 @@
 .splink:hover{color: purple;
   text-decoration: underline;
 } 
-.section-highlight {
-  animation: highlight-fade 1.5s ease-out;
-}
 
-@keyframes highlight-fade {
-  0% {
-    background-color: lightskyblue;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-/* Ensure the body takes up the full height of the viewport */
 body {
   display: flex;
   flex-direction: column;
@@ -44,14 +31,16 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
 header {
   position: fixed;
   width: 100%;
   border-bottom: 2px solid black;
   z-index: 9999;
 
+}
+nav {
+  background: linear-gradient(to top, #c0c0c0 0%, #808080 100%);
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #404040;
 }
 main {
   flex-grow: 1;
@@ -137,75 +126,88 @@ nav a.sideactive:not(.logo) {
 }
 .sidebar a.active {
   background-color: #2929297c;
-  color: white;
+   color: white;
 }
 .menu-button{
   display: none;
 }
-.social-simple {
-  display: flex;
-  gap: 18px;
-  margin: 24px 0;
+.section-highlight {
+  animation: highlight-fade 1.5s ease-out;
 }
 
-.social-simple span {
-  font-weight: 600;
-  margin-right: 8px;
+@keyframes highlight-fade {
+  0% {
+    background-color: lightskyblue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
   color: #222;
-  letter-spacing: 1px;
 }
 
-.social-simple a {
-  color: #888;
-  font-size: 1.7em;
-  text-decoration: none;
-  transition: color 0.2s;
-  display: flex;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 6px;
+  border-radius: 12px;
+  border: none;
+  background: #e0e5ec;
+  box-shadow: inset 2px 2px 6px #b8bac0, inset -2px -2px 6px #ffffff;
+  font-size: 1rem;
+  color: #222;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  outline: none;
 }
 
-.social-simple a:hover {
-  color: #e4405f; /* Instagram pink */
-}
-.social-simple a:nth-child(3):hover {
-  color: #ff0000; /* YouTube red */
-}
-.social-simple a:nth-child(4):hover {
-  color: #229ed9; /* Telegram blue */
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px #b3e5fc, inset 2px 2px 6px #b8bac0, inset -2px -2px 6px #ffffff;
 }
 
-.contact-link {
-    background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
-    border: 2px solid #808080;
-    box-shadow:
-    1px 1px 0 #fff,
-    inset 1px 1px 0 #fff,
-    inset -1px -1px 0 #808080;
-    color: black;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
+textarea {
+  height: 200px;
+  resize: vertical;
 }
 
-.contact-link .arrow {
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-    display: inline-block;
+button {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #e0e5ec;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 12px #b8bac0, -4px -4px 12px #ffffff;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+
 }
 
-.contact-link:hover {
-    padding-right: 25px;
+button:hover {
+  background: #d1d9e6;
+  color: #0056b3;
+  box-shadow: 2px 2px 8px #b8bac0, -2px -2px 8px #ffffff;
 }
 
-.contact-link:hover .arrow {
-    transform: translateX(5px);
+input.error,
+textarea.error {
+  box-shadow: 0 0 0 2px #ffb3b3, inset 2px 2px 6px #b8bac0, inset -2px -2px 6px #ffffff;
 }
-
+.hidden {
+  display: none !important;
+}
 
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
@@ -213,9 +215,7 @@ footer {
   text-align: center;
   padding: 1px 2px 2px;
 }
-.hidden{
-  display: none !important;
-}
+
 .socials-container {
   display: flex;
   gap: 14px;
@@ -283,6 +283,9 @@ footer {
   transform: translateY(-32px) rotate(0);
   opacity: 1;
 }
+section {
+  padding: 20px;
+}
 
 .footer-nav {
   list-style: none;
@@ -303,9 +306,11 @@ footer {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 .footer-nav a:hover {
   color: #aaa;
 }
+
 footer p {
   font-size: 14px;
   margin-top: 20px;
@@ -314,6 +319,17 @@ footer p {
 footer span {
   font-weight: bold;
   color: #bbb;
+}
+.card, .section, .main-container, .about-me, .faq-list, .explore-card {
+  background: #e0e5ec;
+  border-radius: 18px;
+  box-shadow: 8px 8px 24px #b8bac0, -8px -8px 24px #ffffff;
+  padding: 32px 22px 28px 22px;
+  margin: 36px auto 32px auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 @media(max-width: 800px){
   .hideOnMobile{
@@ -325,7 +341,7 @@ footer span {
 }
 @media(max-width: 400px){
   .sidebar{
-      width: 250px;
+     width: 250px;
     max-width: 95vw;
   }
 }
@@ -366,4 +382,3 @@ footer span {
     transform: translateY(-28px) rotate(0);
   }
 }
-

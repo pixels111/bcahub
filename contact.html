@@ -27,7 +27,7 @@
         <li class="hideOnMobile"><a href="content.html"  >Content Galaxy</a></li>
         <li class="hideOnMobile"><a href="about.html" >About Us</a></li>
         <li class="hideOnMobile"><a href="contact.html"class="sideactive" >Contact Us</a></li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="96 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
       </ul>
     </nav>
   </header>
@@ -55,24 +55,11 @@
     <p>You can also use the Contact Form below to reach out. We aim to respond within 24–48 hours.</p>
     </section><br>
     <p>If you have any questions, suggestions or feedback, feel free to reach out!</p>
-   <form id="contactForm" method="POST">
-  <!-- Prevent spam -->
-  <input type="hidden" name="_captcha" value="false">
-  <!-- Redirect after successful submission (optional) -->
-  <input type="hidden" name="_next" value="sethu369.github.io/contact.html">
-
-  <label for="name">Name:</label><br />
-  <input type="text" id="name" name="name" required /><br />
-
-  <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" required /><br />
-
-  <label for="message">Message:</label><br />
-  <textarea id="message" name="message" rows="5" required></textarea><br />
-
-  <button type="submit" class="btn">Send</button>
-</form>
-    <p id="form-response" aria-live="polite"></p>
+<a href="forms.html#contact" class="contact-link">
+                    Get In Touch
+                    <span class="arrow">→</span>
+                </a>
+  <div id="popup" class="popup-msg hidden"></div>
   </main>
   <footer>
     <ul class="footer-nav">
@@ -97,5 +84,43 @@
     </p>
   </footer>
   <script src="contact.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const formTypeSelect = document.getElementById('formType');
+  const subjectDefaults = {
+    'contact': 'For general contact',
+    'broken-link': 'Requesting for broken link',
+    'resource-add': 'Requesting new resource',
+    'spelling-mistake': 'Reporting spelling mistake',
+    'change-del-sub': 'Requesting subject change/deletion',
+    'change-syllabus': 'Requesting syllabus update',
+    'feedback': 'Feedback for BCAHub'
+  };
+
+  if (formTypeSelect) {
+    formTypeSelect.addEventListener('change', function() {
+      const selected = this.value;
+      // Find the visible form and its subject input
+      const form = document.getElementById(selected);
+      if (form) {
+        const subjectInput = form.querySelector('input[name="subject"]');
+        if (subjectInput && subjectDefaults[selected]) {
+          subjectInput.value = subjectDefaults[selected];
+        }
+      }
+    });
+
+    // On page load, if a form is already selected, set its subject
+    const selected = formTypeSelect.value;
+    if (selected && subjectDefaults[selected]) {
+      const form = document.getElementById(selected);
+      if (form) {
+        const subjectInput = form.querySelector('input[name="subject"]');
+        if (subjectInput) subjectInput.value = subjectDefaults[selected];
+      }
+    }
+  }
+});
+  </script>
 </body>
 </html>
