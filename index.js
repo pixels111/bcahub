@@ -122,3 +122,4 @@ function setupPerfectSmoothScroll() {
 
 // Initialize the perfect smooth scrolling
 document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
+

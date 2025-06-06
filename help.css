@@ -157,6 +157,9 @@ section p {
 section ul {
   padding-left: 20px;
 }
+div ul {
+  padding-left: 20px;
+}
 .faq-list {
   list-style: none;
   padding: 0;
@@ -171,18 +174,18 @@ section ul {
   background: none;
   border: none;
   font-size: 1.08em;
-  color: black;
+  color: #721c24;
   cursor: pointer;
   padding: 10px 0;
   transition: color 0.2s;
 }
 .faq-question[aria-expanded="true"] {
-  color: black;
+  color: navy; 
   font-weight: bold;
 }
 .faq-answer {
   padding: 8px 0 8px 16px;
-  color: blue;
+  color: black;
   background: none;
   border-left: 2px solid navy;
   margin-top: 0;
@@ -266,7 +269,65 @@ section ul {
   }
 }
 
+.card{
+  flex: 0 0 calc(33.33% - 20px);
+  background-color: rgba(255, 255, 255, 0.699);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+   
+}
+.card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
 
+.card p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.card li{
+  margin-bottom: 7px;
+}
+.cardbutton {
+    background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
+    border: 2px solid #808080;
+    box-shadow:
+    1px 1px 0 #fff,
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #808080;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardbutton .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.cardbutton:hover {
+    padding-right: 25px;
+}
+
+.cardbutton:hover .arrow {
+    transform: translateX(5px);
+}
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
   color: white;

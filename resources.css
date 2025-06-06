@@ -6,7 +6,17 @@
   padding: 0;
   font-family: 'VT323', monospace;
   -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: grayscale;}
+  -moz-osx-font-smoothing: grayscale;
+}
+.splink:link{color: blue;
+  text-decoration: none;
+}
+.splink:visited{color: blue;
+  text-decoration: none;
+}
+.splink:hover{color: purple;
+  text-decoration: underline;
+} 
 
 body {
   display: flex;
@@ -410,6 +420,67 @@ label {
     padding: 20px;
     text-align: center;
     color: #7f8c8d;
+}
+.card{
+  flex: 0 0 calc(33.33% - 20px);
+  background-color: rgba(255, 255, 255, 0.699);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    margin-left:20px;
+    margin-right:20px;
+}
+.card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.card li{
+  margin-bottom: 7px;
+  list-style: none;
+}
+.cardbutton {
+    background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
+    border: 2px solid #808080;
+    box-shadow:
+    1px 1px 0 #fff,
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #808080;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardbutton .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.cardbutton:hover {
+    padding-right: 25px;
+}
+
+.cardbutton:hover .arrow {
+    transform: translateX(5px);
 }
 /* Footer */
 footer {
