@@ -120,7 +120,94 @@
                 </a>
             </div>
 
-            
+   <div class="ratecontainer" role="main" aria-label="Rating and Feedback">
+
+  <h1>Rate &amp; Provide Feedback</h1>
+  <p class="subtitle">Please rate only once after completely using the website.</p>
+
+  <section class="rating-card" aria-live="polite" aria-atomic="true">
+
+    <div id="rating-summary" aria-live="polite" aria-atomic="true"></div>
+
+    <form id="rating-form" aria-describedby="rating-summary" novalidate>
+      <fieldset>
+        <legend>Your Rating</legend>
+        <div class="stars" role="radiogroup" aria-label="Star rating" tabindex="0">
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5" title="5 stars" aria-label="5 stars" tabindex="0">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63
+              2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </label>
+
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="4 stars" aria-label="4 stars" tabindex="0">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63
+              2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </label>
+
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="3 stars" aria-label="3 stars" tabindex="0">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63
+              2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </label>
+
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="2 stars" aria-label="2 stars" tabindex="0">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63
+              2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </label>
+
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="1 star" aria-label="1 star" tabindex="0">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63
+              2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+          </label>
+        </div>
+      </fieldset>
+
+      <label for="name-input">Your Name</label>
+      <input type="text" id="name-input" name="name" autocomplete="name" placeholder="Enter your name" required minlength="2" maxlength="50" aria-required="true" />
+
+      <label for="feedback-input">Your Feedback</label>
+      <textarea id="feedback-input" name="feedback" placeholder="Write your feedback here..." maxlength="500" required aria-required="true"></textarea>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="approve-checkbox" name="approve" required aria-required="true" />
+        <label for="approve-checkbox">I approve displaying my feedback publicly.</label>
+      </div>
+
+      <button type="submit" class="submit-btn" aria-live="polite">Submit</button>
+    </form>
+
+    <div id="thank-you-message" role="alert" tabindex="0">
+      Thank you for your valuable feedback!
+    </div>
+  </section>
+
+  <section class="feedback-slider-container" aria-label="Customer feedback slider" aria-live="polite" aria-atomic="true">
+    <h2 class="feedback-slider-header">What others say</h2>
+    <div class="feedback-slider" id="feedback-slider">
+      <div class="slides" id="slides" tabindex="0" aria-label="User feedback carousel">
+        <!-- Feedback cards injected by JS -->
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button id="prev-btn" class="slider-btn" aria-label="Previous feedback" title="Previous">&lt;</button>
+      <button id="next-btn" class="slider-btn" aria-label="Next feedback" title="Next">&gt;</button>
+    </div>
+  </section>
+</div>
+         
   </main>
   <footer>
     <ul class="footer-nav">

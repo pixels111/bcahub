@@ -492,6 +492,349 @@ nav a.sideactive:not(.logo) {
 .cardbutton:hover .arrow {
     transform: translateX(5px);
 }
+  /* Import Poppins font */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  
+  :root {
+    --color-bg: #ffffff;
+    --color-primary: #111827;
+    --color-gray: #6b7280;
+    --color-accent: #000000;
+    --color-shadow: rgba(0,0,0,0.05);
+    --color-star-on: #fbbf24;
+    --color-star-off: #d1d5db;
+  }
+
+  /* Reset */
+  *, *::before, *::after { 
+    box-sizing: border-box; 
+  }
+ 
+  .ratecontainer {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .ratecontainer h1 {
+    font-weight: 700;
+    font-size: clamp(36px, 4vw, 48px);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+  }
+  p.subtitle {
+    color: var(--color-gray);
+    font-size: clamp(16px, 2vw, 18px);
+    text-align: center;
+    margin: 0 0 1rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.rating-card {
+    background: var(--color-bg);
+    box-shadow: 0 4px 8px var(--color-shadow);
+    border-radius: 0.75rem;
+    padding: clamp(24px, 4vw, 48px);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #rating-summary {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: clamp(18px, 2vw, 20px);
+    margin-bottom: 2rem;
+    min-height: 24px;
+    user-select: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 32px);
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  legend {
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--color-primary);
+    margin-bottom: clamp(12px, 1.5vw, 20px);
+  }
+
+  .stars {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-direction: row-reverse;
+    user-select: none;
+  }
+ 
+  .stars input[type="radio"] {
+    display: none;
+  }
+  .stars label {
+    cursor: pointer;
+    width: clamp(40px, 5vw, 48px);
+    height: clamp(40px, 5vw, 48px);
+    fill: var(--color-star-off);
+    transition: transform 0.2s ease, fill 0.2s ease;
+  }
+  .stars label svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .stars input[type="radio"]:checked + label,
+  .stars input[type="radio"]:checked + label ~ label {
+    fill: var(--color-star-on);
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 1.2px #000000);
+    color:gold;
+  }
+  .stars label:hover,
+  .stars label:hover ~ label {
+    fill: var(--color-star-on);
+    transform: scale(1.3);
+  }
+  .stars label:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  label[for="name-input"],
+  label[for="feedback-input"],
+  label[for="approve-checkbox"] {
+    font-weight: 600;
+    font-size: clamp(14px, 1.5vw, 16px);
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  input[type="text"], textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 1.5vw, 16px);
+    border-radius: 0.75rem;
+    border: 1.5px solid #d1d5db;
+    padding: clamp(12px, 1.5vw, 16px);
+    width: 100%;
+    transition: border-color 0.25s ease;
+  }
+  input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+  textarea {
+    min-height: clamp(80px, 10vw, 120px);
+    resize: vertical;
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-gray);
+    user-select: none;
+  }
+  .checkbox-container input[type="checkbox"] {
+    width: clamp(16px, 2vw, 18px);
+    height: clamp(16px, 2vw, 18px);
+    cursor: pointer;
+  }
+
+  button.submit-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 18px);
+    background-color: var(--color-accent);
+    color: white;
+    padding: clamp(12px, 2vw, 16px);
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  button.submit-btn:hover:not(:disabled) {
+    background-color: var(--color-primary);
+  }
+  button.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  #thank-you-message {
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 20px);
+    color: var(--color-primary);
+    margin-top: 2rem;
+    text-align: center;
+    display: none;
+  }
+
+  section.feedback-slider-container {
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
+    padding: 0 1rem;
+  }
+  h2.feedback-slider-header {
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 32px);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: clamp(24px, 3vw, 32px);
+  }
+  .feedback-slider {
+    overflow: hidden;
+    position: relative;
+  }
+  .slides {
+    display: flex;
+    gap: clamp(16px, 2vw, 24px);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .slides::-webkit-scrollbar {
+    display: none;
+  }
+
+  article.feedback-card {
+    flex: 0 0 clamp(260px, 25vw, 280px);
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px var(--color-shadow);
+    padding: clamp(20px, 2vw, 32px) clamp(20px, 2vw, 32px) clamp(28px, 3vw, 40px) clamp(20px, 2vw, 32px);
+    display: flex;
+    flex-direction: column;
+    min-height: clamp(160px, 18vw, 180px);
+  }
+  article.feedback-card:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  .feedback-name {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: clamp(16px, 2vw, 18px);
+    margin-bottom: clamp(8px, 1vw, 12px);
+  }
+  .feedback-rating {
+    margin-bottom: clamp(12px, 1.5vw, 16px);
+  }
+  .feedback-message {
+    color: var(--color-gray);
+    font-size: clamp(14px, 1.5vw, 16px);
+    white-space: pre-wrap;
+    flex-grow: 1;
+  }
+  svg.feedback-star {
+    width: clamp(16px, 1.5vw, 20px);
+    height: clamp(16px, 1.5vw, 20px);
+    fill: var(--color-star-on);
+    margin-right: 3px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .slider-controls {
+    margin-top: clamp(16px, 2vw, 24px);
+    display: flex;
+    justify-content: center;
+    gap: clamp(18px, 3vw, 28px);
+  }
+  button.slider-btn {
+    background: var(--color-accent);
+    border: none;
+    border-radius: 50%;
+    width: clamp(36px, 4vw, 44px);
+    height: clamp(36px, 4vw, 44px);
+    color: white;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: clamp(36px, 4vw, 44px);
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    transition: background-color 0.25s ease;
+  }
+  button.slider-btn:hover {
+    background: var(--color-primary);
+  }
+  button.slider-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 36px;
+    }
+    section.rating-card {
+      padding: 24px 24px 32px;
+      max-width: 100%;
+    }
+    button.submit-btn {
+      font-size: 18px;
+    }
+    section.feedback-slider-container {
+      max-width: 100%;
+    }
+    article.feedback-card {
+      flex: 0 0 240px;
+      padding: 20px 20px 28px;
+      min-height: 160px;
+    }
+    button.slider-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+  @media (max-width: 400px) {
+    .stars label {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    label[for="name-input"],
+    label[for="feedback-input"],
+    label[for="approve-checkbox"] {
+      font-size: 14px;
+    }
+    input[type="text"], textarea {
+      font-size: 14px;
+    }
+    button.submit-btn {
+      font-size: 16px;
+      padding: 12px 16px;
+    }
+    .feedback-name {
+      font-size: 16px;
+    }
+    .feedback-message {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 325px) {
+  .stars label {
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.7rem;
+  }
+  .stars {
+    gap: 0.25rem;
+  }
+}
 
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
