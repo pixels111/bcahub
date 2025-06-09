@@ -423,7 +423,7 @@ label {
 }
 .card{
   flex: 0 0 calc(33.33% - 20px);
-  background-color: rgba(255, 255, 255, 0.699);
+  background-color: #e6f0ff;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -434,6 +434,9 @@ label {
     overflow: hidden;
     margin-left:20px;
     margin-right:20px;
+    border-radius: 5px;
+    border-left: 5px solid #0073e6;
+
 }
 .card h3 {
     font-size: 22px;
@@ -449,7 +452,6 @@ label {
 }
 .card li{
   margin-bottom: 7px;
-  list-style: none;
 }
 .cardbutton {
     background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);

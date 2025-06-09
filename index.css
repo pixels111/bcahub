@@ -626,7 +626,6 @@ nav a.sideactive:not(.logo) {
     margin-bottom: 0.5rem;
   }
   input[type="text"], textarea {
-    font-family: 'Poppins', sans-serif;
     font-size: clamp(14px, 1.5vw, 16px);
     border-radius: 0.75rem;
     border: 1.5px solid #d1d5db;
@@ -656,7 +655,6 @@ nav a.sideactive:not(.logo) {
   }
 
   button.submit-btn {
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: clamp(16px, 2vw, 18px);
     background-color: var(--color-accent);

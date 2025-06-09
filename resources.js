@@ -243,10 +243,25 @@ document.addEventListener('DOMContentLoaded', function() {
           
         },
         papers: {
+            1: [
+                       { name: "Semester Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1n9XbKr-oT8S1Nj-J0M-kB48buZQ6DPrS" },
+
+            ],
+
+            2: [
+                       { name: "Semester Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1n28iA_OWzeTbOmfMSh2SgopYOKFMpGJa" },
+
+            ],
+
+            3: [
+                       { name: "Semester Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1n9Lkj2fiyoMjYbqSwbkGnkuyB371dsuz" },
+                       { name: "Internal Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1n8SdPH-IZkTzbYiWGtuSK3EeO0TdLx5H" },
+
+            ],
         
           
             4: [
-                       { name: "Semester Exam Question Papers", link: "#" },
+                       { name: "Semester Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1nCVZJV4044kz13yvEXGRpjr5-352ekRG" },
                        { name: "Internal Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1AmxiY2cTNwtxN04V27NRoRGwNfv_Y2zv" },
                        { name: "Health & Hygeine imp Q & A ", link: "https://drive.google.com/uc?export=download&id=1zZBO_7vlhgSbiUmkATKj7uqiWcVvIxYa" }
 

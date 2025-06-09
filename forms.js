@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
     'spelling-mistake': document.getElementById('spelling-mistake'),
     'change-del-sub': document.getElementById('change-del-sub'),
     'change-syllabus': document.getElementById('change-syllabus'),
-    'feedback': document.getElementById('feedback'),
+    'ask-q': document.getElementById('ask-q'),
   };
   const successMsg = document.getElementById('success-msg');
   let popupTimeout = null;
@@ -299,7 +299,7 @@ if (input.name && input.name.toLowerCase().includes('email_phno')) {
       showFormMessage(form, "Sending...", "#0077ff");
 
       // Submit form data
-      fetch('https://script.google.com/macros/s/AKfycbxSyCetjMaWvpxb9PMGgSXKgSIf_d1-r3qt8FBKZNtvCeIzgIMX759IYntwucfvxy8eeg/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbxw7OfJHrnXW4xNG_O8t7lCqJPWRIaLZN50pPUuIilR4M4mUeuqKBZjRFuUMCo7hUCBoQ/exec', {
         method: 'POST',
         body: new FormData(form),
       })
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
     'spelling-mistake': 'Reporting spelling mistake',
     'change-del-sub': 'Requesting subject change/deletion',
     'change-syllabus': 'Requesting syllabus update',
-    
+    'ask-q': 'Asking a question',
   };
 
   if (formTypeSelect) {

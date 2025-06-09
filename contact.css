@@ -190,6 +190,7 @@ nav a.sideactive:not(.logo) {
     position: relative;
     overflow: hidden;
     margin-top: 20px;
+    margin-left: 135px;
 }
 
 .contact-link .arrow {
