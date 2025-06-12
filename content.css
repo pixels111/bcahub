@@ -368,6 +368,35 @@ nav a.sideactive:not(.logo) {
         {
               overflow: hidden !important;
         }
+        .filters {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    margin: 1rem 0;
+
+}
+.filter-chip {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    /* Keep your existing styles for .filter-chip */
+}
+
+/* Optional: Hide scrollbar for a cleaner look */
+.filters::-webkit-scrollbar {
+    display: none;
+}
+.filters {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
         /* Content Detail View */
         .content-detail {
             position: fixed;
