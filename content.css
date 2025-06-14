@@ -474,6 +474,155 @@ nav a.sideactive:not(.logo) {
             }
         }
 
+        .contact-prompt {
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .click-here {
+            color: #8ebbe9;
+            cursor: pointer;
+            font-weight: bold;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 50px;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            
+        }
+        
+        .modal-content {
+            background-color: #ffffff;
+            margin: 10% auto;
+            padding: 25px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            color:black;
+        }
+        
+        .close {
+            color: #000000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: black;
+        }
+        
+        .format-guide {
+            background-color: whitesmoke;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .format-guide h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        
+        .format-guide ul {
+            padding-left: 20px;
+        }
+        
+        .mail-button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin:10px auto;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            -webkit-tap-highlight-color: transparent;
+            
+        }
+        
+        .mail-button:hover {
+            background-color: #0052a3;
+        }
+      .codesection {
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+      .code-container {
+      position: relative;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .code-header {
+      background: #004d40;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .code-block {
+      display: flex;
+      overflow-x: auto;
+      font-family: sans-serif;
+      font-size: 14px;
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+    }
+    .code-block pre {
+      display: flex;
+      overflow-x: auto;
+      font-family:  monospace;
+      font-size: 14px;
+    }
+    .code-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .code-buttons button {
+      background: #009688;
+      border: none;
+      color: #fff;
+      padding: 5px 10px;
+      margin-left: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .output-box {
+      display: none;
+      background: #e0f2f1;
+      border-left: 4px solid #009688;
+      margin-top: 10px;
+      padding: 10px;
+      color: black;
+    }
+
+
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
   color: white;

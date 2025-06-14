@@ -154,6 +154,140 @@ const contentData = [
                          <li>wikipedia</li>
                         </ul> `
             },
+             {
+                id: 2,
+                title: "The Fibonacci Series code",
+                image: "pictures/id2-0.png",
+                preview: "Fibonacci Series – Aim, Code, Output",
+                content: `
+                <h2>Aim</h2>
+                <p>To generate and display the Fibonacci series up to <code>n</code> terms.</p>
+                <h2>Algorithm</h2>
+                <ol>
+                <li>Start</li>
+                <li>Initialize: <code>a = 0</code>, <code>b = 1</code></li>
+                <li>Print <code>a</code> and <code>b</code></li>
+                <li>Repeat <code>n-2</code> times:
+                    <ul>
+                    <li><code>c = a + b</code></li>
+                    <li>Print <code>c</code></li>
+                    <li>Update <code>a = b</code>, <code>b = c</code></li>
+                    </ul>
+                </li>
+                <li>Stop</li>
+                </ol>
+                </div>
+                <div class="codesection">
+                    <h2>Code in C</h2>
+                    <div class="code-container">
+                    <div class="code-header">C</div>
+                    <div class="code-buttons">
+                        <button onclick="toggleOutput(this)">Output</button>
+                    </div>
+                    <div class="code-block">
+                            <div class="code-lines" id="code-c">
+ <pre>
+ #include &lt;stdio.h&gt;
+ int main() {
+ int n, a = 0, b = 1, c;
+ printf("Enter number of terms: ");
+ scanf("%d", &n);
+ printf("%d\\t%d", a, b);
+ while(n != 0) {
+     c = a + b;
+     printf("\\t%d", c);
+     a = b;
+     b = c;
+     n--;
+ }
+ return 0;
+ }
+ </pre>
+                            </div>
+                        </div>
+                        <div class="output-box">
+                            <strong>Sample Output:</strong><br>
+                            Enter number of terms: 10<br>
+                            0 1 1 2 3 5 8 13 21 34
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="codesection">
+                        <h2>Code in Java</h2>
+                        <div class="code-container">
+                        <div class="code-header">Java</div>
+                        <div class="code-buttons">
+                            <button onclick="toggleOutput(this)">Output</button>
+                        </div>
+                        <div class="code-block">
+                            <div class="code-lines" id="code-java">
+<pre>
+import java.util.Scanner;
+class Fibonacci {
+public static void main(String[] args) {
+    int n, a = 0, b = 1, c;
+    Scanner s = new Scanner(System.in);
+    System.out.print("Enter number: ");
+    n = s.nextInt();
+    System.out.print(a + "\\t" + b);
+    while(n != 0) {
+    c = a + b;
+    System.out.print("\\t" + c);
+    a = b;
+    b = c;
+    n--;
+    }
+}
+}
+</pre>
+                            </div>
+                        </div>
+                        <div class="output-box">
+                            <strong>Sample Output:</strong><br>
+                            Enter number: 10<br>
+                            0 1 1 2 3 5 8 13 21 34
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="codesection">
+                        <h2>Code in Python</h2>
+                        <div class="code-container">
+                        <div class="code-header">Python</div>
+                        <div class="code-buttons">
+                            <button onclick="toggleOutput(this)">Output</button>
+                        </div>
+                        <div class="code-block">
+                                <div class="code-lines" id="code-python">
+
+<pre>
+n = int(input("Enter number: "))
+a, b = 0, 1
+print(a, b, end="\\t")
+while n != 0:
+    c = a + b
+    print(c, end="\\t")
+    a = b
+    b = c
+    n -= 1
+</pre>
+                            </div>
+                        </div>
+                        <div class="output-box">
+                            <strong>Sample Output:</strong><br>
+                            Enter number: 10<br>
+                            0 1 1 2 3 5 8 13 21 34
+                        </div>
+                        </div>
+                    </div>
+                    
+                    `,
+                 labels: ["fibonacci sequence program","c","python", "java", "programming"],
+                 category: ["programs"],
+                credit: `<ul>
+                        <li>BCAHub</li>
+                        </ul> `},
 
             
            
@@ -486,3 +620,38 @@ window.addEventListener('hashchange', () => {
     }
 });
 
+
+
+   // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("clickHere");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        
+    
+    // Toggle Output
+    function toggleOutput(button) {
+      const outputBox = button.closest(".code-container").querySelector(".output-box");
+      outputBox.style.display = outputBox.style.display === "block" ? "none" : "block";
+    }
