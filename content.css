@@ -254,6 +254,7 @@ nav a.sideactive:not(.logo) {
             justify-content: center;
             gap: 1rem;
             margin: 1rem 0;
+            -webkit-tap-highlight-color: transparent;
         }
         
         button {
@@ -310,6 +311,7 @@ nav a.sideactive:not(.logo) {
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .content-card:hover {
@@ -368,6 +370,7 @@ nav a.sideactive:not(.logo) {
         {
               overflow: hidden !important;
         }
+        
         .filters {
     display: block;
     white-space: nowrap;
@@ -378,6 +381,7 @@ nav a.sideactive:not(.logo) {
     padding-top: 10px;
     padding-bottom: 4px;
     margin: 1rem 0;
+    -webkit-tap-highlight-color: transparent;
 
 }
 .filter-chip {
@@ -422,6 +426,7 @@ nav a.sideactive:not(.logo) {
         .back-button {
             font-size: 1.5rem;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .detail-content {
