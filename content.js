@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
 // --- Content Data ---
 const contentData = [       
     {
-    id: 31,
+    id: 1,
     title: "The Fibonacci Series",
     image: "pictures/id6-0.jpg",
     preview: "Nature's mathematical sequence that appears everywhere from flowers to galaxies.",
@@ -157,7 +157,7 @@ const contentData = [
             </ul>`
   },
   {
-    id: 32,
+    id: 2,
     title: "The Fibonacci Series code",
     image: "pictures/id2-0.png",
     preview: "Fibonacci Series – Aim, Code, Output",
@@ -279,7 +279,52 @@ while n != 0:
     labels: ["fibonacci sequence program","c lan","python", "java", "programming"],
     category: ["programs"],
     credit: `<ul><li>BCAHub</li></ul>`
-  }
+  },
+
+  {
+  id: 3,
+    title: "The Touch Sense",
+    image: "pictures/id3-0.png",
+    preview: "How we actually feel touch at the quantum level",
+    content: `<p>Have you ever thought about what really happens when you <em>touch</em> something?</p>
+
+<p>Surprisingly, at the <strong>quantum level</strong>, the answer is: <strong>you never actually touch anything.</strong></p>
+
+<p>Let’s break it down in a simple way...</p>
+
+<p>Everything around us — including our own bodies — is made up of <strong>atoms</strong>. These atoms consist of a <strong>nucleus</strong> (containing protons and neutrons) surrounded by <strong>electrons</strong>.</p>
+
+<img src='pictures/id3-1.png' class='detail-image'>
+
+<p>Now, here’s where it gets interesting:</p>
+
+<p>When you try to touch an object — say, your phone screen — the <strong>electrons</strong> in the atoms of your fingers get extremely close to the electrons in the atoms of the phone. But they never <em>really</em> touch.</p>
+
+<p><strong>Why?</strong></p>
+
+<p>Because <strong>electrons have a negative charge</strong>, and like charges <strong>repel</strong> each other — just like two magnets pushing away when you try to bring their same poles together.</p>
+<br>
+<img src='pictures/id3-2.webp' class='detail-image'>
+
+<p>So instead of your atoms merging or physically "touching" the other atoms, your electrons are actually pushing away the electrons of the object. This creates a <strong>tiny electromagnetic force</strong> — a kind of invisible resistance.</p>
+
+<p>Your <strong>sensory nerves</strong> pick up this repelling force and send signals to your <strong>brain</strong>, which then interprets it as a <strong>sense of touch</strong>.</p>
+
+<p>So, even though it feels like you’re touching something — at the quantum level, it’s just a <strong>force interaction</strong> between clouds of electrons.</p>
+
+<h3>In short:</h3>
+<ul>
+    <li>You never really touch anything.</li>
+    <li>You’re just <strong>feeling the resistance</strong> between your electrons and the electrons of the object.</li>
+    <li>And your brain converts that into the sense of touch.</li>
+</ul>`,
+    labels: ["touch sense", "quantum physics", "electromagnetic force", "human body", "sensation", "atoms", "nerves"],
+    category: ["science", "facts"],
+    credit: `<ul>
+              <li>BCAHub</li>
+              <li>AI Images</li>
+            </ul>`
+  },
 ];
 
 // Current state
@@ -478,7 +523,7 @@ function setupRandomButton() {
     }
 }
 // Priority cards always first, rest shuffled for "all" filter
-const priorityCardIds = [31,32];
+const priorityCardIds = [3];
 
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
