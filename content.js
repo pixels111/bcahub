@@ -325,6 +325,134 @@ while n != 0:
               <li>AI Images</li>
             </ul>`
   },
+  {
+  id: 4,
+    title: "What is USB and Types of USB Ports",
+    image: "pictures/id4-0.png",
+    preview: "A complete and easy guide to USB ports — their types, uses, hidden facts, and why the world is shifting to Type-C.",
+    content: `
+      <h2>What is USB?</h2>
+  <p>
+    <strong>USB</strong> stands for <em>Universal Serial Bus</em>. It’s a standard way to connect, transfer data, and power devices. 
+    From charging your phone to connecting a mouse, keyboard, or flash drive — USB is everywhere in our digital lives. 
+    But did you know there are several types of USB ports? And that one special port, <strong>USB Type-C</strong>, is now replacing them all? 
+    Let’s explore their journey and purpose.
+  </p>
+
+  <h2> The Evolution of USB Ports</h2>
+  <p>
+    The story of USB started in <strong>1996</strong> with <strong>Type-A</strong>. Then came <strong>Type-B</strong>, <strong>Mini USB</strong>, and <strong>Micro USB</strong> in 2007.
+    But things changed in <strong>2014</strong> with the introduction of <strong>USB Type-C</strong> — a smart, fast, reversible connector.
+  </p>
+
+  <h2>Types of USB Ports & Their Uses</h2>
+
+  <h3>1. USB Type-A</h3>
+  <ul>
+    <li><strong>Invented:</strong> 1996</li>
+    <li><strong>Used In:</strong> Desktops, TVs, flash drives, keyboards</li>
+    <li><strong>Still Used:</strong> Yes</li>
+    <li><strong>Image Label:</strong> “Type-A: The classic USB for computers and gadgets”</li>
+    <li><strong>Note:</strong> Big, rectangular, not reversible</li>
+  </ul>
+
+  <h3>2. USB Type-B</h3>
+  <ul>
+    <li><strong>Invented:</strong> ~1998</li>
+    <li><strong>Used In:</strong> Printers, scanners</li>
+    <li><strong>Still Used:</strong> Rarely</li>
+    <li><strong>Image Label:</strong> “Type-B: Mostly used in printers and older devices”</li>
+    <li><strong>Note:</strong> Square with a rounded top</li>
+  </ul>
+
+  <h3>3. Mini USB</h3>
+  <ul>
+    <li><strong>Invented:</strong> Early 2000s</li>
+    <li><strong>Used In:</strong> Old cameras, MP3 players</li>
+    <li><strong>Still Used:</strong> No</li>
+    <li><strong>Image Label:</strong> “Mini USB: Used in old cameras and small gadgets”</li>
+    <li><strong>Note:</strong> Outdated and bulkier than Micro USB</li>
+  </ul>
+
+  <h3>4. Micro USB</h3>
+  <ul>
+    <li><strong>Invented:</strong> 2007</li>
+    <li><strong>Used In:</strong> Older Android phones, Bluetooth speakers, power banks</li>
+    <li><strong>Still Used:</strong> In budget gadgets</li>
+    <li><strong>Image Label:</strong> “Micro USB: Used in old phones and accessories”</li>
+    <li><strong>Note:</strong> Small and thin, but not reversible</li>
+  </ul>
+
+  <h3>5. USB Type-C</h3>
+  <ul>
+    <li><strong>Invented:</strong> 2014</li>
+    <li><strong>Used In:</strong> New phones, laptops, tablets, monitors</li>
+    <li><strong>Still Used:</strong> Yes — and rapidly growing</li>
+    <li><strong>Image Label:</strong> “Type-C: Fast, small, and works both ways”</li>
+    <li><strong>Note:</strong> Reversible, powerful, supports data, charging, and video</li>
+  </ul>
+
+  <h2>The Rise of USB Type-C</h2>
+  <p>
+    USB-C isn’t just a new shape — it’s a new level of functionality. It supports:
+    <ul>
+      <li><strong>Faster Charging</strong> – up to 240W, even enough for gaming laptops</li>
+      <li><strong>High-Speed Data Transfer</strong> – up to 40 Gbps</li>
+      <li><strong>Video/Audio Output</strong> – replaces HDMI and 3.5mm jack</li>
+      <li><strong>Reversibility</strong> – plug it in any way</li>
+      <li><strong>Slim Design</strong> – perfect for modern devices</li>
+    </ul>
+    In 2022, EU laws required USB-C for all smartphones sold in Europe — even Apple switched the iPhone 15 to USB-C.
+  </p>
+
+  <h2>Why the World is Switching to USB-C</h2>
+  <ul>
+    <li>No more flipping — it’s reversible</li>
+    <li>Superfast charging (USB PD)</li>
+    <li>Quick data transfers (up to 40 Gbps)</li>
+    <li>Works for video and sound — goodbye HDMI!</li>
+    <li>Universally supported — one cable for all gadgets</li>
+    <li>Sleek, slim, modern</li>
+    <li>Legally required in some regions (like the EU)</li>
+  </ul>
+
+  <h2>What Most People Don’t Know</h2>
+  <p>
+    Not all USB-C cables are equal:
+    <ul>
+      <li>Some don’t support fast charging or data transfer</li>
+      <li>Thunderbolt 3/4 looks the same but needs special support</li>
+      <li>Cheap cables may overheat or damage devices</li>
+    </ul>
+    Always check for <strong>USB PD</strong>, <strong>Thunderbolt logos</strong>, and proper <strong>certification</strong>.
+  </p>
+
+  <h2>Interesting & Confidential USB Facts</h2>
+  <ul>
+    <li>USB-C was designed to replace ALL ports — USB-A, HDMI, audio, DisplayPort</li>
+    <li>Apple switched to USB-C because of European law</li>
+    <li>USB-C + MagSafe = fast, safe charging with magnets</li>
+    <li>Budget devices still use old USB to sell old accessories</li>
+    <li>Thunderbolt is faster but more expensive and only works with supported devices</li>
+    <li>Low-quality USB-C cables can ruin your gadgets</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    USB ports have come a long way — from bulky, one-way connectors to sleek, universal USB-C. 
+    It’s fast, smart, and becoming the only port you’ll ever need. 
+    Whether it’s for power, data, video, or sound — USB Type-C does it all.
+  </p>
+  <p>Next time you charge or connect a device, remember: not all USB cables are created equal!</p>
+
+    `,
+    labels: ["usb ports", "type-c", "technology", "gadget guide", "connectivity", "charging", "data cables"],
+    category: ["tech"],
+    credit: `<ul>
+              <li>BCAHub</li>
+              <li>internet Images</li>
+            </ul>`
+  },
 ];
 
 // Current state
@@ -523,7 +651,7 @@ function setupRandomButton() {
     }
 }
 // Priority cards always first, rest shuffled for "all" filter
-const priorityCardIds = [3];
+const priorityCardIds = [4];
 
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
