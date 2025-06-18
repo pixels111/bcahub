@@ -283,7 +283,7 @@ while n != 0:
 
   {
   id: 3,
-    title: "The Touch Sense",
+    title: "The Science Behind the Touch Sense",
     image: "pictures/id3-0.png",
     preview: "How we actually feel touch at the quantum level",
     content: `<p>Have you ever thought about what really happens when you <em>touch</em> something?</p>
