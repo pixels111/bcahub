@@ -307,7 +307,7 @@ while n != 0:
 <img src='pictures/id3-2.webp' class='detail-image'>
 
 <p>So instead of your atoms merging or physically "touching" the other atoms, your electrons are actually pushing away the electrons of the object. This creates a <strong>tiny electromagnetic force</strong> — a kind of invisible resistance.</p>
-
+<img src='pictures/id3-3.png' class='detail-image'>
 <p>Your <strong>sensory nerves</strong> pick up this repelling force and send signals to your <strong>brain</strong>, which then interprets it as a <strong>sense of touch</strong>.</p>
 
 <p>So, even though it feels like you’re touching something — at the quantum level, it’s just a <strong>force interaction</strong> between clouds of electrons.</p>
