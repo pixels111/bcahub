@@ -447,7 +447,20 @@ nav a.sideactive:not(.logo) {
             object-fit:contain;
             margin: 1rem 0;
         }
-        
+        .detail-video {
+            object-fit: contain;
+            aspect-ratio: 16/9;
+            width: 100%;
+              margin-top: 8px;
+
+        }
+        .detail-video-label {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #9b9b9b;
+  font-weight: bold;
+}
         .detail-text {
             font-size: 1.2rem;
             line-height: 1.5;
