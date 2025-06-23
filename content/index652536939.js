@@ -110,9 +110,9 @@ const contentData = [
     {
     id: 1,
     title: "The Fibonacci Series",
-    image: "pictures/id6-0.jpg",
+    image: "../pictures/id6-0.jpg",
     preview: "Nature's mathematical sequence that appears everywhere from flowers to galaxies.",
-    content: `<img src='pictures/id6-0.jpg' class='detail-image'>
+    content: `<img src='../pictures/id6-0.jpg' class='detail-image'>
               <p>The Fibonacci series is a sequence of numbers starting with 0 and 1, where each new number is the sum of the two preceding ones.</p>
               <strong>The Series Looks Like:</strong>
               <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...</p> 
@@ -121,7 +121,7 @@ const contentData = [
                 <li>The series <strong>always begins with 0 and 1</strong>.</li>
                 <li>Each new term is calculated by <strong>adding the two previous numbers</strong>.</li>
               </ul>
-              <img src='pictures/id6-1.png' class='detail-image'>
+              <img src='../pictures/id6-1.png' class='detail-image'>
               <h2>Who discovered Fibonacci series?</h2>
               <p>The Fibonacci sequence has its origins in ancient India, particularly in the work of the <strong>mathematician Pingala</strong> around 200 BCE.</p><br>
               <p>However, the sequence became widely known in Europe through the Italian mathematician <strong>Leonardo of Pisa</strong>, commonly known as Fibonacci, who introduced it in his book <strong>Liber Abaci</strong> in 1202.</p>
@@ -159,7 +159,7 @@ const contentData = [
   {
     id: 2,
     title: "The Fibonacci Series code",
-    image: "pictures/id2-0.png",
+    image: "../pictures/id2-0.png",
     preview: "Fibonacci Series – Aim, Code, Output",
     content: `
       <h2>Aim</h2>
@@ -284,7 +284,7 @@ while n != 0:
   {
   id: 3,
     title: "The Science Behind the Touch Sense",
-    image: "pictures/id3-0.png",
+    image: "../pictures/id3-0.png",
     preview: "How we actually feel touch at the quantum level",
     content: `<p>Have you ever thought about what really happens when you <em>touch</em> something?</p>
 
@@ -294,7 +294,7 @@ while n != 0:
 
               <p>Everything around us — including our own bodies — is made up of <strong>atoms</strong>. These atoms consist of a <strong>nucleus</strong> (containing protons and neutrons) surrounded by <strong>electrons</strong>.</p>
 
-              <img src='pictures/id3-1.png' class='detail-image'>
+              <img src='../pictures/id3-1.png' class='detail-image'>
 
               <p>Now, here’s where it gets interesting:</p>
 
@@ -304,10 +304,10 @@ while n != 0:
 
               <p>Because <strong>electrons have a negative charge</strong>, and like charges <strong>repel</strong> each other — just like two magnets pushing away when you try to bring their same poles together.</p>
               <br>
-              <img src='pictures/id3-2.webp' class='detail-image'>
+              <img src='../pictures/id3-2.webp' class='detail-image'>
 
               <p>So instead of your atoms merging or physically "touching" the other atoms, your electrons are actually pushing away the electrons of the object. This creates a <strong>tiny electromagnetic force</strong> — a kind of invisible resistance.</p>
-              <img src='pictures/id3-3.png' class='detail-image'>
+              <img src='../pictures/id3-3.png' class='detail-image'>
               <p>Your <strong>sensory nerves</strong> pick up this repelling force and send signals to your <strong>brain</strong>, which then interprets it as a <strong>sense of touch</strong>.</p>
 
               <p>So, even though it feels like you’re touching something — at the quantum level, it’s just a <strong>force interaction</strong> between clouds of electrons.</p>
@@ -328,7 +328,7 @@ while n != 0:
   {
   id: 4,
     title: "What is USB and Types of USB Ports",
-    image: "pictures/id4-0.png",
+    image: "../pictures/id4-0.png",
     preview: "A complete and easy guide to USB ports — their types, uses, hidden facts, and why the world is shifting to Type-C.",
     content: `
               <h2>What is USB?</h2>
@@ -348,7 +348,7 @@ while n != 0:
               <h2>Types of USB Ports & Their Uses</h2>
 
               <h3>1. USB Type-A</h3>
-              <img src='pictures/id4-1.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
+              <img src='../pictures/id4-1.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
               <ul>
                 <li><strong>Invented:</strong> 1996</li>
                 <li><strong>Used In:</strong> Desktops, TVs, flash drives, keyboards</li>
@@ -358,7 +358,7 @@ while n != 0:
               </ul>
 
               <h3>2. USB Type-B</h3>
-              <img src='pictures/id4-2.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
+              <img src='../pictures/id4-2.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
 
               <ul>
                 <li><strong>Invented:</strong> ~1998</li>
@@ -369,7 +369,7 @@ while n != 0:
               </ul>
 
               <h3>3. Mini USB</h3>
-              <img src='pictures/id4-1.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
+              <img src='../pictures/id4-3.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
 
               <ul>
                 <li><strong>Invented:</strong> Early 2000s</li>
@@ -380,7 +380,7 @@ while n != 0:
               </ul>
 
               <h3>4. Micro USB</h3>
-              <img src='pictures/id4-4.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
+              <img src='../pictures/id4-4.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
               <ul>
                 <li><strong>Invented:</strong> 2007</li>
                 <li><strong>Used In:</strong> Older Android phones, Bluetooth speakers, power banks</li>
@@ -390,7 +390,7 @@ while n != 0:
               </ul>
 
               <h3>5. USB Type-C</h3>
-              <img src='pictures/id4-5.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
+              <img src='../pictures/id4-5.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
               <ul>
                 <li><strong>Invented:</strong> 2014</li>
                 <li><strong>Used In:</strong> New phones, laptops, tablets, monitors</li>
@@ -463,16 +463,16 @@ while n != 0:
    {
   id: 5,
     title: "The Big Bang",
-    image: "pictures/id5-0.png",
+    image: "../pictures/id5-0.png",
     preview: "The story of how the universe began — from a cosmic explosion to ever-expanding galaxies. Is it science or still a mystery?",
     content: `
               <h2>Definition of Big Bang Theory</h2> 
               <p>The Big Bang Theory is the most widely accepted scientific explanation for how the universe began. It proposes that the universe started as a singularity — a single, infinitely small, hot, and dense point — and around <strong>13.8 billion years ago</strong>, it suddenly expanded, creating space, time, energy, and matter. This expansion continues even today.</p>
-              <img src='pictures/id5-2.jpg' class='detail-image' >
+              <img src='../pictures/id5-2.jpg' class='detail-image' >
               <p>Imagine blowing up a balloon — at first, it's tiny, but as you add air, it gets bigger and bigger. The universe expanded in a similar way, just like that balloon.</p>
 <div >
   <video class='detail-video' autoplay controls> 
-    <source src="videos/id5-v1.mp4" type="video/mp4">
+    <source src="../videos/id5-v1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="detail-video-label">This is the Big Bang Simulation Video by NASA</div>
@@ -481,7 +481,7 @@ while n != 0:
               <p>The Big Bang theory was first proposed by <strong>Georges Lemaître</strong>, a Belgian physicist and priest, in 1927.</p>
               <p>Later, <strong>Edwin Hubble</strong> provided observational evidence in 1929 showing that galaxies are moving away from each other — confirming the expansion.</p>
               <h2>How Big Is the Universe Now?</h2>
-              <img src='pictures/id5-3.png' class='detail-image' >
+              <img src='../pictures/id5-3.png' class='detail-image' >
               <p>Since that first moment, the universe has kept growing. Today, the observable universe is about <strong>93 billion light-years</strong> across — and still expanding!</p>
               <h2>How Do We Know the Universe Is Expanding?</h2>
               <p>There are three main clues:</p>
