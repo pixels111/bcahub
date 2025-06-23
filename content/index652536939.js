@@ -370,7 +370,6 @@ while n != 0:
 
               <h3>3. Mini USB</h3>
               <img src='../pictures/id4-3.png' class='detail-image' style="width:100%; height:150px; align-item:center;">
-
               <ul>
                 <li><strong>Invented:</strong> Early 2000s</li>
                 <li><strong>Used In:</strong> Old cameras, MP3 players</li>
