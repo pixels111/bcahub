@@ -838,7 +838,13 @@ nav a.sideactive:not(.logo) {
     gap: 0.25rem;
   }
 }
+.guidelines{
+  margin-left: 5px;
 
+}
+.guidelines ul{
+  padding-left: 20px;
+}
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);
   color: white;

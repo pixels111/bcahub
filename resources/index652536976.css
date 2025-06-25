@@ -423,7 +423,7 @@ label {
     text-align: center;
     color: #7f8c8d;
 }
-.card{
+.report {
   flex: 0 0 calc(33.33% - 20px);
   background-color: #e6f0ff;
     padding: 25px;
@@ -437,8 +437,36 @@ label {
     margin-left:20px;
     margin-right:20px;
     border-radius: 5px;
-    border-left: 5px solid #0073e6;
+    border-left: 5px solid #0073e688;
 
+}
+.report h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.report p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.report li{
+  margin-bottom: 7px;
+}
+.card{
+  flex: 0 0 calc(33.33% - 20px);
+  background-color: rgba(255, 255, 255, 0.699);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    
 }
 .card h3 {
     font-size: 22px;
@@ -451,9 +479,6 @@ label {
     color: #000000;
     line-height: 1.6;
     margin-bottom: 20px;
-}
-.card li{
-  margin-bottom: 7px;
 }
 .cardbutton {
     background: linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%);
