@@ -470,7 +470,7 @@ nav a.sideactive:not(.logo) {
             padding-left: 1.5rem;
         }
          .detail-content ol {
-            padding-left: 1.5rem;
+            padding-left: 2rem;
         }
         .credit-section {
             margin-top: 2rem;
@@ -640,7 +640,6 @@ nav a.sideactive:not(.logo) {
       padding: 10px;
       color: black;
     }
-
 
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);

@@ -110,9 +110,9 @@ const contentData = [
     {
     id: 1,
     title: "The Fibonacci Series",
-    image: "../pictures/id6-0.jpg",
+    image: "../pictures/id1-0.jpg",
     preview: "Nature's mathematical sequence that appears everywhere from flowers to galaxies.",
-    content: `<img src='../pictures/id6-0.jpg' class='detail-image'>
+    content: `<img src='../pictures/id1-0.jpg' class='detail-image'>
               <p>The Fibonacci series is a sequence of numbers starting with 0 and 1, where each new number is the sum of the two preceding ones.</p>
               <strong>The Series Looks Like:</strong>
               <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...</p> 
@@ -121,7 +121,7 @@ const contentData = [
                 <li>The series <strong>always begins with 0 and 1</strong>.</li>
                 <li>Each new term is calculated by <strong>adding the two previous numbers</strong>.</li>
               </ul>
-              <img src='../pictures/id6-1.png' class='detail-image'>
+              <img src='../pictures/id1-1.png' class='detail-image'>
               <h2>Who discovered Fibonacci series?</h2>
               <p>The Fibonacci sequence has its origins in ancient India, particularly in the work of the <strong>mathematician Pingala</strong> around 200 BCE.</p><br>
               <p>However, the sequence became widely known in Europe through the Italian mathematician <strong>Leonardo of Pisa</strong>, commonly known as Fibonacci, who introduced it in his book <strong>Liber Abaci</strong> in 1202.</p>
@@ -510,6 +510,74 @@ while n != 0:
               <li>The Sound of the Big Bang by <a href="https://faculty.washington.edu/jcramer/BBSound_2013.html" class="splink" style="color:yellow">John G.Cramer</a> -- Emeritus Professor of Physics University of Washington</li>
             </ul>`
   },
+  {
+  id: 6,
+    title: "Kalasam – The Hidden Tech",
+    image: "../pictures/id6-0.png",
+    preview: "Discover the ancient science behind temple Kalasams — from lightning protection to emergency grain storage, they are more than just sacred symbols.",
+    content: `
+              <h2>What is Kalasam?</h2>
+              <p>A Kalasam is the pointed or rounded structure you see on top of South Indian temple towers (gopurams). More than just decoration, it holds spiritual, architectural, and scientific value.</p>
+              <img src='../pictures/id6-1.png' class='detail-image'>
+              <h2>What is It Made Of?</h2>
+              <p>
+              Kalasam are traditionally made from <strong>Impon</strong>, a five-metal alloy:
+              <ol>
+                <li>Gold</li>
+                <li>Silver</li>
+                <li>Brass</li>
+                <li>Copper</li>
+                <li>Lead</li>
+              </ol>
+              In ancient temples carved from stone, stone kalasams were used. However, metal kalasams are more common and functional today.
+              </P>
+              <h2>Types of Kalasams</h2>
+              <p>There are <strong>four major types</strong> of Kalasams, each with distinct shapes and purposes:
+              	<ol>
+                 <li><strong>Singakalasha</strong> – Shaped like a bull’s horn </li>
+              	 <li><strong>Trikalasha</strong> – A group of three tall kalasams, seen on large gopurams and gates </li>
+              	 <li><strong>Matakakalasha</strong> – Resembling earthen pots stacked on top of one another </li>
+              	 <li><strong>Golakalasha</strong> – Round-shaped with a fine tip at the top </li>
+                 </ol>     
+              </p>
+              <h2>Purpose of the Kalasam</h2>
+              <h3>Protection from Lightning Strikes</h3>
+              <p>
+               The metal Kalasam acts like a natural <strong>lightning rod</strong>. Placed <strong>above ground</strong>, it <strong>absorbs and redirects</strong> lightning energy away from the village or temple below, protecting people and structures. 
+                <img src='../pictures/id6-2.jpg' class='detail-image' >
+              Ancient proverbs even warn:<br>
+                         <q>Don’t live in a town without a temple</q> — because the Kalasam acts as a <strong>lightning shield</strong> for up to 100 meters around or based on gopuram height.
+                         </P>
+              <h3>Natural Calamity Survival</h3>
+              <p>
+               In times of <strong>natural disasters</strong> like floods or tsunamis, the <strong>grains stored inside the Kalasam</strong> act as a survival backup. Kalasams contain <strong>Navadhanyam</strong> — nine sacred grains:
+              <ol>
+               <li>Barley</li>
+               <li>Ragi</li>
+               <li>Varagu</li>
+               <li>Thinai</li>
+               <li>Kambu</li>
+               <li>Horsegram</li>
+               <li>Saamai</li>
+               <li>Cholam</li>
+               <li>Paddy</li>
+              </ol>
+              These grains can last up to <strong>12 years</strong>. Every 12 years, temples conduct a special ceremony called <strong>Kumbhabhishekam</strong>, also known as <strong>Samprokshanam</strong> to <strong>renew and refill the grains</strong>.
+              </p>
+              <h2>Science & Technology in Ancient Temples</h2>
+              <p>Our ancestors designed Kalasams with <strong>foresight</strong>. From lightning protection to emergency food reserves, the Kalasam is a technological marvel hidden in plain sight. Some even believe the <strong>millets stored inside conduct electromagnetic energy</strong>, helping the structure act like a cosmic antenna.</p>
+              <h2>Conclusion</h2>
+              <p>The Kalasam is a beautiful fusion of <strong>art, science, and tradition</strong>. It sits atop temples not just as a spiritual marker, but as a <strong>guardian of life</strong> — protecting the land from lightning, and holding within it the seeds of future generations. Look around and see how ancient design blends perfectly with modern science — the Kalasam is a true testimony to that brilliance.
+</p>
+`,
+    labels: ["Kalasam", "temple science", "ancient technology", "Indian heritage", "lightning protection", "grain storage"],
+    category: ["science", "facts"],
+    credit: `<ul>
+              <li>BCAHub</li>
+              <li>Information from Google, Wikipedia & other...</li>
+              <li>Images from internet, Wikipedia, AI</li>
+            </ul>`
+  },
 ];
 
 // Current state
@@ -708,7 +776,7 @@ function setupRandomButton() {
     }
 }
 // Priority cards always first, rest shuffled for "all" filter
-const priorityCardIds = [5];
+const priorityCardIds = [6];
 
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
