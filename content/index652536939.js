@@ -578,6 +578,179 @@ while n != 0:
               <li>Images from internet, Wikipedia, AI</li>
             </ul>`
   },
+    {
+    id: 7,
+    title: "The Armstrong number program",
+    image: "../pictures/id7-0.png",
+    preview: "Armstrong number – Aim, Code, Output",
+    content: `
+      <h2>Aim</h2>
+      <p>To write a program that checks whether a given number is an Armstrong number or not using C, Java, and Python.</p>
+      <h2>Definition</h2>
+      <p>An <strong>Armstrong number</strong> is a number that is equal to the sum of its digits each raised to the power of the number of digits.
+        <br><strong>Example:</strong><br>
+        <ul>
+        <li>For 153 → 1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup> = 153 → Armstrong number</li>
+        <li>For 9474 → 9<sup>4</sup> + 4<sup>4</sup> + 7<sup>4</sup> + 4<sup>4</sup> = 9474 → Armstrong number</li> 
+        </ul>
+       </p>
+      <h2>Algorithm</h2>
+      <ol>
+        <li>Start</li>
+        <li>Input a number <code>n</code></li>
+        <li>Count the number of digits in <code>n</code> and store in <code>count</code></li>
+        <li>Copy <code>n</code> to a temporary variable <code>temp</code></li>
+        <li>Initialize <code>sum = 0</code></li>
+        <li>Repeat until <code>n</code> becomes <code>0</code>:
+          <ul>
+            <li>Extract the last digit <code>r = n % 10</code></li>
+            <li>Compute <code>r^count</code> and add to <code>sum</code></li>
+            <li>Reduce <code>n</code> using <code>n = n // 10</code></li>
+          </ul>
+        </li>
+        <li>Compare <code>sum</code> with <code>temp</code>:
+          <ul>
+            <li>If equal → Armstrong number</li>
+            <li>Else → Not an Armstrong number</li>
+          </ul>
+        </li>
+        <li>Stop</li>
+      </ol>
+      <div class="codesection">
+        <h2>Code in C</h2>
+        <div class="code-container">
+          <div class="code-header">C</div>
+          <div class="code-buttons">
+            <button onclick="toggleOutput(this)">Output</button>
+          </div>
+          <div class="code-block">
+            <div class="code-lines" id="code-c">
+       <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+void main() {
+    int n, r, sum = 0, temp, count = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+
+    int num = n;
+    while (num != 0) {
+        count++;
+        num /= 10;
+    }
+
+    num = n;
+    while (num != 0) {
+        r = num % 10;
+        sum += pow(r, count);
+        num /= 10;
+    }
+
+    if (sum == temp)
+        printf("%d is an Armstrong number.\\n", temp);
+    else
+        printf("%d is not an Armstrong number.\\n", temp);
+}
+</pre>
+            </div>
+          </div>
+          <div class="output-box">
+            <strong>Sample Output:</strong><br>
+            Enter number: 407<br>
+            407 is an Armstrong number.
+          </div>
+        </div>
+      </div>
+      <div class="codesection">
+        <h2>Code in Java</h2>
+        <div class="code-container">
+          <div class="code-header">Java</div>
+          <div class="code-buttons">
+            <button onclick="toggleOutput(this)">Output</button>
+          </div>
+          <div class="code-block">
+            <div class="code-lines" id="code-java">
+              <pre>
+import java.util.Scanner;
+
+class Armstrong {
+    public static void main(String[] args) {
+        int n, r, sum = 0, temp, count = 0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        n = s.nextInt();
+        temp = n;
+
+        int num = n;
+        while (num != 0) {
+            count++;
+            num /= 10;
+        }
+
+        num = n;
+        while (num != 0) {
+            r = num % 10;
+            sum += Math.pow(r, count);
+            num /= 10;
+        }
+
+        if (sum == temp)
+            System.out.println(temp + " is an Armstrong number.");
+        else
+            System.out.println(temp + " is not an Armstrong number.");
+    }
+}
+</pre>
+            </div>
+          </div>
+          <div class="output-box">
+            <strong>Sample Output:</strong><br>
+            Enter a number: 9474<br>
+            9474 is an Armstrong number.
+
+          </div>
+        </div>
+      </div>
+      <div class="codesection">
+        <h2>Code in Python</h2>
+        <div class="code-container">
+          <div class="code-header">Python</div>
+          <div class="code-buttons">
+            <button onclick="toggleOutput(this)">Output</button>
+          </div>
+          <div class="code-block">
+            <div class="code-lines" id="code-python">
+              <pre>
+n = int(input("Enter a number: "))
+temp = n
+count = len(str(n))
+sum = 0
+
+while n != 0:
+    r = n % 10
+    sum += r ** count
+    n //= 10
+
+if sum == temp:
+    print(f"{temp} is an Armstrong number.")
+else:
+    print(f"{temp} is not an Armstrong number.")
+</pre>
+            </div>
+          </div>
+          <div class="output-box">
+            <strong>Sample Output:</strong><br>
+            Enter a number: 93084<br>
+            93084 is an Armstrong number.
+          </div>
+        </div>
+      </div>`,
+    labels: ["Armstrong number program","c lan","python", "java", "programming"],
+    category: ["programs"],
+    credit: `<ul><li>BCAHub</li></ul>`
+  },
+
 ];
 
 // Current state
@@ -776,7 +949,7 @@ function setupRandomButton() {
     }
 }
 // Priority cards always first, rest shuffled for "all" filter
-const priorityCardIds = [6];
+const priorityCardIds = [6,7,5];
 
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
