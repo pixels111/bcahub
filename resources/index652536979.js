@@ -240,7 +240,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "INTRODUCTION-TO-GEOGRAPHY", link: "https://drive.google.com/uc?export=download&id=1pyc8HLRBQfxWCY0jVVlWZ1JX0gudvq_2" },
                 ]
             },
-          
+           5:{
+                "major": [
+                { name: "4th sem major subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1JwvSkophXiZ7WPr9Fj-mMDCvyaJJRGn9" },
+
+            ],
+
+           
+            },
         },
         papers: {
             1: [
