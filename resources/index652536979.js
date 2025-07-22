@@ -130,6 +130,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
             },
 
+        5: {
+
+          /*  "MOBILE APPLICATION DEVELOPMENT USING ANDROID ": [
+       { name: "Unit 1: Introduction to Android", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=" }
+           ], */
+
+           "WEB DEVELOPMENT USING PHP & MYSQL ": [
+       { name: "Unit 1: Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1XAKAbjyh_OSUKg0gcHN55_ypX04g_7fd" },
+   /*  { name: "Unit 2: Arrays & String Manipulation and Regular Expressions", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: Reusing Code and Writing Functions & Object-Oriented PHP & Error and Exception Handling", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: Using MySQL", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: Introduction of Laravel PHP Framework", link: "https://drive.google.com/uc?export=download&id=" },
+          */ ], 
+           
+           
+       /*     "FOUNDATION OF DATA SCIENCE ": [
+       { name: "Unit 1", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: IPython", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: Introduction to NumPy", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: Data Manipulation with Pandas", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: Visualization with Matplotlib & Python Libraries for Machine Learning", link: "https://drive.google.com/uc?export=download&id=" }
+            ], */
+
+      /*       "SOFTWARE TESTING": [
+       { name: "Unit 1: Introduction & Flow graphs and Path testing", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: Test Case Design Black-Box Approach", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: State, State Graphs and Transition testing", link: "https://drive.google.com/uc?export=download&id=" },
+    
+   ],*/
+        /*     "PROJECT MANAGEMENT" : [
+       { name: "Unit 1: PROJECT MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: PROJECT PLANNING AND SELECTION", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: PROJECT ORGANIZATION", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: PROJECT MONITORING", link: "https://drive.google.com/uc?export=download&id=" },
+
+   ],*/
+       /*     "FINANCIAL MARKETING" : [
+       { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: THE DERIVATIVES MARKETS", link: "https://drive.google.com/uc?export=download&id=" },    
+     ],
+           */
+       },
+
         },
         pdfs: {
            
