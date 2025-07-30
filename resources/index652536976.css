@@ -11,7 +11,7 @@
 
 }
 .splink:link{color: blue;
-  text-decoration: none;
+  
 }
 .splink:visited{color: blue;
   text-decoration: none;
@@ -19,6 +19,7 @@
 .splink:hover{color: purple;
   text-decoration: underline;
 } 
+
 
 body {
   display: flex;
@@ -304,6 +305,15 @@ label {
 .resource-list a:hover {
   color: purple;
   text-decoration: underline;
+}
+.resource-list a[href=" "],
+.resource-list a[href="https://drive.google.com/uc?export=download&id="],
+.resource-list a[href=""],
+.resource-list a[href="#"],
+.resource-list a:not([href]) {
+  color: red;
+  pointer-events: none;
+  cursor: default;
 }
 
 .resource-list li {
