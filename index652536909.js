@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupPerfectSmoothScroll() {
   let isProgrammaticNavigation = false;
   let lastProcessedHash = '';
-  const scrollOffset = 20; // Small offset from top
+  const scrollOffset = 0; // Small offset from top
 
   // Get all navigation links
   const navLinks = document.querySelectorAll('a[href^="#"]');

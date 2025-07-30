@@ -23,7 +23,7 @@ function hideSidebar(){
 function setupPerfectSmoothScroll() {
   let isProgrammaticNavigation = false;
   let lastProcessedHash = '';
-  const scrollOffset = 20;
+  const scrollOffset = 0;
 
   const navLinks = document.querySelectorAll('a[href^="#"]');
   function perfectScrollTo(targetEl) {
