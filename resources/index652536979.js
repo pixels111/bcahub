@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
            
             "FOUNDATION OF DATA SCIENCE ": [
        { name: "Unit 1: Intro to BigData & DataScience", link: "https://drive.google.com/uc?export=download&id=1DdUPIo3B28EsWv8DVmLlZEAj2VMc6ALB" },
-       { name: "Unit 2: IPython", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: IPython", link: "https://drive.google.com/uc?export=download&id=1Q0Td2DFIcUDkYl7IuM_2Er5GTH-h8Yrx" },
        { name: "Unit 3: Introduction to NumPy", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Data Manipulation with Pandas", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: Visualization with Matplotlib & Python Libraries for Machine Learning", link: "https://drive.google.com/uc?export=download&id=" }
