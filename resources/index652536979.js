@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
            "MOBILE APPLICATION DEVELOPMENT USING ANDROID ": [
        { name: "Unit 1: Introduction to Android", link: "https://drive.google.com/uc?export=download&id=1zNHYV7cYRUbxcATgjqt3Jj9I44yZxZ2n" },
-{ name: "Unit 1: Introduction to Android (Faculty-provided)", link: "https://drive.google.com/uc?export=download&id=1fbRukNCV-HVpUK82THiqNSxRYIHsd73r" },
+       { name: "Unit 1: Introduction to Android (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1fbRukNCV-HVpUK82THiqNSxRYIHsd73r" },
        { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id="},
        { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
