@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 1: Introduction to Android", link: "https://drive.google.com/uc?export=download&id=1zNHYV7cYRUbxcATgjqt3Jj9I44yZxZ2n" },
        { name: "Unit 1: Introduction to Android (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1fbRukNCV-HVpUK82THiqNSxRYIHsd73r" },
        { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id="},
+       { name: "Unit 2: Android Application Design Essentials (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1K912uCwhBXjWzqd0wQIq1Jhdg5ke-twB"},
        { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=" } 
@@ -211,6 +212,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Python_material_updated", link: "https://drive.google.com/uc?export=download&id=1K05kTJ1WnO1rRYeAqjP4giQSbL7T9v8h" },
                 { name: "Unit 4", link: "https://drive.google.com/uc?export=download&id=1K1MhC0CkeTmoTxuApnqUqdJYkpYN3RiM" },
                 { name: "UNIT-5 python notes", link: "https://drive.google.com/uc?export=download&id=1K9ZhIcy3WPEON4G2LP13Lm5kqVF_6wOu" },
+            ],
+            5: [
+                { name: "MAD Experiment 2", link: "https://drive.google.com/uc?export=download&id=1vWlMOTgRtfltzpRXrx6-EEdlB0tuUPez" },
             ],
         },
         records: {
