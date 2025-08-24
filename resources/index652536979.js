@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
            "MOBILE APPLICATION DEVELOPMENT USING ANDROID ": [
        { name: "Unit 1: Introduction to Android", link: "https://drive.google.com/uc?export=download&id=1zNHYV7cYRUbxcATgjqt3Jj9I44yZxZ2n" },
        { name: "Unit 1: Introduction to Android (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1fbRukNCV-HVpUK82THiqNSxRYIHsd73r" },
-       { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=1EkiQGbENGqaRMXTqeAcM_qaC5o1brcu4"},
+       { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=1MTqUsci_kRIfgA7Z3nnAHL8dOBWTaE4e"},
        { name: "Unit 2: Android Application Design Essentials (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1K912uCwhBXjWzqd0wQIq1Jhdg5ke-twB"},
        { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
            "WEB DEVELOPMENT USING PHP & MYSQL ": [
        { name: "Unit 1: Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1XAKAbjyh_OSUKg0gcHN55_ypX04g_7fd" },
        { name: "Unit 1 (2nd pdf): Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1jDhpR_vwkgkB0gyLFbIc22EsKuoZb-h7" },
-       { name: "Unit 2: Arrays & String Manipulation and Regular Expressions", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: Arrays & String Manipulation and Regular Expressions", link: "https://drive.google.com/uc?export=download&id=1tKdajzRRepWUi4nEfKJbPhOo3a4zgKHI" },
        { name: "Unit 3: Reusing Code and Writing Functions & Object-Oriented PHP & Error and Exception Handling", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Using MySQL", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: Introduction of Laravel PHP Framework", link: "https://drive.google.com/uc?export=download&id=" },
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
              "SOFTWARE TESTING": [
        { name: "Unit 1: Introduction & Flow graphs and Path testing", link: "https://drive.google.com/uc?export=download&id=1mR4HfJy5D4OWbx2w67tu2IVKcnpMHdeW" },
-       { name: "Unit 2: Test Case Design Black-Box Approach (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1UtrS5JxrcSKGvFMglA0kLMv6FubS4tpv" },
+       { name: "Unit 2: Test Case Design Black-Box Approach (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1L7KCRxo4oskPSB8M-U1aJI0DwksgxHPI" },
        { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: State, State Graphs and Transition testing", link: "https://drive.google.com/uc?export=download&id=" },
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
    ],
             "FINANCIAL MARKETING" : [
        { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=16uAKcStcz4zRujE-X22K71xYCH983BCs" },
        { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: THE DERIVATIVES MARKETS", link: "https://drive.google.com/uc?export=download&id=" },    
@@ -215,7 +215,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "UNIT-5 python notes", link: "https://drive.google.com/uc?export=download&id=1K9ZhIcy3WPEON4G2LP13Lm5kqVF_6wOu" },
             ],
             5: [
+                { name: "MAD Experiment 1", link: "https://drive.google.com/uc?export=download&id=1yr6Orx1UR8xhwBemhACaGTCmMIPLTC4o" },
                 { name: "MAD Experiment 2", link: "https://drive.google.com/uc?export=download&id=1vWlMOTgRtfltzpRXrx6-EEdlB0tuUPez" },
+
             ],
         },
         records: {
@@ -259,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         },
         syllabus: {
-            all: {
+            0 : {
                 "All Semesters Syllabus": [
                     { name: "All Semesters Syllabus (1-8) ", link: "https://drive.google.com/uc?export=download&id=1DqnrX2_fDLlUqzUHK21vu_ms_As3bUuu" },
                 ],
