@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
              "SOFTWARE TESTING": [
        { name: "Unit 1: Introduction & Flow graphs and Path testing", link: "https://drive.google.com/uc?export=download&id=1mR4HfJy5D4OWbx2w67tu2IVKcnpMHdeW" },
-       { name: "Unit 2: Test Case Design Black-Box Approach", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 2: Test Case Design Black-Box Approach (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1UtrS5JxrcSKGvFMglA0kLMv6FubS4tpv" },
        { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=" },
