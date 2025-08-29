@@ -288,29 +288,29 @@ while n != 0:
     preview: "How we actually feel touch at the quantum level",
     content: `<p>Have you ever thought about what really happens when you <em>touch</em> something?</p>
 
-              <p>Surprisingly, at the <strong>quantum level</strong>, the answer is: <strong>you never actually touch anything.</strong></p>
+              <p>Surprisingly, at the <strong>quantum level</strong>, the answer is <strong>you never actually touch anything.</strong></p>
 
               <p>Let’s break it down in a simple way...</p>
 
-              <p>Everything around us — including our own bodies — is made up of <strong>atoms</strong>. These atoms consist of a <strong>nucleus</strong> (containing protons and neutrons) surrounded by <strong>electrons</strong>.</p>
+              <p>Everything around us including our own bodies is made up of <strong>atoms</strong>. These atoms consist of a <strong>nucleus</strong> (containing protons and neutrons) surrounded by <strong>electrons</strong>.</p>
 
               <img src='../pictures/id3-1.png' class='detail-image'>
 
-              <p>Now, here’s where it gets interesting:</p>
+              <p>Now, here’s where it gets interesting</p>
 
-              <p>When you try to touch an object — say, your phone screen — the <strong>electrons</strong> in the atoms of your fingers get extremely close to the electrons in the atoms of the phone. But they never <em>really</em> touch.</p>
+              <p>When you try to touch an object example, your phone screen the <strong>electrons</strong> in the atoms of your fingers get extremely close to the electrons in the atoms of the phone. But they never <em>really</em> touch.</p>
 
               <p><strong>Why?</strong></p>
 
-              <p>Because <strong>electrons have a negative charge</strong>, and like charges <strong>repel</strong> each other — just like two magnets pushing away when you try to bring their same poles together.</p>
+              <p>Because <strong>electrons have a negative charge</strong>, and like charges <strong>repel</strong> each other just like two magnets pushing away when you try to bring their same poles together.</p>
               <br>
               <img src='../pictures/id3-2.webp' class='detail-image'>
 
-              <p>So instead of your atoms merging or physically "touching" the other atoms, your electrons are actually pushing away the electrons of the object. This creates a <strong>tiny electromagnetic force</strong> — a kind of invisible resistance.</p>
+              <p>So instead of your atoms merging or physically "touching" the other atoms, your electrons are actually pushing away the electrons of the object. This creates a <strong>tiny electromagnetic force</strong> a kind of invisible resistance.</p>
               <img src='../pictures/id3-3.png' class='detail-image'>
               <p>Your <strong>sensory nerves</strong> pick up this repelling force and send signals to your <strong>brain</strong>, which then interprets it as a <strong>sense of touch</strong>.</p>
 
-              <p>So, even though it feels like you’re touching something — at the quantum level, it’s just a <strong>force interaction</strong> between clouds of electrons.</p>
+              <p>So, even though it feels like you’re touching something at the quantum level, it’s just a <strong>force interaction</strong> between clouds of electrons.</p>
 
               <h3>In short:</h3>
               <ul>
@@ -329,12 +329,12 @@ while n != 0:
   id: 4,
     title: "What is USB and Types of USB Ports",
     image: "../pictures/id4-0.png",
-    preview: "A complete and easy guide to USB ports — their types, uses, hidden facts, and why the world is shifting to Type-C.",
+    preview: "A complete and easy guide to USB ports and their types, uses, hidden facts, and why the world is shifting to Type-C.",
     content: `
               <h2>What is USB?</h2>
               <p>
                 <strong>USB</strong> stands for <em>Universal Serial Bus</em>. It’s a standard way to connect, transfer data, and power devices. 
-                From charging your phone to connecting a mouse, keyboard, or flash drive — USB is everywhere in our digital lives. 
+                From charging your phone to connecting a mouse, keyboard, or flash drive, USB is everywhere in our digital lives. 
                 But did you know there are several types of USB ports? And that one special port, <strong>USB Type-C</strong>, is now replacing them all? 
                 Let’s explore their journey and purpose.
               </p>
@@ -342,7 +342,7 @@ while n != 0:
               <h2> The Evolution of USB Ports</h2>
               <p>
                 The story of USB started in <strong>1996</strong> with <strong>Type-A</strong>. Then came <strong>Type-B</strong>, <strong>Mini USB</strong>, and <strong>Micro USB</strong> in 2007.
-                But things changed in <strong>2014</strong> with the introduction of <strong>USB Type-C</strong> — a smart, fast, reversible connector.
+                But things changed in <strong>2014</strong> with the introduction of <strong>USB Type-C</strong> a smart, fast, reversible connector.
               </p>
 
               <h2>Types of USB Ports & Their Uses</h2>
@@ -400,7 +400,7 @@ while n != 0:
 
               <h2>The Rise of USB Type-C</h2>
               <p>
-                USB-C isn’t just a new shape — it’s a new level of functionality. It supports:
+                USB-C isn’t just a new shape, it’s a new level of functionality. It supports:
                 <ul>
                   <li><strong>Faster Charging</strong> – up to 240W, even enough for gaming laptops</li>
                   <li><strong>High-Speed Data Transfer</strong> – up to 40 Gbps</li>
@@ -408,7 +408,7 @@ while n != 0:
                   <li><strong>Reversibility</strong> – plug it in any way</li>
                   <li><strong>Slim Design</strong> – perfect for modern devices</li>
                 </ul>
-                In 2022, EU laws required USB-C for all smartphones sold in Europe — even Apple switched the iPhone 15 to USB-C.
+                In 2022, EU laws required USB-C for all smartphones sold in Europe even Apple switched the iPhone 15 to USB-C.
               </p>
 
               <h2>Why the World is Switching to USB-C</h2>
@@ -440,16 +440,16 @@ while n != 0:
                 <li>USB-C + MagSafe = fast, safe charging with magnets</li>
                 <li>Budget devices still use old USB to sell old accessories</li>
                 <li>Thunderbolt is faster but more expensive and only works with supported devices</li>
-                <li>Low-quality USB-C cables can ruin your gadgets</li>
+                <li>Low quality USB-C cables can ruin your gadgets</li>
               </ul>
 
               <h2>Conclusion</h2>
               <p>
-                USB ports have come a long way — from bulky, one-way connectors to sleek, universal USB-C. 
+                USB ports have come a long way from bulky, one-way connectors to sleek, universal USB-C. 
                 It’s fast, smart, and becoming the only port you’ll ever need. 
-                Whether it’s for power, data, video, or sound — USB Type-C does it all.
+                Whether it’s for power, data, video, or sound USB Type-C does it all.
               </p>
-              <p>Next time you charge or connect a device, remember: not all USB cables are created equal!</p>
+              <p>Next time you charge or connect a device, remember not all USB cables are created equal!</p>
 
     `,
     labels: ["usb ports", "type-c", "technology", "gadget guide", "connectivity", "charging", "data cables"],
@@ -463,12 +463,12 @@ while n != 0:
   id: 5,
     title: "The Big Bang",
     image: "../pictures/id5-0.png",
-    preview: "The story of how the universe began — from a cosmic explosion to ever-expanding galaxies. Is it science or still a mystery?",
+    preview: "The story of how the universe began from a cosmic explosion to ever-expanding galaxies. Is it science or still a mystery?",
     content: `
               <h2>Definition of Big Bang Theory</h2> 
-              <p>The Big Bang Theory is the most widely accepted scientific explanation for how the universe began. It proposes that the universe started as a singularity — a single, infinitely small, hot, and dense point — and around <strong>13.8 billion years ago</strong>, it suddenly expanded, creating space, time, energy, and matter. This expansion continues even today.</p>
+              <p>The Big Bang Theory is the most widely accepted scientific explanation for how the universe began. It proposes that the universe started as a singularity a single, infinitely small, hot, and dense point and around <strong>13.8 billion years ago</strong>, it suddenly expanded, creating space, time, energy, and matter. This expansion continues even today.</p>
               <img src='../pictures/id5-2.jpg' class='detail-image' >
-              <p>Imagine blowing up a balloon — at first, it's tiny, but as you add air, it gets bigger and bigger. The universe expanded in a similar way, just like that balloon.</p>
+              <p>Imagine blowing up a balloon at first, it's tiny, but as you add air, it gets bigger and bigger. The universe expanded in a similar way, just like that balloon.</p>
 <div >
   <video class='detail-video' autoplay controls> 
     <source src="../videos/id5-v1.mp4" type="video/mp4">
@@ -478,29 +478,29 @@ while n != 0:
 </div>
               <h2>Who Introduced This Theory?</h2>
               <p>The Big Bang theory was first proposed by <strong>Georges Lemaître</strong>, a Belgian physicist and priest, in 1927.</p>
-              <p>Later, <strong>Edwin Hubble</strong> provided observational evidence in 1929 showing that galaxies are moving away from each other — confirming the expansion.</p>
+              <p>Later, <strong>Edwin Hubble</strong> provided observational evidence in 1929 showing that galaxies are moving away from each other, confirming the expansion.</p>
               <h2>How Big Is the Universe Now?</h2>
               <img src='../pictures/id5-3.png' class='detail-image' >
-              <p>Since that first moment, the universe has kept growing. Today, the observable universe is about <strong>93 billion light-years</strong> across — and still expanding!</p>
+              <p>Since that first moment, the universe has kept growing. Today, the observable universe is about <strong>93 billion light years</strong> across and still expanding!</p>
               <h2>How Do We Know the Universe Is Expanding?</h2>
-              <p>There are three main clues:</p>
+              <p>There are three main clues...</p>
               <ol>
-                  <li><strong>Redshift:</strong> Light from far-away galaxies is <strong>stretched</strong>, making it appear red — this shows they're moving away.</li>
+                  <li><strong>Redshift:</strong> Light from far away galaxies is <strong>stretched</strong>, making it appear red this shows they're moving away.</li>
                   <li><strong>Cosmic Microwave Background (CMB):</strong> A faint glow of leftover energy from the Big Bang fills the universe.</li>
                   <li><strong>Elements in the Universe:</strong> The amounts of <strong>hydrogen</strong>, <strong>helium</strong>, and <strong>lithium</strong> match what the Big Bang model predicts.</li>
               </ol>
               <p>These observations are like cosmic fingerprints that help us know the Big Bang really happened.</p>
               <h2>Big Bang in Mythology</h2>
-              <p>Interestingly, some ancient cultures have similar ideas:</p>
+              <p>Interestingly, some ancient cultures have similar ideas...</p>
               <ul>
                   <li>In Hinduism, the universe starts with a sound called <strong>“Om”</strong>, which some say is like the <strong>“vibration”</strong> or energy that began everything.</li>
-                  <li>Other ancient stories talk about creation from chaos or darkness — which is not too far from what the Big Bang describes.</li>
+                  <li>Other ancient stories talk about creation from chaos or darkness which is not too far from what the Big Bang describes.</li>
               </ul>
               <p>So, while science and mythology are different, they sometimes share a surprising connection.</p>
               <h2>Can We Trust This Theory? How Much Truth Is Behind It?</h2>
-              <p>The Big Bang Theory is not just a guess —, and it’s backed by physics, mathematics decades of astronomical observation. However, it doesn’t explain what caused the Big Bang, only what happened after. While it's our best model, scientists are still exploring new theories like cosmic inflation, string theory, and quantum gravity to understand more.</p>
+              <p>The Big Bang Theory is not just a guess it is backed by physics, mathematics and decades of astronomical observation. However, it doesn’t explain what caused the Big Bang, only what happened after. While it's our best model, scientists are still exploring new theories like cosmic inflation, string theory, and quantum gravity to understand more.</p>
               <h2>Conclusion</h2>
-              <p>The Big Bang Theory gives us the closest and most fascinating explanation of how the universe came into existence. From a tiny, hot flash of energy, space and time were born — and over billions of years, that spark expanded to form stars, galaxies, planets, and life itself. It helps us understand where we came from — not just as people, but as part of a vast, ever-growing cosmos. While we don’t have all the answers, what we do know points to an exciting universe still unfolding. So the next time you look up at the night sky, remember: it all began with one giant cosmic leap — the Big Bang.</p>
+              <p>The Big Bang Theory gives us the closest and most fascinating explanation of how the universe came into existence. From a tiny, hot flash of energy, space and time were born and over billions of years, that spark expanded to form stars, galaxies, planets, and life itself. It helps us understand where we came from not just as people, but as part of a vast, ever growing cosmos. While we don’t have all the answers, what we do know points to an exciting universe still unfolding. So the next time you look up at the night sky, remember it all began with one giant cosmic leap the Big Bang.</p>
 `,
     labels: ["big bang", "universe", "space science", "origin of universe", "singularity"],
     category: ["space"],
@@ -514,14 +514,14 @@ while n != 0:
   id: 6,
     title: "Kalasam – The Hidden Tech",
     image: "../pictures/id6-0.png",
-    preview: "Discover the ancient science behind temple Kalasams — from lightning protection to emergency grain storage, they are more than just sacred symbols.",
+    preview: "Discover the ancient science behind temple Kalasams from lightning protection to emergency grain storage, they are more than just sacred symbols.",
     content: `
               <h2>What is Kalasam?</h2>
               <p>A Kalasam is the pointed or rounded structure you see on top of South Indian temple towers (gopurams). More than just decoration, it holds spiritual, architectural, and scientific value.</p>
               <img src='../pictures/id6-1.png' class='detail-image'>
               <h2>What is It Made Of?</h2>
               <p>
-              Kalasam are traditionally made from <strong>Impon</strong>, a five-metal alloy:
+              Kalasam are traditionally made from <strong>Impon</strong>, a five metal alloy
               <ol>
                 <li>Gold</li>
                 <li>Silver</li>
@@ -545,12 +545,12 @@ while n != 0:
               <p>
                The metal Kalasam acts like a natural <strong>lightning rod</strong>. Placed <strong>above ground</strong>, it <strong>absorbs and redirects</strong> lightning energy away from the village or temple below, protecting people and structures. 
                 <img src='../pictures/id6-2.jpg' class='detail-image' >
-              Ancient proverbs even warn:<br>
-                         <q>Don’t live in a town without a temple</q> — because the Kalasam acts as a <strong>lightning shield</strong> for up to 100 meters around or based on gopuram height.
+              Ancient proverbs even warn<br>
+                         <q>Don’t live in a town without a temple</q> because the Kalasam acts as a <strong>lightning shield</strong> for up to 100 meters around or based on gopuram height.
                          </P>
               <h3>Natural Calamity Survival</h3>
               <p>
-               In times of <strong>natural disasters</strong> like floods or tsunamis, the <strong>grains stored inside the Kalasam</strong> act as a survival backup. Kalasams contain <strong>Navadhanyam</strong> — nine sacred grains:
+               In times of <strong>natural disasters</strong> like floods or tsunamis, the <strong>grains stored inside the Kalasam</strong> act as a survival backup. Kalasams contain <strong>Navadhanyam</strong> (nine sacred grains)
               <ol>
                <li>Barley</li>
                <li>Ragi</li>
@@ -567,7 +567,7 @@ while n != 0:
               <h2>Science & Technology in Ancient Temples</h2>
               <p>Our ancestors designed Kalasams with <strong>foresight</strong>. From lightning protection to emergency food reserves, the Kalasam is a technological marvel hidden in plain sight. Some even believe the <strong>millets stored inside conduct electromagnetic energy</strong>, helping the structure act like a cosmic antenna.</p>
               <h2>Conclusion</h2>
-              <p>The Kalasam is a beautiful fusion of <strong>art, science, and tradition</strong>. It sits atop temples not just as a spiritual marker, but as a <strong>guardian of life</strong> — protecting the land from lightning, and holding within it the seeds of future generations. Look around and see how ancient design blends perfectly with modern science — the Kalasam is a true testimony to that brilliance.
+              <p>The Kalasam is a beautiful fusion of <strong>art, science, and tradition</strong>. It sits atop temples not just as a spiritual marker, but as a <strong>guardian of life</strong> protecting the land from lightning, and holding within it the seeds of future generations. Look around and see how ancient design blends perfectly with modern science, the Kalasam is a true testimony to that brilliance.
 </p>
 `,
     labels: ["Kalasam", "temple science", "ancient technology", "Indian heritage", "lightning protection", "grain storage"],
