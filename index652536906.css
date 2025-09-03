@@ -646,6 +646,16 @@ nav a.sideactive:not(.logo) {
     min-height: clamp(80px, 10vw, 120px);
     resize: vertical;
   }
+textarea#feedback-input,
+textarea[name="feedback"],
+textarea.feedback-input {
+    min-height: 120px;
+    max-height: none;
+    height: 140px;
+    resize: vertical;
+    overflow-y: auto;
+    width: 100%;
+}
   .checkbox-container {
     display: flex;
     align-items: center;
@@ -739,10 +749,27 @@ nav a.sideactive:not(.logo) {
   }
   .feedback-message {
     color: var(--color-gray);
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: clamp(17px, 1.5vw, 18px);
     white-space: pre-wrap;
     flex-grow: 1;
+    height: 120px;
+    width:  290px;
+    max-height: 120px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #bbb #f5f5f5;
+    word-break: break-word;
   }
+
+
+@media (max-width: 400px) {
+  .feedback-message {
+    font-size: 13px;
+    height: 80px;
+    max-height: 120px;
+    width: 100%;
+  }
+}
   svg.feedback-star {
     width: clamp(16px, 1.5vw, 20px);
     height: clamp(16px, 1.5vw, 20px);
