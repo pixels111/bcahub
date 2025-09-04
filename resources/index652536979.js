@@ -171,7 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
              "PROJECT MANAGEMENT" : [
        { name: "Unit 1: PROJECT MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 2: PROJECT PLANNING AND SELECTION", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: PROJECT PLANNING AND SELECTION (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=12ipYCAFW-gcdN3y7qRZnZVDY0M2HCThW" },
        { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1_GWfLT1ax9vwtjGcB2QD_gkxuDGuBDQM" },
        { name: "Unit 4: PROJECT ORGANIZATION", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: PROJECT MONITORING", link: "https://drive.google.com/uc?export=download&id=" },
 
@@ -217,8 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
             5: [
                 { name: "MAD Experiment 1", link: "https://drive.google.com/uc?export=download&id=1yr6Orx1UR8xhwBemhACaGTCmMIPLTC4o" },
                 { name: "MAD Experiment 2", link: "https://drive.google.com/uc?export=download&id=1vWlMOTgRtfltzpRXrx6-EEdlB0tuUPez" },
-
-            ],
+                { name: "MAD LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },            ],
         },
         records: {
            
