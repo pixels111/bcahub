@@ -162,14 +162,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
              "SOFTWARE TESTING": [
        { name: "Unit 1: Introduction & Flow graphs and Path testing", link: "https://drive.google.com/uc?export=download&id=1mR4HfJy5D4OWbx2w67tu2IVKcnpMHdeW" },
-       { name: "Unit 2: Test Case Design Black-Box Approach (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1L7KCRxo4oskPSB8M-U1aJI0DwksgxHPI" },
-       { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: Test Case Design Black-Box Approach", link: "https://drive.google.com/uc?export=download&id=1L7KCRxo4oskPSB8M-U1aJI0DwksgxHPI" },
+       { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=1mxRJNx1wkXRyRucBC81pEDmMGr804VK8" },
        { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: State, State Graphs and Transition testing", link: "https://drive.google.com/uc?export=download&id=" },
     
    ],
              "PROJECT MANAGEMENT" : [
-       { name: "Unit 1: PROJECT MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 1: PROJECT MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=1RWKiNK078gxjx0uZiBOwXYzciXL6gINo" },
        { name: "Unit 2: PROJECT PLANNING AND SELECTION", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 2: PROJECT PLANNING AND SELECTION (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=12ipYCAFW-gcdN3y7qRZnZVDY0M2HCThW" },
        { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION", link: "https://drive.google.com/uc?export=download&id=" },
