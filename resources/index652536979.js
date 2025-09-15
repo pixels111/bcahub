@@ -138,11 +138,11 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=1MTqUsci_kRIfgA7Z3nnAHL8dOBWTaE4e"},
        { name: "Unit 2: Android Application Design Essentials (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1K912uCwhBXjWzqd0wQIq1Jhdg5ke-twB"},
        { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
-{ name: "Unit 3: Android User Interface Design Essentials & Input Controls (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1ng908o61qPVc3D0pWw3VI3QU53L6yLw8" },
+       { name: "Unit 3: Android User Interface Design Essentials & Input Controls (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1ng908o61qPVc3D0pWw3VI3QU53L6yLw8" },
        { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
-{ name: "Unit 4: Testing Android applications (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1Bgg5cumoOtwxxMbWUpP0umPIYJ7gYt4x" },
+       { name: "Unit 4: Testing Android applications (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1Bgg5cumoOtwxxMbWUpP0umPIYJ7gYt4x" },
        { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=" },
-{ name: "Unit 5: Using Common Android APIs (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1U5bwV5g06kWAKi_MViqtxm0VSqMlu0bJ" } 
+       { name: "Unit 5: Using Common Android APIs (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1U5bwV5g06kWAKi_MViqtxm0VSqMlu0bJ" } 
            ],
 
            "WEB DEVELOPMENT USING PHP & MYSQL ": [
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 1: Intro to BigData & DataScience", link: "https://drive.google.com/uc?export=download&id=1DdUPIo3B28EsWv8DVmLlZEAj2VMc6ALB" },
        { name: "Unit 2: IPython", link: "https://drive.google.com/uc?export=download&id=1Q0Td2DFIcUDkYl7IuM_2Er5GTH-h8Yrx" },
        { name: "Unit 3: Introduction to NumPy", link: "https://drive.google.com/uc?export=download&id=1k7s41EGkwRcSiOkg1OQ0XqkK3P9BmXCq"},
-       { name: "Unit 4: Data Manipulation with Pandas", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: Data Manipulation with Pandas", link: "https://drive.google.com/uc?export=download&id=1EUwsNlGYJVupQTMSPnwMaThwEwn7fKPW&usp=drive_fs" },
        { name: "Unit 5: Visualization with Matplotlib & Python Libraries for Machine Learning", link: "https://drive.google.com/uc?export=download&id=" }
             ], 
 
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "FINANCIAL MARKETING" : [
        { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=16uAKcStcz4zRujE-X22K71xYCH983BCs" },
-       { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=1huvoRnVP91b5tROMDPTF-yRcH6JrBPam" },
        { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 5: THE DERIVATIVES MARKETS", link: "https://drive.google.com/uc?export=download&id=" },    
      ],
