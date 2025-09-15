@@ -138,8 +138,11 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=1MTqUsci_kRIfgA7Z3nnAHL8dOBWTaE4e"},
        { name: "Unit 2: Android Application Design Essentials (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1K912uCwhBXjWzqd0wQIq1Jhdg5ke-twB"},
        { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
+{ name: "Unit 3: Android User Interface Design Essentials & Input Controls (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1ng908o61qPVc3D0pWw3VI3QU53L6yLw8" },
        { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=" } 
+{ name: "Unit 4: Testing Android applications (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1Bgg5cumoOtwxxMbWUpP0umPIYJ7gYt4x" },
+       { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=" },
+{ name: "Unit 5: Using Common Android APIs (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1U5bwV5g06kWAKi_MViqtxm0VSqMlu0bJ" } 
            ],
 
            "WEB DEVELOPMENT USING PHP & MYSQL ": [
