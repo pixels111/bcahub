@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectionMessage = document.getElementById('selection-message');
     const resourcesContainer = document.getElementById('resources-container');
     
-    // Sample data for resources with links
+    
     const resourceData = {
         assignments: {
                
@@ -137,12 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 1: Introduction to Android (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1fbRukNCV-HVpUK82THiqNSxRYIHsd73r" },
        { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=1MTqUsci_kRIfgA7Z3nnAHL8dOBWTaE4e"},
        { name: "Unit 2: Android Application Design Essentials (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1K912uCwhBXjWzqd0wQIq1Jhdg5ke-twB"},
-       { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 3: Android User Interface Design Essentials & Input Controls (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1ng908o61qPVc3D0pWw3VI3QU53L6yLw8" },
-       { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 4: Testing Android applications (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1Bgg5cumoOtwxxMbWUpP0umPIYJ7gYt4x" },
-       { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 5: Using Common Android APIs (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1U5bwV5g06kWAKi_MViqtxm0VSqMlu0bJ" } 
+       { name: "Unit 3: Android User Interface Design Essentials & Input Controls", link: "https://drive.google.com/uc?export=download&id=1ng908o61qPVc3D0pWw3VI3QU53L6yLw8" },
+       { name: "Unit 4: Testing Android applications", link: "https://drive.google.com/uc?export=download&id=1Bgg5cumoOtwxxMbWUpP0umPIYJ7gYt4x" },
+       { name: "Unit 4: Testing Android applications (2nd pdf)", link: "https://drive.google.com/uc?export=download&id=1nqfRmtsZfbygG4xDsiRrZbbr8MBpsJSK" },
+       { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=1U5bwV5g06kWAKi_MViqtxm0VSqMlu0bJ" } 
            ],
 
            "WEB DEVELOPMENT USING PHP & MYSQL ": [
@@ -167,17 +165,15 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 1: Introduction & Flow graphs and Path testing", link: "https://drive.google.com/uc?export=download&id=1mR4HfJy5D4OWbx2w67tu2IVKcnpMHdeW" },
        { name: "Unit 2: Test Case Design Black-Box Approach", link: "https://drive.google.com/uc?export=download&id=1L7KCRxo4oskPSB8M-U1aJI0DwksgxHPI" },
        { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=1mxRJNx1wkXRyRucBC81pEDmMGr804VK8" },
-       { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=17TozD4jm337AOm89CU_PBAfp-Sd166Wf" },
        { name: "Unit 5: State, State Graphs and Transition testing", link: "https://drive.google.com/uc?export=download&id=" },
     
    ],
              "PROJECT MANAGEMENT" : [
        { name: "Unit 1: PROJECT MANAGEMENT", link: "https://drive.google.com/uc?export=download&id=1RWKiNK078gxjx0uZiBOwXYzciXL6gINo" },
-       { name: "Unit 2: PROJECT PLANNING AND SELECTION", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 2: PROJECT PLANNING AND SELECTION (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=12ipYCAFW-gcdN3y7qRZnZVDY0M2HCThW" },
-       { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1_GWfLT1ax9vwtjGcB2QD_gkxuDGuBDQM" },
-       { name: "Unit 4: PROJECT ORGANIZATION", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 2: PROJECT PLANNING AND SELECTION", link: "https://drive.google.com/uc?export=download&id=12ipYCAFW-gcdN3y7qRZnZVDY0M2HCThW" },
+       { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION", link: "https://drive.google.com/uc?export=download&id=1_GWfLT1ax9vwtjGcB2QD_gkxuDGuBDQM" },
+       { name: "Unit 4: PROJECT ORGANIZATION", link: "https://drive.google.com/uc?export=download&id=17tufQq_Pd-bS4lbwHrHsXF1yNjqWhV0k" },
        { name: "Unit 5: PROJECT MONITORING", link: "https://drive.google.com/uc?export=download&id=" },
 
    ],
@@ -222,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
             5: [
                 { name: "MAD Experiment 1", link: "https://drive.google.com/uc?export=download&id=1yr6Orx1UR8xhwBemhACaGTCmMIPLTC4o" },
                 { name: "MAD Experiment 2", link: "https://drive.google.com/uc?export=download&id=1vWlMOTgRtfltzpRXrx6-EEdlB0tuUPez" },
-                { name: "MAD LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },            ],
+        ],
         },
         records: {
            
@@ -250,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     { name: "python Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=14aoyGGaarUfnGInMAxlGqZq4jGMTi1My" },
                ],
 
-                "WEB PROGRAMMING": [
+                "WEB DEVELOPMENT USING PHP & MYSQL ": [
                     { name: "Web Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X5xNmGDF9ag7h7IUYVNuskWaeW6-wVqz" },
                     { name: "web record outputs(by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X6mSriCEfBi0OnT_eR-Oyu5A9IgkkGmD" },
                     { name: "web record but no outputs(by RAKESH)", link: "https://drive.google.com/uc?export=download&id=1ONDQCE0gpJyg02Y_Gu8fGe7TKKgJM9aL" },
@@ -262,6 +258,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 "OPERATING SYSTEM":[
                     { name: "Operating System Record", link: "https://drive.google.com/uc?export=download&id=148GK7ltpIRLRDAOsdX6UOXsq966Qn65z" },
                 ],       
+            },
+            5: {
+                 "MOBILE APPLICATION DEVELOPMENT USING ANDROID": [
+                    { name: "MAD LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },
+               ],
+
+                "WEB PROGRAMMING": [
+                    { name: "WEB MANUAL", link: "https://drive.google.com/uc?export=download&id=1D3lL9YnrwzzYsHNhxnfpghBwbwV0LwFm" },
+
+                ],
+
+                "FOUNDATION OF DATA SCIENCE":[
+                    { name: "FDS Record", link: "https://drive.google.com/uc?export=download&id=" },
+                ],  
+                "SOFTWARE TESTING":[
+                    { name: "ST Record", link: "https://drive.google.com/uc?export=download&id=" },
+                ],      
             },
         },
         syllabus: {

@@ -18,21 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.socials-container').style.display = 'flex';
   }
 
-  
-// Live Clock
-function updateClock() {
-  const now = new Date();
-  const options = {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-    hour: '2-digit', minute: '2-digit', second: '2-digit',
-    hour12: true
-  };
-  document.getElementById('current-time').textContent = now.toLocaleString('en-IN', options);
-}
-setInterval(updateClock, 1000);
-updateClock();
-
-
   const repoOwner = 'pixels111';
   const repoName = 'bcahub';
 
