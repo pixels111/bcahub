@@ -22,11 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "SOFTWARE ENGINEERING Assignment", link:"https://drive.google.com/uc?export=download&id=1lEu32gBZXEGyeVnJVXEqB2F7ynVGjygI"},
             ],
             4: [
-                { name: "python programming assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1xXluvLwuePrg7bspnNungzRblLhxsXzr"},
-                { name: "web  programming assignment (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1xYm4aOMmbmf7AXfb4GvLPIPJkOU6bdVU"},
-                { name: "OS Assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=147PdKRdOWDv_TAn4ZmTM-y4SwcLMMKam"},
-                { name: "HRM Assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1tDdjU1_H7fSfQkZpxUQiRV4knnEJUD8a"},
-                { name: "FM Assignment (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1tEtqzVFJDNcYtmTJuyq-6Iv-nqi3wVnv"},
+                { name: "python programming assignment", link:"https://drive.google.com/uc?export=download&id=1xXluvLwuePrg7bspnNungzRblLhxsXzr"},
+                { name: "web  programming assignment", link: "https://drive.google.com/uc?export=download&id=1xYm4aOMmbmf7AXfb4GvLPIPJkOU6bdVU"},
+                { name: "OS Assignment", link:"https://drive.google.com/uc?export=download&id=147PdKRdOWDv_TAn4ZmTM-y4SwcLMMKam"},
+                { name: "HRM Assignment", link:"https://drive.google.com/uc?export=download&id=1tDdjU1_H7fSfQkZpxUQiRV4knnEJUD8a"},
+                { name: "FM Assignment", link:"https://drive.google.com/uc?export=download&id=1tEtqzVFJDNcYtmTJuyq-6Iv-nqi3wVnv"},
+            ],
+            5: [
+                { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1f8TrV73djYkr17W9dayyg2BMgxW4bnbt"},
+                { name: "WEB DEVELOPMENT USING PHP & MYSQL (by RAKESH)", link: "https://drive.google.com/uc?export=download&id=1pzsiBVIR7FFYSIhcfu_f2HKKMWtf7Snc"},
+                { name: "FOUNDATION OF DATA SCIENCE", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "SOFTWARE TESTING", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "PROJECT MANAGEMENT (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1J8BYpK7hqeKCHpeh52blPfRwcV7-Rann"},
+                { name: "FINANCIAL MARKETING", link:"https://drive.google.com/uc?export=download&id="},
             ],
            
         },
@@ -132,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         5: {
 
-           "MOBILE APPLICATION DEVELOPMENT USING ANDROID ": [
+           "MOBILE APPLICATION DEVELOPMENT USING ANDROID": [
        { name: "Unit 1: Introduction to Android", link: "https://drive.google.com/uc?export=download&id=1zNHYV7cYRUbxcATgjqt3Jj9I44yZxZ2n" },
        { name: "Unit 1: Introduction to Android (Faculty-provided pdf)", link: "https://drive.google.com/uc?export=download&id=1fbRukNCV-HVpUK82THiqNSxRYIHsd73r" },
        { name: "Unit 2: Android Application Design Essentials", link: "https://drive.google.com/uc?export=download&id=1MTqUsci_kRIfgA7Z3nnAHL8dOBWTaE4e"},
@@ -143,17 +151,17 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 5: Using Common Android APIs", link: "https://drive.google.com/uc?export=download&id=1U5bwV5g06kWAKi_MViqtxm0VSqMlu0bJ" } 
            ],
 
-           "WEB DEVELOPMENT USING PHP & MYSQL ": [
+           "WEB DEVELOPMENT USING PHP & MYSQL": [
        { name: "Unit 1: Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1XAKAbjyh_OSUKg0gcHN55_ypX04g_7fd" },
        { name: "Unit 1 (2nd pdf): Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1jDhpR_vwkgkB0gyLFbIc22EsKuoZb-h7" },
        { name: "Unit 2: Arrays & String Manipulation and Regular Expressions", link: "https://drive.google.com/uc?export=download&id=1tKdajzRRepWUi4nEfKJbPhOo3a4zgKHI" },
        { name: "Unit 3: Reusing Code and Writing Functions & Object-Oriented PHP & Error and Exception Handling", link: "https://drive.google.com/uc?export=download&id=1AkcBYgWXBot3l2AympbI0Md_m3sT7kow" },
        { name: "Unit 4: Using MySQL", link: "https://drive.google.com/uc?export=download&id=1ItYiIAqpSC7Vw1M0EAC8ITulvmUL9f_i" },
-       { name: "Unit 5: Introduction of Laravel PHP Framework", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: Introduction of Laravel PHP Framework", link: "https://drive.google.com/uc?export=download&id=1YVgqyYH2NakWmF4zm8jpyDti2jD4UrgN" },
            ], 
            
            
-            "FOUNDATION OF DATA SCIENCE ": [
+            "FOUNDATION OF DATA SCIENCE": [
        { name: "Unit 1: Intro to BigData & DataScience", link: "https://drive.google.com/uc?export=download&id=1DdUPIo3B28EsWv8DVmLlZEAj2VMc6ALB" },
        { name: "Unit 2: IPython", link: "https://drive.google.com/uc?export=download&id=1Q0Td2DFIcUDkYl7IuM_2Er5GTH-h8Yrx" },
        { name: "Unit 3: Introduction to NumPy", link: "https://drive.google.com/uc?export=download&id=1k7s41EGkwRcSiOkg1OQ0XqkK3P9BmXCq"},
@@ -224,31 +232,31 @@ document.addEventListener('DOMContentLoaded', function() {
            
             3: {
                  "DATABASE MANAGEMENT SYSTEM": [
-                    { name: "DBMS Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1-EEf5vXhy5LVIYDEYHoGrNfXjLIgzW9R" },
+                    { name: "DBMS Record", link: "https://drive.google.com/uc?export=download&id=1-EEf5vXhy5LVIYDEYHoGrNfXjLIgzW9R" },
                     { name: "DBMS Record (source file)", link: "https://drive.google.com/uc?export=download&id=1jPm_m_73QfqpO0L_4xfmay4Wz8zW7aSC" },
                ],
 
                 "JAVA AND DATA STRUCTURES": [
-                    { name: "JAVA Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=10wE0-CRtmH0lT1JUCoH9nIY1KlJlrSv8" },
+                    { name: "JAVA Record", link: "https://drive.google.com/uc?export=download&id=10wE0-CRtmH0lT1JUCoH9nIY1KlJlrSv8" },
                 ],
 
                 "MATHEMATICAL AND STATISTICAL FOUNDATIONS":[
-                    { name: "Maths Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1zFbQfDDf5PJpAJed3qt_Y4kKHG-w0t_4" },
+                    { name: "Maths Record", link: "https://drive.google.com/uc?export=download&id=1zFbQfDDf5PJpAJed3qt_Y4kKHG-w0t_4" },
                     { name: "Maths Record (source file)", link: "https://drive.google.com/uc?export=download&id=1lOmvdzVrYouMCOv-cQQ6Ku4pAw4EzsUw" },
                 ],       
 
                 "SOFTWARE ENGINEERING": [
-                    { name: "SOFTWARE ENGINEERING Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1UQ6uBRBdmLIbuxWBJbSl6LsUgxTPmgm8" },
+                    { name: "SOFTWARE ENGINEERING Record", link: "https://drive.google.com/uc?export=download&id=1UQ6uBRBdmLIbuxWBJbSl6LsUgxTPmgm8" },
                 ],
             },
             4: {
                  "PYTHON PROGRAMMING": [
-                    { name: "python Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=14aoyGGaarUfnGInMAxlGqZq4jGMTi1My" },
+                    { name: "python Record", link: "https://drive.google.com/uc?export=download&id=14aoyGGaarUfnGInMAxlGqZq4jGMTi1My" },
                ],
 
                 "WEB DEVELOPMENT USING PHP & MYSQL ": [
-                    { name: "Web Record (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X5xNmGDF9ag7h7IUYVNuskWaeW6-wVqz" },
-                    { name: "web record outputs(by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X6mSriCEfBi0OnT_eR-Oyu5A9IgkkGmD" },
+                    { name: "Web Record", link: "https://drive.google.com/uc?export=download&id=1X5xNmGDF9ag7h7IUYVNuskWaeW6-wVqz" },
+                    { name: "web record outputs", link: "https://drive.google.com/uc?export=download&id=1X6mSriCEfBi0OnT_eR-Oyu5A9IgkkGmD" },
                     { name: "web record but no outputs(by RAKESH)", link: "https://drive.google.com/uc?export=download&id=1ONDQCE0gpJyg02Y_Gu8fGe7TKKgJM9aL" },
                     { name: "WP-lab-manual-list", link: "https://drive.google.com/uc?export=download&id=1rCzdepN3QQNfkbf_2HCjg0o_0rAM6lF_" }, 
                     { name: "8,9,10", link: "https://drive.google.com/uc?export=download&id=1rF99JdMTGOCDtePcSi8TCNRXaOpFTHXU" },
