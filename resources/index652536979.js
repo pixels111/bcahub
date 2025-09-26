@@ -328,10 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
             },
            5:{
                 "major": [
-                { name: "4th sem major subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1JwvSkophXiZ7WPr9Fj-mMDCvyaJJRGn9" },
+                { name: "5th sem major subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1JwvSkophXiZ7WPr9Fj-mMDCvyaJJRGn9" },
                 ],
                 "minor": [
-                { name: "4th sem minor subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1DFxpdGZd_Uq7r7B03ne6dbdYhy912FmL" },
+                { name: "5th sem minor subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1DFxpdGZd_Uq7r7B03ne6dbdYhy912FmL" },
 
             ],
 
