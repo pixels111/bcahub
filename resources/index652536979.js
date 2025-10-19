@@ -35,6 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "SOFTWARE TESTING", link:"https://drive.google.com/uc?export=download&id="},
                 { name: "PROJECT MANAGEMENT (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1J8BYpK7hqeKCHpeh52blPfRwcV7-Rann"},
                 { name: "FINANCIAL MARKETING", link:"https://drive.google.com/uc?export=download&id="},
+
+             { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1QMQc4uNA3I3Nwh4ieW3O-aBV2tKjgxAL"},
+                { name: "WEB DEVELOPMENT USING PHP & MYSQL (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X32cP4mSKbwjRaJx7CHHCzOzrPrIx61_"},
+                { name: "FOUNDATION OF DATA SCIENCE (by SETHU)", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "SOFTWARE TESTING (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1aoOYgmekVej0C8B_-M0-N3JEwCPpiSI8"},
+                { name: "PROJECT MANAGEMENT (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1Gk8-AdBh8l9hd5hdSd4YFLO33q1KzfE_"},
+                { name: "FINANCIAL MARKETING (by SETHU)", link:"https://drive.google.com/uc?export=download&id="},
             ],
            
         },
@@ -189,9 +196,12 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=" },
        { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=16uAKcStcz4zRujE-X22K71xYCH983BCs" },
        { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=1huvoRnVP91b5tROMDPTF-yRcH6JrBPam" },
-       { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=" },
-       { name: "Unit 5: THE DERIVATIVES MARKETS", link: "https://drive.google.com/uc?export=download&id=" },    
+       { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=1sw-OHUTb2MXqpAI86HDQKnj5XAntaB47" },
+       { name: "Unit 5: THE DERIVATIVES MARKETS", link: "https://drive.google.com/uc?export=download&id=1LXGuzfvKW3uT8rfIOU3qYTnhDpidgM79" },    
      ],
+"ENVIRONMENTAL EDUCATION" : [
+            { name: "Environmental Education (All Units)", link: "https://drive.google.com/uc?export=download&id=14S_31kBlIK_eklqvPNy6M5hl8O1pk433" },
+          ],
            
        },
 
@@ -270,10 +280,15 @@ document.addEventListener('DOMContentLoaded', function() {
             5: {
                  "MOBILE APPLICATION DEVELOPMENT USING ANDROID": [
                     { name: "MAD LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },
+{ name: "Mobile Application Development Record Pics", link: "https://drive.google.com/uc?export=download&id=1eYQXe-VxwxPIORMCRP0C5Yrb4WbexoEj" },
+{ name: "Mobile Application Development Record", link: "https://drive.google.com/uc?export=download&id=1xemXGRXNcPxPvGQW8unYb54efoBuwnuT" },
+
                ],
 
                 "WEB PROGRAMMING": [
                     { name: "WEB MANUAL", link: "https://drive.google.com/uc?export=download&id=1D3lL9YnrwzzYsHNhxnfpghBwbwV0LwFm" },
+
+{ name: "WEB Development Record", link: "https://drive.google.com/uc?export=download&id=1u4v21bx0mIPwYNwUKwSgzHVlOew6Psjr" },
 
                 ],
 
@@ -281,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     { name: "FDS Record", link: "https://drive.google.com/uc?export=download&id=" },
                 ],  
                 "SOFTWARE TESTING":[
-                    { name: "ST Record", link: "https://drive.google.com/uc?export=download&id=" },
+                    { name: "Software Testing Record", link: "https://drive.google.com/uc?export=download&id=1w2bG1YK92IgbPrnzyvO_6takEMyj3tTo" },
                 ],      
             },
         },
@@ -334,6 +349,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "5th sem minor subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1DFxpdGZd_Uq7r7B03ne6dbdYhy912FmL" },
 
             ],
+"Foundation Course": [
+                { name: "Environmental Education", link: "https://drive.google.com/uc?export=download&id=19EEuz4Bq3NGGkJgYA-WgxPnCNhA_Kpxv" },
+                
+                ]
 
            
             },
