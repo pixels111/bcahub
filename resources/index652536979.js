@@ -31,10 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
             5: [
                 { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1f8TrV73djYkr17W9dayyg2BMgxW4bnbt"},
                 { name: "WEB DEVELOPMENT USING PHP & MYSQL (by RAKESH)", link: "https://drive.google.com/uc?export=download&id=1pzsiBVIR7FFYSIhcfu_f2HKKMWtf7Snc"},
-                { name: "FOUNDATION OF DATA SCIENCE", link:"https://drive.google.com/uc?export=download&id="},
-                { name: "SOFTWARE TESTING", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "FOUNDATION OF DATA SCIENCE (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1LxG5gxoH4PSmE3GZzYwaW6eQZseNqyI8"},
+               
                 { name: "PROJECT MANAGEMENT (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1J8BYpK7hqeKCHpeh52blPfRwcV7-Rann"},
-                { name: "FINANCIAL MARKETING", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "FINANCIAL MARKETING (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=19eE41d1E9ZC_AvNA40vzMQgXoSKLAg9T"},
+
+{ name: "•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••", link:""},
 
              { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1QMQc4uNA3I3Nwh4ieW3O-aBV2tKjgxAL"},
                 { name: "WEB DEVELOPMENT USING PHP & MYSQL (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X32cP4mSKbwjRaJx7CHHCzOzrPrIx61_"},
@@ -189,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 2: PROJECT PLANNING AND SELECTION", link: "https://drive.google.com/uc?export=download&id=12ipYCAFW-gcdN3y7qRZnZVDY0M2HCThW" },
        { name: "Unit 3: NETWORK ANALYSIS AND PROJECT EVALUATION", link: "https://drive.google.com/uc?export=download&id=1_GWfLT1ax9vwtjGcB2QD_gkxuDGuBDQM" },
        { name: "Unit 4: PROJECT ORGANIZATION", link: "https://drive.google.com/uc?export=download&id=17tufQq_Pd-bS4lbwHrHsXF1yNjqWhV0k" },
-       { name: "Unit 5: PROJECT MONITORING", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: PROJECT MONITORING", link: "https://drive.google.com/uc?export=download&id=19mdXdxEzlVh_Y-wCFtiQgQIcqo-RSYnP" },
 
    ],
             "FINANCIAL MARKETING" : [
@@ -279,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             5: {
                  "MOBILE APPLICATION DEVELOPMENT USING ANDROID": [
-                    { name: "MAD LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },
+                    { name: "Mobile Application Development LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },
 { name: "Mobile Application Development Record Pics", link: "https://drive.google.com/uc?export=download&id=1eYQXe-VxwxPIORMCRP0C5Yrb4WbexoEj" },
 { name: "Mobile Application Development Record", link: "https://drive.google.com/uc?export=download&id=1xemXGRXNcPxPvGQW8unYb54efoBuwnuT" },
 
@@ -350,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             ],
 "Foundation Course": [
-                { name: "Environmental Education", link: "https://drive.google.com/uc?export=download&id=19EEuz4Bq3NGGkJgYA-WgxPnCNhA_Kpxv" },
+                { name: "Environmental Education Syllabus", link: "https://drive.google.com/uc?export=download&id=19EEuz4Bq3NGGkJgYA-WgxPnCNhA_Kpxv" },
                 
                 ]
 
