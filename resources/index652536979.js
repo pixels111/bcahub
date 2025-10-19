@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "PROJECT MANAGEMENT (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1J8BYpK7hqeKCHpeh52blPfRwcV7-Rann"},
                 { name: "FINANCIAL MARKETING (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=19eE41d1E9ZC_AvNA40vzMQgXoSKLAg9T"},
 
-{ name: "•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••", link:""},
+{ name: "••••••••••••••••••••••••••••••••••••••••••••••••", link:""},
 
              { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1QMQc4uNA3I3Nwh4ieW3O-aBV2tKjgxAL"},
                 { name: "WEB DEVELOPMENT USING PHP & MYSQL (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X32cP4mSKbwjRaJx7CHHCzOzrPrIx61_"},
