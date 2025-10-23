@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 2: IPython", link: "https://drive.google.com/uc?export=download&id=1Q0Td2DFIcUDkYl7IuM_2Er5GTH-h8Yrx" },
        { name: "Unit 3: Introduction to NumPy", link: "https://drive.google.com/uc?export=download&id=1k7s41EGkwRcSiOkg1OQ0XqkK3P9BmXCq"},
        { name: "Unit 4: Data Manipulation with Pandas", link: "https://drive.google.com/uc?export=download&id=1EUwsNlGYJVupQTMSPnwMaThwEwn7fKPW&usp=drive_fs" },
-       { name: "Unit 5: Visualization with Matplotlib & Python Libraries for Machine Learning", link: "https://drive.google.com/uc?export=download&id=" }
+       { name: "Unit 5: Visualization with Matplotlib & Python Libraries for Machine Learning", link: "https://drive.google.com/uc?export=download&id=1XLUXWtkyInzbdPbWJ-yvbklUfi9t8tR9" }
             ], 
 
              "SOFTWARE TESTING": [
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 2: Test Case Design Black-Box Approach", link: "https://drive.google.com/uc?export=download&id=1L7KCRxo4oskPSB8M-U1aJI0DwksgxHPI" },
        { name: "Unit 3: Test Case Design White–Box Approach", link: "https://drive.google.com/uc?export=download&id=1mxRJNx1wkXRyRucBC81pEDmMGr804VK8" },
        { name: "Unit 4: Paths, Path products and Regular expressions", link: "https://drive.google.com/uc?export=download&id=17TozD4jm337AOm89CU_PBAfp-Sd166Wf" },
-       { name: "Unit 5: State, State Graphs and Transition testing", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 5: State, State Graphs and Transition testing", link: "https://drive.google.com/uc?export=download&id=1xffwB4upH02ohhs9Lm-lBQ_vr0Y0N8lV" },
     
    ],
              "PROJECT MANAGEMENT" : [
