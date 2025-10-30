@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
              { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1QMQc4uNA3I3Nwh4ieW3O-aBV2tKjgxAL"},
                 { name: "WEB DEVELOPMENT USING PHP & MYSQL (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X32cP4mSKbwjRaJx7CHHCzOzrPrIx61_"},
-                { name: "FOUNDATION OF DATA SCIENCE (by SETHU)", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "FOUNDATION OF DATA SCIENCE (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1ye6ook4XEDVcw2HA-y60p1dlri6eFyLa"},
                 { name: "SOFTWARE TESTING (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1aoOYgmekVej0C8B_-M0-N3JEwCPpiSI8"},
                 { name: "PROJECT MANAGEMENT (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1Gk8-AdBh8l9hd5hdSd4YFLO33q1KzfE_"},
-                { name: "FINANCIAL MARKETING (by SETHU)", link:"https://drive.google.com/uc?export=download&id="},
+                { name: "FINANCIAL MARKETING (by SETHU)", link:"https://drive.google.com/uc?export=download&id=10vuO995q-gwNIM6qmAn0IpuTCttzob9H"},
             ],
            
         },
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
    ],
             "FINANCIAL MARKETING" : [
-       { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=" },
+       { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=1dmdo7hS3Ulath6axfH1u8JG58QfO_QNd" },
        { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=16uAKcStcz4zRujE-X22K71xYCH983BCs" },
        { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=1huvoRnVP91b5tROMDPTF-yRcH6JrBPam" },
        { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=1sw-OHUTb2MXqpAI86HDQKnj5XAntaB47" },
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ],
 
                 "FOUNDATION OF DATA SCIENCE":[
-                    { name: "FDS Record", link: "https://drive.google.com/uc?export=download&id=" },
+                    { name: "FDS Record", link: "https://drive.google.com/uc?export=download&id=1_Je7lMYwKp5HUbdJevKhnUFLNDmVg9yz" },
                 ],  
                 "SOFTWARE TESTING":[
                     { name: "Software Testing Record", link: "https://drive.google.com/uc?export=download&id=1w2bG1YK92IgbPrnzyvO_6takEMyj3tTo" },
