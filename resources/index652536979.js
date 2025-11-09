@@ -29,21 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "FM Assignment", link:"https://drive.google.com/uc?export=download&id=1tEtqzVFJDNcYtmTJuyq-6Iv-nqi3wVnv"},
             ],
             5: [
-                { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1f8TrV73djYkr17W9dayyg2BMgxW4bnbt"},
-                { name: "WEB DEVELOPMENT USING PHP & MYSQL (by RAKESH)", link: "https://drive.google.com/uc?export=download&id=1pzsiBVIR7FFYSIhcfu_f2HKKMWtf7Snc"},
-                { name: "FOUNDATION OF DATA SCIENCE (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1LxG5gxoH4PSmE3GZzYwaW6eQZseNqyI8"},
-               
-                { name: "PROJECT MANAGEMENT (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=1J8BYpK7hqeKCHpeh52blPfRwcV7-Rann"},
-                { name: "FINANCIAL MARKETING (by RAKESH)", link:"https://drive.google.com/uc?export=download&id=19eE41d1E9ZC_AvNA40vzMQgXoSKLAg9T"},
-
-{ name: "••••••••••••••••••••••••••••••••••••••••••••••••", link:""},
-
-             { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1QMQc4uNA3I3Nwh4ieW3O-aBV2tKjgxAL"},
-                { name: "WEB DEVELOPMENT USING PHP & MYSQL (by SETHU)", link: "https://drive.google.com/uc?export=download&id=1X32cP4mSKbwjRaJx7CHHCzOzrPrIx61_"},
-                { name: "FOUNDATION OF DATA SCIENCE (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1ye6ook4XEDVcw2HA-y60p1dlri6eFyLa"},
-                { name: "SOFTWARE TESTING (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1aoOYgmekVej0C8B_-M0-N3JEwCPpiSI8"},
-                { name: "PROJECT MANAGEMENT (by SETHU)", link:"https://drive.google.com/uc?export=download&id=1Gk8-AdBh8l9hd5hdSd4YFLO33q1KzfE_"},
-                { name: "FINANCIAL MARKETING (by SETHU)", link:"https://drive.google.com/uc?export=download&id=10vuO995q-gwNIM6qmAn0IpuTCttzob9H"},
+                { name: "MOBILE APPLICATION DEVELOPMENT USING ANDROID", link:"https://drive.google.com/uc?export=download&id=1QMQc4uNA3I3Nwh4ieW3O-aBV2tKjgxAL"},
+                { name: "WEB DEVELOPMENT USING PHP & MYSQL", link: "https://drive.google.com/uc?export=download&id=1X32cP4mSKbwjRaJx7CHHCzOzrPrIx61_"},
+                { name: "FOUNDATION OF DATA SCIENCE", link:"https://drive.google.com/uc?export=download&id=1ye6ook4XEDVcw2HA-y60p1dlri6eFyLa"},
+                { name: "SOFTWARE TESTING", link:"https://drive.google.com/uc?export=download&id=1aoOYgmekVej0C8B_-M0-N3JEwCPpiSI8"},
+                { name: "PROJECT MANAGEMENT", link:"https://drive.google.com/uc?export=download&id=1Gk8-AdBh8l9hd5hdSd4YFLO33q1KzfE_"},
+                { name: "FINANCIAL MARKETS", link:"https://drive.google.com/uc?export=download&id=10vuO995q-gwNIM6qmAn0IpuTCttzob9H"},
             ],
            
         },
@@ -194,14 +185,14 @@ document.addEventListener('DOMContentLoaded', function() {
        { name: "Unit 5: PROJECT MONITORING", link: "https://drive.google.com/uc?export=download&id=19mdXdxEzlVh_Y-wCFtiQgQIcqo-RSYnP" },
 
    ],
-            "FINANCIAL MARKETING" : [
+            "FINANCIAL MARKETS" : [
        { name: "Unit 1: INDIAN FINANCIAL SYSTEM", link: "https://drive.google.com/uc?export=download&id=1dmdo7hS3Ulath6axfH1u8JG58QfO_QNd" },
        { name: "Unit 2: MONEY MARKET", link: "https://drive.google.com/uc?export=download&id=16uAKcStcz4zRujE-X22K71xYCH983BCs" },
        { name: "Unit 3: CAPITAL MARKET", link: "https://drive.google.com/uc?export=download&id=1huvoRnVP91b5tROMDPTF-yRcH6JrBPam" },
        { name: "Unit 4: FOREIGN EXCHANGE MARKET", link: "https://drive.google.com/uc?export=download&id=1sw-OHUTb2MXqpAI86HDQKnj5XAntaB47" },
        { name: "Unit 5: THE DERIVATIVES MARKETS", link: "https://drive.google.com/uc?export=download&id=1LXGuzfvKW3uT8rfIOU3qYTnhDpidgM79" },    
      ],
-"ENVIRONMENTAL EDUCATION" : [
+             "ENVIRONMENTAL EDUCATION" : [
             { name: "Environmental Education (All Units)", link: "https://drive.google.com/uc?export=download&id=14S_31kBlIK_eklqvPNy6M5hl8O1pk433" },
           ],
            
@@ -282,15 +273,15 @@ document.addEventListener('DOMContentLoaded', function() {
             5: {
                  "MOBILE APPLICATION DEVELOPMENT USING ANDROID": [
                     { name: "Mobile Application Development LAB MANUAL", link: "https://drive.google.com/uc?export=download&id=1U0hZO_g0i7pRNYeGm5pdLgjWpeI9Nkan" },
-{ name: "Mobile Application Development Record Pics", link: "https://drive.google.com/uc?export=download&id=1eYQXe-VxwxPIORMCRP0C5Yrb4WbexoEj" },
-{ name: "Mobile Application Development Record", link: "https://drive.google.com/uc?export=download&id=1xemXGRXNcPxPvGQW8unYb54efoBuwnuT" },
+                    { name: "Mobile Application Development Record Pics", link: "https://drive.google.com/uc?export=download&id=1eYQXe-VxwxPIORMCRP0C5Yrb4WbexoEj" },
+                    { name: "Mobile Application Development Record", link: "https://drive.google.com/uc?export=download&id=1xemXGRXNcPxPvGQW8unYb54efoBuwnuT" },
 
                ],
 
                 "WEB PROGRAMMING": [
                     { name: "WEB MANUAL", link: "https://drive.google.com/uc?export=download&id=1D3lL9YnrwzzYsHNhxnfpghBwbwV0LwFm" },
 
-{ name: "WEB Development Record", link: "https://drive.google.com/uc?export=download&id=1u4v21bx0mIPwYNwUKwSgzHVlOew6Psjr" },
+                    { name: "WEB Development Record", link: "https://drive.google.com/uc?export=download&id=1u4v21bx0mIPwYNwUKwSgzHVlOew6Psjr" },
 
                 ],
 
@@ -383,10 +374,14 @@ document.addEventListener('DOMContentLoaded', function() {
                        { name: "Health & Hygeine imp Q & A ", link: "https://drive.google.com/uc?export=download&id=1zZBO_7vlhgSbiUmkATKj7uqiWcVvIxYa" }
 
             ],
+
+            5: [
+                       { name: "1st Internal Examination Question Papers", link: "https://drive.google.com/uc?export=download&id=1iiDycYBwZxT8nmpAaEexj9wR8RqD96vA" },
+
+            ],
            
         }
     };
-    
     // Current selections
     let currentSemester = null;
     let currentResource = null;
