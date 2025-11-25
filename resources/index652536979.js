@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "5th sem minor subjects syllabus(edited)", link: "https://drive.google.com/uc?export=download&id=1DFxpdGZd_Uq7r7B03ne6dbdYhy912FmL" },
 
             ],
-"Foundation Course": [
+                "Foundation Course": [
                 { name: "Environmental Education Syllabus", link: "https://drive.google.com/uc?export=download&id=19EEuz4Bq3NGGkJgYA-WgxPnCNhA_Kpxv" },
                 
                 ]
@@ -377,6 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             5: [
                        { name: "1st Internal Examination Question Papers", link: "https://drive.google.com/uc?export=download&id=1iiDycYBwZxT8nmpAaEexj9wR8RqD96vA" },
+                       { name: "2nd Internal Examination Question Papers", link: "https://drive.google.com/uc?export=download&id=1WQDvZGW8bH6b184n3Yok5kkV88TphBhX" },
 
             ],
            
