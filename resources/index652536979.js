@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
            ],
 
            "WEB DEVELOPMENT USING PHP & MYSQL": [
-       { name: "Unit 1: Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1XAKAbjyh_OSUKg0gcHN55_ypX04g_7fd" },
+       { name: "Unit 1: Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=15lQJbAE42A2Q1WQf_dArjKcePV2i8FTI" },
        { name: "Unit 1 (2nd pdf): Using PHP & Storing and Retrieving Data", link: "https://drive.google.com/uc?export=download&id=1jDhpR_vwkgkB0gyLFbIc22EsKuoZb-h7" },
        { name: "Unit 2: Arrays & String Manipulation and Regular Expressions", link: "https://drive.google.com/uc?export=download&id=1tKdajzRRepWUi4nEfKJbPhOo3a4zgKHI" },
        { name: "Unit 3: Reusing Code and Writing Functions & Object-Oriented PHP & Error and Exception Handling", link: "https://drive.google.com/uc?export=download&id=1AkcBYgWXBot3l2AympbI0Md_m3sT7kow" },
@@ -199,6 +199,17 @@ document.addEventListener('DOMContentLoaded', function() {
        },
 
         },
+
+        important_questions: {
+           
+            5: [
+                { name: "Environmental Education Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=12bQytMgZfA2HBd6KWtIdeHm8vJaiEFMH" },
+                 { name: "Foundations of DataScience Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=16sEr39JOtuv-QCxUTZ1ymqiLHfBzsWnI" },
+                { name: "Software Testing Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=169GNZVi_ycdSHXwE3vZfOkIjjUD5-ZB9" }
+               
+            ],
+        },
+
         pdfs: {
            
             2: [
@@ -475,6 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <ul>
                         <li>Assignments</li>
                         <li>Notes & Materials</li>
+                        <li>Important Questions</li>
                         <li>PDF's</li>
                         <li>Records</li>
                         <li>Syllabus</li>
@@ -487,7 +499,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Render all resources
     function renderAllResources() {
-        const sections = ['assignments', 'notes', 'pdfs', 'records', 'syllabus', 'papers'];
+        const sections = ['assignments', 'notes', 'important_questions', 'pdfs', 'records', 'syllabus', 'papers'];
         
         sections.forEach(section => {
             const data = resourceData[section];
@@ -652,6 +664,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const names = {
             'assignments': 'Assignments',
             'notes': 'Notes & Materials',
+            'important_questions': 'Important Questions',
             'pdfs': 'PDF\'s',
             'records': 'Records',
             'syllabus': 'Syllabus',
