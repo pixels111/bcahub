@@ -201,12 +201,18 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         important_questions: {
-           
+            3: [
+
+               { name: "Health & Hygeine imp Q & A ", link: "https://drive.google.com/uc?export=download&id=1zZBO_7vlhgSbiUmkATKj7uqiWcVvIxYa" }
+            ],
+
             5: [
-                { name: "Environmental Education Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=12bQytMgZfA2HBd6KWtIdeHm8vJaiEFMH" },
-                 { name: "Foundations of DataScience Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=16sEr39JOtuv-QCxUTZ1ymqiLHfBzsWnI" },
-                { name: "Software Testing Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=169GNZVi_ycdSHXwE3vZfOkIjjUD5-ZB9" }
-               
+                { name: "Environmental Education Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=12bQytMgZfA2HBd6KWtIdeHm8vJaiEFMH" },          
+                { name: "Foundations of DataScience Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=16sEr39JOtuv-QCxUTZ1ymqiLHfBzsWnI" },
+                { name: "Foundations of DataScience Important Questions 2 (Staff provided)", link: "https://drive.google.com/uc?export=download&id=1Q53kC9-ZRktdUdo5UxuxXa33ghYvd_i7" },    
+                { name: "Software Testing Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=169GNZVi_ycdSHXwE3vZfOkIjjUD5-ZB9" },
+                { name: "Software Testing Important Questions 2 (Staff provided)", link: "https://drive.google.com/uc?export=download&id=1QV1afynl9GIM7ofFLMHTFHMV9IV-gVJh" },   
+                { name: "Financial markets Important Questions (Staff provided)", link: "https://drive.google.com/uc?export=download&id=12uR5K3odwvHPFzW4hFC0roeD_bt48Wk9" },              
             ],
         },
 
@@ -382,11 +388,11 @@ document.addEventListener('DOMContentLoaded', function() {
             4: [
                        { name: "Semester Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1nCVZJV4044kz13yvEXGRpjr5-352ekRG" },
                        { name: "Internal Exam Question Papers", link: "https://drive.google.com/uc?export=download&id=1AmxiY2cTNwtxN04V27NRoRGwNfv_Y2zv" },
-                       { name: "Health & Hygeine imp Q & A ", link: "https://drive.google.com/uc?export=download&id=1zZBO_7vlhgSbiUmkATKj7uqiWcVvIxYa" }
 
             ],
 
             5: [
+                       { name: "Semester Examination Question Papers", link: "https://drive.google.com/uc?export=download&id=1yaTi6vIyPQZxi7HPqNlwcxFqjrDDjrXb" },  
                        { name: "1st Internal Examination Question Papers", link: "https://drive.google.com/uc?export=download&id=1iiDycYBwZxT8nmpAaEexj9wR8RqD96vA" },
                        { name: "2nd Internal Examination Question Papers", link: "https://drive.google.com/uc?export=download&id=1WQDvZGW8bH6b184n3Yok5kkV88TphBhX" },
 
