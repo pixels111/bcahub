@@ -519,6 +519,7 @@ nav a.sideactive:not(.logo) {
     max-width: 1200px;
     width: 100%;
     padding: 0 1rem;
+    margin: 4rem auto 2rem auto;
   }
   .ratecontainer h1 {
     font-weight: 700;
