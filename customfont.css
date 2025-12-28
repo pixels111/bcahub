@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* customfont.css
+   Styling only for the settings icon/panel and controls (isolated names with cf- prefix)
+*/
+.cf-settings{
+   position:relative;
+   display:inline-block;
+   font-family:inherit;
+   top:10px;
+   right:10px;
+   size: 50px;
+}
+
+/* When the sidebar is active (overlay), hide the top-nav settings reliably */
+.cf-sidebar-active .cf-top{ display:none !important; }
+.cf-settings-toggle{
+   background:transparent;
+   border:0;
+   font-size:20px;
+   line-height:1;
+   cursor:pointer;
+   padding:6px;
+   padding-left: 35px;
+   display:inline-flex;
+   align-items:center;
+   justify-content:center;
+}
+.cf-panel{
+   position:absolute;
+   right:0;
+   top:50px;
+   min-width:200px;
+   background-color: rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(12px);
+   border: 2px solid rgba(0,0,0,.08);
+   box-shadow:0 6px 18px rgba(0,0,0,.08);
+   padding:12px;
+   border-radius:30px;
+   z-index:9999;
+   display:none;
+}
+.cf-panel-toggle{
+   position:absolute;
+   right:0;
+   top:40px;
+   min-width:200px;
+   background-color: rgba(250, 4, 4, 0.15);
+   backdrop-filter: blur(12px);
+   border: 2px solid rgba(0,0,0,.08);
+   box-shadow:0 6px 18px rgba(0,0,0,.08);
+   padding:12px;
+   border-radius:30px;
+   z-index:9999;
+   display:none;
+}
+.cf-panel[aria-hidden="false"]
+{
+   display:block;
+}
+.cf-panel h4{
+   margin:0 0 8px 0;
+   font-size:20px;
+   font-weight:600;
+}
+.cf-group{
+   margin-bottom:8px;
+   font-size:20px;
+}
+.cf-label{
+   font-size:19px;
+   font-weight:400;
+   color:#000000;
+   margin-bottom:6px;
+}
+.cf-group label{
+   display:block;
+   cursor:pointer;
+   padding:6px 4px;
+   border-radius:6px;
+   font-size: 18px;
+}
+.cf-group input[type="radio"]{
+   margin-right:8px;
+   vertical-align:middle;
+}
+.cf-size-group{
+   display:flex;
+   flex-direction:column;
+}
+.cf-size-controls{
+   display:flex;
+   align-items:center;
+   gap:8px;
+}
+.cf-size-btn{
+   padding:8px 12px;
+   border-radius:8px;
+   border:1px solid #ddd;
+   background:#f7f7f7;
+   cursor:pointer;
+   font-size:18px;
+   font-family: VT323;
+}
+.cf-size-btn:active{
+   transform:translateY(1px);
+}
+#cf-size-display{
+   min-width:44px;
+   text-align:center;
+}
+
+/* Side dropdown adjustments when injected into sidebar -- panel expands below item */
+.cf-side .cf-panel{
+   position:static;
+   margin-top:10px;
+   margin-left: 30px;
+}
+
+/* Make touch-friendly */
+.cf-settings-toggle,.cf-size-btn{
+   touch-action:manipulation;
+}
+
+/* Highlight label when its radio is selected (fallback via JS toggling .cf-selected) */
+.cf-group label.cf-selected{
+   background: rgba(40, 167, 70, 0.192);
+   color: #000000;
+   border-radius:100px;
+   padding-left:35px;
+   font-size: 20px;
+}
+
+/* Overrides and enhancements: animated panel show/hide and custom radio visuals */
+/* Animated panel: later rules override earlier `display:none` so transitions can run */
+.cf-panel{
+   opacity:0;
+   transform:translateY(-6px) scale(0.99);
+   pointer-events:none;
+   transition:opacity 220ms ease, transform 220ms ease;
+}
+.cf-panel[aria-hidden="false"]{
+   opacity:1;
+   transform:translateY(0) scale(1);
+   pointer-events:auto;
+}
+.cf-panel-toggle{ opacity:0; transform:translateY(-6px) scale(0.99); pointer-events:none; transition:opacity 220ms ease, transform 220ms ease; }
+
+/* Sidebar variant should also animate nicely when inserted in-flow */
+.cf-side .cf-panel{ transform:translateY(-4px); transition:opacity 220ms ease, transform 220ms ease; }
+
+/* Custom radio visuals: hide native input and draw circle + green dot via span */
+.cf-group label{ position:relative; padding-left:36px; }
+.cf-group label input[type="radio"]{
+   position:absolute; left:8px; top:50%; transform:translateY(-50%); width:18px; height:18px; margin:0; opacity:0;
+}
+.cf-group label span{ display:inline-block; }
+.cf-group label span::before{
+   content:"";
+   position:absolute;
+   left:8px;
+   top:50%;
+   transform:translateY(-50%);
+   width:18px; height:18px; border-radius:50%;
+   border:2px solid rgba(0,0,0,0.35);
+   background:#fff;
+   box-sizing:border-box;
+   z-index:2;
+}
+.cf-group label span::after{
+   content:"";
+   position:absolute;
+   left:13px;                       /* (dot position top navigation)*/
+   top:50%;
+   transform:translateY(-50%) scale(0);
+   width:8px; height:8px; border-radius:50%;
+   background:#28a745;
+   transition:transform 160ms ease;
+   z-index:3;
+}
+.cf-group label input[type="radio"]:checked + span::after{
+   transform:translateY(-50%) scale(1);
+}
+.cf-group label input[type="radio"]:focus + span::before{
+   box-shadow:0 0 0 2px rgba(0, 0, 0, 0.274);
+}
+
+/* Sidebar-specific positioning tweaks (dot position side navigation)*/
+.cf-side .cf-group label span::before{ right:1px; }
+.cf-side .cf-group label span::after{ left:13px; }
+
+/* Strong override for sidebar: ensure inner green dot is visible in all contexts */
+.cf-side .cf-group label span::after{
+   transform:translateY(-50%) scale(0);
+   opacity:0;
+   z-index:99999;
+   transition:transform 160ms ease, opacity 160ms ease;
+}
+.cf-side .cf-group label input[type="radio"]:checked + span::after{
+   transform:translateY(-50%) scale(1) !important;
+   opacity:1 !important;
+}
+.cf-side .cf-group label span::before{ z-index:99998; }
+
+/* Fallback: force dot visible when JS adds `cf-showdot` on the label (side navigation setting) */
+.cf-group label.cf-showdot span::after{
+   transform:translateY(-50%) scale(1) !important;
+   opacity:1 !important;
+}
+.cf-side .cf-group label.cf-showdot span::after{
+   transform:translateY(-50%) scale(1) !important;
+   opacity:1 !important;
+}

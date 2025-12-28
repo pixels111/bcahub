@@ -1,0 +1,20 @@
+<div id="cf-settings-container" class="cf-settings">
+  <button class="cf-settings-toggle" aria-label="Accessibility settings" style="margin-right: 10px;"><img src="pictures/settings-icon.png" alt="Settings" style="width: 20px; height: 20px;"></button>
+  <div class="cf-panel" role="dialog" aria-hidden="true">
+    <h4>Reading Settings</h4>
+    <div class="cf-group" >
+      <div class="cf-label">Font Style</div>
+      <label><input type="radio" name="cf-font" value="vt323" checked><span>VT323</span></label>
+      <label><input type="radio" name="cf-font" value="monospace"><span>Monospace</span></label>
+      <label><input type="radio" name="cf-font" value="system"><span>System Font</span></label>
+    </div>
+    <div class="cf-group cf-size-group">
+      <div class="cf-label">Font Size</div>
+      <div class="cf-size-controls">
+        <button id="cf-decrease" class="cf-size-btn" aria-label="Decrease font size">A-</button>
+        <span id="cf-size-display">18px</span>
+        <button id="cf-increase" class="cf-size-btn" aria-label="Increase font size">A+</button>
+      </div>
+    </div>
+  </div>
+</div>
