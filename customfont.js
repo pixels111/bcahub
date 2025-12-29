@@ -11,13 +11,11 @@
   const MAX_SIZE = 32;
 
 function isHomePage() {
-  const path = location.pathname.replace(/\/$/, "");
-
-  return (
-    path === "/bcahub" ||
-    path === "/bcahub/index.html"
-  );
+  let path = location.pathname;
+  if (path.endsWith('/')) path = path.slice(0, -1);
+  return path === '/bcahub' || path === '/bcahub/index.html';
 }
+
 
   function applyToMain(style, size){
     const mains = document.querySelectorAll('main');
@@ -183,14 +181,10 @@ function isHomePage() {
 
     // fetch and inject markup (only used on Home page)
    try{
-  const scriptTag = document.querySelector('script[src$="settings.js"]');
-  const base = scriptTag && scriptTag.src
-    ? scriptTag.src.replace(/[^\/]*$/, '')
-    : '/bcahub/';
-  fetch(base + 'customfont.html')
-    .then(r=>{ if(!r.ok) throw 0; return r.text(); })
-    .then(html=> injectSettings(html))
-    .catch(()=>{});
+  fetch('customfont.html')
+      .then(r => { if (!r.ok) throw 0; return r.text(); })
+      .then(html => injectSettings(html))
+      .catch(() => {});
 }catch(e){/* silent */}
 });
 })();
