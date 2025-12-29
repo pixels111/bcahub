@@ -10,10 +10,10 @@
   const MIN_SIZE = 12;
   const MAX_SIZE = 32;
 
-  function isHomePage(){
-    const seg = location.pathname.split('/').filter(Boolean);
-    return seg.length <= 1;
-  }
+function isHomePage() {
+  const path = location.pathname;
+  return path === "/bcahub/" || path.endsWith("/index.html");
+}
 
   function applyToMain(style, size){
     const mains = document.querySelectorAll('main');
