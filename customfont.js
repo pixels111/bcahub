@@ -118,8 +118,7 @@ function isHomePage() {
   }
 
   function injectSettings(html){
-    const seg = location.pathname.split('/').filter(Boolean);
-    const isHome = seg.length <= 1;
+    const isHome = isHomePage();
     // apply saved settings immediately on every page
     const state = load();
     applyToMain(state.style, state.size);
