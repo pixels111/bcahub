@@ -11,8 +11,12 @@
   const MAX_SIZE = 32;
 
 function isHomePage() {
-  const path = location.pathname;
-  return path === "/bcahub/" || path.endsWith("/index.html");
+  const path = location.pathname.replace(/\/$/, "");
+
+  return (
+    path === "/bcahub" ||
+    path === "/bcahub/index.html"
+  );
 }
 
   function applyToMain(style, size){
