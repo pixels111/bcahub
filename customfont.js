@@ -182,14 +182,15 @@ function isHomePage() {
     applyToMain(state.style, state.size);
 
     // fetch and inject markup (only used on Home page)
-    try{
-      const scriptTag = Array.from(document.getElementsByTagName('script')).find(s=> s.src && s.src.endsWith('customfont.js'));
-      const base = scriptTag && scriptTag.src ? scriptTag.src.replace(/[^\/]*$/, '') : '/';
-      fetch(base + 'customfont.html')
-        .then(r=>{ if(!r.ok) throw 0; return r.text(); })
-        .then(html=> injectSettings(html))
-        .catch(()=>{});
-    }catch(e){/* silent */}
-  });
-
+   try{
+  const scriptTag = document.querySelector('script[src$="settings.js"]');
+  const base = scriptTag && scriptTag.src
+    ? scriptTag.src.replace(/[^\/]*$/, '')
+    : '/bcahub/';
+  fetch(base + 'customfont.html')
+    .then(r=>{ if(!r.ok) throw 0; return r.text(); })
+    .then(html=> injectSettings(html))
+    .catch(()=>{});
+}catch(e){/* silent */}
+});
 })();
