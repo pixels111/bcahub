@@ -341,12 +341,13 @@ nav a.sideactive:not(.logo) {
 .explore {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
 .explore-card {
     flex: 0 0 calc(33.33% - 20px);
-  background-color: rgba(255, 255, 255, 0.699);
+    background-color: rgba(255, 255, 255, 0.699);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -440,8 +441,8 @@ nav a.sideactive:not(.logo) {
 }
 
 .card{
-  flex: 0 0 calc(33.33% - 20px);
-  background-color: rgba(255, 255, 255, 0.699);
+    flex: 0 0 calc(33.33% - 20px);
+    background-color: rgba(255, 255, 255, 0.699);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);

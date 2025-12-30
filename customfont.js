@@ -12,10 +12,18 @@
 
 function isHomePage() {
   let path = location.pathname;
-  if (path.endsWith('/')) path = path.slice(0, -1);
-  return path === '/bcahub' || path === '/bcahub/index.html';
-}
 
+  // remove trailing slash
+  if (path.endsWith('/')) path = path.slice(0, -1);
+
+  return (
+    path === '' ||               // local server: /
+    path === '/' ||              // local server
+    path === '/index.html' ||    // local index
+    path === '/bcahub' ||        // GitHub Pages
+    path === '/bcahub/index.html'
+  );
+}
 
   function applyToMain(style, size){
     const mains = document.querySelectorAll('main');
