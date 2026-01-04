@@ -263,8 +263,9 @@ section {
 }
 
 footer p {
-  font-size: 14px;
+ font-size: 16px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 footer span {
