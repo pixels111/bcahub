@@ -187,13 +187,23 @@ nav a.sideactive:not(.logo) {
             text-align: center;
             padding: 1rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-family: inherit; /* follow reading settings */
+            /* Use a larger relative multiplier so the heading grows noticeably even at small size changes */
+            font-size: 1.6em;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: font-size 160ms ease;
         }
         
         h1 {
-            font-size: 3rem;
+            /* Keep headings responsive but larger than body for emphasis */
+            font-family: inherit;
+            font-size: 1.6em;
             margin: 0;
             letter-spacing: 2px;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: font-size 160ms ease;
         }
         
         .search-container {
@@ -201,6 +211,17 @@ nav a.sideactive:not(.logo) {
             margin: 2rem auto;
             padding: 0 1rem;
         }
+
+        /* Content card text scaling */
+        .content-card,
+        .card-title,
+        .card-text,
+        .card-labels,
+        .label {
+            font-family: inherit;
+        }
+        .card-title { font-size: 1.15em; }
+        .card-text { font-size: 1em; color: rgba(255,255,255,0.85);}
         
         .search-bar {
             display: flex;
@@ -210,13 +231,18 @@ nav a.sideactive:not(.logo) {
         #search-input {
             flex: 1;
             padding: 0.8rem;
-            font-family: 'VT323', monospace;
-            font-size: 1.2rem;
+            font-family: inherit;
+            font-size: 1em;
             background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
             border-radius: 4px;
         }
+        /* ensure placeholder also inherits font & scales */
+        #search-input::placeholder { font-family: inherit; font-size: inherit; color: rgba(255,255,255,0.65); }
+        #search-input::-webkit-input-placeholder { font-family: inherit; font-size: inherit; color: rgba(255,255,255,0.65); }
+        #search-input::-moz-placeholder { font-family: inherit; font-size: inherit; color: rgba(255,255,255,0.65); }
+        #search-input:-ms-input-placeholder { font-family: inherit; font-size: inherit; color: rgba(255,255,255,0.65); }
         
         #search-input:focus {
             outline: none;
@@ -258,8 +284,9 @@ nav a.sideactive:not(.logo) {
         }
         
         button {
-            font-family: 'VT323', monospace;
-            font-size: 1.2rem;
+            /* inherit the chosen font on <main> and scale with it */
+            font-family: inherit;
+            font-size: 1em;
             padding: 0.5rem 1rem;
             background-color: var(--nebula-purple);
             color: white;
@@ -347,6 +374,61 @@ nav a.sideactive:not(.logo) {
             flex-wrap: wrap;
             gap: 0.3rem;
             margin-top: 0.5rem;
+        }
+
+        /* Detail view and UI elements inherit reading settings */
+        .back-button,
+        .detail-title,
+        .detail-content,
+        #credit-section,
+        .card-labels .label,
+        .card-title,
+        .card-text {
+            font-family: inherit;
+            /* inherit the main font-size to ensure Reading Settings control sizing */
+            font-size: inherit;
+            transition: font-size 160ms ease;
+        }
+
+        .back-button {
+            /* use inherit to follow main font-size */
+            font-size: inherit;
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+            background: rgba(255,255,255,0.06);
+            color: white;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .detail-title {
+            /* slightly larger than main text but expressed as inheritance */
+            font-size: inherit;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .detail-content {
+            font-size: inherit; /* match main text size */
+            color: rgba(255,255,255,0.95);
+            line-height: 1.6;
+        }
+
+        .card-image {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .card-labels .label {
+            font-size: 0.95em;
+        }
+
+        #credit-section {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.75);
+            margin-top: 12px;
         }
         
         .label {

@@ -161,10 +161,37 @@ textarea {
   border: none;
   background: #e0e5ec;
   box-shadow: inset 2px 2px 6px #b8bac0, inset -2px -2px 6px #ffffff;
-  font-size: 1rem;
+  /* Respect Reading Settings: inherit font-size from surrounding context (e.g., <main>) */
+  font-size: inherit;
   color: #222;
+  /* inherit the chosen font from <main> so customfont settings apply */
+  font-family: inherit;
   transition: box-shadow 0.2s, border-color 0.2s;
   outline: none;
+} 
+
+/* Ensure placeholders use the same font and sizing as the control */
+input::placeholder,
+textarea::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  color: #666;
+  opacity: 0.8;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { font-family: inherit; font-size: inherit; color: #666; opacity: 0.8; }
+input::-moz-placeholder,
+textarea::-moz-placeholder { font-family: inherit; font-size: inherit; color: #666; opacity: 0.8; }
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { font-family: inherit; font-size: inherit; color: #666; opacity: 0.8; }
+input:-moz-placeholder,
+textarea:-moz-placeholder { font-family: inherit; font-size: inherit; color: #666; opacity: 0.8; }
+
+/* Ensure select and its options inherit the chosen font and sizing */
+select,
+select option {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 input:focus,
@@ -178,7 +205,7 @@ textarea {
   resize: vertical;
 }
 
-button {
+button, .button, input[type="submit"], input[type="button"] {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -187,16 +214,17 @@ button {
   border-radius: 12px;
   background: #e0e5ec;
   color: black;
-  font-size: 1.1rem;
+  /* inherit font-family and use em sizing so buttons scale with <main> font-size */
+  font-family: inherit;
+  font-size: 1.1em;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 4px 4px 12px #b8bac0, -4px -4px 12px #ffffff;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   position: relative;
-
 }
 
-button:hover {
+button:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
   background: #d1d9e6;
   color: #0056b3;
   box-shadow: 2px 2px 8px #b8bac0, -2px -2px 8px #ffffff;

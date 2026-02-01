@@ -51,6 +51,23 @@ padding-right: 15px;
 padding-left: 15px;
 padding-top: 15px;
 }
+
+/* Make the page title larger than its descriptive paragraph while still following Reading Settings
+   Use a more specific selector and a safe override so the heading reliably scales with <main>'s font-size */
+main h1.sph1, .container h1.sph1 {
+  font-family: inherit;
+  /* Larger heading multiplier and enforced specificity so changes to <main> font-size are visible */
+  font-size: 1.6em !important;
+  line-height: 1.2;
+  margin-bottom: 0.35em;
+  transition: font-size 160ms ease;
+}
+
+p.sph1 {
+  font-family: inherit;
+  font-size: 1em; /* body size */
+  line-height: 1.45;
+} 
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -712,4 +729,58 @@ footer span {
   .socials-container a:hover::after {
     transform: translateY(-28px) rotate(0);
   }
+}
+/* --- Reading Settings overrides for Resources page ---
+   Ensure titles, headings, lists and notice text inherit the chosen
+   font-family and scale with the font-size applied to <main> by `customfont.js`.
+*/
+
+h1.sph1,
+p.sph1,
+.selected-info h2,
+.selected-info h3,
+.selected-info p,
+.initial-content p,
+.info-box h4,
+.info-box li,
+.semester-heading,
+.no-resources,
+.report h3,
+.report p,
+.report li,
+.card h3,
+.card p,
+.disclaimer h4,
+.disclaimer p,
+.subject-title {
+  font-family: inherit;
+}
+
+/* scale headings slightly above body text and keep body-level text matching main */
+h1.sph1,
+.selected-info h2,
+.report h3,
+.card h3,
+.info-box h4,
+.semester-heading {
+  font-size: 1.2em;
+}
+
+p.sph1,
+.selected-info p,
+.initial-content p,
+.info-box li,
+.no-resources,
+.report p,
+.card p,
+.disclaimer p,
+.subject-title {
+  font-size: 1em;
+}
+
+/* small-screen adjustments */
+@media (max-width: 480px) {
+  h1.sph1 { font-size: 1.25em; }
+  .selected-info h2, .report h3, .card h3 { font-size: 1.05em; }
+  p.sph1, .report p, .card p { font-size: 0.95em; }
 }

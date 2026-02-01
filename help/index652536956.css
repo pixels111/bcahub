@@ -139,7 +139,9 @@ nav a.sideactive:not(.logo) {
   }
 }
 section h1{
-  font-size: 2em;
+  /* Slightly larger multiplier so users notice changes at smaller sizes */
+  font-size: 2.2em;
+  transition: font-size 160ms ease;
 }
 section h2 {
   font-size: 1.5em;
@@ -486,4 +488,71 @@ footer span {
   .socials-container a:hover::after {
     transform: translateY(-28px) rotate(0);
   }
+}
+
+/* --- Reading Settings overrides: make headings and FAQ scale/inherit ---
+   Ensure the Help page respects the font-family and font-size applied to <main>
+   by `customfont.js`. Placed at end so it overrides earlier fixed sizes. */
+
+/* General headings - make headings larger than body while still respecting Reading Settings */
+h1, .contentheading {
+  font-family: inherit;
+  font-size: 1.8em;
+  line-height: 1.15;
+  transition: font-size 160ms ease;
+}
+
+h2, section h2 {
+  font-family: inherit;
+  font-size: 1.3em;
+  line-height: 1.2;
+  transition: font-size 160ms ease;
+}
+
+h3, section h3 {
+  font-family: inherit;
+  font-size: 1.15em;
+  line-height: 1.2;
+  transition: font-size 160ms ease;
+}
+
+/* FAQ specific */
+.faq-question {
+  font-family: inherit;
+  font-size: 1.08em; /* slightly larger than body */
+}
+.faq-answer {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+/* Video card titles / captions */
+.video-card-question h3,
+.video-card-caption,
+.video-card-caption p {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+/* Ask-a-Question card */
+.help-section h3,
+.help-section p,
+.help-section ul,
+.cardbutton {
+  font-family: inherit;
+}
+.help-section h3 { font-size: 1.15em; }
+.help-section p, .help-section ul { font-size: 1em; }
+
+/* Card headings and content */
+.card h3 { font-family: inherit; font-size: 1.15em; }
+.card p  { font-family: inherit; font-size: 1em; }
+
+/* FAQ collapse header state (ensure focus/expanded styles still apply) */
+.faq-question[aria-expanded="true"] { font-weight: 700; }
+
+/* Small-screen tweaks */
+@media (max-width: 480px) {
+  .faq-question { font-size: 1.02em; }
+  .help-section h3 { font-size: 1.05em; }
 }

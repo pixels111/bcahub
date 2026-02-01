@@ -313,11 +313,14 @@ nav a.sideactive:not(.logo) {
 }
 
 .explore-section-title h1 {
-    font-size: 36px;
+    /* Use relative sizing so headings scale with <main> font-size */
+    font-family: inherit;
+    font-size: 1.8em;
     color: #333;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
+    transition: font-size 160ms ease;
 }
 
 .explore-section-title h1::after {
@@ -332,11 +335,12 @@ nav a.sideactive:not(.logo) {
 }
 
 .explore-section-title p {
-    font-size: 18px;
+    font-family: inherit;
+    font-size: 1em;
     color: #777;
     max-width: 700px;
     margin: 0 auto;
-}
+} 
 
 .explore {
     display: flex;
@@ -631,8 +635,10 @@ nav a.sideactive:not(.logo) {
     display: block;
     margin-bottom: 0.5rem;
   }
+  /* Make inputs inherit the chosen font and scale with <main> */
   input[type="text"], textarea {
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-family: inherit;
+    font-size: 1em; /* follow the main font-size so placeholders scale */
     border-radius: 0.75rem;
     border: 1.5px solid #d1d5db;
     padding: clamp(12px, 1.5vw, 16px);
@@ -798,6 +804,83 @@ textarea.feedback-input {
     box-shadow: 0 2px 10px rgba(0,0,0,0.12);
     transition: background-color 0.25s ease;
   }
+
+/* --- Accessibility/Reading Settings overrides ---
+   Ensure headings, card content and feedback cards inherit the chosen
+   font style and scale with the font-size applied to <main> by `customfont.js`.
+   These rules are intentionally placed at the end so they override
+   earlier fixed/clamped font-size declarations. */
+
+/* Apply chosen font to common blocks */
+.card,
+.explore-card,
+.latest-updates-box,
+.card h3,
+.explore-card h3,
+.card p,
+.explore-card p,
+.cardbutton,
+.read-more,
+.ratecontainer,
+.ratecontainer h1,
+section.rating-card,
+#rating-summary,
+legend,
+label[for="name-input"],
+label[for="feedback-input"],
+label[for="approve-checkbox"],
+.feedback-slider,
+.slides,
+article.feedback-card,
+.feedback-name,
+.feedback-message,
+h2.feedback-slider-header,
+h1,
+.explore-section-title h1,
+p.subtitle,
+button.submit-btn {
+  /* Use the font chosen by the user (applied to <main>) */
+  font-family: inherit;
+}
+
+/* Headings and section titles scale with main font */
+.explore-section-title h1,
+.ratecontainer h1 {
+  /* Stronger multiplier so headings are noticeably larger even at small main sizes */
+  font-size: 1.8em; /* larger section/title size */
+  font-family: inherit;
+  transition: font-size 160ms ease;
+}
+
+/* Card headings and feedback headers slightly larger */
+.card h3,
+.explore-card h3,
+h2.feedback-slider-header {
+  font-size: 1.15em; /* slightly larger than body text */
+}
+
+/* Body-level text matches main text size */
+.card p,
+.explore-card p,
+.feedback-message,
+.feedback-name,
+#rating-summary,
+p.subtitle,
+legend,
+label[for="name-input"],
+label[for="feedback-input"],
+label[for="approve-checkbox"] {
+  font-size: 1em; /* match main text size */
+}
+
+/* Small-screen tweak (keeps layout stable while remaining scalable) */
+@media (max-width: 480px) {
+  .feedback-message { font-size: 0.95em; }
+  label[for="name-input"],
+  label[for="feedback-input"],
+  label[for="approve-checkbox"] { font-size: 0.95em; }
+}
+
   button.slider-btn:hover {
     background: var(--color-primary);
   }
@@ -1067,3 +1150,36 @@ footer span {
         height: 180px;
     }
 }
+
+/* Ensure form controls inherit the chosen font set on <main> (customfont.js applies font to <main>) */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1em; /* scale with <main> font-size */
+}
+
+/* Placeholder styles should also inherit the font and have a consistent color */
+input::placeholder,
+textarea::placeholder {
+  font-family: inherit;
+  color: #666;
+  opacity: 0.8;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { font-family: inherit; color: #666; opacity: 0.8; }
+input::-moz-placeholder,
+textarea::-moz-placeholder { font-family: inherit; color: #666; opacity: 0.8; }
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { font-family: inherit; color: #666; opacity: 0.8; }
+input:-moz-placeholder,
+textarea:-moz-placeholder { font-family: inherit; color: #666; opacity: 0.8; }
+
+/* Make submit button inherit font too */
+button.submit-btn,
+button[type="submit"],
+input[type="submit"] {
+  font-family: inherit;
+  font-size: 1em;
+}
+

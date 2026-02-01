@@ -152,15 +152,23 @@ nav a.sideactive:not(.logo) {
   margin-bottom: 10px ;
 }
 .privacycss div h2 {
-  font-size: 25px;
+  /* Respect Reading Settings: inherit font and scale relative to main */
+  font-family: inherit;
+  font-size: 1.25em;
+  line-height: 1.2;
   margin-bottom: 10px;
+  transition: font-size 150ms ease-in-out;
 }
 .privacycss div ul {
   padding-left: 20px;
 }
 .privacycss h1 {
-  font-size: 32px;
+  /* Respect Reading Settings: inherit font and scale relative to main */
+  font-family: inherit;
+  font-size: 1.5em;
+  line-height: 1.2;
   margin-bottom: 20px;
+  transition: font-size 150ms ease-in-out;
 }
 footer {
   background: linear-gradient(to top, #3a3939  0%, #3a3939 100%);

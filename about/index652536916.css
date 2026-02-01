@@ -147,8 +147,10 @@ section {
   margin-bottom: 10px ;
 }
 section h3 {
-  font-size: 25px;
-  margin-bottom: 10px;
+  /* scale with main font-size and inherit chosen font */
+  font-family: inherit;
+  font-size: 1.15em;
+  margin-bottom: 0.6em;
 }
 section em{
   border-left: #2929297c 2px solid;
@@ -158,9 +160,13 @@ section em{
 section ul {
   padding-left: 20px;
 }
+
 h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  /* follow Reading Settings by inheriting main font and using em units */
+  font-family: inherit;
+  font-size: 1.6em;
+  margin-bottom: 1.2em;
+  transition: font-size 160ms ease;
 }
 
 .wrapper .img-area,
@@ -210,13 +216,15 @@ h1 {
   object-fit: cover;
 }
 .wrapper .name{
-  font-size: 1.3em;
+  font-family: inherit; /* scale with Reading Settings */
+  font-size: 1.2em;
     font-weight: 600;
   color: black;
      margin: 10px 0 5px 0;
     text-align: center;
 }
 .wrapper .about{
+  font-family: inherit; /* scale with Reading Settings */
   color: black;
   font-weight: 400;
   font-size: 1em;
@@ -289,18 +297,23 @@ h1 {
     gap: 16px;
     margin-top: 12px;
 }
-.buttons button{
+.buttons button, .full-button-link > button {
   position: relative;
   width: 100%;
   border: none;
   outline: none;
   padding: 12px 0;
   color: black;
-  font-size: 17px;
+  /* inherit the chosen font applied to <main> and scale with it */
+  font-family: inherit;
+  font-size: 1em;
   font-weight: 400;
   border-radius: 5px;
   cursor: pointer;
   z-index: 4;
+  line-height: 1.2;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .full-button-link {
