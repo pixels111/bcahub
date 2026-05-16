@@ -232,6 +232,24 @@
       <p class="section-sub">Practical apps created to solve real student problems — totally free, no sign-up required.</p>
     </div>
     <div class="apps-grid">
+      <div class="card app-card reveal" style="transition-delay:0.2s">
+        <div class="app-icon">🔢</div>
+        <h3>RAM_MagicSquare</h3>
+        <p>Inspired by the legendary mathematician Srinivasa Ramanujan and his famous 4×4 magic square built from his date of birth, this site lets you generate your own Ramanujan-style magic square.</p>
+        <div class="app-developer">Developed by <span>BCAHub</span></div>
+        <div class="app-links">
+          <a href="https://pixels111.github.io/rammagic/" target="_blank" class="app-link link-solid"><i class="fas fa-external-link-alt"></i> Try It</a>
+        </div>
+      </div>
+      <div class="card app-card reveal" style="transition-delay:0.25s">
+        <div class="app-icon">📊</div>
+        <h3>Student Attendance Calculator (SAC)</h3>
+        <p>Calculate your attendance percentage easily with this tool. Just enter the total number of working days and the number of days you attended, and it will compute your attendance percentage.</p>
+        <div class="app-developer">Developed by <span>BCAHub</span></div>
+        <div class="app-links">
+          <a href="https://pixels111.github.io/sac/" target="_blank" class="app-link link-solid"><i class="fas fa-calculator"></i> Calculate</a>
+        </div>
+      </div>
       <div class="card app-card reveal" style="transition-delay:0.05s">
         <div class="app-icon">📄</div>
         <h3>Build My Resume</h3>
@@ -260,24 +278,6 @@
         <div class="app-developer">Developed by <span>G. Giri</span></div>
         <div class="app-links">
           <a href="https://cirravogames.free.nf/" target="_blank" class="app-link link-solid"><i class="fas fa-play"></i> Play Now</a>
-        </div>
-      </div>
-      <div class="card app-card reveal" style="transition-delay:0.2s">
-        <div class="app-icon">🔢</div>
-        <h3>RAM_MagicSquare</h3>
-        <p>Inspired by the legendary mathematician Srinivasa Ramanujan and his famous 4×4 magic square built from his date of birth, this site lets you generate your own Ramanujan-style magic square.</p>
-        <div class="app-developer">Developed by <span>BCAHub</span></div>
-        <div class="app-links">
-          <a href="https://pixels111.github.io/rammagic/" target="_blank" class="app-link link-solid"><i class="fas fa-external-link-alt"></i> Try It</a>
-        </div>
-      </div>
-      <div class="card app-card reveal" style="transition-delay:0.25s">
-        <div class="app-icon">📊</div>
-        <h3>Student Attendance Calculator (SAC)</h3>
-        <p>Calculate your attendance percentage easily with this tool. Just enter the total number of working days and the number of days you attended, and it will compute your attendance percentage.</p>
-        <div class="app-developer">Developed by <span>BCAHub</span></div>
-        <div class="app-links">
-          <a href="https://pixels111.github.io/sac/" target="_blank" class="app-link link-solid"><i class="fas fa-calculator"></i> Calculate</a>
         </div>
       </div>
       <div class="card app-card reveal" style="transition-delay:0.3s">
@@ -371,53 +371,72 @@
         </div>
         <div class="form-group">
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" id="fbName" placeholder="Enter your name">
+          <input type="text" class="form-input" id="name-input" name="name" placeholder="Enter your name">
         </div>
         <div class="form-group">
           <label class="form-label">Your Feedback</label>
-          <textarea class="form-textarea" id="fbText" placeholder="Share your thoughts about BCAHub..."></textarea>
+          <textarea class="form-textarea" id="feedback-input" name="feedback" placeholder="Share your thoughts about BCAHub..."></textarea>
         </div>
         <div class="form-check">
-          <input type="checkbox" id="fbPublic">
-          <label for="fbPublic">I approve displaying my feedback publicly</label>
+          <input type="checkbox" id="approve-checkbox" name="approve" required>
+          <label for="approve-checkbox">I approve displaying my feedback publicly</label>
         </div>
         <button class="btn btn-primary" onclick="submitFeedback()" style="width:100%; justify-content:center;">
           <i class="fas fa-paper-plane"></i> Submit Feedback
         </button>
         <div class="form-success" id="fbSuccess">✓ Thank you for your feedback! We really appreciate it.</div>
       </div>
-      <div class="reveal-r">
-        <h3 style="font-family:var(--font-head); font-size:1.2rem; font-weight:700; margin-bottom:1.5rem;">What Students Say</h3>
-        <div style="display:flex; flex-direction:column; gap:1rem;">
-          <div class="card" style="padding:1.25rem;">
-            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:0.85rem;color:#fff;">C</div>
-              <div><div style="font-weight:600;font-size:0.875rem;">Charan</div><div style="color:#fbbf24;font-size:0.7rem;">★★★★★</div></div>
-            </div>
-            <p style="font-size:0.83rem;color:var(--muted2);line-height:1.65;">THIS APP IS VERY USEFUL TO STUDENTS BUT ONLY BCA SUBJECTS HERE. TO DEVELOP BCA(AI),(ML),BSC,(DS),BCOM SUBJECTS</p>
-          </div>
-          <div class="card" style="padding:1.25rem;">
-            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--pink));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:0.85rem;color:#fff;">Y</div>
-              <div><div style="font-weight:600;font-size:0.875rem;">YASWANTH KUMAR</div><div style="color:#fbbf24;font-size:0.7rem;">★★★★★</div></div>
-            </div>
-            <p style="font-size:0.83rem;color:var(--muted2);line-height:1.65;">"Good work bro</p>
-          </div>
-          <div class="card" style="padding:1.25rem;">
-            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:0.85rem;color:#fff;">K</div>
-              <div><div style="font-weight:600;font-size:0.875rem;">Kiran</div><div style="color:#fbbf24;font-size:0.7rem;">★★★★☆</div></div>
-            </div>
-            <p style="font-size:0.83rem;color:var(--muted2);line-height:1.65;">Good</p>
-          </div>
-          
-        </div>
-      </div>
+<div class="reveal-r">
+
+  <div class="feedback-nav">
+
+    <h3 style="
+      font-family:var(--font-head);
+      font-size:1.2rem;
+      font-weight:700;
+      margin:0;
+    ">
+      What Students Say
+    </h3>
+
+    <div class="feedback-nav-buttons">
+
+      <button id="prevFeedback"
+        class="feedback-nav-btn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <button id="nextFeedback"
+        class="feedback-nav-btn">
+       <i class="fas fa-arrow-right"></i>
+      </button>
+
     </div>
+
   </div>
+
+  <div id="feedbackSlider">
+
+    <div id="feedbackLoading">
+
+  <div class="feedback-loading-spinner"></div>
+
+  <p>Loading feedback...</p>
+
+</div>
+
+    <div id="feedbackContainer"></div>
+
+  </div>
+
+  <div id="feedbackEnd">
+    You reached end of feedback
+  </div>
+
+</div>
 </section>
 
-
+ 
 
 
 <!-- FOOTER -->
@@ -429,7 +448,7 @@
           <span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>
           BCAHub
         </a>
-        <p>A free, student-friendly platform for BCA (SVU) students. Notes, question papers, assignments and tools — all in one place.</p>
+        <p>A free, student-friendly platform for BCA students. Notes, question papers, assignments and tools — all in one place.</p>
         <div class="social-row">
           <a href="https://www.instagram.com/bcahumor" target="_blank" class="soc"><i class="fab fa-instagram"></i></a>
           <a href="https://www.youtube.com/@BCAHub" target="_blank" class="soc"><i class="fab fa-youtube"></i></a>
