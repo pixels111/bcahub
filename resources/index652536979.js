@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const resourceData = {
         assignments: {
-               
+                
           
             3: [
                 { name: "DBMS Assignment", link:"https://drive.google.com/uc?export=download&id=1l7m_ZeXaI_dkc2G8swltFs_lvRNS-P_Q"},
@@ -620,7 +620,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (const subject in data) {
                 if (data.hasOwnProperty(subject)) {
                     const subjectname = document.createElement('div');
-                    subjectname.className = 'subject-name';
+                    subjectname.className = 'subject-title';
                     subjectname.textContent = subject;
                     list.appendChild(subjectname);
                     
@@ -674,7 +674,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'pdfs': 'PDF\'s',
             'records': 'Records',
             'syllabus': 'Syllabus',
-            'papers': 'Question Papers'
+            'papers': 'Question Papers',
         };
         return names[type] || type;
     }
@@ -835,3 +835,33 @@ function setupPerfectSmoothScroll() {
 
 // Initialize the perfect smooth scrolling
 document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
+
+
+
+// LOADER
+let p = 0;
+const fill = document.getElementById('lf');
+const pct = document.getElementById('lp');
+const iv = setInterval(() => {
+  p += Math.random() * 18 + 5;
+  if (p >= 100) { p = 100; clearInterval(iv); setTimeout(() => document.getElementById('loader').classList.add('done'), 300); }
+  fill.style.width = p + '%';
+  pct.textContent = Math.floor(p) + '%';
+}, 80);
+
+// NAV
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+
+// HAMBURGER
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+function closeMobile() { burger.classList.remove('open'); mobileNav.classList.remove('open'); }
+
+// REVEAL
+const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } }), { threshold: 0.1 });
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => obs.observe(el));
+
+// STAGGER
+document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid .card').forEach((el,i) => { el.style.transitionDelay = (i * 0.07) + 's'; });

@@ -20,37 +20,55 @@
 
 </head>
 <body>
-      <header>
-    <nav>
-      <ul class="sidebar">
-        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-        <li><a href="../index.html" >Home</a></li>
-        <li><a href="../resources/index.html" class="active" >Resources</a></li>
-        <li><a href="../content/index.html"  >Content Galaxy</a></li>
-        <li><a href="../about/index.html" >About Us</a></li>
-        <li><a href="../contact/index.html">Contact Us</a></li>
-        <li><a href="../help/index.html">Help</a></li>
+<!-- ── LOADER ── -->
+<div id="loader">
+  <div class="loader-logo">BCAHub</div>
+  <div class="loader-track"><div class="loader-fill" id="lf"></div></div>
+  <div class="loader-pct" id="lp">0%</div>
+</div>
 
-      </ul> 
-      <ul>
-        <li><a class="logo" href="../index.html">BCAHub</a></li>
-        <li class="hideOnMobile"><a href="../index.html"  >Home</a></li>
-        <li class="hideOnMobile"><a href="../resources/index.html" class="sideactive" >Resources</a></li>
-        <li class="hideOnMobile"><a href="../content/index.html"  >Content Galaxy</a></li>
-        <li class="hideOnMobile"><a href="../about/index.html" >About Us</a></li>
-        <li class="hideOnMobile"><a href="../contact/index.html">Contact Us</a></li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-      </ul>
-    </nav>
-  </header>
-<main>
-    <h1 class="sph1">Resources by Semester</h1>
-    <p class="sph1">Access all semester wise resources for your BCA course in one place.</p>
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">
+    <span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>BCAHub
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../resources/index.html" class="active">Resources</a></li>
+    <li><a href="../content/index.html">Content Galaxy</a></li>
+    <li><a href="../about/index.html">About</a></li>
+    <li><a href="../contact/index.html">Contact</a></li>
+    <li><a href="../help/index.html">Help</a></li>
+  </ul>
+  <button class="hamburger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html" onclick="closeMobile()">Home</a>
+  <a href="../resources/index.html" onclick="closeMobile()">Resources</a>
+  <a href="../content/index.html" onclick="closeMobile()">Content Galaxy</a>
+  <a href="../about/index.html" onclick="closeMobile()">About</a>
+  <a href="../contact/index.html" onclick="closeMobile()">Contact</a>
+  <a href="../help/index.html" onclick="closeMobile()">Help</a>
+</div>
 
+<!-- ── PAGE HERO ── -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <div class="page-orb porb1"></div>
+    <div class="page-orb porb2" style="background:var(--cyan)"></div>
+    <div class="page-grid"></div>
+  </div>
+  <div class="page-hero-content reveal">
+    <div class="page-badge"><i class="fas fa-folder-open"></i> Academic Resources</div>
+    <h1 class="page-title">Resources by <span class="grad">Semester</span></h1>
+    <p class="page-sub">Notes, question papers, assignments, lab records, syllabus and more — semester-wise, all free, no sign-up needed.</p>
+  </div>
+</div>
+<!-- ── MAIN SECTION ── -->
     <div class="container">
         <div class="selection-container">
             <div class="select-box" id="semester-select">
-                <label for="semester">Select Semester</label>
+                <label for="semester"><i class="fas fa-layer-group"></i> Select Semester</label>
                 <div class="custom-select">
                     <div class="select-header" id="semester-header">
                         <span>Select Semester</span>
@@ -69,7 +87,7 @@
             </div>
             
             <div class="select-box">
-                <label for="resource">Select Resources</label>
+                <label for="resource"><i class="fas fa-file-alt"></i> Select Resources</label>
                 <div class="custom-select">
                     <div class="select-header" id="resource-header">
                         <span>Select Resource</span>
@@ -93,7 +111,8 @@
             <h2>YOU SELECTED: <span id="selected-sem">NO SEMESTER SELECTED</span></h2>
             <h3 id="selected-resource">NO RESOURCE SELECTED</h3>
             <p id="selection-message">Select semester & resource type to view resources<br> Use combinations like:<br>All Semesters + All Resources<br>Any Semester + All Resources<br>Any Semester + Specific Resource<br>Specific Resource + All Semesters<br></p>
-        </div>
+        
+          </div>
         <div class="resources-container" id="resources-container">
             <!-- Initial content when nothing is selected -->
             <div class="initial-content">
@@ -114,37 +133,42 @@
             </div>
             
         </div>
-          <div class="card">          
-                <h3>Don’t Know how to download resources</h3>
-                <p>click below to know how to download resources for different files like PDF and DOCX etc..</p>
-                <a href="../help/index.html#faq-q1" class="cardbutton">
-                    know Now&nbsp;
-                    <span class="cardarrow"> →</span>
-                </a>
-            </div>
+
+      <div class="info-card reveal" style="margin-top:2rem;">
+        <span class="feat-icon fi-cyan"><i class="fas fa-question-circle"></i></span>
+        <div>
+          <div class="info-card-title">Don't know how to download resources?</div>
+          <div class="info-card-desc">Click below to learn how to download PDF and DOCX files from Google Drive.</div>
+        </div>
+        <a href="../help/index.html#faq-q1" class="btn btn-ghost btn-sm">Know Now <i class="fas fa-arrow-right"></i></a>
+      </div>
       
         <div class="disclaimer">
             <h4>Disclaimer</h4>
             <p> While we strive for accuracy, we cannot guarantee that all materials are error-free or up-to-date. Users are advised to verify information with official sources. The maintainers of this resource repository are not responsible for any mistakes or inaccuracies in the provided materials.</p>
         </div>
+    
+    <div class="report reveal">
+      <div class="report-box-header">
+        <h3><i class="fas fa-flag"></i> Report or Suggest</h3>
+        <a href="../forms/index.html" class="btn btn-ghost btn-sm"><i class="fas fa-external-link-alt"></i> All Forms</a>
+      </div>
+          <p>If you notice anything that needs fixing or updating, feel free to reach out! You can contact us for:</p>
+      <ul class="report-list">
+            <li><strong><a href="../forms/index.html#broken-link" class="splink"><i class="fas fa-arrow-right"></i> Broken Links</a></strong> – Found a link that doesn’t work? Let us know so we can fix it.</li>
+            <li><strong><a href="../forms/index.html#broken-link" class="splink"><i class="fas fa-arrow-right"></i> Broken Links</a></strong> – Found a link that doesn’t work? Let us know so we can fix it.</li>
+            <li><strong><a href="../forms/index.html#resource-add" class="splink"><i class="fas fa-arrow-right"></i> Adding Resources</a></strong> – Have useful content you'd like to share? We’re happy to include it with proper credit. If ypu want to send any file to me please send through <a href="mailto:generalbca@gmail.com" class="splink">e-mail</a></li>
+            <li><strong><a href="../forms/index.html#spelling-mistake" class="splink"><i class="fas fa-arrow-right"></i> Incorrect Info or Spelling Errors</a></strong> – Help us keep everything accurate and typo free.</li>
+            <li><strong><a href="../forms/index.html#change-del-sub" class="splink"><i class="fas fa-arrow-right"></i> Subject Updates</a></strong> – Want to rename, change, or remove a subject? Tell us!</li>
+            <li><strong><a href="../forms/index.html#change-syllabus" class="splink"><i class="fas fa-arrow-right"></i> Syllabus Changes</a></strong> – If the syllabus has been updated, we’d love to know so we can keep our resources current.</li>
+      </ul>
+                <p>Click the relevant link above to submit your request. Your feedback helps us keep BCAHub better for everyone!</p>
+                <p><i class="fas fa-exclamation-triangle"></i><strong> &nbsp;&nbsp;Please fill out the form carefully and do not submit false or incomplete information.</strong></p>
+      
     </div>
-    <div class="report">          
-                <h3>Need to Report an Issue or Suggest an Update?</h3>
-<p>If you notice anything that needs fixing or updating, feel free to reach out! You can contact us for:</p>
 
-<ul>
-  <li><strong>🔗 <a href="../forms/index.html#broken-link" class="splink">Broken Links</a></strong> – Found a link that doesn’t work? Let us know so we can fix it.</li>
-  <li><strong>📤 <a href="../forms/index.html#resource-add" class="splink">Adding Resources</a></strong> – Have useful content you'd like to share? We’re happy to include it with proper credit. If ypu want to send any file to me please send through <a href="mailto:generalbca@gmail.com" class="splink">e-mail</a></li>
-  <li><strong>✍️ <a href="../forms/index.html#spelling-mistake" class="splink">Incorrect Info or Spelling Errors</a></strong> – Help us keep everything accurate and typo free.</li>
-  <li><strong>🗂️ <a href="../forms/index.html#change-del-sub" class="splink">Subject Updates</a></strong> – Want to rename, change, or remove a subject? Tell us!</li>
-  <li><strong>📘 <a href="../forms/index.html#change-syllabus" class="splink">Syllabus Changes</a></strong> – If the syllabus has been updated, we’d love to know so we can keep our resources current.</li>
-</ul>
-
-<p>Click the relevant link above to submit your request. Your feedback helps us keep BCAHub better for everyone!</p>
-
-<p><strong>✅ Please fill out the form carefully and do not submit false or incomplete information.</strong></p>
-            </div>
-    </main>
+    </div>
+  </div>
       <footer>
     <ul class="footer-nav">
       <li><a href="../contact/index.html">Contact us</a></li>
