@@ -176,7 +176,7 @@ nav.scrolled {
   padding: 0.4rem 1rem;
   font-size: 0.78rem; font-weight: 500; color: var(--blue2);
   margin-bottom: 2rem;
-  animation: fadeDown 0.6s ease both;
+  animation: fadeDown 0.6s ease both; 
 }
 .badge-dot { width: 6px; height: 6px; background: var(--blue2); border-radius: 50%; animation: blink 2s ease infinite; }
 @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
