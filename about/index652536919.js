@@ -1,23 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuLinks = document.querySelectorAll('nav ul a'); // Select all menu links
-    // Highlight the active menu item based on the current URL
-    menuLinks.forEach(link => {
-      if (link.href === window.location.href) {
-        link.classList.add('active'); // Add 'active' class to the matching link
-      } else {
-        link.classList.remove('active'); // Remove 'active' class from non-matching links
-      }
-    });
-  });
-  function showSidebar(){
-    document.querySelector('.sidebar').classList.add('active');
-    document.querySelector('.socials-container').style.display = 'none';
-  }
-  function hideSidebar(){
-    document.querySelector('.sidebar').classList.remove('active');
-    document.querySelector('.socials-container').style.display = 'flex';
-  }
+let p=0;const lf=document.getElementById('lf'),lpt=document.getElementById('lp');
+const iv=setInterval(()=>{p+=Math.random()*18+5;if(p>=100){p=100;clearInterval(iv);setTimeout(()=>document.getElementById('loader').classList.add('done'),300);}lf.style.width=p+'%';lpt.textContent=Math.floor(p)+'%';},80);
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
+const burger=document.getElementById('burger'),mNav=document.getElementById('mobileNav');
+burger.addEventListener('click',()=>{burger.classList.toggle('open');mNav.classList.toggle('open');});
+function closeMobile(){burger.classList.remove('open');mNav.classList.remove('open');}
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');obs.unobserve(x.target);}}),{threshold:.08});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+// Count-up
+const co=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){
+  const el=x.target,tgt=+el.dataset.count;let n=0;const step=Math.max(1,Math.ceil(tgt/60));
+  const iv=setInterval(()=>{n=Math.min(n+step,tgt);el.textContent=n+(tgt>=2025?'':'+');if(n>=tgt)clearInterval(iv);},28);
+  co.unobserve(el);
+}}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 
+//website updates - commit count and last updated date
   const repoOwner = 'pixels111';
   const repoName = 'bcahub';
 
@@ -65,107 +62,4 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('commit-count').textContent = 'Unavailable';
       document.getElementById('last-updated-date').textContent = 'Unavailable';
     });
-    // Perfect smooth scroll solution with refresh protection
-function setupPerfectSmoothScroll() {
-  let isProgrammaticNavigation = false;
-  let lastProcessedHash = '';
-  const scrollOffset = 0; // Small offset from top
 
-  // Get all navigation links
-  const navLinks = document.querySelectorAll('a[href^="#"]');
-
-  // Scroll to element with perfect positioning
-  function perfectScrollTo(targetEl) {
-    if (!targetEl) return;
-    const header = document.querySelector('header');
-    const headerHeight = header ? header.offsetHeight : 0;
-    const elementPosition = targetEl.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerHeight - scrollOffset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    });
-  }
-
-  // Highlight element
-  function highlightElement(targetEl) {
-    targetEl.classList.add('section-highlight');
-    setTimeout(() => {
-      targetEl.classList.remove('section-highlight');
-    }, 1500);
-  }
-
-  // Handle link clicks
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href').slice(1);
-      const targetEl = document.getElementById(targetId);
-      
-      if (targetEl) {
-        e.preventDefault();
-        isProgrammaticNavigation = true;
-        lastProcessedHash = targetId;
-        
-        perfectScrollTo(targetEl);
-        highlightElement(targetEl);
-        
-        // Update URL without adding to history
-        history.replaceState(null, null, `#${targetId}`);
-      }
-    });
-  });
-
-  // Handle initial hash
-  function processInitialHash() {
-    const hash = window.location.hash.slice(1);
-    if (hash && hash !== lastProcessedHash) {
-      const targetEl = document.getElementById(hash);
-      if (targetEl) {
-        isProgrammaticNavigation = true;
-        lastProcessedHash = hash;
-        
-        // Small delay to ensure proper positioning
-        setTimeout(() => {
-          perfectScrollTo(targetEl);
-          highlightElement(targetEl);
-        }, 50);
-      }
-    }
-  }
-
-  // Handle hash changes
-  window.addEventListener('hashchange', () => {
-    const hash = window.location.hash.slice(1);
-    
-    if (isProgrammaticNavigation) {
-      isProgrammaticNavigation = false;
-      return;
-    }
-    
-    if (hash && hash !== lastProcessedHash) {
-      const targetEl = document.getElementById(hash);
-      if (targetEl) {
-        lastProcessedHash = hash;
-        setTimeout(() => {
-          perfectScrollTo(targetEl);
-          highlightElement(targetEl);
-        }, 50);
-      }
-    }
-  });
-
-  // Clear hash on full page refresh
-  window.addEventListener('beforeunload', () => {
-    if (performance.navigation.type === 1) { // Type 1 is page reload
-      history.replaceState(null, null, ' ');
-    }
-  });
-
-  // Initialize
-  window.addEventListener('load', processInitialHash);
-  window.addEventListener('DOMContentLoaded', processInitialHash);
-}
-
-// Initialize the perfect smooth scrolling
-document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
