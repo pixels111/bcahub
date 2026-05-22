@@ -975,7 +975,12 @@ label i { color: var(--blue2); font-size: 0.65rem; }
  .report p i { 
   color: var(--red-text);
  }
-
+.report a{
+  color: var(--violet);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--trans);
+}
 .report li a {
   display: inline-flex;
   align-items: center;
