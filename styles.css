@@ -371,6 +371,36 @@ nav.scrolled {
 .link-outline { background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--muted2); }
 .link-outline:hover { color:var(--text); border-color:rgba(99,179,237,0.3); }
 
+.appmedia-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.appmedia-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+}
+.appmedia-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+}
+
+.appmedia-image:hover .appmedia-image img {
+    transform: scale(1.05);
+}
+.appmedia-image:hover .appmedia-image video {
+    transform: scale(1.05);
+}
+
 /* ── EXPLORE ── */
 .explore-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3.5rem; }
 .explore-card {
@@ -976,6 +1006,11 @@ footer {
   max-width: 565px; margin: 0 auto 1rem;
 }
 }
+
+
+
+
+
 
 
 
