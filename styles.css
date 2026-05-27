@@ -793,23 +793,29 @@ nav.scrolled {
 
   .feedback-nav{
 
-    flex-direction:column;
+ display:flex;
 
-    align-items:flex-start;
+    align-items:center;
+
+    justify-content:space-between;
   }
 
   .feedback-nav-buttons{
 
-    width:100%;
-    justify-content:flex-end;
-    gap: 19.5rem;
-  }
+    width:auto;
+
+    gap:.75rem;
+    }
 
   .feedback-nav-btn{
+  width:42px;
+  height:42px;
 
-    width:42px;
-    height:42px;
-    font-size:.9rem;
+  min-width:42px;
+  min-height:42px;
+
+  flex-shrink:0;
+  font-size:.9rem;
   }
 
   .feedback-card{
@@ -851,15 +857,34 @@ nav.scrolled {
 ───────────────────────────── */
 
 @media(max-width:380px){
+  .feedback-nav{
 
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+  }
   .feedback-nav h3{
     font-size:1rem;
   }
 
   .feedback-nav-btn{
 
-    width:34px;
-    height:34px;
+  width:34px;
+  height:34px;
+
+  min-width:34px;
+  min-height:34px;
+
+  flex-shrink:0;
+  }
+
+  .feedback-nav-buttons{
+
+width:auto;
+
+    gap:.55rem;
   }
 
   .feedback-card{

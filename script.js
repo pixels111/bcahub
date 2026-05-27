@@ -41,7 +41,7 @@ stars.forEach(s => {
 ========================= */
 
 const API_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbzeg_WAHLiPltc15t-HnKeRucuHoLYjRJYAJ8MXnfw1oGG7zIw6zSglx3eY9P94q6DO/exec";
+  "https://script.google.com/macros/s/AKfycbwsDfqSsTPqzPSnDuJi7TGuCF_PRZUvYC1FlCKRCm46PFjNkk_cvP2Df8XxIuXmfua-/exec";
 
 const ratingLabel = document.getElementById("ratingLabel");
 

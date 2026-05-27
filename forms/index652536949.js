@@ -310,7 +310,7 @@ if (input.name && input.name.toLowerCase().includes('email_phno')) {
       showFormMessage(form, "Sending...", "#0077ff");
 
       // Submit form data
-      fetch('https://script.google.com/macros/s/AKfycbxw7OfJHrnXW4xNG_O8t7lCqJPWRIaLZN50pPUuIilR4M4mUeuqKBZjRFuUMCo7hUCBoQ/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbxhSUuMPw3TtXLEWayd4EIhKy3fCvadw9RSho1zXLESPPF0PwGdM7CvtQLfK8UKJpGC1g/exec', {
         method: 'POST',
         body: new FormData(form),
       })
