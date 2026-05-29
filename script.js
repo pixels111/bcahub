@@ -459,3 +459,492 @@ setTimeout(() => {
 ========================= */
 
 loadFeedback();
+
+
+/* =========================
+   ANNOUNCEMENTS
+========================= */
+
+const announcements = [
+
+
+{
+  type:"image",
+  badge:"APPVERSE",
+  title:"New App Released",
+  description:"Explore the latest AppVerse application added to BCAHub.",
+  media:"pictures/rammagicsquarenotification.png",
+  buttonText:"Explore App",
+  buttonLink:"#rammagicsquare"
+},
+
+
+{
+  type:"image",
+  badge:"FEEDBACK",
+  title:"Share Your Feedback",
+  description:"Help improve BCAHub by submitting your feedback.",
+  media:"pictures/social-preview.png",
+  buttonText:"Give Feedback",
+  buttonLink:"#feedback"
+}
+
+];
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const hubMini =
+document.getElementById("hubMini");
+
+const hubPanel =
+document.getElementById("hubPanel");
+
+const hubImage =
+document.getElementById("hubImage");
+
+const hubVideo =
+document.getElementById("hubVideo");
+hubVideo.preload = "metadata";
+
+const hubVideoSource =
+document.getElementById("hubVideoSource");
+
+const hubBadge =
+document.getElementById("hubBadge");
+
+const hubTitle =
+document.getElementById("hubTitle");
+
+const hubDescription =
+document.getElementById("hubDescription");
+
+const hubButton =
+document.getElementById("hubButton");
+
+const hubDots =
+document.getElementById("hubDots");
+
+renderAnnouncement(0);
+createDots();
+
+let currentAnnouncement = 0;
+
+/* =========================
+   SHUFFLE ORDER
+========================= */
+
+announcements.sort(
+() => Math.random() - 0.5
+);
+announcements.forEach(item => {
+
+  if(item.type === "image"){
+
+    const img = new Image();
+
+    img.src = item.media;
+  }
+
+  if(item.type === "video"){
+
+    const video =
+      document.createElement("video");
+
+    video.preload = "auto";
+
+    video.src = item.media;
+  }
+
+});
+/* =========================
+   RENDER
+========================= */
+
+function renderAnnouncement(index){
+
+const item =
+announcements[index];
+
+hubBadge.textContent =
+item.badge;
+
+hubTitle.textContent =
+item.title;
+
+hubDescription.textContent =
+item.description;
+
+hubButton.textContent =
+item.buttonText;
+
+hubButton.href =
+item.buttonLink;
+
+/* MEDIA */
+
+hubImage.style.display =
+"none";
+
+hubVideo.style.display =
+"none";
+
+hubVideo.pause();
+
+if(item.type === "image"){
+
+hubImage.src =
+item.media;
+
+hubImage.style.display =
+"block";
+
+}
+
+if(item.type === "video"){
+
+  if(hubVideoSource.src !== item.media){
+
+    hubVideoSource.src = item.media;
+
+  }
+
+  hubVideo.style.display = "block";
+
+  hubVideo.play().catch(()=>{});
+
+}
+/* DOTS */
+
+document
+.querySelectorAll(
+".hub-dot"
+)
+.forEach((dot,i)=>{
+
+dot.classList.toggle(
+"active",
+i===index
+);
+
+});
+
+}
+
+/* =========================
+   CREATE DOTS
+========================= */
+
+function createDots(){
+
+hubDots.innerHTML = "";
+
+announcements.forEach(
+(_,i)=>{
+
+const dot =
+document.createElement(
+"div"
+);
+
+dot.className =
+"hub-dot";
+
+if(i===0)
+dot.classList.add(
+"active"
+);
+
+dot.onclick = ()=>{
+
+currentAnnouncement =
+i;
+
+renderAnnouncement(
+currentAnnouncement
+);
+
+};
+
+hubDots.appendChild(
+dot
+);
+
+});
+
+}
+
+/* =========================
+   NEXT
+========================= */
+
+function nextAnnouncement(){
+
+currentAnnouncement++;
+
+if(
+currentAnnouncement >=
+announcements.length
+){
+
+currentAnnouncement = 0;
+
+}
+
+renderAnnouncement(
+currentAnnouncement
+);
+
+}
+
+/* =========================
+   PREV
+========================= */
+
+function prevAnnouncement(){
+
+currentAnnouncement--;
+
+if(
+currentAnnouncement < 0
+){
+
+currentAnnouncement =
+announcements.length - 1;
+
+}
+
+renderAnnouncement(
+currentAnnouncement
+);
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+document
+.getElementById(
+"hubNext"
+)
+.onclick =
+nextAnnouncement;
+
+document
+.getElementById(
+"hubPrev"
+)
+.onclick =
+prevAnnouncement;
+
+/* =========================
+   OPEN PANEL
+========================= */
+
+hubMini.onclick = ()=>{
+
+  hubMini.style.display = "none";
+
+  hubPanel.classList.add("open");
+
+};
+/* =========================
+   MINIMIZE
+========================= */
+
+document
+.getElementById("hubMinimize")
+.onclick = ()=>{
+
+  hubPanel.classList.remove("open");
+
+  hubMini.style.display = "flex";
+
+};
+
+/* =========================
+   CLOSE
+========================= */
+
+document
+.getElementById(
+"hubClose"
+)
+.onclick = ()=>{
+
+const hideToday =
+document.getElementById(
+"hubHideToday"
+).checked;
+
+if(hideToday){
+
+const tomorrow =
+Date.now() +
+86400000;
+
+localStorage.setItem(
+"hubHideUntil",
+tomorrow
+);
+
+}
+
+document
+.getElementById(
+"hubNotify"
+)
+.style.display =
+"none";
+
+};
+
+/* =========================
+   SHOW RULES
+========================= */
+
+function shouldShow(){
+
+const hideUntil =
+localStorage.getItem(
+"hubHideUntil"
+);
+
+if(
+hideUntil &&
+Date.now() <
+Number(hideUntil)
+){
+
+return false;
+
+}
+
+return true;
+
+}
+
+/* =========================
+   VISIT DELAY
+========================= */
+
+function getDelay(){
+
+const visited =
+localStorage.getItem(
+"hubVisited"
+);
+
+if(!visited){
+
+localStorage.setItem(
+"hubVisited",
+"true"
+);
+
+return 30000;
+}
+
+return 10000;
+
+}
+
+/* =========================
+   AUTO ROTATE
+========================= */
+
+setInterval(()=>{
+
+nextAnnouncement();
+
+},8000);
+
+/* =========================
+   INIT
+========================= */
+
+if(shouldShow()){
+
+setTimeout(()=>{
+
+document
+.getElementById(
+"hubNotify"
+)
+.style.display =
+"block";
+},getDelay());
+
+}
+/* =========================
+   TOUCH SWIPE SUPPORT
+========================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+hubPanel.addEventListener(
+  "touchstart",
+  (e) => {
+
+    touchStartX =
+      e.changedTouches[0].screenX;
+
+  },
+  { passive:true }
+);
+
+hubPanel.addEventListener(
+  "touchend",
+  (e) => {
+
+    touchEndX =
+      e.changedTouches[0].screenX;
+
+    handleSwipe();
+
+  },
+  { passive:true }
+);
+
+function handleSwipe(){
+
+  const distance =
+    touchStartX - touchEndX;
+
+  /* LEFT SWIPE */
+
+  if(distance > 50){
+
+    nextAnnouncement();
+
+  }
+
+  /* RIGHT SWIPE */
+
+  if(distance < -50){
+
+    prevAnnouncement();
+
+  }
+
+}
+/* =========================
+   MINIMIZE ON CTA CLICK
+========================= */
+
+hubButton.addEventListener(
+  "click",
+  () => {
+
+    hubPanel.classList.remove(
+      "open"
+    );
+
+    hubMini.style.display =
+      "flex";
+
+  }
+);

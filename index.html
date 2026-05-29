@@ -68,6 +68,206 @@
 </script>
 </head>
 <body>
+<!-- =========================
+     BCAHUB NOTIFICATION CENTER
+========================= -->
+
+<div id="hubNotify" class="hub-notify">
+
+  <!-- COLLAPSED CARD -->
+
+  <div class="hub-mini" id="hubMini">
+
+    <div class="hub-mini-icon">
+      <i class="fas fa-bullhorn"></i>
+    </div>
+
+    <div class="hub-mini-text">
+
+      <span class="hub-mini-title">
+         Hub Feed
+      </span>
+
+      <span class="hub-mini-sub">
+        Announcements & updates
+      </span>
+
+    </div>
+
+    <div class="hub-mini-pulse"></div>
+
+  </div>
+
+  <!-- EXPANDED PANEL -->
+
+  <div class="hub-panel" id="hubPanel">
+
+    <!-- HEADER -->
+
+    <div class="hub-header">
+
+      <div class="hub-header-left">
+
+        <div class="hub-header-icon">
+
+          <i class="fas fa-bullhorn"></i>
+
+        </div>
+
+        <div>
+
+          <h3>
+           BCAHub Feed
+          </h3>
+
+          <p>
+            Alerts, announcements, Updates and more
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="hub-header-actions">
+
+        <button
+          id="hubMinimize"
+          class="hub-action-btn">
+
+          <i class="fas fa-minus"></i>
+
+        </button>
+
+        <button
+          id="hubClose"
+          class="hub-action-btn">
+
+          <i class="fas fa-times"></i>
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="hub-content">
+
+      <!-- MEDIA -->
+
+      <div
+        id="hubMedia"
+        class="hub-media">
+
+        <img
+          id="hubImage"
+          src=""
+          alt="Announcement">
+
+        <video
+          id="hubVideo"
+          muted
+          loop
+          playsinline>
+
+          <source
+            id="hubVideoSource"
+            src=""
+            type="video/mp4">
+
+        </video>
+
+              <!-- PREV / NEXT -->
+
+      <div class="hub-nav">
+
+        <button id="hubPrev" class="hub-nav-btn hub-prev">
+  <i class="fas fa-angle-left"></i>
+</button>
+
+<button id="hubNext" class="hub-nav-btn hub-next">
+  <i class="fas fa-angle-right"></i>
+</button>
+
+      </div>
+
+      </div>
+
+     <!-- DOTS -->
+
+      <div
+        id="hubDots"
+        class="hub-dots">
+
+      </div>
+      
+      <!-- TEXT -->
+
+      <div class="hub-info">
+
+        <div
+          id="hubBadge"
+          class="hub-badge">
+
+          NEW
+
+        </div>
+
+        <h2
+          id="hubTitle">
+
+          Loading...
+
+        </h2>
+
+        <p
+          id="hubDescription">
+
+          Loading announcement...
+
+        </p>
+
+      </div>
+
+      <!-- CTA -->
+
+      <a
+        id="hubButton"
+        href="#"
+        class="hub-btn">
+
+        Learn More
+
+      </a>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="hub-footer">
+
+    </div>
+
+    <!-- SETTINGS -->
+
+    <div class="hub-settings">
+
+      <label>
+
+        <input
+          type="checkbox"
+          id="hubHideToday">
+
+        Don't show again today
+
+      </label>
+
+    </div>
+
+  </div>
+
+</div>
 
 <!-- LOADER -->
 <div id="loader">
@@ -144,7 +344,7 @@
     </div>
     <div class="updates-grid">
       <div class="card update-card reveal">
-        <h3><i class="fas fa-sync" style="color:var(--blue2)"></i> Updates <span class="tag tag-blue">Latest</span></h3>
+        <h3><i class="fas fa-sync" style="color:var(--blue2)"></i> Resources <span class="tag tag-blue">Latest</span></h3>
         <ul class="update-list">
           <li><a href="https://pixels111.github.io/bcahub/resources/index.html" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> View All Resources (All Semesters)</a></li>
           <li><a href="https://drive.google.com/uc?export=download&id=1DqnrX2_fDLlUqzUHK21vu_ms_As3bUuu" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i> Download All Semesters Syllabus (PDF)</a></li>
@@ -195,7 +395,7 @@
       <p class="section-sub">Practical apps created to solve real student problems — </p>
     </div>
     <div class="apps-grid">
-      <div class="card app-card reveal" style="transition-delay:0.2s">
+      <div class="card app-card reveal" style="transition-delay:0.2s" id="rammagicsquare">
           <div class="appmedia-image">
           <img src="pictures/magicsquare.png" alt="App Icon" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
           </div>
@@ -206,7 +406,7 @@
           <a href="https://rammagicsquare.vercel.app" target="_blank" class="app-link link-solid"><i class="fas fa-external-link-alt"></i> Try It</a>
         </div>
       </div>
-      <div class="card app-card reveal" style="transition-delay:0.25s">
+      <div class="card app-card reveal" style="transition-delay:0.25s" id="sac">
          <div class="appmedia-image">
          <img src="pictures/sac.png" alt="App Icon" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
          </div>
@@ -217,7 +417,7 @@
           <a href="https://pixels111.github.io/sac/" target="_blank" class="app-link link-solid"><i class="fas fa-calculator"></i> Calculate</a>
         </div>
       </div>
-      <div class="card app-card reveal" style="transition-delay:0.05s">
+      <div class="card app-card reveal" style="transition-delay:0.05s" id="buildmyresume">
          <div class="appmedia-image">
             <img src="pictures/buildyourresume.jpg" alt="App Icon" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
          </div>
@@ -230,7 +430,7 @@
           <a href="https://buildmyresume.free.nf/" target="_blank" class="app-link link-outline"><i class="fas fa-external-link-alt"></i> Website</a>
         </div>
       </div>
-      <div class="card app-card reveal" style="transition-delay:0.1s">
+      <div class="card app-card reveal" style="transition-delay:0.1s" id="sdhrdump">
         <div class="appmedia-image">
           <img src="pictures/sdhrdump.png" alt="SDHR Dump App Icon" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
         </div>
@@ -242,7 +442,7 @@
           <a href="https://sdhr.free.nf/" target="_blank" class="app-link link-outline"><i class="fas fa-external-link-alt"></i> Website</a>
         </div>
       </div>
-      <div class="card app-card reveal" style="transition-delay:0.15s">
+      <div class="card app-card reveal" style="transition-delay:0.15s" id="cirravogames">
           <div class="appmedia-image">
           <video src="videos/cirravogames.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;"></video>
           </div>
@@ -253,7 +453,7 @@
           <a href="https://cirravogames.free.nf/" target="_blank" class="app-link link-solid"><i class="fas fa-play"></i> Play Now</a>
         </div>
       </div>
-      <div class="card app-card reveal" style="transition-delay:0.3s">
+      <div class="card app-card reveal" style="transition-delay:0.3s" id="submitapp">
         <div class="app-icon">➕</div>
         <h3>Submit Your App</h3>
         <p>Built something useful for students? We'd love to feature your project in AppVerse! Reach out to us.</p>
@@ -329,7 +529,7 @@
 
 
 <!-- FEEDBACK -->
-<section class="section">
+<section class="section" id="feedback">
   <div class="section-inner">
     <div class="reveal">
       <div class="section-label">Feedback</div>
