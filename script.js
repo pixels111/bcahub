@@ -467,6 +467,15 @@ loadFeedback();
 
 const announcements = [
 
+{
+  type:"image",
+  badge:"ARTICLE",
+  title:"The Big Bang",
+  description:"The story of how the universe began from a cosmic explosion to ever-expanding galaxies.",
+  media:"pictures/id5-0.png",
+  buttonText:"Read Article",
+  buttonLink:"https://pixels111.github.io/bcahub/content/index.html#5"
+},
 
 {
   type:"image",
@@ -487,7 +496,8 @@ const announcements = [
   media:"pictures/social-preview.png",
   buttonText:"Give Feedback",
   buttonLink:"#feedback"
-}
+},
+
 
 ];
 
