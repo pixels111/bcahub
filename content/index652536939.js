@@ -899,7 +899,13 @@ function setupEventListeners() {
     backButton.addEventListener('click', () => {
         contentDetail.style.display = 'none';
         document.body.classList.remove('noscroll');
+        document.documentElement.classList.remove('noscroll-modal');
         history.replaceState(null, null, window.location.pathname);
+    });
+
+    // Handle nav styling when content-detail scrolls
+    contentDetail.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', contentDetail.scrollTop > 40);
     });
 }
 
@@ -1024,6 +1030,7 @@ function showContentDetail(contentId) {
     contentDetail.style.display = 'block';
     contentDetail.scrollTop = 0;
     document.body.classList.add('noscroll');
+    document.documentElement.classList.add('noscroll-modal');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // Update history
@@ -1048,6 +1055,7 @@ backButton.addEventListener('click', () => {
     currentDetailId = null;
     contentDetail.style.display = 'none';
     document.body.classList.remove('noscroll');
+    document.documentElement.classList.remove('noscroll-modal');
     
     // Restore grid scroll position
     if (window.contentGridScrollPosition !== undefined) {
@@ -1064,6 +1072,7 @@ window.addEventListener('popstate', (event) => {
             currentDetailId = null;
             contentDetail.style.display = 'none';
             document.body.classList.remove('noscroll');
+            document.documentElement.classList.remove('noscroll-modal');
         }
         return;
     }
@@ -1074,6 +1083,7 @@ window.addEventListener('popstate', (event) => {
         currentDetailId = null;
         contentDetail.style.display = 'none';
         document.body.classList.remove('noscroll');
+        document.documentElement.classList.remove('noscroll-modal');
         
         if (window.contentGridScrollPosition !== undefined) {
             window.scrollTo({ top: window.contentGridScrollPosition });
@@ -1105,6 +1115,7 @@ window.addEventListener('hashchange', () => {
     } else {
         contentDetail.style.display = 'none';
         document.body.classList.remove('noscroll');
+        document.documentElement.classList.remove('noscroll-modal');
     }
 });
 

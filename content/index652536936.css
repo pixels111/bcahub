@@ -516,14 +516,16 @@ main {
             gap: 1rem;
             margin: 2rem 0;
         }
-        body.noscroll
-       {
+        html.noscroll-modal {
+            overflow: hidden !important;
+        }
+        body.noscroll {
             overflow: hidden !important;
             width: 100vw;
+            height: 100vh;
         }
-        body.noscroll main 
-        {
-              overflow: hidden !important;
+        body.noscroll main {
+            overflow: hidden !important;
         }
         
         .filters {
@@ -565,7 +567,7 @@ main {
             bottom: 0;
             background-color: var(--space-color);
             z-index: 100;
-            overflow-y: auto;
+            overflow-y: overlay;
             padding:1rem;
             display: none;
            padding-top: 60px;
@@ -577,13 +579,15 @@ main {
             align-items: center;
             margin-bottom: 1rem;
         }
-        
         .back-button {
+            margin-top: 1rem;
             font-size: 1.5rem;
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
         }
-        
+        #next-random-btn{
+        margin-top: 1rem;
+        }
         .detail-content {
             max-width: 800px;
             margin: 0 auto;
@@ -608,12 +612,12 @@ main {
 
         }
         .detail-video-label {
-  text-align: center;
-  margin-top: 8px;
-  font-size: 1rem;
-  color: #9b9b9b;
-  font-weight: bold;
-}
+           text-align: center;
+           margin-top: 8px;
+           font-size: 1rem;
+           color: #9b9b9b;
+           font-weight: bold;
+         }
         .detail-text {
             font-size: 1.2rem;
             line-height: 1.5;
