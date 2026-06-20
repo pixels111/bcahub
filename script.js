@@ -306,6 +306,22 @@ function setupFeedbackSlider() {
   const prev =
     document.getElementById("prevFeedback");
 
+/* ========================
+   TEXT CYCLING ANIMATION
+   ======================== */
+
+// Cycle through different text options for the resource updates heading
+const cycleTextElement = document.querySelector('.cycle-text');
+if (cycleTextElement) {
+  const texts = ['Resource', 'Content', 'Website', 'Appverse'];
+  let currentIndex = 0;
+  
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % texts.length;
+    cycleTextElement.textContent = texts[currentIndex];
+  }, 2250); // Change every 2.25 seconds (9 seconds total / 4 texts)
+}
+
   const next =
     document.getElementById("nextFeedback");
 

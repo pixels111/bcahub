@@ -467,7 +467,8 @@ x
 
 }
 
-#rammagicsquare { scroll-margin-top:140px; }
+#iLikeCode { scroll-margin-top:120px; }
+#Safex { scroll-margin-top:120px; }
 
 /* ── EXPLORE ── */
 .explore-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3.5rem; }
@@ -1076,6 +1077,7 @@ footer {
     min-height:auto;
   }
 }
+
 /* DESKTOP ONLY */
 @media(min-width:1200px){
   .hero-inner{
@@ -1100,7 +1102,60 @@ footer {
 }
 }
 
+/* ── TEXT CYCLING ANIMATION ── */
 
+.cycle-text{
+  font-family:var(--font-head);
+  font-size:clamp(1rem,3vw,1.2rem);
+  font-weight:bold;
+  display:inline-block;
+  min-width:7ch;
+  white-space:nowrap;
 
+  background:linear-gradient(
+    135deg,
+    var(--blue2),
+    var(--cyan)
+  );
 
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
 
+.update-text{
+  font-family:var(--font-head);
+  font-size:clamp(1rem,3vw,1.2rem);
+  font-weight:bold;
+}
+
+/* Prevent wrapping issues */
+
+.updates-heading {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.3rem;
+}
+
+/* Slightly larger on phones */
+
+@media (max-width:650px){
+
+  .cycle-text,
+  .update-text{
+    font-size:1.05rem;
+  }
+
+}
+
+/* Very small devices */
+
+@media (max-width:400px){
+
+  .cycle-text,
+  .update-text{
+    font-size:1rem;
+  }
+
+}
