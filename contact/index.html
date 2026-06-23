@@ -22,12 +22,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BCAHub - Contact</title>
 <link rel="stylesheet" href="index652536926.css">
+<link rel="stylesheet" href="../loader.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="icon" href="pictures/weblogonobg.png" type="image/png">
 </head>
 <body>
 
-<div id="loader"><div class="loader-logo">BCAHub</div><div class="loader-track"><div class="loader-fill" id="lf"></div></div><div class="loader-pct" id="lp">0%</div></div>
+<div id="loader">
+
+  <div class="loader">
+
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+
+    <div class="line"></div>
+
+  </div>
+
+  <div class="loader-subtitle">
+    Preparing Your Learning Experience...
+  </div>
+
+  <div class="loader-pct" id="loaderPct">0%</div>
+
+</div>
 
 <nav id="nav">
   <a href="../index.html" class="nav-logo"><span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>BCAHub</a>
@@ -176,8 +201,7 @@
 </footer>
  
 <script>
-let p=0;const lf=document.getElementById('lf'),lpt=document.getElementById('lp');
-const iv=setInterval(()=>{p+=Math.random()*18+5;if(p>=100){p=100;clearInterval(iv);setTimeout(()=>document.getElementById('loader').classList.add('done'),300);}lf.style.width=p+'%';lpt.textContent=Math.floor(p)+'%';},80);
+
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
 const burger=document.getElementById('burger'),mNav=document.getElementById('mobileNav');
 burger.addEventListener('click',()=>{burger.classList.toggle('open');mNav.classList.toggle('open');});
@@ -216,5 +240,6 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
 });
 function showMsg(id,msg,type){const el=document.getElementById(id);el.textContent=msg;el.className=(type==='ok'?'form-success':'form-error-msg');el.style.display='block';setTimeout(()=>el.style.display='none',9000);}
 </script>
+<script src="../loader.js"></script>
 </body>
 </html>

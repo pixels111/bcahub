@@ -129,17 +129,6 @@ function setupPerfectSmoothScroll() {
 // Initialize the perfect smooth scrolling
 document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
 
-// LOADER
-let p = 0;
-const fill = document.getElementById('loaderFill');
-const pct = document.getElementById('loaderPct');
-const iv = setInterval(() => {
-  p += Math.random() * 18 + 5;
-  if (p >= 100) { p = 100; clearInterval(iv); setTimeout(() => document.getElementById('loader').classList.add('done'), 300); }
-  fill.style.width = p + '%';
-  pct.textContent = Math.floor(p) + '%';
-}, 80);
-
 // NAV 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));

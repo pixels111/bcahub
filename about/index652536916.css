@@ -35,14 +35,6 @@ body { background:var(--bg); color:var(--text); font-family:var(--font-body); ov
 
 #creator { scroll-margin-top:120px; }
 
-/* ── LOADER ── */
-#loader { position:fixed; inset:0; z-index:9999; background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.5rem; transition:opacity 0.6s, visibility 0.6s; }
-#loader.done { opacity:0; visibility:hidden; }
-.loader-logo { font-family:var(--font-head); font-size:2.5rem; font-weight:800; background:linear-gradient(135deg,var(--blue),var(--cyan),var(--violet)); background-clip:text; -webkit-text-fill-color:transparent; }
-.loader-track { width:220px; height:3px; background:var(--bg3); border-radius:3px; overflow:hidden; }
-.loader-fill { height:100%; width:0; background:linear-gradient(90deg,var(--blue),var(--cyan)); border-radius:3px; transition:width 0.05s linear; }
-.loader-pct { font-size:0.78rem; color:var(--muted); letter-spacing:0.15em; font-family:var(--font-head); }
-
 /* ── NAV ── */
 nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1.25rem 2.5rem; display:flex; align-items:center; justify-content:space-between; transition:all 0.4s ease; }
 nav.scrolled { background:rgba(7,9,15,0.92); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:0.9rem 2.5rem; }

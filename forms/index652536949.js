@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-let p=0;const lf=document.getElementById('lf'),lpt=document.getElementById('lp');
-const iv=setInterval(()=>{p+=Math.random()*18+5;if(p>=100){p=100;clearInterval(iv);setTimeout(()=>document.getElementById('loader').classList.add('done'),300);}lf.style.width=p+'%';lpt.textContent=Math.floor(p)+'%';},80);
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
 const burger=document.getElementById('burger'),mNav=document.getElementById('mobileNav');
 burger.addEventListener('click',()=>{burger.classList.toggle('open');mNav.classList.toggle('open');});
