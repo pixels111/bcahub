@@ -54,7 +54,7 @@ nav {
 nav.scrolled {
   background: rgba(7,9,15,0.9);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); 
   padding: 0.9rem 2.5rem;
 }
 .nav-logo {
@@ -1077,15 +1077,23 @@ footer {
 }
 }
 
-/* ── TEXT CYCLING ANIMATION ── */
+/* ─────────────────────────────
+   BCAHub Typing Animation
+───────────────────────────── */
+
+.updates-heading{
+  display:flex;
+  align-items:center;
+  gap:.35rem;
+  flex-wrap:wrap;
+}
 
 .cycle-text{
+  display:inline-block;
+  min-width:8.3ch;
   font-family:var(--font-head);
   font-size:clamp(1rem,3vw,1.2rem);
-  font-weight:bold;
-  display:inline-block;
-  min-width:7ch;
-  white-space:nowrap;
+  font-weight:700;
 
   background:linear-gradient(
     135deg,
@@ -1101,19 +1109,8 @@ footer {
 .update-text{
   font-family:var(--font-head);
   font-size:clamp(1rem,3vw,1.2rem);
-  font-weight:bold;
+  font-weight:700;
 }
-
-/* Prevent wrapping issues */
-
-.updates-heading {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:.3rem;
-}
-
-/* Slightly larger on phones */
 
 @media (max-width:650px){
 
@@ -1123,8 +1120,6 @@ footer {
   }
 
 }
-
-/* Very small devices */
 
 @media (max-width:400px){
 

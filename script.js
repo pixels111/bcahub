@@ -18,7 +18,7 @@ document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid
 
 // STARS
 let rating = 0;
-const stars = document.querySelectorAll('.star');
+const stars = document.querySelectorAll('.star'); 
 stars.forEach(s => {
   s.addEventListener('mouseover', () => stars.forEach(st => st.classList.toggle('lit', st.dataset.v <= s.dataset.v)));
   s.addEventListener('mouseout', () => stars.forEach(st => st.classList.toggle('lit', st.dataset.v <= rating)));
@@ -295,21 +295,6 @@ function setupFeedbackSlider() {
   const prev =
     document.getElementById("prevFeedback");
 
-/* ========================
-   TEXT CYCLING ANIMATION
-   ======================== */
-
-// Cycle through different text options for the resource updates heading
-const cycleTextElement = document.querySelector('.cycle-text');
-if (cycleTextElement) {
-  const texts = ['Resource', 'Content', 'Website', 'Appverse'];
-  let currentIndex = 0;
-  
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % texts.length;
-    cycleTextElement.textContent = texts[currentIndex];
-  }, 2250); // Change every 2.25 seconds (9 seconds total / 4 texts)
-}
 
   const next =
     document.getElementById("nextFeedback");
@@ -465,3 +450,89 @@ setTimeout(() => {
 
 loadFeedback();
 
+const cycleText = document.querySelector(".cycle-text");
+
+if(cycleText){
+
+  const words = [
+    "Resources",
+    "Content",
+    "Website",
+    "AppVerse"
+  ];
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeEffect(){
+
+    const currentWord = words[wordIndex];
+
+    if(!deleting){
+
+      cycleText.textContent =
+        currentWord.substring(0, charIndex + 1) + "|";
+
+      charIndex++;
+
+      if(charIndex === currentWord.length){
+
+        blinkCursor(() => {
+
+          deleting = true;
+          typeEffect();
+
+        });
+
+        return;
+      }
+
+    }else{
+
+      cycleText.textContent =
+        currentWord.substring(0, charIndex - 1) + "|";
+
+      charIndex--;
+
+      if(charIndex === 0){
+
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+
+    }
+
+    setTimeout(
+      typeEffect,
+      deleting ? 35 : 120
+    );
+  }
+
+  function blinkCursor(callback){
+
+    let count = 0;
+
+    const blink = setInterval(() => {
+
+      cycleText.textContent =
+        count % 2 === 0
+          ? words[wordIndex]
+          : words[wordIndex] + "|";
+
+      count++;
+
+      if(count === 6){
+
+        clearInterval(blink);
+        callback();
+
+      }
+
+    }, 250);
+
+  }
+
+  typeEffect();
+
+}
