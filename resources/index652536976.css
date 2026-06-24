@@ -39,7 +39,7 @@ nav.scrolled { background:rgba(7,9,15,0.92); backdrop-filter:blur(20px); border-
 .nav-logo {
   display: flex; align-items: center; gap: 0.6rem;
   text-decoration: none;
-  font-family: var(--font-head); font-weight: 800; font-size: 1.35rem;
+  font-family: var(--font-head); font-weight: 800; font-size: 1.35rem; 
   background: linear-gradient(135deg, var(--blue2), var(--cyan));
   background-clip: text; -webkit-text-fill-color: transparent;
 }
@@ -1005,4 +1005,88 @@ label i { color: var(--blue2); font-size: 0.65rem; }
   text-decoration: none;
 }
 
+/* ── maintenance-modal ── */
+.maintenance-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(7,9,15,.85);
+  backdrop-filter:blur(8px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+  padding:20px;
+}
 
+.maintenance-modal.show{
+  display:flex;
+  animation:fadeIn .25s ease;
+}
+
+.maintenance-box{
+  width:min(550px,100%);
+  background:linear-gradient(
+    135deg,
+    #111827,
+    #0d1117
+  );
+  border:1px solid rgba(99,179,237,.2);
+  border-radius:20px;
+  padding:32px;
+  text-align:center;
+  box-shadow:
+    0 0 40px rgba(59,130,246,.15),
+    0 0 80px rgba(34,211,238,.08);
+}
+
+.maintenance-icon{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.maintenance-box h2{
+  color:#f0f4ff;
+  margin-bottom:16px;
+  font-family:'Syne',sans-serif;
+}
+
+.maintenance-box p{
+  color:#b0bcd0;
+  line-height:1.7;
+  margin-bottom:12px;
+  font-family:'Outfit',sans-serif;
+}
+
+.maintenance-note{
+  color:#60a5fa !important;
+  font-weight:600;
+}
+
+.maintenance-box button{
+  margin-top:18px;
+  border:none;
+  padding:12px 28px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  background:linear-gradient(
+    135deg,
+    #3b82f6,
+    #22d3ee
+  );
+  color:#fff;
+  transition:.25s;
+}
+
+.maintenance-box button:hover{
+  transform:translateY(-2px);
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}

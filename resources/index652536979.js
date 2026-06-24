@@ -843,7 +843,7 @@ window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY
 // HAMBURGER
 const burger = document.getElementById('burger');
 const mobileNav = document.getElementById('mobileNav');
-burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileNav.classList.toggle('open'); }); 
 function closeMobile() { burger.classList.remove('open'); mobileNav.classList.remove('open'); }
 
 // REVEAL
@@ -852,3 +852,31 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => obs.obser
 
 // STAGGER
 document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid .card').forEach((el,i) => { el.style.transitionDelay = (i * 0.07) + 's'; });
+
+
+
+// MaintenanceModal
+function showMaintenanceModal(){
+  document
+    .getElementById("maintenanceModal")
+    .classList.add("show");
+}
+
+function closeMaintenanceModal(){
+  document
+    .getElementById("maintenanceModal")
+    .classList.remove("show");
+}
+
+document.addEventListener("click", function(e){
+
+  const link = e.target.closest("a");
+
+  if(!link) return;
+
+  if(link.href.includes("drive.google.com")){
+    e.preventDefault();
+    showMaintenanceModal();
+  }
+
+});
