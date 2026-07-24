@@ -277,6 +277,14 @@ nav.scrolled {
 .updates-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:3.5rem; }
 .update-card { padding:1.75rem; }
 .update-card h3 { font-family:var(--font-head); font-size:1.1rem; font-weight:700; margin-bottom:1.25rem; display:flex; align-items:center; gap:0.75rem; }
+.update-card .results-heading {
+  font-size:clamp(1.05rem, 2vw, 1.55rem);
+  line-height:1.2;
+  margin:0 0 1rem;
+  color:#fff;
+  text-align:left;
+  white-space:nowrap;
+}
 .tag {
   display:inline-block; padding:0.2rem 0.6rem;
   border-radius:6px; font-size:0.65rem; font-weight:700;
@@ -332,150 +340,122 @@ nav.scrolled {
 .avail { background:rgba(52,211,153,0.15); color:var(--green); }
 .soon { background:rgba(251,146,60,0.12); color:var(--orange); }
 
-/* ===============================
-   SDHR Dump Resource Card
-================================== */
+/* SDHR Dump Resource Card */
 
 .resource-highlight-card{
-    display:flex;
-    align-items:flex-start;
-    gap:1.25rem;
-    padding:1.5rem;
-    margin:2rem 0;
-    margin-bottom:-2rem;
-    border-radius:18px;
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-    border:1px solid rgba(255,255,255,.08);
-    box-shadow:0 10px 30px rgba(0,0,0,.18);
-    transition:.35s ease;
-    overflow:hidden;
-    position:relative;
-}
-
-.resource-highlight-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:5px;
-    height:100%;
-    background:linear-gradient(var(--cyan),var(--blue2));
+display:flex;
+align-items:flex-start;
+gap:1.5rem;
+padding:clamp(1rem,3vw,1.75rem);
+margin:2rem 0 -2rem;
+border-radius:18px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 10px 30px rgba(0,0,0,.18);
+transition:.35s ease;
+overflow:hidden;
+position:relative;
 }
 
 .resource-highlight-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-}
-
-.resource-highlight-icon{
-    width:70px;
-    height:70px;
-    min-width:70px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,var(--blue2),var(--cyan));
-    color:#fff;
-    font-size:1.8rem;
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
 .resource-highlight-content{
-    flex:1;
+flex:1;
+width:100%;
 }
 
-.resource-badge{
-    display:inline-block;
-    padding:.35rem .8rem;
-    border-radius:50px;
-    background:rgba(0,255,255,.15);
-    color:var(--cyan);
-    font-size:.8rem;
-    font-weight:600;
-    margin-bottom:.8rem;
+/* Title */
+
+.resource-title{
+display:flex;
+align-items:center;
+gap:.6rem;
+margin-bottom:.8rem;
 }
 
-.resource-highlight-content h3{
-    margin:0 0 .8rem;
-    font-size:1.55rem;
-    color:#fff;
+.resource-title i{
+font-size:1.1rem;
+color:var(--blue2);
+flex-shrink:0;
+margin-top:0;
+}
+
+.resource-title h3{
+margin:0;
+font-family:var(--font-head);
+font-size:clamp(1.05rem,2vw,1.55rem);
+line-height:1.2;
+color:#fff;
 }
 
 .resource-highlight-content p{
-    color:#d1d5db;
-    line-height:1.8;
-    margin-bottom:1.3rem;
+color:#d1d5db;
+font-size:clamp(.9rem,1.4vw,.98rem);
+line-height:1.7;
+margin-bottom:1.3rem;
 }
 
 .resource-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:.8rem;
+display:flex;
+flex-wrap:wrap;
+gap:.8rem;
 }
 
 .resource-links a{
-    display:inline-flex;
-    align-items:center;
-    gap:.55rem;
-    padding:.8rem 1rem;
-    text-decoration:none;
-    border-radius:10px;
-    background:rgba(255,255,255,.06);
-    color:#fff;
-    font-weight:600;
-    transition:.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:.55rem;
+padding:.85rem 1rem;
+min-height:48px;
+border-radius:10px;
+text-decoration:none;
+background:rgba(255,255,255,.06);
+color:#fff;
+font-weight:600;
+transition:.3s;
+flex:1 1 calc(33.33% - .6rem);
 }
 
 .resource-links a:hover{
-    background:linear-gradient(135deg,var(--blue2),var(--cyan));
-    transform:translateY(-3px);
-    box-shadow:0 8px 18px rgba(0,0,0,.25);
+background:linear-gradient(135deg,var(--blue),var(--cyan));
+transform:translateY(-3px);
+box-shadow:0 8px 18px rgba(0,0,0,.25);
 }
 
 .resource-links i{
-    font-size:1rem;
+font-size:1rem;
 }
 
-/* ===============================
-   Responsive
-================================== */
+/* Tablet */
 
-@media (max-width:768px){
-
-    .resource-highlight-card{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .resource-highlight-icon{
-        margin:auto;
-    }
-
-    .resource-links{
-        justify-content:center;
-    }
-
-    .resource-highlight-content h3{
-        font-size:1.35rem;
-    }
-
+@media(max-width:768px){
+.update-card .results-heading{font-size:clamp(.95rem,3vw,1.25rem);}
+.resource-highlight-card{padding:1.2rem;}
+.resource-title h3{font-size:1.2rem;}
+.resource-links a{flex:1 1 calc(50% - .4rem);}
 }
 
-@media (max-width:480px){
+/* Mobile */
 
-    .resource-highlight-card{
-        padding:1.2rem;
-    }
+@media(max-width:540px){
+.update-card .results-heading{font-size:1rem;}
+.resource-highlight-card{padding:1.1rem;}
+.resource-title h3{font-size:1.12rem;}
+.resource-highlight-content p{font-size:.92rem;}
+.resource-links{flex-direction:column;}
+.resource-links a{width:100%;}
+}
 
-    .resource-links{
-        flex-direction:column;
-    }
+/* Small Phones */
 
-    .resource-links a{
-        width:100%;
-        justify-content:center;
-    }
-
+@media(max-width:380px){
+.resource-highlight-card{padding:1rem;}
+.resource-title h3{font-size:1.02rem;}
+.resource-highlight-content p{font-size:.88rem;}
 }
 
 /* ── APPVERSE ── */
