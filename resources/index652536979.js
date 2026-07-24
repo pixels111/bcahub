@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     const resourceData = {
-        assignments: {
+        assignments: { 
                 
           
             3: [

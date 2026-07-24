@@ -178,6 +178,150 @@ footer { background:var(--bg2); border-top:1px solid var(--border); padding:4rem
   .footer-bottom { flex-direction:column; text-align:center; }
 }
 
+/* ===============================
+   SDHR Dump Resource Card
+================================== */
+
+.resource-highlight-card{
+    display:flex;
+    align-items:flex-start;
+    gap:1.25rem;
+    padding:1.5rem;
+    margin:2rem 0;
+    border-radius:18px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    transition:.35s ease;
+    overflow:hidden;
+    position:relative;
+}
+
+.resource-highlight-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:5px;
+    height:100%;
+    background:linear-gradient(var(--cyan),var(--blue2));
+}
+
+.resource-highlight-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.resource-highlight-icon{
+    width:70px;
+    height:70px;
+    min-width:70px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,var(--blue2),var(--cyan));
+    color:#fff;
+    font-size:1.8rem;
+}
+
+.resource-highlight-content{
+    flex:1;
+}
+
+.resource-badge{
+    display:inline-block;
+    padding:.35rem .8rem;
+    border-radius:50px;
+    background:rgba(0,255,255,.15);
+    color:var(--cyan);
+    font-size:.8rem;
+    font-weight:600;
+    margin-bottom:.8rem;
+}
+
+.resource-highlight-content h3{
+    margin:0 0 .8rem;
+    font-size:1.55rem;
+    color:#fff;
+}
+
+.resource-highlight-content p{
+    color:#d1d5db;
+    line-height:1.8;
+    margin-bottom:1.3rem;
+}
+
+.resource-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.8rem;
+}
+
+.resource-links a{
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+    padding:.8rem 1rem;
+    text-decoration:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.resource-links a:hover{
+    background:linear-gradient(135deg,var(--blue2),var(--cyan));
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+.resource-links i{
+    font-size:1rem;
+}
+
+/* ===============================
+   Responsive
+================================== */
+
+@media (max-width:768px){
+
+    .resource-highlight-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .resource-highlight-icon{
+        margin:auto;
+    }
+
+    .resource-links{
+        justify-content:center;
+    }
+
+    .resource-highlight-content h3{
+        font-size:1.35rem;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .resource-highlight-card{
+        padding:1.2rem;
+    }
+
+    .resource-links{
+        flex-direction:column;
+    }
+
+    .resource-links a{
+        width:100%;
+        justify-content:center;
+    }
+
+}
 
 /* ── INFO CARD (help to download) ── */
 .info-card {
@@ -973,7 +1117,7 @@ label i { color: var(--blue2); font-size: 0.65rem; }
   font-weight: 500;
   transition: color var(--trans);
 }
-.report li a {
+.report li a { 
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1004,4 +1148,3 @@ label i { color: var(--blue2); font-size: 0.65rem; }
   border-bottom-color: var(--cyan);
   text-decoration: none;
 }
-
