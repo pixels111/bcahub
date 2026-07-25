@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resourcesContainer = document.getElementById('resources-container');
     
     
-    const resourceData = {
+    const resourceData = { 
         assignments: { 
                 
           
@@ -400,6 +400,11 @@ document.addEventListener('DOMContentLoaded', function() {
            
         }
     };
+
+    // Expose resource data for the deep-link navigation module (read-only reference).
+    // This does not alter any existing behavior, UI, or functionality.
+    window.__resourcesPageData = resourceData;
+
     // Current selections
     let currentSemester = null;
     let currentResource = null;
@@ -853,7 +858,24 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => obs.obser
 // STAGGER
 document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid .card').forEach((el,i) => { el.style.transitionDelay = (i * 0.07) + 's'; });
 
-/* DEEP-LINK RESOURCE NAVIGATION */
+/* ============================================================================
+   DEEP-LINK RESOURCE NAVIGATION
+   ----------------------------------------------------------------------------
+   Enables URLs like:
+     https://.../resources/index.html#3SEMA1f
+   to automatically select the right semester/category, scroll to, and
+   highlight the matching resource once the page has finished rendering.
+
+   Reference code format:  <semester>SEM<TYPE><index>[suffix]
+     e.g. 3SEMA1f  -> 3rd Semester, Assignments (A), 1st item, file suffix
+          2SEMN5   -> 2nd Semester, Notes (N), 5th item
+          1SEMPP3  -> 1st Semester, Previous/Question Papers (PP), 3rd item
+
+   This module is fully additive: it does not modify any existing DOM
+   structure, styling, or the original selection/rendering logic. It only
+   reads the already-rendered output and (re)uses the existing dropdown
+   click handlers to drive selection, exactly as a real user would.
+   ============================================================================ */
 (function () {
     'use strict';
 
