@@ -852,3 +852,324 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => obs.obser
 
 // STAGGER
 document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid .card').forEach((el,i) => { el.style.transitionDelay = (i * 0.07) + 's'; });
+
+/* DEEP-LINK RESOURCE NAVIGATION */
+(function () {
+    'use strict';
+
+    // Order must correspond to how sections are logically grouped; only used
+    // for generating deterministic reference codes.
+    var SECTION_ORDER = ['assignments', 'notes', 'important_questions', 'pdfs', 'records', 'syllabus', 'papers'];
+
+    var TYPE_CODE_MAP = {
+        assignments: { code: 'A', suffix: 'f' },
+        notes: { code: 'N', suffix: '' },
+        important_questions: { code: 'IQ', suffix: '' },
+        pdfs: { code: 'PDF', suffix: '' },
+        records: { code: 'REC', suffix: '' },
+        syllabus: { code: 'SYL', suffix: '' },
+        papers: { code: 'PP', suffix: '' }
+    };
+
+    var HIGHLIGHT_CLASS = 'deep-link-highlight';
+    var HIGHLIGHT_MIN_MS = 8000;
+    var HIGHLIGHT_MAX_MS = 10000;
+
+    var lastProcessedRef = null;
+    var highlightTimer = null;
+    var isResolving = false;
+
+    /* ---------------------------- utilities ---------------------------- */
+
+    function decodeHash() {
+        var raw = window.location.hash || '';
+        if (!raw || raw === '#') return null;
+        var value = raw.slice(1);
+        try {
+            value = decodeURIComponent(value);
+        } catch (e) {
+            // leave as-is if decoding fails
+        }
+        value = value.trim();
+        return value || null;
+    }
+
+    function waitFor(conditionFn, timeoutMs, intervalMs) {
+        timeoutMs = timeoutMs || 5000;
+        intervalMs = intervalMs || 50;
+        return new Promise(function (resolve) {
+            var start = Date.now();
+            (function poll() {
+                var result;
+                try {
+                    result = conditionFn();
+                } catch (e) {
+                    result = null;
+                }
+                if (result) {
+                    resolve(result);
+                } else if (Date.now() - start >= timeoutMs) {
+                    resolve(null);
+                } else {
+                    setTimeout(poll, intervalMs);
+                }
+            })();
+        });
+    }
+
+    /* ------------------------ reference code index ------------------------ */
+
+    function buildResourceRefIndex(resourceData) {
+        var index = {};
+        if (!resourceData) return index;
+
+        SECTION_ORDER.forEach(function (section) {
+            var sectionData = resourceData[section];
+            if (!sectionData) return;
+
+            var typeInfo = TYPE_CODE_MAP[section] || { code: section.toUpperCase(), suffix: '' };
+
+            Object.keys(sectionData).forEach(function (semKey) {
+                var semData = sectionData[semKey];
+                var itemCounter = 0;
+
+                function registerItem(item, subject) {
+                    itemCounter += 1;
+                    var refCode = semKey + 'SEM' + typeInfo.code + itemCounter + typeInfo.suffix;
+                    index[refCode] = {
+                        section: section,
+                        semester: semKey,
+                        subject: subject || null,
+                        item: item
+                    };
+                }
+
+                if (Array.isArray(semData)) {
+                    semData.forEach(function (item) { registerItem(item, null); });
+                } else if (semData && typeof semData === 'object') {
+                    Object.keys(semData).forEach(function (subject) {
+                        var subjItems = semData[subject];
+                        if (Array.isArray(subjItems)) {
+                            subjItems.forEach(function (item) { registerItem(item, subject); });
+                        }
+                    });
+                }
+            });
+        });
+
+        return index;
+    }
+
+    /* ---------------------------- DOM helpers ---------------------------- */
+
+    function selectOptionByValue(containerId, value) {
+        var container = document.getElementById(containerId);
+        if (!container) return false;
+        var options = container.querySelectorAll('.option');
+        for (var i = 0; i < options.length; i++) {
+            var opt = options[i];
+            if (opt.dataset && String(opt.dataset.value) === String(value)) {
+                opt.click(); // reuse the existing, unmodified selection logic
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function expandCollapsedAncestors(el) {
+        var node = el;
+        while (node && node !== document.body) {
+            if (node.classList) {
+                if (node.classList.contains('collapsed')) {
+                    node.classList.remove('collapsed');
+                }
+                if (node.getAttribute && node.getAttribute('aria-expanded') === 'false') {
+                    node.setAttribute('aria-expanded', 'true');
+                }
+                if (node.style && node.style.display === 'none') {
+                    node.style.display = '';
+                }
+            }
+            node = node.parentElement;
+        }
+    }
+
+    function findTargetElement(entry) {
+        var container = document.getElementById('resources-container');
+        if (!container || !entry || !entry.item) return null;
+
+        var anchors = container.querySelectorAll('a');
+        var i, a;
+
+        if (entry.item.link) {
+            for (i = 0; i < anchors.length; i++) {
+                a = anchors[i];
+                if (a.getAttribute('href') === entry.item.link) {
+                    return a.closest('li') || a;
+                }
+            }
+        }
+
+        if (entry.item.name) {
+            var target = entry.item.name.trim();
+            for (i = 0; i < anchors.length; i++) {
+                a = anchors[i];
+                if (a.textContent.trim() === target) {
+                    return a.closest('li') || a;
+                }
+            }
+            var items = container.querySelectorAll('li');
+            for (i = 0; i < items.length; i++) {
+                if (items[i].textContent.trim() === target) {
+                    return items[i];
+                }
+            }
+        }
+
+        return null;
+    }
+
+    /* ------------------------------ styling ------------------------------ */
+
+    function injectHighlightStyles() {
+        if (document.getElementById('deep-link-highlight-styles')) return;
+        var style = document.createElement('style');
+        style.id = 'deep-link-highlight-styles';
+        style.textContent =
+        '@keyframes colorGlow {' +
+        '0% {' +
+        'box-shadow:0 0 0 rgba(59,130,246,.25),0 0 12px rgba(59,130,246,.15);' +
+        'border-color:var(--blue,#3b82f6);' +
+        'background:rgba(59,130,246,.08);' +
+        '}' +
+        
+        '25% {' +
+        'box-shadow:0 0 20px rgba(34,211,238,.45),0 0 32px rgba(34,211,238,.18);' +
+        'border-color:var(--cyan,#22d3ee);' +
+        'background:rgba(34,211,238,.08);' +
+        '}' +
+        
+        '50% {' +
+        'box-shadow:0 0 28px rgba(167,139,250,.55),0 0 42px rgba(167,139,250,.22);' +
+        'border-color:var(--violet,#a78bfa);' +
+        'background:rgba(167,139,250,.10);' +
+        '}' +
+        
+        '75% {' +
+        'box-shadow:0 0 20px rgba(96,165,250,.45),0 0 32px rgba(96,165,250,.18);' +
+        'border-color:var(--blue2,#60a5fa);' +
+        'background:rgba(96,165,250,.08);' +
+        '}' +
+        
+        '100% {' +
+        'box-shadow:0 0 0 rgba(59,130,246,.25),0 0 12px rgba(59,130,246,.15);' +
+        'border-color:var(--blue,#3b82f6);' +
+        'background:rgba(59,130,246,.08);' +
+        '}' +
+        '}' +
+        
+        '@keyframes textGlow {' +
+        '0% {' +
+        'color:var(--violet,#a78bfa);' +
+        'text-shadow:0 0 10px rgba(167,139,250,.8);' +
+        '}' +
+        
+        '25% {' +
+        'color:var(--blue2,#60a5fa);' +
+        'text-shadow:0 0 10px rgba(96,165,250,.8);' +
+        '}' +
+        
+        '50% {' +
+        'color:var(--cyan,#22d3ee);' +
+        'text-shadow:0 0 12px rgba(34,211,238,.9);' +
+        '}' +
+        
+        '75% {' +
+        'color:var(--blue,#3b82f6);' +
+        'text-shadow:0 0 10px rgba(59,130,246,.9);' +
+        '}' +
+        
+        '100% {' +
+        'color:var(--violet,#a78bfa);' +
+        'text-shadow:0 0 10px rgba(167,139,250,.8);' +
+        '}' +
+        '}' +
+        
+        '.' + HIGHLIGHT_CLASS + ' {' +
+        'position:relative;' +
+        'display:block;' +
+        'margin-left:-18px;' +
+        'padding:8px 12px 8px 22px;' +
+        'border-radius:10px;' +
+        'border:2px solid transparent;' +
+        'animation:colorGlow 2.5s ease-in-out infinite;' +
+        'font-weight:600;' +
+        'scroll-margin:80px;' +
+        'transition:all .35s ease;' +
+        'overflow:visible;' +
+        '}' +
+        
+        '.' + HIGHLIGHT_CLASS + ' *,' +
+        '.' + HIGHLIGHT_CLASS + ' a,' +
+        '.' + HIGHLIGHT_CLASS + ' span {' +
+        'animation:textGlow 2.5s linear infinite;' +
+        '}';
+        document.head.appendChild(style);
+    }
+
+    function highlightTarget(el) {
+        if (!el) return;
+        injectHighlightStyles();
+
+        var existing = document.querySelectorAll('.' + HIGHLIGHT_CLASS);
+        for (var i = 0; i < existing.length; i++) {
+            existing[i].classList.remove(HIGHLIGHT_CLASS);
+        }
+        if (highlightTimer) clearTimeout(highlightTimer);
+
+        expandCollapsedAncestors(el);
+
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add(HIGHLIGHT_CLASS);
+
+        var duration = HIGHLIGHT_MIN_MS + Math.random() * (HIGHLIGHT_MAX_MS - HIGHLIGHT_MIN_MS);
+        highlightTimer = setTimeout(function () {
+            el.classList.remove(HIGHLIGHT_CLASS);
+        }, duration);
+    }
+
+    /* ------------------------------- flow -------------------------------- */
+
+    function handleDeepLink() {
+        var refCode = decodeHash();
+        if (!refCode || refCode === lastProcessedRef || isResolving) return;
+        isResolving = true;
+
+        waitFor(function () { return window.__resourcesPageData; }, 5000, 50).then(function (resourceData) {
+            if (!resourceData) { isResolving = false; return; } // fail silently
+
+            var index = buildResourceRefIndex(resourceData);
+            var entry = index[refCode];
+            if (!entry) { isResolving = false; return; } // no matching resource: fail silently
+
+            lastProcessedRef = refCode;
+
+            selectOptionByValue('semester-options', entry.semester);
+            selectOptionByValue('resource-options', entry.section);
+
+            waitFor(function () { return findTargetElement(entry); }, 4000, 60).then(function (target) {
+                isResolving = false;
+                if (!target) return; // fail silently
+                requestAnimationFrame(function () { highlightTarget(target); });
+            });
+        });
+    }
+
+    window.addEventListener('hashchange', handleDeepLink);
+    window.addEventListener('load', function () {
+        setTimeout(handleDeepLink, 60);
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(handleDeepLink, 60);
+    });
+})();
