@@ -1,3 +1,54 @@
+const RESOURCE_REF_SECTION_ORDER = ['assignments', 'notes', 'important_questions', 'pdfs', 'records', 'syllabus', 'papers'];
+
+const RESOURCE_REF_TYPE_CODE_MAP = {
+    assignments: { code: 'A', suffix: '' },
+    notes: { code: 'N', suffix: '' },
+    important_questions: { code: 'IQ', suffix: '' },
+    pdfs: { code: 'PDF', suffix: '' },
+    records: { code: 'REC', suffix: '' },
+    syllabus: { code: 'SYL', suffix: '' },
+    papers: { code: 'PP', suffix: '' }
+};
+
+function buildResourceRefIndex(resourceData) {
+    const index = {};
+    if (!resourceData) return index;
+
+    RESOURCE_REF_SECTION_ORDER.forEach(section => {
+        const sectionData = resourceData[section];
+        if (!sectionData) return;
+
+        const typeInfo = RESOURCE_REF_TYPE_CODE_MAP[section] || { code: section.toUpperCase(), suffix: '' };
+
+        Object.keys(sectionData).forEach(semKey => {
+            const semData = sectionData[semKey];
+            let itemCounter = 0;
+
+            function register(item, subject) {
+                itemCounter += 1;
+                const refCode = semKey + 'SEM' + typeInfo.code + itemCounter + typeInfo.suffix;
+                if (item && typeof item === 'object') {
+                    item.refCode = refCode; // reused as-is by the renderer, no second system
+                }
+                index[refCode] = { section, semester: semKey, subject: subject || null, item };
+            }
+
+            if (Array.isArray(semData)) {
+                semData.forEach(item => register(item, null));
+            } else if (semData && typeof semData === 'object') {
+                Object.keys(semData).forEach(subject => {
+                    const subjItems = semData[subject];
+                    if (Array.isArray(subjItems)) {
+                        subjItems.forEach(item => register(item, subject));
+                    }
+                });
+            }
+        });
+    });
+
+    return index;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
     const semesterHeader = document.getElementById('semester-header');
@@ -10,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resourcesContainer = document.getElementById('resources-container');
     
     
-    const resourceData = { 
+    const resourceData = {
         assignments: { 
                 
           
@@ -401,9 +452,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Expose resource data for the deep-link navigation module (read-only reference).
-    // This does not alter any existing behavior, UI, or functionality.
+    // Build the reference-code index once (this stamps item.refCode onto every
+    // resource object in resourceData) and expose it for the deep-link module
+    // and the Copy Direct Link feature to reuse - no second reference system.
     window.__resourcesPageData = resourceData;
+    window.__resourcesRefIndex = buildResourceRefIndex(resourceData);
 
     // Current selections
     let currentSemester = null;
@@ -602,6 +655,21 @@ document.addEventListener('DOMContentLoaded', function() {
         resourcesContainer.appendChild(section);
     }
     
+    // Create the small "Copy Direct Link" icon button for a resource <li>.
+    // Reuses item.refCode exactly as stamped by buildResourceRefIndex() -
+    // no new reference codes are generated here.
+    function createCopyLinkButton(item) {
+        if (!item || typeof item !== 'object' || !item.refCode) return null;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy-resource-link';
+        btn.dataset.ref = item.refCode;
+        btn.setAttribute('aria-label', 'Copy direct link to this resource');
+        btn.innerHTML = '<i class="fas fa-link"></i>';
+        return btn;
+    }
+
     // Create resource list based on type
     function createResourceList(type, data) {
         const list = document.createElement('ul');
@@ -619,6 +687,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     li.textContent = typeof item === 'object' ? item.name : item;
                 }
+                const copyBtn = createCopyLinkButton(item);
+                if (copyBtn) li.appendChild(copyBtn);
                 list.appendChild(li);
             });
         } else if (typeof data === 'object') {
@@ -643,6 +713,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         } else {
                             li.textContent = typeof item === 'object' ? item.name : item;
                         }
+                        const copyBtn = createCopyLinkButton(item);
+                        if (copyBtn) li.appendChild(copyBtn);
                         subjectGroup.appendChild(li);
                     });
                     
@@ -858,40 +930,9 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => obs.obser
 // STAGGER
 document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid .card').forEach((el,i) => { el.style.transitionDelay = (i * 0.07) + 's'; });
 
-/* ============================================================================
-   DEEP-LINK RESOURCE NAVIGATION
-   ----------------------------------------------------------------------------
-   Enables URLs like:
-     https://.../resources/index.html#3SEMA1f
-   to automatically select the right semester/category, scroll to, and
-   highlight the matching resource once the page has finished rendering.
-
-   Reference code format:  <semester>SEM<TYPE><index>[suffix]
-     e.g. 3SEMA1f  -> 3rd Semester, Assignments (A), 1st item, file suffix
-          2SEMN5   -> 2nd Semester, Notes (N), 5th item
-          1SEMPP3  -> 1st Semester, Previous/Question Papers (PP), 3rd item
-
-   This module is fully additive: it does not modify any existing DOM
-   structure, styling, or the original selection/rendering logic. It only
-   reads the already-rendered output and (re)uses the existing dropdown
-   click handlers to drive selection, exactly as a real user would.
-   ============================================================================ */
+/* DEEP-LINK RESOURCE NAVIGATION */
 (function () {
     'use strict';
-
-    // Order must correspond to how sections are logically grouped; only used
-    // for generating deterministic reference codes.
-    var SECTION_ORDER = ['assignments', 'notes', 'important_questions', 'pdfs', 'records', 'syllabus', 'papers'];
-
-    var TYPE_CODE_MAP = {
-        assignments: { code: 'A', suffix: 'f' },
-        notes: { code: 'N', suffix: '' },
-        important_questions: { code: 'IQ', suffix: '' },
-        pdfs: { code: 'PDF', suffix: '' },
-        records: { code: 'REC', suffix: '' },
-        syllabus: { code: 'SYL', suffix: '' },
-        papers: { code: 'PP', suffix: '' }
-    };
 
     var HIGHLIGHT_CLASS = 'deep-link-highlight';
     var HIGHLIGHT_MIN_MS = 8000;
@@ -937,49 +978,6 @@ document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid
                 }
             })();
         });
-    }
-
-    /* ------------------------ reference code index ------------------------ */
-
-    function buildResourceRefIndex(resourceData) {
-        var index = {};
-        if (!resourceData) return index;
-
-        SECTION_ORDER.forEach(function (section) {
-            var sectionData = resourceData[section];
-            if (!sectionData) return;
-
-            var typeInfo = TYPE_CODE_MAP[section] || { code: section.toUpperCase(), suffix: '' };
-
-            Object.keys(sectionData).forEach(function (semKey) {
-                var semData = sectionData[semKey];
-                var itemCounter = 0;
-
-                function registerItem(item, subject) {
-                    itemCounter += 1;
-                    var refCode = semKey + 'SEM' + typeInfo.code + itemCounter + typeInfo.suffix;
-                    index[refCode] = {
-                        section: section,
-                        semester: semKey,
-                        subject: subject || null,
-                        item: item
-                    };
-                }
-
-                if (Array.isArray(semData)) {
-                    semData.forEach(function (item) { registerItem(item, null); });
-                } else if (semData && typeof semData === 'object') {
-                    Object.keys(semData).forEach(function (subject) {
-                        var subjItems = semData[subject];
-                        if (Array.isArray(subjItems)) {
-                            subjItems.forEach(function (item) { registerItem(item, subject); });
-                        }
-                    });
-                }
-            });
-        });
-
-        return index;
     }
 
     /* ---------------------------- DOM helpers ---------------------------- */
@@ -1058,84 +1056,20 @@ document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid
         var style = document.createElement('style');
         style.id = 'deep-link-highlight-styles';
         style.textContent =
-        '@keyframes colorGlow {' +
-        '0% {' +
-        'box-shadow:0 0 0 rgba(59,130,246,.25),0 0 12px rgba(59,130,246,.15);' +
-        'border-color:var(--blue,#3b82f6);' +
-        'background:rgba(59,130,246,.08);' +
-        '}' +
-        
-        '25% {' +
-        'box-shadow:0 0 20px rgba(34,211,238,.45),0 0 32px rgba(34,211,238,.18);' +
-        'border-color:var(--cyan,#22d3ee);' +
-        'background:rgba(34,211,238,.08);' +
-        '}' +
-        
-        '50% {' +
-        'box-shadow:0 0 28px rgba(167,139,250,.55),0 0 42px rgba(167,139,250,.22);' +
-        'border-color:var(--violet,#a78bfa);' +
-        'background:rgba(167,139,250,.10);' +
-        '}' +
-        
-        '75% {' +
-        'box-shadow:0 0 20px rgba(96,165,250,.45),0 0 32px rgba(96,165,250,.18);' +
-        'border-color:var(--blue2,#60a5fa);' +
-        'background:rgba(96,165,250,.08);' +
-        '}' +
-        
-        '100% {' +
-        'box-shadow:0 0 0 rgba(59,130,246,.25),0 0 12px rgba(59,130,246,.15);' +
-        'border-color:var(--blue,#3b82f6);' +
-        'background:rgba(59,130,246,.08);' +
-        '}' +
-        '}' +
-        
-        '@keyframes textGlow {' +
-        '0% {' +
-        'color:var(--violet,#a78bfa);' +
-        'text-shadow:0 0 10px rgba(167,139,250,.8);' +
-        '}' +
-        
-        '25% {' +
-        'color:var(--blue2,#60a5fa);' +
-        'text-shadow:0 0 10px rgba(96,165,250,.8);' +
-        '}' +
-        
-        '50% {' +
-        'color:var(--cyan,#22d3ee);' +
-        'text-shadow:0 0 12px rgba(34,211,238,.9);' +
-        '}' +
-        
-        '75% {' +
-        'color:var(--blue,#3b82f6);' +
-        'text-shadow:0 0 10px rgba(59,130,246,.9);' +
-        '}' +
-        
-        '100% {' +
-        'color:var(--violet,#a78bfa);' +
-        'text-shadow:0 0 10px rgba(167,139,250,.8);' +
-        '}' +
-        '}' +
-        
-        '.' + HIGHLIGHT_CLASS + ' {' +
-        'position:relative;' +
-        'display:block;' +
-        'margin-left:-18px;' +
-        'padding:8px 12px 8px 22px;' +
-        'border-radius:10px;' +
-        'border:2px solid transparent;' +
-        'animation:colorGlow 2.5s ease-in-out infinite;' +
-        'font-weight:600;' +
-        'scroll-margin:80px;' +
-        'transition:all .35s ease;' +
-        'overflow:visible;' +
-        '}' +
-        
-        '.' + HIGHLIGHT_CLASS + ' *,' +
-        '.' + HIGHLIGHT_CLASS + ' a,' +
-        '.' + HIGHLIGHT_CLASS + ' span {' +
-        'animation:textGlow 2.5s linear infinite;' +
-        '}';
+            '@keyframes colorGlow {' +
+            '0% { box-shadow: 0 0 0 rgba(59,130,246,.2); border-color: var(--blue, #3b82f6); background: rgba(59,130,246,.08); }' +
+            '25% { box-shadow: 0 0 18px rgba(34,211,238,.45); border-color: var(--cyan, #22d3ee); }' +
+            '50% { box-shadow: 0 0 26px rgba(167,139,250,.55); border-color: var(--violet, #a78bfa); background: rgba(167,139,250,.08); }' +
+            '75% { box-shadow: 0 0 18px rgba(96,165,250,.45); border-color: var(--blue2, #60a5fa); }' +
+            '100% { box-shadow: 0 0 0 rgba(59,130,246,.2); border-color: var(--blue, #3b82f6); background: rgba(59,130,246,.08); }' +
+            '}' +
+            '.' + HIGHLIGHT_CLASS + ' {' +
+            'animation: colorGlow 2.5s ease-in-out infinite;' +
+            'font-weight: 600;' +
+            'border-radius: 8px;' +
+            'border: 1px solid transparent;' +
+            'scroll-margin: 80px;' +
+            '}';
         document.head.appendChild(style);
     }
 
@@ -1167,10 +1101,9 @@ document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid
         if (!refCode || refCode === lastProcessedRef || isResolving) return;
         isResolving = true;
 
-        waitFor(function () { return window.__resourcesPageData; }, 5000, 50).then(function (resourceData) {
-            if (!resourceData) { isResolving = false; return; } // fail silently
+        waitFor(function () { return window.__resourcesRefIndex; }, 5000, 50).then(function (index) {
+            if (!index) { isResolving = false; return; } // fail silently
 
-            var index = buildResourceRefIndex(resourceData);
             var entry = index[refCode];
             if (!entry) { isResolving = false; return; } // no matching resource: fail silently
 
@@ -1194,4 +1127,116 @@ document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid
     document.addEventListener('DOMContentLoaded', function () {
         setTimeout(handleDeepLink, 60);
     });
+})();
+
+/* COPY DIRECT LINK */
+(function () {
+    'use strict';
+
+    var toastTimer = null;
+
+    function injectCopyLinkStyles() {
+        if (document.getElementById('copy-link-styles')) return;
+        var style = document.createElement('style');
+        style.id = 'copy-link-styles';
+        style.textContent =
+            '.resource-list li, .subject-group li {' +
+            'display: flex;' +
+            'align-items: center;' +
+            'justify-content: space-between;' +
+            'gap: .5em;' +
+            '}' +
+            '.copy-resource-link {' +
+            'display: inline-flex;' +
+            'align-items: center;' +
+            'justify-content: center;' +
+            'flex: 0 0 auto;' +
+            'margin-left: auto;' +
+            'padding: 4px 7px;' +
+            'background: transparent;' +
+            'border: none;' +
+            'border-radius: 6px;' +
+            'color: var(--blue, #3b82f6);' +
+            'font-size: 0.85em;' +
+            'line-height: 1;' +
+            'opacity: 0.65;' +
+            'cursor: pointer;' +
+            'transition: opacity .2s ease, background .2s ease, color .2s ease, transform .15s ease;' +
+            '}' +
+            '.copy-resource-link:hover, .copy-resource-link:focus-visible {' +
+            'opacity: 1;' +
+            'background: rgba(59,130,246,.12);' +
+            'color: var(--cyan, #22d3ee);' +
+            '}' +
+            '.copy-resource-link:active { transform: scale(0.9); }' +
+            '.copy-link-toast {' +
+            'position: fixed;' +
+            'left: 50%;' +
+            'bottom: 28px;' +
+            'transform: translateX(-50%) translateY(12px);' +
+            'background: #111827;' +
+            'color: #fff;' +
+            'padding: 10px 18px;' +
+            'border-radius: 999px;' +
+            'font-size: 0.9rem;' +
+            'font-weight: 600;' +
+            'box-shadow: 0 8px 24px rgba(0,0,0,.25);' +
+            'opacity: 0;' +
+            'pointer-events: none;' +
+            'transition: opacity .25s ease, transform .25s ease;' +
+            'z-index: 9999;' +
+            '}' +
+            '.copy-link-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }';
+        document.head.appendChild(style);
+    }
+
+    function showCopyToast(message) {
+        injectCopyLinkStyles();
+
+        var toast = document.getElementById('copy-link-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'copy-link-toast';
+            toast.className = 'copy-link-toast';
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = message;
+        toast.classList.add('show');
+
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+            toast.classList.remove('show');
+        }, 2200);
+    }
+
+    function buildResourceUrl(refCode) {
+        return window.location.origin + window.location.pathname + '#' + refCode;
+    }
+
+    function copyResourceLink(refCode) {
+        var url = buildResourceUrl(refCode);
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function () {
+                showCopyToast('<i class="fas fa-link"></i> &nbsp;Resource Link Copied');
+            }).catch(function () {
+                window.prompt('Copy this link:', url);
+            });
+        } else {
+            window.prompt('Copy this link:', url);
+        }
+    }
+
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('.copy-resource-link') : null;
+        if (!btn) return;
+
+        e.preventDefault();
+        var refCode = btn.dataset.ref;
+        if (!refCode) return;
+
+        copyResourceLink(refCode);
+    });
+
+    document.addEventListener('DOMContentLoaded', injectCopyLinkStyles);
 })();
