@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pixels111.github.io/bcahub/sitemap.xml

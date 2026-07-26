@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BCAHub • Temporarily Unavailable</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--bg:#0D1117;
+--card:#111827;
+--border:#1F2937;
+
+--text:#F8FAFC;
+--secondary:#CBD5E1;
+--muted:#94A3B8;
+
+--blue:#60A5FA;
+--cyan:#22D3EE;
+
+}
+
+body{
+
+font-family:'Outfit',sans-serif;
+background:var(--bg);
+color:var(--text);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+padding:30px;
+
+overflow:hidden;
+
+}
+
+/* Background Glow */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:-250px;
+right:-250px;
+
+width:700px;
+height:700px;
+
+background:
+radial-gradient(circle,
+rgba(96,165,250,.18) 0%,
+transparent 70%);
+
+filter:blur(40px);
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+bottom:-250px;
+left:-250px;
+
+width:650px;
+height:650px;
+
+background:
+radial-gradient(circle,
+rgba(34,211,238,.14) 0%,
+transparent 70%);
+
+filter:blur(40px);
+
+}
+
+.card{
+
+position:relative;
+
+max-width:760px;
+width:100%;
+
+padding:60px 45px;
+
+background:rgba(17,24,39,.85);
+
+backdrop-filter:blur(18px);
+
+border:1px solid var(--border);
+
+border-radius:26px;
+
+text-align:center;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.45);
+
+z-index:10;
+
+}
+
+.logo{
+
+width:130px;
+
+margin:auto;
+
+margin-bottom:35px;
+
+display:block;
+
+filter:
+drop-shadow(0 10px 30px rgba(96,165,250,.30));
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:999px;
+
+background:rgba(96,165,250,.12);
+
+border:1px solid rgba(96,165,250,.25);
+
+color:var(--blue);
+
+font-weight:600;
+
+font-size:.9rem;
+
+margin-bottom:25px;
+
+}
+
+h1{
+
+font-size:2.4rem;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+font-size:1.08rem;
+
+line-height:1.8;
+
+color:var(--secondary);
+
+max-width:580px;
+
+margin:auto;
+
+}
+
+.notice{
+
+margin-top:35px;
+
+padding:18px 22px;
+
+border-radius:16px;
+
+border:1px solid rgba(34,211,238,.20);
+
+background:rgba(34,211,238,.05);
+
+color:var(--secondary);
+
+}
+
+.footer{
+
+margin-top:45px;
+
+font-size:.9rem;
+
+color:var(--muted);
+
+}
+
+.accent{
+
+background:linear-gradient(
+90deg,
+var(--blue),
+var(--cyan)
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+background-clip:text;
+
+color:transparent;
+
+}
+
+@media(max-width:640px){
+
+.card{
+
+padding:40px 25px;
+
+}
+
+.logo{
+
+width:100px;
+
+}
+
+h1{
+
+font-size:1.9rem;
+
+}
+
+p{
+
+font-size:1rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img
+src="pictures/weblogonobg.png"
+alt="BCAHub Logo"
+class="logo">
+
+<div class="badge">
+Temporary Notice
+</div>
+
+<h1>
+Website <span class="accent">Temporarily Unavailable</span>
+</h1>
+
+<p>
+The website has been temporarily shut down due to scheduled maintenance and ongoing development.
+</p>
+
+<div class="notice">
+We apologize for the inconvenience and appreciate your patience.
+Please check back again soon.
+</div>
+
+<div class="footer">
+© 2024-2026 BCAHub. All Rights Reserved.
+</div>
+
+</div>
+
+</body>
+</html>
