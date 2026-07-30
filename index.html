@@ -46,6 +46,10 @@ h1 { font-size: clamp(1.6rem, 5.5vw, 2.75rem); font-weight: 700; line-height: 1.
 .whatsapp-icon { width: 22px; height: 22px; flex-shrink: 0; }
 footer { position: relative; z-index: 1; text-align: center; margin-top: clamp(24px, 5vw, 32px); font-size: clamp(0.75rem, 2vw, 0.85rem); color: #6E7681; font-weight: 300; padding: 0 12px; }
 a:focus-visible, button:focus-visible { outline: 3px solid #22d3ee; outline-offset: 3px; border-radius: 6px; }
+.countdown-box{background:rgba(56,139,253,.08);border:1px solid rgba(56,139,253,.25);border-radius:14px;padding:20px;margin-bottom:32px;}
+.countdown-label{font-size:.85rem;color:#79c0ff;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;font-weight:600;}
+.countdown{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:10px;}
+.countdown-note{color:#9DA7B3;font-size:.95rem;}
 @media (max-width: 400px) {
   .whatsapp-btn { max-width: 100%; }
 }
@@ -72,6 +76,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22d3ee; outline-offs
     <div class="notice-box">
       We apologize for the inconvenience and appreciate your patience. Please check back again soon.
     </div>
+    <div class="countdown-box">
+  <p class="countdown-label">Expected Launch</p>
+  <div id="countdown" class="countdown">
+    Loading...
+  </div>
+  <p class="countdown-note">
+    We expect the website to be live tomorrow at <strong>2:00 PM</strong>.
+  </p>
+</div>
     <hr class="divider">
     <section class="contact-section" aria-labelledby="contact-heading">
       <p class="contact-heading" id="contact-heading">Emergency Contact</p>
@@ -92,4 +105,39 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22d3ee; outline-offs
   </footer>
   </main>
 </body>
+<script>
+  
+(function () {
+  const countdown = document.getElementById("countdown");
+
+  // Tomorrow at 2:00 PM (visitor's local time)
+  const target = new Date();
+  target.setDate(target.getDate() + 1);
+  target.setHours(14, 0, 0, 0);
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      countdown.innerHTML = "🎉 We're Live!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdown.textContent =
+      (days ? days + "d " : "") +
+      String(hours).padStart(2, "0") + "h " +
+      String(minutes).padStart(2, "0") + "m " +
+      String(seconds).padStart(2, "0") + "s";
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
+</script>
 </html>
