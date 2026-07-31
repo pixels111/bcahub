@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKJJK95B5Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JKJJK95B5Z');
+</script>
+  <!-- microsoft clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wv1zqqiu2v");
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>BCAHub - Content</title>
+  <link rel="stylesheet" href="index652536936.css" />
+  <link rel="stylesheet" href="../loader.css" />
+  <link rel="icon" href="../pictures/weblogonobg.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div id="loader">
+
+  <div class="loader">
+
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div>
+
+    <div class="line"></div>
+
+  </div>
+
+  <div class="loader-subtitle">
+    Preparing Your Learning Experience...
+  </div>
+
+  <div class="loader-pct" id="loaderPct">0%</div>
+
+</div>
+
+<nav id="nav">
+  <a href="https://pixels111.github.io/bcahub/index.html" class="nav-logo"><span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>BCAHub</a>
+  <ul class="nav-links">
+    <li><a href="https://pixels111.github.io/bcahub/index.html">Home</a></li>
+    <li><a href="https://pixels111.github.io/bcahub/resources/index.html">Resources</a></li>
+    <li><a href="https://pixels111.github.io/bcahub/content/index.html" class="active">Content Galaxy</a></li>
+    <li><a href="https://pixels111.github.io/bcahub/about/index.html" >About</a></li>
+    <li><a href="https://pixels111.github.io/bcahub/contact/index.html">Contact</a></li>
+    <li><a href="https://pixels111.github.io/bcahub/help/index.html" >Help</a></li>
+  </ul>
+  <button class="hamburger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://pixels111.github.io/bcahub/index.html" onclick="closeMobile()">Home</a>
+  <a href="https://pixels111.github.io/bcahub/resources/index.html" onclick="closeMobile()">Resources</a>
+  <a href="https://pixels111.github.io/bcahub/content/index.html" onclick="closeMobile()">Content Galaxy</a>
+  <a href="https://pixels111.github.io/bcahub/about/index.html" onclick="closeMobile()">About</a>
+  <a href="https://pixels111.github.io/bcahub/contact/index.html" onclick="closeMobile()">Contact</a>
+  <a href="https://pixels111.github.io/bcahub/help/index.html" onclick="closeMobile()">Help</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <div class="page-orb porb1"></div>
+    <div class="page-orb porb2" style="background:var(--violet)"></div>
+    <div class="page-grid"></div>
+  </div>
+  <div class="page-hero-content">
+    <div class="page-badge"><i class="fas fa-brain"></i> Knowledge</div>
+    <h1 class="page-title">Content <span class="grad">Galaxy</span></h1>
+  </div>
+</div>
+  <main>
+        <div class="space-background" id="space-bg"></div>
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Explore the content galaxy...">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button id="random-btn">Random Content</button>
+    </div>
+    
+    <div class="filters">
+        <div class="filter-chip active" data-filter="all">All Mixed</div>
+        <div class="filter-chip" data-filter="programs">Programs</div>
+        <div class="filter-chip" data-filter="science">Science</div>
+        <div class="filter-chip" data-filter="space">Space</div>
+        <div class="filter-chip" data-filter="facts">Facts</div>
+        <div class="filter-chip" data-filter="tech">Tech</div>
+ 
+    </div>
+    
+    <div class="content-grid" id="content-grid">
+        <!-- Content cards will be dynamically inserted here -->
+    </div>
+    
+    <div class="pagination">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+    </div>
+    
+    <div class="content-detail" id="content-detail">
+        <div class="detail-header">
+            <div class="back-button" id="back-button"><i class="fas fa-arrow-left" style="font-size: 1.5rem"></i></div>
+        </div>
+        <div class="detail-content">
+            <h1 class="detail-title" id="detail-title"></h1>
+            <div id="detail-content">
+                <!-- Content wile insertel bd here -->
+            </div>
+            <div class="credit-section" id="credit-section"></div>
+        </div>
+    </div>
+<div class="contact-prompt">
+        <p>If you want to add your content in the Contact Galaxy</p>
+        <p class="click-here" id="clickHere">please click here</p>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Add Content to Content Galaxy</h2>
+            <p>Send me your content in the following preferred format:</p>
+            
+            <div class="format-guide">
+                <h3>Format Requirements</h3>
+                <ul>
+                    <li><strong>Cover image:</strong> 2:1 ratio HD image</li>
+                    <li><strong>Title:</strong> of the content</li>
+                    <li><strong>Preview line:</strong> brief description of the content</li>
+                    <li><strong>Labels:</strong> related tags/categories</li>
+                    <li><strong>Text area:</strong> main content text</li>
+                    <li><strong>Images in text:</strong> any supporting images</li>
+                    <li><strong>Credit:</strong> source of information and images</li>
+                </ul>
+            </div>
+            
+            <p>You can either send the text directly or attach a file containing your content.</p>
+            
+            <a href="mailto:generalbca@gmail.com?subject=Content Galaxy Submission" class="mail-button">Mail to Me</a>
+        </div>
+    </div>
+  </main>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="https://pixels111.github.io/bcahub/index.html" class="nav-logo" style="display:inline-flex; margin-bottom:0.5rem;">
+          <span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>
+          BCAHub
+        </a>
+        <p>A free, student-friendly platform for BCA students. Notes, question papers, assignments and tools — all in one place.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/bcahumor" target="_blank" class="soc"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@BCAHub" target="_blank" class="soc"><i class="fab fa-youtube"></i></a>
+          <a href="mailto:generalbca@gmail.com" class="soc"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="https://pixels111.github.io/bcahub/index.html">Home</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/resources/index.html">Resources</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/content/index.html">Content Galaxy</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/about/index.html">About Us</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/contact/index.html">Contact</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/help/index.html">Help & FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Results</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.results.manabadi.co.in/2024/svu-i-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">1st Semester</a></li>
+          <li><a href="https://www.results.manabadi.co.in/2024/svu-ii-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">2nd Semester</a></li>
+          <li><a href="https://www.results.manabadi.co.in/2024/svu-iii-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">3rd Semester</a></li>
+          <li><a href="https://www.results.manabadi.co.in/2024/svu-iv-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">4th Semester</a></li>
+          <li><a href="https://www4.tcsion.com/SelfServices/" target="_blank">5th Semester</a></li>
+          <li><a href="https://www4.tcsion.com/SelfServices/" target="_blank">6th Semester</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="https://pixels111.github.io/bcahub/privacy/index.html">Privacy Policy</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/terms/index.html">Terms of Use</a></li>
+          <li><a href="mailto:generalbca@gmail.com">generalbca@gmail.com</a></li>
+          <li><a href="https://pixels111.github.io/bcahub/forms/index.html">Report an Issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <a href="https://pixels111.github.io/bcahub/index.html">BCAHub</a> — Built by <a href="https://pixels111.github.io/bcahub/about/index.html#creator">Sethu</a> | All Rights Reserved</p>
+      <p style="font-size:0.75rem; color:var(--muted);">"For Students, By Students"</p>
+    </div>
+  </div>
+</footer>
+  <script src="index652536939.js"></script>
+  <script src="../loader.js"></script>
+</body>
+</html>
+

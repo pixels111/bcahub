@@ -1,0 +1,141 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const response = document.getElementById('form-response');
+  const menuLinks = document.querySelectorAll('nav ul a'); // Select all menu links
+
+  // Highlight the active menu item based on the current URL
+  menuLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active'); // Add 'active' class to the matching link
+    } else {
+      link.classList.remove('active'); // Remove 'active' class from non-matching links
+    }
+  }); 
+
+  
+});
+function showSidebar() {
+  document.querySelector('.sidebar').classList.add('active');
+  document.querySelectorAll('.socials-container').forEach(el => el.classList.add('hidden'));
+}
+
+function hideSidebar() {
+  document.querySelector('.sidebar').classList.remove('active');
+  document.querySelectorAll('.socials-container').forEach(el => el.classList.remove('hidden'));
+}
+
+// Perfect smooth scroll solution with refresh protection
+function setupPerfectSmoothScroll() {
+  let isProgrammaticNavigation = false;
+  let lastProcessedHash = '';
+  const scrollOffset = 0; // Small offset from top
+
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('a[href^="#"]');
+
+  // Scroll to element with perfect positioning
+  function perfectScrollTo(targetEl) {
+    if (!targetEl) return;
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+    const elementPosition = targetEl.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerHeight - scrollOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  // Highlight element
+  function highlightElement(targetEl) {
+    targetEl.classList.add('section-highlight');
+    setTimeout(() => {
+      targetEl.classList.remove('section-highlight');
+    }, 1500);
+  }
+
+  // Handle link clicks
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').slice(1);
+      const targetEl = document.getElementById(targetId);
+      
+      if (targetEl) {
+        e.preventDefault();
+        isProgrammaticNavigation = true;
+        lastProcessedHash = targetId;
+        
+        perfectScrollTo(targetEl);
+        highlightElement(targetEl);
+        
+        // Update URL without adding to history
+        history.replaceState(null, null, `#${targetId}`);
+      }
+    });
+  });
+
+  // Handle initial hash
+  function processInitialHash() {
+    const hash = window.location.hash.slice(1);
+    if (hash && hash !== lastProcessedHash) {
+      const targetEl = document.getElementById(hash);
+      if (targetEl) {
+        isProgrammaticNavigation = true;
+        lastProcessedHash = hash;
+        
+        // Small delay to ensure proper positioning
+        setTimeout(() => {
+          perfectScrollTo(targetEl);
+          highlightElement(targetEl);
+        }, 50);
+      }
+    }
+  }
+
+  // Handle hash changes
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.slice(1);
+    
+    if (isProgrammaticNavigation) {
+      isProgrammaticNavigation = false;
+      return;
+    }
+    
+    if (hash && hash !== lastProcessedHash) {
+      const targetEl = document.getElementById(hash);
+      if (targetEl) {
+        lastProcessedHash = hash;
+        setTimeout(() => {
+          perfectScrollTo(targetEl);
+          highlightElement(targetEl);
+        }, 50);
+      }
+    }
+  });
+
+  // Clear hash on full page refresh
+  window.addEventListener('beforeunload', () => {
+    if (performance.navigation.type === 1) { // Type 1 is page reload
+      history.replaceState(null, null, ' ');
+    }
+  });
+
+  // Initialize
+  window.addEventListener('load', processInitialHash);
+  window.addEventListener('DOMContentLoaded', processInitialHash);
+}
+
+// Initialize the perfect smooth scrolling
+document.addEventListener('DOMContentLoaded', setupPerfectSmoothScroll);
+
+// NAV 
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+
+// HAMBURGER
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobileNav');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileNav.classList.toggle('open'); });
+function closeMobile() { burger.classList.remove('open'); mobileNav.classList.remove('open'); }
+
