@@ -82,7 +82,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22d3ee; outline-offs
     Loading...
   </div>
   <p class="countdown-note">
-    We expect the website to be live tomorrow at <strong>2:00 PM</strong>.
+    We expect the website to be live today at <strong>2:00 PM</strong>.
   </p>
 </div>
     <hr class="divider">
@@ -110,9 +110,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22d3ee; outline-offs
 (function () {
   const countdown = document.getElementById("countdown");
 
-  // Tomorrow at 2:00 PM (visitor's local time)
+  // Today at 2:00 PM (visitor's local time)
   const target = new Date();
-  target.setDate(target.getDate() + 1);
+  target.setDate(target.getDate());
   target.setHours(14, 0, 0, 0);
 
   function updateCountdown() {
