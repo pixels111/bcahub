@@ -11,7 +11,7 @@ if(loader && pct){
 
   }else{
 
-    sessionStorage.setItem("loaderShown","true");
+    sessionStorage.setItem("loaderShown","true"); 
 
     let p = 0;
 

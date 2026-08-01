@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('active'); // Remove 'active' class from non-matching links
     }
   }); 
-
+ 
   
 });
 function showSidebar() {

@@ -8,7 +8,7 @@
 #loader.done { opacity: 0; visibility: hidden; pointer-events:none; }
 
 .loader {
-  --main-size: 5em;
+  --main-size: 5em; 
   --text-color: #ffffff;
   --shine-color: #ffffff40;
   --shadow-color: #aaaaaa;

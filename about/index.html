@@ -22,7 +22,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   <title>BCAHub - About Us</title>
   <link rel="stylesheet" href="index652536916.css" />
-  <link rel="stylesheet" href="../loader.css" />
+  <link rel="stylesheet" href="../components/loader.css" />
+  <link rel="stylesheet" href="../components/footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="icon" href="../pictures/weblogonobg.png" type="image/png">
 </head>
@@ -36,7 +37,7 @@
     <div class="text"><span>Loading BCAHub</span></div>
     <div class="text"><span>Loading BCAHub</span></div>
     <div class="text"><span>Loading BCAHub</span></div>
-    <div class="text"><span>Loading BCAHub</span></div>
+    <div class="text"><span>Loading BCAHub</span></div> 
     <div class="text"><span>Loading BCAHub</span></div>
     <div class="text"><span>Loading BCAHub</span></div>
     <div class="text"><span>Loading BCAHub</span></div>
@@ -55,24 +56,24 @@
 </div>
 
 <nav id="nav">
-  <a href="https://pixels111.github.io/bcahub/index.html" class="nav-logo"><span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>BCAHub</a>
+  <a href="../index.html" class="nav-logo"><span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>BCAHub</a>
   <ul class="nav-links">
-    <li><a href="https://pixels111.github.io/bcahub/index.html">Home</a></li>
-    <li><a href="https://pixels111.github.io/bcahub/resources/index.html">Resources</a></li>
-    <li><a href="https://pixels111.github.io/bcahub/content/index.html">Content Galaxy</a></li>
-    <li><a href="https://pixels111.github.io/bcahub/about/index.html" class="active">About</a></li>
-    <li><a href="https://pixels111.github.io/bcahub/contact/index.html">Contact</a></li>
-    <li><a href="https://pixels111.github.io/bcahub/help/index.html">Help</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../resources/">Resources</a></li>
+    <li><a href="../content/">Content Galaxy</a></li>
+    <li><a href="../about/" class="active">About</a></li>
+    <li><a href="../contact/">Contact</a></li>
+    <li><a href="../help/">Help</a></li>
   </ul>
   <button class="hamburger" id="burger"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
-  <a href="https://pixels111.github.io/bcahub/index.html" onclick="closeMobile()">Home</a>
-  <a href="https://pixels111.github.io/bcahub/resources/index.html" onclick="closeMobile()">Resources</a>
-  <a href="https://pixels111.github.io/bcahub/content/index.html" onclick="closeMobile()">Content Galaxy</a>
-  <a href="https://pixels111.github.io/bcahub/about/index.html" onclick="closeMobile()">About</a>
-  <a href="https://pixels111.github.io/bcahub/contact/index.html" onclick="closeMobile()">Contact</a>
-  <a href="https://pixels111.github.io/bcahub/help/index.html" onclick="closeMobile()">Help</a>
+  <a href="../index.html" onclick="closeMobile()">Home</a>
+  <a href="../resources/" onclick="closeMobile()">Resources</a>
+  <a href="../content/" onclick="closeMobile()">Content Galaxy</a>
+  <a href="../about/" onclick="closeMobile()">About</a>
+  <a href="../contact/" onclick="closeMobile()">Contact</a>
+  <a href="../help/" onclick="closeMobile()">Help</a>
 </div>
 
 <!-- PAGE HERO -->
@@ -85,7 +86,7 @@
   <div class="page-hero-content">
     <div class="page-badge"><i class="fas fa-users"></i> Our Story</div>
     <h1 class="page-title">About <span class="grad">BCAHub</span></h1>
-    <p class="page-sub">A free, student-built platform that started with one BCA student's simple idea — make studying easier for everyone.</p>
+    <p class="page-sub">Built by a student, for students—BCAHub started with one BCA student's simple idea: to make studying easier for everyone.</p>
   </div>
 </div>
 
@@ -185,7 +186,7 @@
         </div>
         <div class="why-card reveal">
           <div class="why-icon wi-blue"><i class="fas fa-poll"></i></div>
-          <div><h4>Live SVU Results Links</h4><p>Direct Manabadi & TCSiON links for all 6 semester exam results — no searching, no confusion. Just click and check your results instantly.</p></div>
+          <div><h4>Live SVU Results Links</h4><p>Direct Manabadi & TCS iON result links exclusively for the 2023–2026 BCA batch. Check all six semester exam results instantly—no searching, no confusion. Just click and view your results.</p></div>
         </div>
       </div>
     </div>
@@ -251,67 +252,65 @@
       <h3 style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;margin-bottom:.75rem;">Want to Contribute?</h3>
       <p style="font-size:.9rem;color:var(--muted2);max-width:480px;margin:0 auto 1.5rem;line-height:1.75;">Have notes, question papers, or something useful for BCA students? Submit resources, report issues, or just say hi!</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap; position:relative; z-index:11;">
-        <a href="https://pixels111.github.io/bcahub/contact/index.html" class="btn btn-primary" style="pointer-events:auto;"><i class="fas fa-envelope"></i> Contact BCAHUB</a>
+         <!-- How to Contribute Button -->
+         <a href="#" class="btn btn-primary" onclick="document.getElementById('contributeModal').classList.add('active');return false;">
+         <i class="fas fa-hands-helping"></i> How to Contribute
+        </a>
+
       </div>
     </div>
 
   </div>
 </section>
+  <!-- Contribution Popup -->
+<div class="contribute-modal" id="contributeModal">
+    <div class="contribute-modal-box">
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="https://pixels111.github.io/bcahub/index.html" class="nav-logo" style="display:inline-flex; margin-bottom:0.5rem;">
-          <span class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></span>
-          BCAHub
-        </a>
-        <p>A free, student-friendly platform for BCA students. Notes, question papers, assignments and tools — all in one place.</p>
-        <div class="social-row">
-          <a href="https://www.instagram.com/bcahumor" target="_blank" class="soc"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.youtube.com/@BCAHub" target="_blank" class="soc"><i class="fab fa-youtube"></i></a>
-          <a href="mailto:generalbca@gmail.com" class="soc"><i class="fas fa-envelope"></i></a>
+        <button class="close-modal" onclick="document.getElementById('contributeModal').classList.remove('active')">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-icon">
+            <i class="fas fa-hands-helping"></i>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/resources/index.html">Resources</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/content/index.html">Content Galaxy</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/about/index.html">About Us</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/contact/index.html">Contact</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/help/index.html">Help & FAQ</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Results</h4>
-        <ul class="footer-links">
-          <li><a href="https://www.results.manabadi.co.in/2024/svu-i-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">1st Semester</a></li>
-          <li><a href="https://www.results.manabadi.co.in/2024/svu-ii-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">2nd Semester</a></li>
-          <li><a href="https://www.results.manabadi.co.in/2024/svu-iii-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">3rd Semester</a></li>
-          <li><a href="https://www.results.manabadi.co.in/2024/svu-iv-sem-ug-babcombscbcabbabaolbmusbdanbhm-bvoc-reg-exam-jan-2024-results-14082024.htm" target="_blank">4th Semester</a></li>
-          <li><a href="https://www4.tcsion.com/SelfServices/" target="_blank">5th Semester</a></li>
-          <li><a href="https://www4.tcsion.com/SelfServices/" target="_blank">6th Semester</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul class="footer-links">
-          <li><a href="https://pixels111.github.io/bcahub/privacy/index.html">Privacy Policy</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/terms/index.html">Terms of Use</a></li>
-          <li><a href="mailto:generalbca@gmail.com">generalbca@gmail.com</a></li>
-          <li><a href="https://pixels111.github.io/bcahub/forms/index.html">Report an Issue</a></li>
-        </ul>
-      </div>
+
+        <h3>Contribute Your Resources</h3>
+
+        <p>
+            Thank you for helping the BCACHub. Please send your resource
+            through <strong>WhatsApp</strong> or <strong>Email</strong> with the
+            following details:
+        </p>
+
+        <div class="contribute-list">
+            <div>📄 <strong>Resource Title</strong></div>
+            <div>📚 <strong>Semester</strong></div>
+            <div>📂 <strong>Resource Type</strong></div>
+            <div>👤 <strong>Your Name</strong></div>
+            <div>📎 <strong>Attach PDF / ZIP File</strong></div>
+        </div>
+
+        <div class="popup-note">
+            ⭐ Every verified contribution is published with credit to the contributor.
+        </div>
+
+        <div class="popup-buttons">
+            <a href="https://wa.me/917993588220" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+            <a href="mailto:generalbca@gmail.com"  target="_blank">
+                <i class="fas fa-envelope"></i>
+                Email
+            </a>
+        </div>
+
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 <a href="https://pixels111.github.io/bcahub/index.html">BCAHub</a> — Built by <a href="https://pixels111.github.io/bcahub/about/index.html#creator">Sethu</a> | All Rights Reserved</p>
-      <p style="font-size:0.75rem; color:var(--muted);">"For Students, By Students"</p>
-    </div>
-  </div>
-</footer>
+</div>
+<!-- FOOTER -->
+<div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
    <script src="index652536919.js"></script>
-   <script src="../loader.js"></script>
+   <script src="../components/loader.js"></script>
 </body>
 </html>

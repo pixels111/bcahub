@@ -12,7 +12,7 @@ const co=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){
 }}),{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el)); 
 
-//website updates - commit count and last updated date
+//website updates - commit count and last updated date 
   const repoOwner = 'pixels111';
   const repoName = 'bcahub';
 
@@ -60,4 +60,18 @@ document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
       document.getElementById('commit-count').textContent = 'Unavailable';
       document.getElementById('last-updated-date').textContent = 'Unavailable';
     });
+//contribution model
+const contributeModal=document.getElementById("contributeModal");
+
+contributeModal.addEventListener("click",function(e){
+    if(e.target===this){
+        contributeModal.classList.remove("active");
+    }
+});
+
+document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){
+        contributeModal.classList.remove("active");
+    }
+});
 
