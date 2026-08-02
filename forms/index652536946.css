@@ -29,6 +29,27 @@
 html { scroll-behavior:smooth; overflow-x:hidden; }
 body { background:var(--bg); color:var(--text); font-family:var(--font-body); overflow-x:hidden; min-height:100vh; }
 
+*{
+  -webkit-tap-highlight-color:transparent;
+}
+
+input:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible){
+  outline:none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible{
+outline:2px solid var(--blue2);
+outline-offset:2px;
+box-shadow:0 0 0 4px rgba(59,130,246,.25);
+border-radius:8px;
+}
+
+
 ::-webkit-scrollbar { width:4px; }
 ::-webkit-scrollbar-track { background:var(--bg); }
 ::-webkit-scrollbar-thumb { background:var(--blue); border-radius:4px; }
@@ -433,7 +454,7 @@ main > select {
   font-weight: 500;
   color: var(--text2);
   padding: 0.85rem 3rem 0.85rem 1.1rem;
-  -webkit-appearance: none;
+  -webkit-appearance:none;
   cursor: pointer;
   outline: none;
   transition: box-shadow var(--trans), border-color var(--trans), color var(--trans);
@@ -541,7 +562,7 @@ textarea {
 
   color: var(--text2);
   outline: none;
-  -webkit-appearance: none;
+  -webkit-appearance:none;
   transition: box-shadow var(--trans), border-color var(--trans), color var(--trans-fast);
 }
 

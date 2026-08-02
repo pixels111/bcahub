@@ -114,121 +114,383 @@
 </select>
 
 <form id="contact" class="hidden">
-  <input type="hidden" name="formType" value="contact" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject" />
-  <label>Message</label>
-  <textarea name="message" placeholder="Enter message"></textarea>
+  <input type="hidden" name="formType" value="contact">
+
+  <label for="contact-name">Name *</label>
+  <input
+    type="text"
+    id="contact-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="contact-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="contact-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="contact-subject">Subject *</label>
+  <input
+    type="text"
+    id="contact-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject">
+
+  <label for="contact-message">Message</label>
+  <textarea
+    id="contact-message"
+    name="message"
+    autocomplete="off"
+    placeholder="Enter message"></textarea>
+
   <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
 
 <form id="broken-link" class="hidden">
-  <input type="hidden" name="formType" value="broken-link" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject" />
-  <label>Broken Link URL *</label>
-  <input type="url" name="broken_link_url" required placeholder="Enter broken link URL" />
-  <label>Resource Name *</label>
-  <input type="text" name="resource_name" required placeholder="Enter resource name" />
-  <label>Message</label>
-  <textarea name="message" placeholder="Enter message"></textarea>
- <button type="submit" class="button">Send</button>
+  <input type="hidden" name="formType" value="broken-link">
+
+  <label for="broken-name">Name *</label>
+  <input
+    type="text"
+    id="broken-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="broken-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="broken-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="broken-subject">Subject *</label>
+  <input
+    type="text"
+    id="broken-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject">
+
+  <label for="broken-link-url">Broken Link URL *</label>
+  <input
+    type="url"
+    id="broken-link-url"
+    name="broken_link_url"
+    autocomplete="url"
+    required
+    placeholder="Enter broken link URL">
+
+  <label for="broken-resource-name">Resource Name *</label>
+  <input
+    type="text"
+    id="broken-resource-name"
+    name="resource_name"
+    autocomplete="off"
+    required
+    placeholder="Enter resource name">
+
+  <label for="broken-message">Message</label>
+  <textarea
+    id="broken-message"
+    name="message"
+    autocomplete="off"
+    placeholder="Enter message"></textarea>
+
+  <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
 
 <form id="resource-add" class="hidden">
-  <input type="hidden" name="formType" value="resource-add" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject" />
-  <label>Resource Name *</label>
-  <input type="text" name="resource_name" required placeholder="Enter resource name" />
-  <label>Resource Semester *</label>
-  <input type="text" name="resource_sem" required placeholder="Enter semester" />
-  <label>Message</label>
-  <textarea name="message" placeholder="Enter message"></textarea>
-   <button type="submit" class="button">Send</button>
+  <input type="hidden" name="formType" value="resource-add">
+
+  <label for="resource-name">Name *</label>
+  <input
+    type="text"
+    id="resource-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="resource-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="resource-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="resource-subject">Subject *</label>
+  <input
+    type="text"
+    id="resource-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject">
+
+  <label for="resource-resource-name">Resource Name *</label>
+  <input
+    type="text"
+    id="resource-resource-name"
+    name="resource_name"
+    autocomplete="off"
+    required
+    placeholder="Enter resource name">
+
+  <label for="resource-sem">Resource Semester *</label>
+  <input
+    type="text"
+    id="resource-sem"
+    name="resource_sem"
+    autocomplete="off"
+    required
+    placeholder="Enter semester">
+
+  <label for="resource-message">Message</label>
+  <textarea
+    id="resource-message"
+    name="message"
+    autocomplete="off"
+    placeholder="Enter message"></textarea>
+
+  <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
 
 <form id="spelling-mistake" class="hidden">
-  <input type="hidden" name="formType" value="spelling-mistake" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject about" />
-  <label>Mistaken Name *</label>
-  <input type="text" name="mistaken_name" required placeholder="Enter mistaken name" />
-  <label>Correct Name *</label>
-  <input type="text" name="correct_name" required placeholder="Enter correct name" />
-  <label>Message</label>
-  <textarea name="message" placeholder="Enter message"></textarea>
+  <input type="hidden" name="formType" value="spelling-mistake">
+
+  <label for="spelling-name">Name *</label>
+  <input
+    type="text"
+    id="spelling-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="spelling-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="spelling-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="spelling-subject">Subject *</label>
+  <input
+    type="text"
+    id="spelling-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject about">
+
+  <label for="spelling-mistaken-name">Mistaken Name *</label>
+  <input
+    type="text"
+    id="spelling-mistaken-name"
+    name="mistaken_name"
+    autocomplete="off"
+    required
+    placeholder="Enter mistaken name">
+
+  <label for="spelling-correct-name">Correct Name *</label>
+  <input
+    type="text"
+    id="spelling-correct-name"
+    name="correct_name"
+    autocomplete="off"
+    required
+    placeholder="Enter correct name">
+
+  <label for="spelling-message">Message</label>
+  <textarea
+    id="spelling-message"
+    name="message"
+    autocomplete="off"
+    placeholder="Enter message"></textarea>
+
   <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
 
 <form id="change-del-sub" class="hidden">
-  <input type="hidden" name="formType" value="change-del-sub" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject about" />
-  <label>Subject Name *</label>
-  <input type="text" name="subject_name" required placeholder="Enter subject name to change/delete" />
-  <label>Message *</label>
-  <textarea name="message" placeholder="Enter message about  to delete or change"></textarea>
+  <input type="hidden" name="formType" value="change-del-sub">
+
+  <label for="change-sub-name">Name *</label>
+  <input
+    type="text"
+    id="change-sub-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="change-sub-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="change-sub-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="change-sub-subject">Subject *</label>
+  <input
+    type="text"
+    id="change-sub-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject about">
+
+  <label for="change-subject-name">Subject Name *</label>
+  <input
+    type="text"
+    id="change-subject-name"
+    name="subject_name"
+    autocomplete="off"
+    required
+    placeholder="Enter subject name to change/delete">
+
+  <label for="change-sub-message">Message *</label>
+  <textarea
+    id="change-sub-message"
+    name="message"
+    autocomplete="off"
+    required
+    placeholder="Enter message about the subject to change or delete"></textarea>
+
   <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
 
 <form id="change-syllabus" class="hidden">
-  <input type="hidden" name="formType" value="change-syllabus" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject about" />
-  <label>Syllabus Name *</label>
-  <input type="text" name="syllabus_name" required placeholder="Enter syllabus name" />
-  <label>Message *</label>
-  <textarea name="message" placeholder="Enter message in-detaile about subject"></textarea>
-   <button type="submit" class="button">Send</button>
+  <input type="hidden" name="formType" value="change-syllabus">
+
+  <label for="syllabus-name">Name *</label>
+  <input
+    type="text"
+    id="syllabus-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="syllabus-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="syllabus-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="syllabus-subject">Subject *</label>
+  <input
+    type="text"
+    id="syllabus-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject about">
+
+  <label for="syllabus-title">Syllabus Name *</label>
+  <input
+    type="text"
+    id="syllabus-title"
+    name="syllabus_name"
+    autocomplete="off"
+    required
+    placeholder="Enter syllabus name">
+
+  <label for="syllabus-message">Message *</label>
+  <textarea
+    id="syllabus-message"
+    name="message"
+    autocomplete="off"
+    required
+    placeholder="Enter message in detail about the subject"></textarea>
+
+  <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
-
 
 <form id="ask-q" class="hidden">
-  <input type="hidden" name="formType" value="ask-q" />
-  <label>Name *</label>
-  <input type="text" name="name" required placeholder="Enter your name" />
-  <label>Email/Phone *</label>
-  <input type="text" name="email_phno" required placeholder="Enter your email or phone" />
-  <label>Subject *</label>
-  <input type="text" name="subject" required placeholder="Enter subject about" />
-  <label>Your Question? *</label>
-  <input type="text" name="question" required placeholder="Enter your Question?" />
-  <label>Message *</label>
-  <textarea name="message" placeholder="Enter message in-detaile about your Question?"></textarea>
-   <button type="submit" class="button">Send</button>
+  <input type="hidden" name="formType" value="ask-q">
+
+  <label for="ask-name">Name *</label>
+  <input
+    type="text"
+    id="ask-name"
+    name="name"
+    autocomplete="name"
+    required
+    placeholder="Enter your name">
+
+  <label for="ask-email-phno">Email/Phone *</label>
+  <input
+    type="text"
+    id="ask-email-phno"
+    name="email_phno"
+    autocomplete="email"
+    required
+    placeholder="Enter your email or phone">
+
+  <label for="ask-subject">Subject *</label>
+  <input
+    type="text"
+    id="ask-subject"
+    name="subject"
+    autocomplete="off"
+    required
+    placeholder="Enter subject about">
+
+  <label for="ask-question">Your Question *</label>
+  <input
+    type="text"
+    id="ask-question"
+    name="question"
+    autocomplete="off"
+    required
+    placeholder="Enter your question">
+
+  <label for="ask-message">Message *</label>
+  <textarea
+    id="ask-message"
+    name="message"
+    autocomplete="off"
+    required
+    placeholder="Enter message in detail about your question"></textarea>
+
+  <button type="submit" class="button">Send</button>
+
   <div class="form-message" style="display:none;"></div>
 </form>
+
 <div id="success-msg">Form submitted successfully!</div>
 </main>
 <!-- FOOTER -->
