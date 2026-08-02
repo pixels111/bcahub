@@ -677,8 +677,6 @@ async function openResourcesModal() {
 
                     <a
                         href="${resource.Link}"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         class="resource-button">
 
                         <i class="fas fa-download"></i>
