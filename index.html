@@ -23,6 +23,8 @@
 <link rel="icon" href="pictures/weblogonobg.png" type="image/png">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="components/loader.css">
+<link rel="stylesheet" href="components/resources-modal.css">
+<link rel="stylesheet" href="components/updates.css">
 <link rel="stylesheet" href="components/footer.css">
 
 <meta name="google-site-verification" content="or_0OWPpHZCSiqepry5_sZR1dGP5FMcBC27uFFriOa0" />
@@ -166,14 +168,14 @@
     <div class="updates-grid">
       <div class="card update-card reveal">
         <h3 class="updates-heading"><i class="fas fa-sync" style="color:var(--blue2)"></i><span class="cycle-text"></span><span class="update-text">Updates</span><span class="tag tag-blue">Latest</span></h3>
-        <ul class="update-list"> 
-          <li><a class="update-new" href="https://drive.google.com/file/d/1T3J1JdARbvWKCI_7OR8yoDO01YErsfoC/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fas fa-sync"></i> Instant Examinations August 2026</a></li>
-          <li><a href="resources/" rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> View All Resources (All Semesters)</a></li>
-          <li><a href="https://drive.google.com/uc?export=download&id=1DqnrX2_fDLlUqzUHK21vu_ms_As3bUuu" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-exclamation"></i> Download All Semesters Syllabus (PDF)</a></li>
-          <li><a href="content/"  rel="noopener noreferrer"><i class="fas fa-arrow-right"></i> Browse Content Galaxy</a></li>
-          <li><a href="https://svuniversity.edu.in/degree-course-syllabus/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Official SVU Syllabus Page</a></li>
-          <li><a href="https://svuniversity.edu.in/storage/2021/12/Guidelines-for-4-Year-UG-Honours-Program-with-Single-Major-W.E.F.2023-24.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Guidelines for the 4-Year UG Honours Program with Single Major</a></li>
-        </ul>
+        
+<ul class="update-list" id="updates-list">
+    <li class="update-loading">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span>Loading updates...</span>
+    </li>
+</ul>
+
       </div>
       <div class="card update-card reveal" style="transition-delay:0.1s">
         <h3><i class="fas fa-poll" style="color:var(--green)"></i> SVU Exam Results <span class="tag tag-green">Live</span></h3>
@@ -523,5 +525,57 @@
 </footer>
 <script src="script.js"></script>
 <script src="components/loader.js"></script>
+<script src="components/updates.js"></script>
+<!-- ==========================================================
+     NEWLY ADDED RESOURCES
+=========================================================== -->
+
+<div id="resourcesModal" class="resources-modal">
+
+    <div class="resources-box">
+
+        <!-- Header -->
+
+        <div class="resources-header">
+
+            <div>
+
+                <h2>
+                    <i class="fas fa-folder-open"></i>
+                    Newly Added Resources
+                </h2>
+
+            </div>
+
+            <button
+                id="closeResources"
+                type="button"
+                aria-label="Close">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Body -->
+
+        <div id="resourcesContent">
+
+            <div class="resource-loading">
+
+                <i class="fas fa-spinner fa-spin"></i>
+
+                <h3>Loading Resources...</h3>
+
+                <p>Please wait while we fetch the latest uploads.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>

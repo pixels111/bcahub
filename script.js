@@ -535,3 +535,216 @@ if(cycleText){
   typeEffect();
 
 }
+
+
+
+
+
+
+
+
+/* ==========================================================
+   GLOBAL API
+========================================================== */
+
+const API = "https://script.google.com/macros/s/AKfycbye0bNpmPZ6xAjygP5hkTERRJQKfoZqh2X6GiL8xD2MQbIbv0cQ8XQLjfkPPXtoK373sw/exec";
+
+
+/* ==========================================================
+   RESOURCE MODAL
+========================================================== */
+
+function getResourceIcon(type = "") {
+
+    type = type.toLowerCase();
+
+    if (type.includes("pdf")) return "fa-file-pdf";
+    if (type.includes("note")) return "fa-book";
+    if (type.includes("record")) return "fa-file-lines";
+    if (type.includes("program")) return "fa-code";
+    if (type.includes("question")) return "fa-clipboard";
+    if (type.includes("assignment")) return "fa-folder";
+    if (type.includes("lab")) return "fa-book-open";
+
+    return "fa-file";
+}
+
+async function openResourcesModal() {
+
+    const modal = document.getElementById("resourcesModal");
+    const container = document.getElementById("resourcesContent");
+
+    modal.classList.add("show");
+
+    container.innerHTML = `
+        <div class="resource-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <h3>Loading Resources...</h3>
+            <p>Please wait while we fetch the latest uploads.</p>
+        </div>
+    `;
+
+    try {
+
+        const response = await fetch(`${API}?sheet=new-resource-list`);
+
+        if (!response.ok) throw new Error();
+
+        const resources = await response.json();
+
+        container.innerHTML = "";
+
+        if (!resources.length) {
+
+            container.innerHTML = `
+                <div class="resource-empty">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>No Resources Found</h3>
+                    <p>No newly added resources are available.</p>
+                </div>
+            `;
+
+            return;
+
+        }
+
+        resources.reverse();
+
+        resources.forEach(resource => {
+
+            container.innerHTML += `
+
+            <article class="resource-card">
+
+                <div class="resource-thumb">
+
+                    <i class="fas ${getResourceIcon(resource["Resource Type"] || resource.Type)}"></i>
+
+                </div>
+
+                <div class="resource-body">
+
+                    <div class="resource-top">
+
+                        <div>
+
+                            <h3 class="resource-title">
+                                ${resource.Title}
+                            </h3>
+
+                            <p class="resource-type">
+                                ${resource["Resource Type"]}
+                            </p>
+
+                        </div>
+
+                        <span class="resource-author">
+
+                            Uploaded by
+                            <strong>${resource["Upload By"]}</strong>
+
+                        </span>
+
+                    </div>
+
+                    <div class="resource-info">
+
+                        <span>
+
+                            <i class="fas fa-graduation-cap"></i>
+
+                            ${resource.Semester}
+
+                        </span>
+
+                        <span>
+
+                            <i class="fas fa-file"></i>
+
+                            ${resource.Pages}
+
+                        </span>
+
+                        <span>
+
+                            <i class="fas fa-calendar"></i>
+
+                            ${resource.uploadDate}
+
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="${resource.Link}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resource-button">
+
+                        <i class="fas fa-download"></i>
+
+                        Get Resource
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            `;
+
+        });
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        container.innerHTML = `
+            <div class="resource-error">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>Unable to Load Resources</h3>
+                <p>Please try again later.</p>
+            </div>
+        `;
+
+    }
+
+}
+
+/* ==========================================================
+   CLOSE MODAL
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modal = document.getElementById("resourcesModal");
+
+    document.getElementById("closeResources").addEventListener("click", () => {
+
+        modal.classList.remove("show");
+
+    });
+
+    modal.addEventListener("click", e => {
+
+        if (e.target === modal) {
+
+            modal.classList.remove("show");
+
+        }
+
+    });
+
+    document.addEventListener("keydown", e => {
+
+        if (e.key === "Escape") {
+
+            modal.classList.remove("show");
+
+        }
+
+    });
+
+});

@@ -330,6 +330,45 @@ nav.scrolled {
 .update-list li a i { color:var(--blue2); width:14px; font-size:0.75rem; flex-shrink:0; }
 .update-new { animation: colorGlow 2.5s ease-in-out infinite; font-weight: 600; }
 
+/* Loading State */
+.update-list .update-loading{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    padding:.5rem 0;
+    border-bottom:1px solid rgba(255,255,255,.04);
+    color:var(--muted2);
+    font-size:.875rem;
+    font-weight:500;
+    user-select:none;
+}
+
+.update-list .update-loading i{
+    width:14px;
+    font-size:.8rem;
+    color:var(--blue2);
+    flex-shrink:0;
+}
+
+/* Error State */
+.update-list .update-error{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    padding:.5rem 0;
+    border-bottom:1px solid rgba(255,255,255,.04);
+    color:#ff8a8a;
+    font-size:.875rem;
+    font-weight:500;
+    user-select:none;
+}
+
+.update-list .update-error i{
+    width:14px;
+    font-size:.8rem;
+    color:#ef4444;
+    flex-shrink:0;
+}
 /* ── RESULTS ── */
 .results-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:0.5rem; }
 .result-item {
@@ -1155,3 +1194,4 @@ width:auto;
   }
 
 }
+
