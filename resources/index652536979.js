@@ -12,7 +12,7 @@ document.addEventListener("keydown",function(e){
     }
 });
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzDT0ea9J8KT4Dkr5Z9f085SBO_cbMQZucrNFIaetcsjlmBvQocJwpm7CimqX1EZiU4/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyEaoQMkMlEP5AAaKQYakoFc19V-mQvsWoJLuu8bHdjxAvr3Bow3FalVKH7hgKOm7pp/exec";
 
 const RESOURCE_REF_SECTION_ORDER = ['assignments', 'notes', 'important_questions', 'pdfs', 'records', 'syllabus', 'papers'];
 
@@ -117,7 +117,54 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('resource-search');
     const searchClearBtn = document.getElementById('search-clear');
     
-    
+    /* ==========================================================
+   RESOURCE LOADING OVERLAY
+========================================================== */
+
+const loadingOverlay =
+    document.getElementById("resourceLoadingOverlay");
+
+const loadingText =
+    document.getElementById("resourceLoadingText");
+
+function isMainLoaderVisible() {
+
+    const loader = document.getElementById("loader");
+
+    if (!loader) return false;
+
+    return !loader.classList.contains("done");
+
+}
+
+function showLoadingOverlay(message = "Preparing resources...") {
+
+    // Don't show if the main BCAHub loader is still active
+    if (isMainLoaderVisible()) return;
+
+    if (!loadingOverlay) return;
+
+    loadingText.textContent = message;
+
+    loadingOverlay.classList.add("show");
+
+}
+
+function hideLoadingOverlay() {
+
+    if (!loadingOverlay) return;
+
+    loadingOverlay.classList.remove("show");
+
+}
+
+function updateLoadingMessage(message) {
+
+    if (!loadingText) return;
+
+    loadingText.textContent = message;
+
+}
     // Data now comes from the Apps Script Web App (Google Sheet backend)
     // instead of a hardcoded object. It starts empty and is populated by
     // loadResourceData() below; every render function reads this same
@@ -140,59 +187,168 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch resource data from the Apps Script Web App and normalize it
     // into the shape the existing renderer expects.
-    async function loadResourceData() {
-        selectionMessage.textContent = 'Loading resources...';
+    // Toggle dropdown
+async function loadResourceData() {
 
-        try {
-            const response = await fetch(API_URL);
-            if (!response.ok) {
-                throw new Error('Request failed with status ' + response.status);
+    selectionMessage.textContent = "Loading resources...";
+
+    const isDirectVisit =
+    !document.referrer ||
+    !document.referrer.startsWith(location.origin);
+
+    if (
+        !isDirectVisit &&
+        window.BCAHubResourceState &&
+        window.BCAHubResourceState.downloading &&
+        !window.BCAHubResourceState.ready
+    ) {
+    
+        showResourcePopup();
+    
+    }
+
+    try {
+
+        // Get resources (cache or download)
+        const rawData = await getResources();
+        
+        if (
+            document.getElementById("resourcePopup")?.classList.contains("show")
+        ) {
+        
+            popupTerminalLog("Building Search Index");
+        
+        } else {
+        
+            loaderEngine.step("Building Search Index");
+        
+        }
+        // Update loader status
+        if (typeof setLoaderStatus === "function") {
+            setLoaderStatus("Organizing Study Materials...");
+        }
+
+        // Normalize data
+        resourceData = normalizeResourceData(rawData);
+
+        if (
+            document.getElementById("resourcePopup")?.classList.contains("show")
+        ) {
+        
+            popupTerminalLog("Building Reference Index");
+        
+        } else {
+        
+            loaderEngine.step("Building Reference Index");
+        
+        }
+        // Build reference index
+        window.__resourcesPageData = resourceData;
+        window.__resourcesRefIndex = buildResourceRefIndex(resourceData);
+        if (
+            document.getElementById("resourcePopup")?.classList.contains("show")
+        ) {
+        
+            popupTerminalLog("Rendering Interface");
+        
+        } else {
+        
+            loaderEngine.step("Rendering Interface");
+        
+        }
+        isDataLoaded = true;
+        dataLoadFailed = false;
+
+        // Render page
+        if (currentSemester && currentResource) {
+
+            renderResources();
+
+        } else {
+
+            showInitialContent();
+            updateSelectionMessage();
+
+        }
+
+        // Finish after browser paints the UI
+        requestAnimationFrame(() => {
+
+            if (typeof setLoaderStatus === "function") {
+                setLoaderStatus("Almost Ready...");
             }
 
-            const rawData = await response.json();
+            if (window.handleDeepLink) {
+                window.handleDeepLink();
+            }
 
-            resourceData = normalizeResourceData(rawData);
-            window.__resourcesPageData = resourceData;
-            window.__resourcesRefIndex = buildResourceRefIndex(resourceData);
+            // Give user time to read "Almost Ready..."
+            setTimeout(() => {
 
-            isDataLoaded = true;
-            dataLoadFailed = false;
-
-if (currentSemester && currentResource) {
-    renderResources();
-
-    // Process any deep link after resources have been rendered
-    requestAnimationFrame(() => {
-        if (window.handleDeepLink) {
-            window.handleDeepLink();
-        }
-    });
-} else {
-    showInitialContent();
-    updateSelectionMessage();
-
-    // If a deep link exists, attempt to process it after the UI is ready
-    requestAnimationFrame(() => {
-        if (window.handleDeepLink) {
-            window.handleDeepLink();
-        }
-    });
-}
+                if (
+                    document.getElementById("resourcePopup")?.classList.contains("show")
+                ) {
+                
+                    popupTerminalLog("Launching BCAHub");
+                
+                } else {
+                
+                    loaderEngine.step("Launching BCAHub");
+                
+                }            
+                setTimeout(() => {
+                    
+                    if (
+                        document.getElementById("resourcePopup")?.classList.contains("show")
+                    ) {
+                    
+                        popupTerminalDone();
+                    
+                    }                   
+                     // Hide the popup (if it was shown)
+                    hideResourcePopup();
             
-        } catch (error) {
-            console.error('Failed to load resource data from Apps Script API:', error);
-            dataLoadFailed = true;
-            isDataLoaded = false;
-            selectionMessage.textContent = 'Unable to load resources right now. Please refresh the page to try again.';
-            resourcesContainer.innerHTML = `
-                <div class="no-resources">
-                    Unable to load resources right now. Please refresh the page to try again.
-                </div>
-            `;
-        }
+                    // Hide the full-page loader
+                    finishResourcesLoader();
+            
+                }, 300);
+            
+            }, 300);
+        });
+
     }
-    
-    // Toggle dropdown
+
+    catch (error) {
+        if (window.loaderEngine) {
+
+         loaderEngine.error("Failed to Load Resources");
+
+        }
+
+        console.error("[BCAHub] Failed to load resources:", error);
+
+        dataLoadFailed = true;
+        isDataLoaded = false;
+
+        selectionMessage.textContent =
+            "Unable to load resources right now. Please refresh the page.";
+
+        resourcesContainer.innerHTML = `
+            <div class="no-resources">
+                Unable to load resources right now.
+            </div>
+        `;
+        
+        hideResourcePopup();
+
+        // Finish loader even on failure
+        if (typeof finishResourcesLoader === "function") {
+            finishResourcesLoader();
+        }
+
+    }
+
+}
     function toggleDropdown(header, options) {
         const isActive = options.classList.contains('active');
         

@@ -2031,3 +2031,607 @@ a.dc-btn:not([href]) {
 }
 
 
+/* ==========================================================
+   TERMINAL
+========================================================== */
+
+.loader-terminal{
+
+    width:min(520px, calc(100vw - 40px));
+
+    height:128px;
+
+    min-height:128px;
+
+    max-height:128px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    margin:18px auto 0;
+
+    padding:16px 18px;
+
+    background:linear-gradient(180deg, rgba(14,20,32,.55), rgba(8,12,20,.45));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:16px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.06),
+        inset 0 0 24px rgba(96,165,250,.03),
+        0 12px 35px rgba(0,0,0,.35);
+
+    backdrop-filter:blur(14px) saturate(140%);
+
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+
+    font-family:"SFMono-Regular",Consolas,"Liberation Mono","Courier New",monospace;
+
+    font-size:13px;
+
+    font-variant-ligatures:none;
+
+    line-height:1.8;
+
+    letter-spacing:.01em;
+
+    color:#dbeafe;
+
+    text-align:left;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    white-space:nowrap;
+
+    user-select:none;
+
+    contain:strict;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+    scroll-behavior:smooth;
+
+    -webkit-mask-image:linear-gradient(to bottom,
+        transparent 0,
+        #000 10px,
+        #000 calc(100% - 6px),
+        transparent 100%);
+
+    mask-image:linear-gradient(to bottom,
+        transparent 0,
+        #000 10px,
+        #000 calc(100% - 6px),
+        transparent 100%);
+
+}
+
+.loader-terminal::-webkit-scrollbar{
+
+    display:none;
+
+    width:0;
+
+    height:0;
+
+}
+
+.loader-terminal-wrapper{
+
+    height:130px;
+
+    min-height:130px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    contain:layout;
+
+}
+
+/* ==========================
+   TERMINAL LINES
+========================== */
+
+.loader-terminal-line{
+
+    display:grid;
+
+    grid-template-columns:20px minmax(0,1fr) 10px;
+
+    align-items:center;
+
+    column-gap:12px;
+
+    height:28px;
+
+    min-height:28px;
+
+    max-height:28px;
+
+    margin-bottom:6px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateY(4px);
+
+    animation:terminalFade .22s ease forwards;
+
+    will-change:opacity,transform;
+
+}
+
+.loader-terminal-line:last-child{
+
+    margin-bottom:0;
+
+}
+
+.loader-terminal-current{
+
+    color:#7dd3fc;
+
+    text-shadow:0 0 10px rgba(125,211,252,.25);
+
+}
+
+.loader-terminal-success{
+
+    color:#86efac;
+
+}
+
+.loader-terminal-error{
+
+    color:#fca5a5;
+
+}
+
+/* ==========================
+   ICONS
+========================== */
+
+.terminal-prefix,
+.terminal-success,
+.terminal-info,
+.terminal-error{
+
+    width:20px;
+
+    height:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-weight:700;
+
+    font-size:13px;
+
+    line-height:1;
+
+    flex-shrink:0;
+
+}
+
+.terminal-prefix{
+
+    color:#60a5fa;
+
+    text-shadow:0 0 8px rgba(96,165,250,.35);
+
+}
+
+.terminal-success{
+
+    color:#22c55e;
+
+    text-shadow:0 0 8px rgba(34,197,94,.35);
+
+}
+
+.terminal-info{
+
+    color:#facc15;
+
+    text-shadow:0 0 8px rgba(250,204,21,.3);
+
+}
+
+.terminal-error{
+
+    color:#ef4444;
+
+    text-shadow:0 0 8px rgba(239,68,68,.35);
+
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.terminal-text{
+
+    min-width:0;
+
+    max-width:100%;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+    color:inherit;
+
+    font-variant-numeric:tabular-nums;
+
+}
+
+/* ==========================
+   CURSOR
+========================== */
+
+.terminal-cursor{
+
+    width:2px;
+
+    height:15px;
+
+    background:#60a5fa;
+
+    border-radius:2px;
+
+    justify-self:end;
+
+    box-shadow:0 0 6px rgba(96,165,250,.6);
+
+    animation:terminalBlink .9s steps(1) infinite;
+
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes terminalBlink{
+
+    0%,50%{
+
+        opacity:1;
+
+    }
+
+    51%,100%{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes terminalFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(4px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media (prefers-reduced-motion:reduce){
+
+    .loader-terminal-line{
+
+        animation:none;
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+    .terminal-cursor{
+
+        animation:none;
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width:768px){
+
+    .loader-terminal{
+
+        width:calc(100vw - 40px);
+
+        height:110px;
+
+        min-height:110px;
+
+        max-height:110px;
+
+        padding:14px 16px;
+
+        font-size:12px;
+
+        line-height:1.7;
+
+    }
+
+    .loader-terminal-wrapper{
+
+        height:110px;
+
+        min-height:110px;
+
+    }
+
+    .loader-terminal-line{
+
+        grid-template-columns:18px minmax(0,1fr) 8px;
+
+        column-gap:10px;
+
+        height:24px;
+
+        min-height:24px;
+
+        max-height:24px;
+
+        margin-bottom:5px;
+
+    }
+
+    .terminal-prefix,
+    .terminal-success,
+    .terminal-info,
+    .terminal-error{
+
+        width:18px;
+
+        height:18px;
+
+        font-size:12px;
+
+    }
+}
+
+/* ==========================
+   MOBILES
+========================== */
+
+@media (max-width:480px){
+
+    .loader-terminal{
+
+        width:calc(100vw - 28px);
+
+        height:98px;
+
+        min-height:98px;
+
+        max-height:98px;
+
+        padding:12px 14px;
+
+        font-size:11px;
+
+        line-height:1.6;
+
+        border-radius:14px;
+
+    }
+
+    .loader-terminal-wrapper{
+
+        height:98px;
+
+        min-height:98px;
+
+    }
+
+    .loader-terminal-line{
+
+        grid-template-columns:16px minmax(0,1fr) 8px;
+
+        column-gap:8px;
+
+        height:22px;
+
+        min-height:22px;
+
+        max-height:22px;
+
+        margin-bottom:4px;
+
+    }
+
+    .terminal-prefix,
+    .terminal-success,
+    .terminal-info,
+    .terminal-error{
+
+        width:16px;
+
+        height:16px;
+
+        font-size:11px;
+
+    }
+
+    .terminal-cursor{
+
+        height:13px;
+
+    }
+}
+
+
+/* ==========================================================
+   RESOURCE POPUP
+========================================================== */
+
+.resource-popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(0,0,0,.18);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:.35s ease;
+
+    z-index:9998;
+
+}
+
+.resource-popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+}
+
+.resource-popup-card{
+
+    width:min(400px,calc(100vw - 30px));
+
+    padding:22px;
+
+    border-radius:22px;
+
+    background:rgba(18,24,38,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    animation:resourcePopupIn .35s ease;
+
+}
+
+.resource-popup-title{
+
+    font-family:var(--font-head);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#fff;
+
+    margin-bottom:16px;
+
+    text-align:center;
+
+    letter-spacing:.03em;
+
+}
+
+.resource-popup .loader-terminal{
+
+    width:100%;
+
+    margin:0;
+
+    min-height:110px;
+
+    max-height:110px;
+
+    border-radius:14px;
+
+    background:rgba(0,0,0,.25);
+
+}
+
+@keyframes resourcePopupIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px) scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .resource-popup-card{
+
+        width:calc(100vw - 28px);
+
+        padding:18px;
+
+    }
+
+}

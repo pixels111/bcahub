@@ -48,11 +48,38 @@
 
   </div>
 
-  <div class="loader-subtitle">
+<div class="loader-subtitle" id="loaderStatus">
+
     Preparing Your Learning Experience...
-  </div>
+
+</div>
+
+<!-- TERMINAL -->
+<div class="loader-terminal-wrapper">
+    <div id="loaderTerminal" class="loader-terminal"></div>
+</div>
 
   <div class="loader-pct" id="loaderPct">0%</div>
+
+</div>
+
+<!-- ==========================================
+     RESOURCE POPUP
+=========================================== -->
+
+<div id="resourcePopup" class="resource-popup">
+
+    <div class="resource-popup-card">
+
+        <div class="resource-popup-title">
+
+            Preparing Resources...
+
+        </div>
+
+        <div id="popupTerminal" class="loader-terminal"></div>
+
+    </div>
 
 </div>
 
@@ -311,7 +338,9 @@
 </div>
 <!-- FOOTER -->
  <div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
-    <script src="index652536979.js"></script>
-    <script src="../components/loader.js"></script>
+<script src="../components/resources-loader.js"></script>
+<script src="../components/resource-cache.js"></script>
+<script src="../components/resources-popup.js"></script>
+ <script src="index652536979.js"></script>
 </body>
 </html>
