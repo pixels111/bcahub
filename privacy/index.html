@@ -104,9 +104,9 @@
       <!-- Content -->
       <div class="legal-content">
         <div class="legal-meta reveal">
-          <span class="lm-item"><i class="fas fa-calendar"></i>Last updated: Aug 01, 2026</span>
+          <span class="lm-item"><i class="fas fa-calendar"></i>Last updated: Aug 05, 2026</span>
           <span class="lm-item"><i class="fas fa-globe"></i>Applies to: pixels111.github.io/bcahub and all subdomains</span>
-          <span class="lm-item"><i class="fas fa-code-branch"></i>Version 3.0</span>
+          <span class="lm-item"><i class="fas fa-code-branch"></i>Version 4.0</span>
           <span class="lm-item"><i class="fas fa-language"></i>English</span>
         </div>
 
@@ -137,9 +137,20 @@
             <li><strong>Content Galaxy / Resource Request Forms:</strong> Messages, resource requests, links, and files (if sent via email).</li>
           </ul>
           <div class="highlight-box warn">
-            <div class="hb-title orange"><i class="fas fa-exclamation-triangle" style="margin-right:.4rem;"></i>We do NOT collect</div>
-            <div class="hb-text">We do notbcollect personal data like IP addresses or cookies. GitHub may log basic usage statistics as per <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer" style="color: var(--blue2);">GitHub’s Privacy Policy</a>.</div>
-          </div>
+            <div class="hb-title orange">
+              <i class="fas fa-exclamation-triangle" style="margin-right:.4rem;"></i>
+              We do NOT collect
+            </div>
+          
+            <div class="hb-text">
+              We do not collect personal data such as IP addresses or cookies. GitHub may log basic usage statistics in accordance with
+              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer" style="color: var(--blue2);">
+                GitHub's Privacy Policy
+              </a>.
+              <br><br>
+              <strong>Resource Cache:</strong> To improve loading performance, BCAHub temporarily stores publicly available resource metadata and file information in your browser's session storage. This cache contains only educational resource data, does not include personal information, is automatically refreshed when updated resources become available, and is cleared when your browser session ends.
+            </div>
+          </div>        
         </div>
 
         <div id="s3" class="legal-section reveal">
@@ -178,7 +189,19 @@
             <li><strong>To make resources up to date:</strong> We regularly update our materials to ensure they remain current and relevant.</li>
             <li><strong>To add new content you suggest:</strong> We welcome your ideas for additional resources that could benefit the community.</li>
           </ul>
-          <p class="legal-p">We do not use your data for advertising, tracking, or third-party sales.</p>
+          <p class="legal-p">
+            We do not use your data for advertising, tracking, or third-party sales.
+          </p>
+          
+          <div class="highlight-box">
+            <div class="hb-title blue">
+              Performance Optimization
+            </div>
+          
+            <div class="hb-text">
+              To provide faster loading times and reduce unnecessary network requests, BCAHub temporarily caches publicly available resource information within your browser's session storage. This cache is used solely to improve website performance and does not contain personal information.
+            </div>
+          </div>       
         </div>
 
         <div id="s6" class="legal-section reveal">
@@ -211,7 +234,8 @@
           </p>
           <ul class="legal-ul">
             <li>Information submitted through contact forms, reviews, or contribution forms is securely stored in our connected database only for the time necessary to process your request.</li>
-            <li>Google Apps Script is used only to deliver website data.</li>
+            <li>Google Apps Script is used only to securely deliver website data.</li>
+            <li>To improve performance, BCAHub temporarily stores publicly available resource metadata and file information in your browser's session storage. This cached data is used only to speed up resource loading, is automatically refreshed when updated resource versions become available, contains no personal information, and is automatically cleared when your browser session ends.</li>            
             <li>Although we use trusted platforms and reasonable security measures, no method of online transmission or electronic storage is completely secure.</li>
           </ul>
         </div>
@@ -273,7 +297,25 @@
   </div>
 </section>
 <!-- FOOTER -->
- <div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
+<div id="footer"></div>
+
+<script>
+fetch("../components/footer.html")
+.then(r => r.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
+    const year = document.getElementById("copyright-year");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+});
+</script>
 <script src="../components/loader.js"></script>
 <script src="../components/resource-cache.js"></script>
  <script src="index652536969.js"></script>

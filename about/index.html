@@ -226,7 +226,7 @@
           <div class="tl-content">
             <div class="tl-year">Early 2026</div>
             <div class="tl-title">AppVerse Added</div>
-            <p class="tl-desc">The Attendance Calculator and RAM MagicSquare tools went live. Build My Resume, SDHR Dump, and CirravoGames from Cirravo Solutions joined AppVerse.</p>
+            <p class="tl-desc">The Attendance Calculator and RAM MagicSquare tools went live. Build My Resume, Free Degree Library, and CirravoGames from Cirravo Solutions joined AppVerse.</p>
           </div>
         </div>
         <div class="tl-item reveal">
@@ -309,7 +309,25 @@
     </div>
 </div>
 <!-- FOOTER -->
-<div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
+<div id="footer"></div>
+
+<script>
+fetch("../components/footer.html")
+.then(r => r.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
+    const year = document.getElementById("copyright-year");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+});
+</script>
 <script src="../components/loader.js"></script>
 <script src="../components/resource-cache.js"></script>
 <script src="index652536919.js"></script>

@@ -105,9 +105,9 @@
 
         <!-- Meta bar -->
         <div class="legal-meta reveal">
-          <span class="lm-item"><i class="fas fa-calendar"></i>Last Updated: Aug 01, 2026</span>
+          <span class="lm-item"><i class="fas fa-calendar"></i>Last Updated: Aug 05, 2026</span>
           <span class="lm-item"><i class="fas fa-globe"></i>pixels111.github.io/bcahub</span>
-          <span class="lm-item"><i class="fas fa-code-branch"></i>Version 3.0</span>
+          <span class="lm-item"><i class="fas fa-code-branch"></i>Version 4.0</span>
           <span class="lm-item"><i class="fas fa-language"></i>English</span>
         </div>
 
@@ -194,6 +194,7 @@
               <ul class="dd-list">
                 <li>Use BCAHub resources for learning and academic purposes.</li>
                 <li>Download materials for personal offline study.</li>
+                <li>Allow BCAHub to temporarily cache publicly available resource information in your browser to improve loading speed and reduce repeated downloads.</li>
                 <li>Share links to BCAHub resources with others.</li>
                 <li>Copy, upload, or republish BCAHub original content with proper credit.</li>
                 <li>Use the <strong>Copy Ref-Link</strong> feature to redirect users to the original resource.</li>
@@ -253,6 +254,7 @@
             <li><strong>Third-Party Links:</strong> BCAHub links to external platforms like Google Drive, Manabadi, and GitHub. We are not responsible for the content, availability, or privacy practices of these third-party sites.</li>
             <li><strong>Exam Results:</strong> SVU result links point to official third-party result portals. BCAHub is not responsible for the accuracy of result data on those portals.</li>
             <li><strong>Service Interruptions:</strong> Downtime, bugs, or unavailability of BCAHub due to hosting issues, GitHub Pages maintenance, or other technical reasons.</li>
+            <li><strong>Performance Cache:</strong> BCAHub may temporarily cache publicly available resource metadata and file information within your browser to improve website performance. While we strive to keep cached data up to date, temporary differences may occur until the cache is refreshed automatically.</li>
           </ul>
         </div>
 
@@ -339,7 +341,25 @@
   </div><!-- end .section-inner -->
 </section>
 <!-- FOOTER -->
- <div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
+<div id="footer"></div>
+
+<script>
+fetch("../components/footer.html")
+.then(r => r.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
+    const year = document.getElementById("copyright-year");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+});
+</script>
 <script src="../components/loader.js"></script>
 <script src="../components/resource-cache.js"></script>
  <script src="index652536989.js"></script>

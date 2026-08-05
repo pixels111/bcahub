@@ -22,6 +22,25 @@ function showResourcePopup(){
 
     popupCurrentLine = null;
 
+    /* Temporary startup message */
+
+    const line = document.createElement("div");
+
+    line.className =
+        "loader-terminal-line loader-terminal-current";
+
+    line.id = "popupPlaceholder";
+
+    line.innerHTML = `
+        <span class="terminal-prefix">&gt;</span>
+        <span class="terminal-text">
+            Initializing Resources...
+        </span>
+        <span class="terminal-cursor"></span>
+    `;
+
+    popupTerminal.appendChild(line);
+
     resourcePopup.classList.add("show");
 
 }
@@ -41,6 +60,15 @@ function hideResourcePopup(){
 function popupTerminalLog(message){
 
     if(!popupTerminal) return;
+
+    const placeholder =
+    document.getElementById("popupPlaceholder");
+
+    if (placeholder) {
+
+    popupTerminal.innerHTML = "";
+
+    }
 
     if(popupCurrentLine){
 

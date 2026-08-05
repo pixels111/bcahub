@@ -494,7 +494,25 @@
 <div id="success-msg">Form submitted successfully!</div>
 </main>
 <!-- FOOTER -->
- <div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
+<div id="footer"></div>
+
+<script>
+fetch("../components/footer.html")
+.then(r => r.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
+    const year = document.getElementById("copyright-year");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+});
+</script>
 <script src="../components/loader.js"></script>
 <script src="../components/resource-cache.js"></script>
 <script src="index652536949.js"></script>

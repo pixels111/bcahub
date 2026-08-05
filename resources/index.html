@@ -218,7 +218,7 @@
                 <span class="resource-badge">Featured</span>
                 <h3>Need More Study Resources?</h3>
                 <p>
-                    Looking for additional study materials? Explore <strong>SDHR Dump</strong> for a comprehensive collection of
+                    Looking for additional study materials? Explore <strong>Free Degree Library</strong> for a comprehensive collection of
                     BCA, MCA, and ICET resources including notes, previous question papers,
                     lab manuals, syllabus, PDFs, and exam preparation materials.
                 </p>
@@ -337,7 +337,25 @@
     </div>
 </div>
 <!-- FOOTER -->
- <div id="footer"></div><script>fetch("../components/footer.html").then(r => r.text()).then(html => {document.getElementById("footer").innerHTML = html;});</script>
+<div id="footer"></div>
+
+<script>
+fetch("../components/footer.html")
+.then(r => r.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
+    const year = document.getElementById("copyright-year");
+
+    if (year) {
+
+        year.textContent = new Date().getFullYear();
+
+    }
+
+});
+</script>
 <script src="../components/resources-loader.js"></script>
 <script src="../components/resource-cache.js"></script>
 <script src="../components/resources-popup.js"></script>
