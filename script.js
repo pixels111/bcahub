@@ -1005,8 +1005,6 @@ async function openResourcesModal() {
 
         }
 
-        resources.reverse();
-
         let html = "";
 
         resources.forEach(resource => {
