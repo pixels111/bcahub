@@ -17,6 +17,16 @@ A free educational platform that brings together semester-wise BCA study resourc
 [❓ Help](https://pixels111.github.io/bcahub/help/) •
 [📩 Contact](https://pixels111.github.io/bcahub/contact/)
 
+
+[![GitHub Pages](https://img.shields.io/badge/hosted%20on-GitHub%20Pages-222?logo=github&logoColor=white)](https://pages.github.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](#-technology-stack)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](#-technology-stack)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](#-technology-stack)
+[![Backend](https://img.shields.io/badge/backend-Google%20Apps%20Script-4285F4?logo=googlesheets&logoColor=white)](#-architecture)
+[![Made for](https://img.shields.io/badge/made%20for-BCA%20students-8A2BE2)](#-overview)
+[![GitHub last commit](https://img.shields.io/github/last-commit/pixels111/bcahub?color=blue)](https://github.com/pixels111/bcahub/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/pixels111/bcahub)](https://github.com/pixels111/bcahub)
+
 </div>
 
 ---
