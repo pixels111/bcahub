@@ -940,19 +940,6 @@ async function loadResourceData() {
         if (pages !== null && pages !== undefined && pages !== '') {
             metaParts.push(pages);
         }
-        if (uploadedDate) {
-        
-            const date = new Date(uploadedDate);
-        
-            const formattedDate = date.toLocaleDateString("en-US", {
-                day: "2-digit",
-                month: "short",
-                year: "numeric"
-            }).replace(",", "").toUpperCase();
-        
-            metaParts.push("Uploaded " + formattedDate);
-        
-        }
         if (resourceId) {
             metaParts.push(resourceId);
         }
