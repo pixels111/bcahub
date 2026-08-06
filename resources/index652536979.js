@@ -12,7 +12,7 @@ document.addEventListener("keydown",function(e){
     }
 });
 
-const API_URL = "https://script.google.com/macros/s/AKfycbyEaoQMkMlEP5AAaKQYakoFc19V-mQvsWoJLuu8bHdjxAvr3Bow3FalVKH7hgKOm7pp/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycby2GNSDM67zYmyPWb91Q9GUZZHLLrKpBE_gyl2yGTWabFmvET-A2ebtx9SBe3bETUMd/exec";
 
 const RESOURCE_REF_SECTION_ORDER = ['assignments', 'notes', 'important_questions', 'pdfs', 'records', 'syllabus', 'papers'];
 
@@ -430,18 +430,35 @@ async function loadResourceData() {
             : (itemObj.tags || '');
 
         const values = [
+            // Basic
             itemObj.name || '',
             subject || '',
             semester || '',
             getResourcename(section),
+
+            // Classification
             itemObj.category || '',
             itemObj.resourceType || '',
             itemObj.resource_type || '',
+            itemObj.type || "",
+
             tags,
-            itemObj.refCode || '',
-            itemObj.referenceCode || '',
-            itemObj.reference_code || '',
-            itemObj.subject || ''
+
+            // IDs
+            itemObj.resourceId || "",
+            itemObj.refCode || "",
+            itemObj.referenceCode || "",
+            itemObj.reference_code || "",
+            
+           // Metadata
+            itemObj.subject || "",
+            itemObj.author || "",
+            itemObj.authorBadge || "",
+            itemObj.uploadedDate || "",
+            itemObj.pages || "",
+            itemObj.fileId || "",
+
+
         ];
 
         return values.join(' ').toLowerCase();
@@ -884,6 +901,7 @@ async function loadResourceData() {
             const badgeText = isObj ? (item.badge || item.authorBadge || null) : null;
         const pages = isObj ? item.pages : null;
         const uploadedDate = isObj ? item.uploadedDate : null;
+        const resourceId = isObj ? item.resourceId : null;
         const fileType = detectFileType(item);
 
         const card = document.createElement('div');
@@ -923,7 +941,20 @@ async function loadResourceData() {
             metaParts.push(pages);
         }
         if (uploadedDate) {
-            metaParts.push('Uploaded on ' + uploadedDate);
+        
+            const date = new Date(uploadedDate);
+        
+            const formattedDate = date.toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            }).replace(",", "").toUpperCase();
+        
+            metaParts.push("Uploaded " + formattedDate);
+        
+        }
+        if (resourceId) {
+            metaParts.push(resourceId);
         }
         if (metaParts.length) {
             const meta = document.createElement('div');
