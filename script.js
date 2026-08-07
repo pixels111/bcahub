@@ -540,7 +540,7 @@ if(cycleText){
    GLOBAL API
 ========================================================== */
 
-const API = "https://script.google.com/macros/s/AKfycbye0bNpmPZ6xAjygP5hkTERRJQKfoZqh2X6GiL8xD2MQbIbv0cQ8XQLjfkPPXtoK373sw/exec";
+const API = "https://script.google.com/macros/s/AKfycbyh5vsvP6AkS_eFMov2E9n-sNQlKm4_cw9Lge050lcyK56ODw7YmaiHolb_FmXtXALFRA/exec";
 
 /* ==========================================================
    PART 1
