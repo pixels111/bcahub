@@ -732,12 +732,18 @@ async function loadResourceData() {
         btn.className = 'copy-resource-link dc-btn dc-btn-blue';
         btn.dataset.ref = item.refCode;
         btn.setAttribute('aria-label', 'Copy direct link to this resource');
+        const buttonText =
+            window.innerWidth < 400
+                ? 'Ref-Link'
+                : 'Copy Ref-Link';
+        
         btn.innerHTML =
             '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
             '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>' +
             '<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>' +
-            '</svg>Copy Ref-Link';
-        return btn;
+            '</svg>' +
+            buttonText;      
+      return btn;
     }
 
     // ---- File type detection -------------------------------------------
@@ -937,9 +943,14 @@ async function loadResourceData() {
         content.appendChild(title);
 
         const metaParts = [];
+        
         if (pages !== null && pages !== undefined && pages !== '') {
-            metaParts.push(pages);
+            metaParts.push({
+                icon: 'fa-file-alt',
+                text: pages
+            });
         }
+        
         if (uploadedDate) {
         
             const date = new Date(uploadedDate);
@@ -950,25 +961,40 @@ async function loadResourceData() {
                 year: "numeric"
             }).replace(",", "").toUpperCase();
         
-            metaParts.push("Uploaded " + formattedDate);
+            metaParts.push({
+                icon: 'fa-calendar-alt',
+                text: formattedDate
+            });
+        }
         
-        }
         if (resourceId) {
-            metaParts.push(resourceId);
+            metaParts.push({
+                icon: 'fa-fingerprint',
+                text: resourceId
+            });
         }
+        
         if (metaParts.length) {
+        
             const meta = document.createElement('div');
             meta.className = 'dc-meta';
+        
             metaParts.forEach((part, i) => {
+        
                 if (i > 0) {
                     const dot = document.createElement('span');
                     dot.className = 'dc-dot';
                     meta.appendChild(dot);
                 }
+        
                 const span = document.createElement('span');
-                span.textContent = part;
+        
+                span.innerHTML =
+                    `<i class="fas ${part.icon}"></i> ${part.text}`;
+        
                 meta.appendChild(span);
             });
+        
             content.appendChild(meta);
         }
 
@@ -1561,4 +1587,21 @@ document.querySelectorAll('.features-grid .card, .apps-grid .card, .explore-grid
     document.addEventListener('DOMContentLoaded', injectCopyLinkStyles);
 })();
 
+/* ==========================================================
+   NEWLY ADDED RESOURCES BUTTON
+========================================================== */
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const button =
+        document.getElementById("viewNewResourcesBtn");
+
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+
+        openResourcesModal();
+
+    });
+
+});

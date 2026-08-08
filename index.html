@@ -139,10 +139,30 @@
     <div class="hero-grid"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      For Students, By Students — BCAHub
+
+<div class="hero-badge">
+    <!-- KEEP EXISTING -->
+    <span class="badge-dot"></span>
+
+    <!-- ADD / REPLACE: everything below was previously a single text node -->
+    <div class="badge-marquee" id="heroBadgeMarqueeViewport">
+        <div class="badge-marquee-track" id="heroBadgeMarquee">
+
+            <!-- Real, focusable, accessible content -->
+            <div class="badge-marquee-group" id="badgeMarqueeGroupA">
+                <span class="badge-marquee-item">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For Students, By Students — BCAHub</span>
+            </div>
+
+            <!-- Visual clone for seamless looping — hidden from AT/tab order -->
+            <div class="badge-marquee-group" id="badgeMarqueeGroupB" aria-hidden="true">
+                <span class="badge-marquee-item">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; For Students, By Students — BCAHub</span>
+            </div> 
+
+        </div>
     </div>
+</div>
+
+
     <h1 class="hero-title">
       Your Ultimate<br>
       <span class="grad">BCA Study Hub</span>
@@ -525,6 +545,7 @@
 <script src="components/loader.js"></script>
 <script src="components/resource-cache.js"></script>
 <script src="components/updates.js"></script>
+<script src="components/nar.js"></script>
 <script src="script.js"></script>
 <!-- ==========================================================
      NEWLY ADDED RESOURCES
@@ -558,7 +579,7 @@
 
         </div>
 
-        <!-- Body -->
+        <!-- Body --> 
 
         <div id="nar-content">
 

@@ -1918,7 +1918,7 @@ a.dc-btn:not([href]) {
   text-decoration: none;
   font-weight: 500;
   transition: color var(--trans), border-color var(--trans);
-}
+} 
 
 .splink:visited {
   color: var(--blue2);
@@ -2029,6 +2029,7 @@ a.dc-btn:not([href]) {
     min-width: 0;
     white-space: nowrap;
 }
+
 
 
 /* ==========================================================
@@ -2634,4 +2635,258 @@ a.dc-btn:not([href]) {
 
     }
 
+}
+
+
+/* =========================================================
+   NEWLY ADDED RESOURCES BUTTON
+========================================================= */
+
+.new-resources-button-container {
+    width: min(1325px, calc(100% - 40px));
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.new-resources-button {
+    position: relative;
+
+    padding: 13px 24px;
+
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    border-radius: 10px;
+
+    background: rgba(59, 130, 246, 0.10);
+
+    color: #60a5fa;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   ANIMATED HAND CURSOR
+========================================================= */
+
+.new-resources-button::after {
+    content: "\f245";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -20px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    color: var(--blue2);
+
+    filter:
+        drop-shadow(0 0 4px rgba(59, 130, 246, 0.8));
+
+    z-index: 5;
+
+    animation:
+        resourceHandClick 2.4s ease-in-out infinite;
+}
+
+/* =========================================================
+   PULSE SIGNALS
+========================================================= */
+
+.new-resources-button::before {
+    content: "";
+
+    position: absolute;
+
+    right: -12px;
+    bottom: -12px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    border: 2px solid #22d3ee;
+
+    opacity: 0;
+
+    z-index: 4;
+
+    animation:
+        resourceClickPulse 2.4s ease-out infinite;
+}
+
+
+/* =========================================================
+   HAND MOVEMENT + CLICK
+========================================================= */
+
+@keyframes resourceHandClick {
+
+    /* Start away from button */
+
+    0% {
+        transform:
+            translate(12px, 12px)
+            scale(1);
+
+        opacity: 0;
+    }
+
+
+    /* Appear */
+
+    15% {
+        transform:
+            translate(7px, 7px)
+            scale(1);
+
+        opacity: 1;
+    }
+
+
+    /* Move toward button */
+
+    35% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+
+    /* CLICK */
+
+    42% {
+        transform:
+            translate(0, 0)
+            scale(0.82);
+    }
+
+
+    /* Release */
+
+    50% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+
+    /* Stay */
+
+    65% {
+        transform:
+            translate(0, 0)
+            scale(1);
+
+        opacity: 1;
+    }
+
+
+    /* Move away */
+
+    82% {
+        transform:
+            translate(8px, 8px)
+            scale(1);
+
+        opacity: 0.8;
+    }
+
+
+    /* Disappear */
+
+    100% {
+        transform:
+            translate(12px, 12px)
+            scale(1);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   CLICK PULSE
+========================================================= */
+
+@keyframes resourceClickPulse {
+
+    /* Wait until cursor reaches button */
+
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    36% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+
+    /* Click signal appears */
+
+    42% {
+        transform: scale(0.5);
+        opacity: 0.9;
+    }
+
+
+    /* Expand */
+
+    58% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: scale(2.2);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   BUTTON RESPONSE
+========================================================= */
+
+.new-resources-button:hover {
+
+    background:
+        rgba(59, 130, 246, 0.18);
+
+    border-color:
+        rgba(59, 130, 246, 0.6);
+
+    box-shadow:
+        0 0 22px rgba(59, 130, 246, 0.2);
+}
+
+
+.new-resources-button:active {
+
+    transform: scale(0.97);
+
+    box-shadow:
+        0 0 30px rgba(34, 211, 238, 0.3);
 }
