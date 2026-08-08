@@ -1605,22 +1605,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
 /* ==========================================================
-   CLOSE NEWLY ADDED RESOURCES AFTER GET RESOURCE CLICK
+   CLOSE NAR MODAL WHEN GET RESOURCE IS CLICKED
+   RESOURCES PAGE ONLY
 ========================================================== */
 
 document.addEventListener("click", function (e) {
 
     const link = e.target.closest(
-        'a[href*="resources/#"]'
+        '#nar-modal a[href*="resources/#"]'
     );
 
     if (!link) return;
 
-    // Close the modal using its existing close function
-    if (typeof closeResourcesModal === "function") {
-        closeResourcesModal();
-    }
+    closeResourcesModal();
 
 });
