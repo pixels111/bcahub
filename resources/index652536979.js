@@ -964,7 +964,7 @@ async function loadResourceData() {
             metaParts.push({
                 icon: 'fa-calendar-alt',
                 text: formattedDate
-            });
+            }); 
         }
         
         if (resourceId) {
@@ -1603,5 +1603,24 @@ document.addEventListener("DOMContentLoaded", function () {
         openResourcesModal();
 
     });
+
+});
+
+/* ==========================================================
+   CLOSE NEWLY ADDED RESOURCES AFTER GET RESOURCE CLICK
+========================================================== */
+
+document.addEventListener("click", function (e) {
+
+    const link = e.target.closest(
+        'a[href*="resources/#"]'
+    );
+
+    if (!link) return;
+
+    // Close the modal using its existing close function
+    if (typeof closeResourcesModal === "function") {
+        closeResourcesModal();
+    }
 
 });

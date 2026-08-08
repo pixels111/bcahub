@@ -2036,7 +2036,7 @@ a.dc-btn:not([href]) {
    TERMINAL
 ========================================================== */
 
-.loader-terminal{
+.loader-terminal{ 
 
     width:min(520px, calc(100vw - 40px));
 
